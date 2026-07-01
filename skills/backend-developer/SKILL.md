@@ -37,10 +37,11 @@ Ao atuar nesta skill, paute suas decisões técnicas nos seguintes domínios:
 Ao escrever código backend:
 
 1. **Valide as Abstrações e Arquitetura**: Siga rigorosamente as diretrizes da skill [software-architect](../software-architect/SKILL.md) (DDD, SOLID, Clean Architecture).
-2. **Implemente Tratamento de Erros e Logs Defensivos**:
+2. **Código Limpo, Reutilização e Documentação**: Antes de implementar novas funções ou lógicas, consulte as diretrizes de [clean-code-reusability](../clean-code-reusability/SKILL.md) para verificar redundâncias no codebase, garantir a reutilização de componentes e aplicar boas práticas de documentação.
+3. **Implemente Tratamento de Erros e Logs Defensivos**:
    - Capture e formate todas as exceções para evitar vazamentos de memória ou stack traces ao cliente (consulte [appsec-owasp-asvs](../appsec-owasp-asvs/SKILL.md)).
    - Utilize logging estruturado contendo IDs de correlação de requisição (*Correlation IDs*) para rastreamento de problemas distribuídos.
-3. **Escreva Testes**: Siga as diretrizes de [tech-testing](../tech-testing/SKILL.md) para construir testes unitários e de integração (p. ex., simulando banco de dados em memória ou utilizando containers de teste).
+4. **Escreva Testes**: Siga as diretrizes de [tech-testing](../tech-testing/SKILL.md) para construir testes unitários e de integração (p. ex., simulando banco de dados em memória ou utilizando containers de teste).
 
 ---
 

@@ -37,8 +37,9 @@ Ao atuar nesta skill, estruture as suas decisões em torno dos seguintes pilares
 Ao escrever código frontend:
 
 1. **Aproveite a Tipagem do Backend**: Use contratos tipados comuns em [tech-typescript](../tech-typescript/SKILL.md) para garantir que as respostas da API batam perfeitamente com os dados consumidos.
-2. **Utilize Frameworks de Forma Eficiente**: Aplique os padrões modulares da skill [tech-vue](../tech-vue/SKILL.md) (ou equivalentes reativos).
-3. **Escreva Testes de Interface**: Crie testes automatizados (unitários de componentes e testes E2E/fluxos de usuários) baseando-se em [tech-testing](../tech-testing/SKILL.md).
+2. **Código Limpo, Reutilização e Documentação**: Antes de criar novos componentes, hooks ou funções utilitárias, consulte a skill [clean-code-reusability](../clean-code-reusability/SKILL.md) para garantir a não duplicação e seguir as práticas de clean code e documentação recomendadas.
+3. **Utilize Frameworks de Forma Eficiente**: Aplique os padrões modulares da skill [tech-vue](../tech-vue/SKILL.md) (ou equivalentes reativos).
+4. **Escreva Testes de Interface**: Crie testes automatizados (unitários de componentes e testes E2E/fluxos de usuários) baseando-se em [tech-testing](../tech-testing/SKILL.md).
 
 ---
 
