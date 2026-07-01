@@ -29,6 +29,7 @@
 
 | Skill / Caminho | Nome da Habilidade | Descrição / Caso de Uso |
 | :--- | :--- | :--- |
+| [`tech-python`](skills/tech-python/SKILL.md) | **tech-python** | Fornece padrões de engenharia de software em Python, cobrindo estilo de código, tipagem, estruturas de projeto, frameworks populares como Django, Flask e FastAPI, além de boas práticas para testes, packaging e operacao. |
 | [`tech-testing`](skills/tech-testing/SKILL.md) | **tech-testing** | Fornece diretrizes e boas práticas para testes de software robustos, cobrindo TDD, Pirâmide de Testes, Unitários, Integração e E2E, além de ferramentas como Vitest, Jest e Playwright. |
 | [`tech-typescript`](skills/tech-typescript/SKILL.md) | **tech-typescript** | Fornece padrões de engenharia de software seguro e robusto usando TypeScript, cobrindo generics, tipos avançados, segurança estrita de compilador e mapeamento defensivo de dados. |
 | [`tech-vue`](skills/tech-vue/SKILL.md) | **tech-vue** | Fornece padrões de desenvolvimento modular e de alta performance usando o ecossistema Vue 3, cobrindo Composition API, TypeScript, Pinia, Vue Router e otimizações de reatividade. |

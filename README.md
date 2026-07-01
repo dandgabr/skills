@@ -90,6 +90,7 @@ Abaixo está a listagem detalhada de todas as skills disponíveis no ecossistema
 | Habilidade | Caminho da Skill | Descrição / Caso de Uso |
 | :--- | :--- | :--- |
 | **tech-testing** | [`skills/tech-testing`](skills/tech-testing/SKILL.md) | Fornece diretrizes e boas práticas para testes de software robustos, cobrindo TDD, Pirâmide de Testes, Unitários, Integração e E2E, além de ferramentas como Vitest, Jest e Playwright. |
+| **tech-python** | [`skills/tech-python`](skills/tech-python/SKILL.md) | Fornece padrões de engenharia de software em Python, cobrindo estilo de código, tipagem, estruturas de projeto, frameworks populares como Django, Flask e FastAPI, além de boas práticas para testes, packaging e operação. |
 | **tech-typescript** | [`skills/tech-typescript`](skills/tech-typescript/SKILL.md) | Fornece padrões de engenharia de software seguro e robusto usando TypeScript, cobrindo generics, tipos avançados, segurança estrita de compilador e mapeamento defensivo de dados. |
 | **tech-vue** | [`skills/tech-vue`](skills/tech-vue/SKILL.md) | Fornece padrões de desenvolvimento modular e de alta performance usando o ecossistema Vue 3, cobrindo Composition API, TypeScript, Pinia, Vue Router e otimizações de reatividade. |
 
