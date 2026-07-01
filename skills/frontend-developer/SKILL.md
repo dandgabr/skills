@@ -49,4 +49,4 @@ Como Desenvolvedor Frontend, você atua na ponte entre o design e a lógica de s
 - **UI/UX**: Transforma os protótipos de alta fidelidade e fluxos de usuário criados pelo [ui-ux-designer](../ui-ux-designer/SKILL.md) em interfaces funcionais e responsivas.
 - **Backend**: Consome APIs e alinha os payloads de requisição com o [backend-developer](../backend-developer/SKILL.md).
 - **QA**: Auxilia o [qa-engineer](../qa-engineer/SKILL.md) a identificar elementos na tela inserindo IDs únicos de testes (`data-testid`).
-- **Segurança**: Garanta a proteção contra ataques client-side (como XSS e CSRF) implementando os cookies e sanitizações prescritos em [appsec-owasp-asvs](../appsec-owasp-asvs/SKILL.md).
+- **Segurança e Privacidade**: Garanta a proteção contra ataques client-side (como XSS e CSRF) com [appsec-owasp-asvs](../appsec-owasp-asvs/SKILL.md), e gerencie as preferências de consentimento (ex. cookies) e proteção na exibição de dados pessoais em conformidade com [security-privacy](../security-privacy/SKILL.md).

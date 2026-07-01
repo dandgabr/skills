@@ -56,3 +56,4 @@ Quando solicitado a validar a conformidade, redigir políticas ou definir métri
 - Para traduzir políticas de GRC em conceitos físicos e lógicos corporativos, consulte a skill [security-architect-sabsa](../security-architect-sabsa/SKILL.md).
 - Para alinhar o treinamento do time aos controles técnicos mais violados nos testes de código, consulte a skill [appsec-owasp-asvs](../appsec-owasp-asvs/SKILL.md).
 - Para consolidar vulnerabilidades identificadas em auditorias e atualizar as regras gerais de risco, consulte a skill [security-manager-samm](../security-manager-samm/SKILL.md).
+- Para alinhar o desenvolvimento de sistemas às regulamentações específicas de proteção de dados (como LGPD e GDPR), consulte a skill [security-privacy](../security-privacy/SKILL.md).

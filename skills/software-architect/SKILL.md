@@ -82,5 +82,5 @@ Quando requisitado a definir a arquitetura ou desenhar o código de um novo comp
 2. **Defina as Abstrações**: Modele interfaces claras, priorizando a composição e a imutabilidade estrutural.
 3. **Mapeie os Desafios Estruturais**: Consulte a tabela de Design Patterns acima. 
 4. **Invoque a Skill Específica**: Carregue e execute as regras contidas no link da skill do padrão de projeto escolhido para orientar a geração do código concreto.
-5. **Garanta Clean Code e Reusabilidade**: Siga rigorosamente a skill [clean-code-reusability](../clean-code-reusability/SKILL.md) para garantir que as estruturas propostas sejam livres de redundâncias, reaproveitem padrões e lógicas já consolidadas no repositório, e estejam bem documentadas.
+5. **Garanta Clean Code, Reusabilidade e Privacidade**: Siga rigorosamente a skill [clean-code-reusability](../clean-code-reusability/SKILL.md) para design livre de redundâncias e a skill [security-privacy](../security-privacy/SKILL.md) para modelar fluxos e estruturas que respeitem a privacidade por padrão (Privacy by Default) e facilitem portabilidade e expiração de dados pessoais.
 6. **Escreva Testes**: Projete testes unitários com TDD antes ou em conjunto com a escrita do código para validar a alta coesão e o baixo acoplamento do design.

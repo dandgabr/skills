@@ -38,8 +38,9 @@ Ao escrever código backend:
 
 1. **Valide as Abstrações e Arquitetura**: Siga rigorosamente as diretrizes da skill [software-architect](../software-architect/SKILL.md) (DDD, SOLID, Clean Architecture).
 2. **Código Limpo, Reutilização e Documentação**: Antes de implementar novas funções ou lógicas, consulte as diretrizes de [clean-code-reusability](../clean-code-reusability/SKILL.md) para verificar redundâncias no codebase, garantir a reutilização de componentes e aplicar boas práticas de documentação.
-3. **Implemente Tratamento de Erros e Logs Defensivos**:
+3. **Implemente Tratamento de Erros, Logs Defensivos e Privacidade**:
    - Capture e formate todas as exceções para evitar vazamentos de memória ou stack traces ao cliente (consulte [appsec-owasp-asvs](../appsec-owasp-asvs/SKILL.md)).
+   - Garanta a não-gravação de dados pessoais identificáveis (PII) nos logs da aplicação e utilize criptografia e pseudonimização onde necessário seguindo a skill [security-privacy](../security-privacy/SKILL.md).
    - Utilize logging estruturado contendo IDs de correlação de requisição (*Correlation IDs*) para rastreamento de problemas distribuídos.
 4. **Escreva Testes**: Siga as diretrizes de [tech-testing](../tech-testing/SKILL.md) para construir testes unitários e de integração (p. ex., simulando banco de dados em memória ou utilizando containers de teste).
 
@@ -51,4 +52,4 @@ Como Desenvolvedor Backend, você trabalha de forma coordenada no time de engenh
 - **Frontend**: Alinha os contratos de API com o [frontend-developer](../frontend-developer/SKILL.md), utilizando tipagem segura compartilhada com [tech-typescript](../tech-typescript/SKILL.md).
 - **QA**: Fornece endpoints de teste e dados mockados para o [qa-engineer](../qa-engineer/SKILL.md) validar cenários de E2E.
 - **PO**: Transforma os requisitos de histórias do [product-owner](../product-owner/SKILL.md) em arquiteturas lógicas e tarefas de código acionáveis.
-- **Segurança**: Colabora com o [security-architect-sabsa](../security-architect-sabsa/SKILL.md) para desenhar Zonas de Confiança e APIs protegidas.
+- **Segurança e Privacidade**: Colabora com o [security-architect-sabsa](../security-architect-sabsa/SKILL.md) para desenhar Zonas de Confiança e APIs protegidas, além de aplicar as diretrizes de [security-privacy](../security-privacy/SKILL.md) para garantir a segurança no tratamento de dados pessoais.

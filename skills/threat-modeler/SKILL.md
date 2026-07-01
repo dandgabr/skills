@@ -65,3 +65,4 @@ Ao mapear as ameaças de um novo componente ou funcionalidade, entregue uma aná
 - Para alinhar a modelagem de ameaças à arquitetura de segurança física e à lógica do negócio, consulte a skill [security-architect-sabsa](../security-architect-sabsa/SKILL.md).
 - Para extrair os requisitos técnicos consolidados do OWASP ASVS necessários para mitigar as ameaças mapeadas, consulte a skill [appsec-owasp-asvs](../appsec-owasp-asvs/SKILL.md).
 - Para simular as ameaças mapeadas em testes reais de penetração e validar as defesas, consulte a skill [pentester-owasp-wstg](../pentester-owasp-wstg/SKILL.md).
+- Para modelar especificamente as ameaças e riscos à privacidade de dados usando frameworks como LINDDUN, consulte a skill [security-privacy](../security-privacy/SKILL.md).
