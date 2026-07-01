@@ -17,7 +17,7 @@ Este diretório contém as definições declarativas dos agentes do projeto util
 
 ### 1. [documenter](documenter/agent.yaml)
 - **Modelo Base**: `gemini-2.0-flash`
-- **Função**: Especializado em desenhar fluxogramas, diagramas de classe e sequências de APIs utilizando a sintaxe correta do Mermaid.js.
+- **Função**: Especializado em desenhar diagramas estruturais, de dados, estratégicos e técnicos utilizando toda a sintaxe do Mermaid.js.
 - **Skill Associada**: [documentation-designer](../skills/documentation-designer/SKILL.md)
 
 ### 2. [software-architect](software-architect/agent.yaml)

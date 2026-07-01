@@ -62,5 +62,5 @@
 
 | Skill / Caminho | Nome da Habilidade | Descrição / Caso de Uso |
 | :--- | :--- | :--- |
-| [`documentation-designer`](skills/documentation-designer/SKILL.md) | **documentation-designer** | Auxilia na elaboração de documentação técnica rica e no desenho de diagramas visuais e fluxogramas utilizando a sintaxe do Mermaid.js. |
+| [`documentation-designer`](skills/documentation-designer/SKILL.md) | **documentation-designer** | Auxilia na elaboração de documentação técnica rica e no desenho de diagramas estruturais, de dados, estratégicos e técnicos utilizando toda a sintaxe do Mermaid.js. |
 | [`template-skill`](skills/template-skill/SKILL.md) | **template-skill** | Um template básico que demonstra como estruturar uma habilidade (skill) personalizada para agentes de IA. |
