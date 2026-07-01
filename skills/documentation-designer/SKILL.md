@@ -31,31 +31,46 @@ Para evitar que o renderizador de Markdown ou a IDE quebrem ao processar o Merma
 Utilize a declaração `flowchart` (em vez de `graph`) para obter renderizações modernas.
 - **Orientação**: `TB` ou `TD` (cima-baixo), `LR` (esquerda-direita), `BT` (baixo-cima), `RL` (direita-esquerda).
 - **Formas de Nós**:
-  - Retângulo Padrão: `id1[Texto]`
-  - Arredondado (Início/Fim): `id2(Texto)`
-  - Estádio (Stadium): `id3([Texto])`
-  - Sub-rotina: `id4[[Texto]]`
-  - Banco de Dados (Cilindro): `id5[(Texto)]`
-  - Círculo: `id6((Texto))`
-  - Losango (Decisão): `id7{Texto}`
-  - Hexágono (Preparação): `id8{{Texto}}`
-  - Paralelogramo: `id9[/Texto/]` ou `id10[\Texto\]`
-  - Duplo Círculo: `id11(((Texto)))`
+    - Retângulo Padrão: `id1[Texto]`
+    - Arredondado (Início/Fim): `id2(Texto)`
+    - Estádio (Stadium): `id3([Texto])`
+    - Sub-rotina: `id4[[Texto]]`
+    - Banco de Dados (Cilindro): `id5[(Texto)]`
+    - Círculo: `id6((Texto))`
+    - Losango (Decisão): `id7{Texto}`
+    - Hexágono (Preparação): `id8{{Texto}}`
+    - Paralelogramo: `id9[/Texto/]` ou `id10[\Texto\]`
+    - Duplo Círculo: `id11(((Texto)))`
 - **Conexões**:
-  - Seta Simples: `A --> B`
-  - Linha sem Seta: `A --- B`
-  - Linha com Texto: `A -->|Texto| B` ou `A -- Texto --> B`
-  - Linha Pontilhada: `A -.-> B`
-  - Linha Grossa (Thick): `A ==> B`
-  - Comprimento Customizado: `--->` ou `====>` ou `-.-.->` (adicione caracteres para esticar)
-  - Setas Circulares/Cruzadas: `A --o B` ou `A --x B`
+    - Seta Simples: `A --> B`
+    - Linha sem Seta: `A --- B`
+    - Linha com Texto: `A -->|Texto| B` ou `A -- Texto --> B`
+    - Linha Pontilhada: `A -.-> B`
+    - Linha Grossa (Thick): `A ==> B`
+    - Comprimento Customizado: `--->` ou `====>` ou `-.-.->` (adicione caracteres para esticar)
+    - Setas Circulares/Cruzadas: `A --o B` ou `A --x B`
 - **Subgrafos**:
-  ```mermaid
-  subgraph Camada_Dominio ["Camada de Domínio"]
-      direction TB
-      Entidade --> ObjetoValor
-  end
-  ```
+```mermaid
+flowchart TB
+    subgraph Lane_Cliente["Cliente"]
+        direction LR
+        A[Solicitar orçamento] --> B[Enviar documentos]
+    end
+    subgraph Lane_Sistema["Sistema"]
+        direction LR
+        C{Dados completos?}
+        D[Gerar proposta]
+        E[Solicitar complementação]
+    end
+    subgraph Lane_Operacao["Operação"]
+        direction LR
+        F[Aprovar proposta]
+        G[Iniciar execução]
+    end
+    B --> C
+    C -->|Sim| D --> F --> G
+    C -->|Não| E --> B
+```
 
 ### 🔹 Raias de Processos (Swimlanes Diagram)
 Como o Mermaid não possui um tipo dedicado para Swimlanes, utilize `flowchart` combinando `subgraph` estruturados para representar raias funcionais.
@@ -124,9 +139,9 @@ stateDiagram-v2
 ### 🔹 Diagramas de Entidade e Relacionamento (`erDiagram`)
 Modelagem lógica e física de banco de dados relacionais.
 - **Relações de Cardinalidade**:
-  - `||--||` (Um para um)
-  - `||--o{` (Zero ou muitos)
-  - `||--|{` (Um ou muitos)
+    - `||--||` (Um para um)
+    - `||--o{` (Zero ou muitos)
+    - `||--|{` (Um ou muitos)
 ```mermaid
 erDiagram
     USUARIO ||--o{ POST : escreve
@@ -137,16 +152,19 @@ erDiagram
 Usado em engenharia de sistemas (padrão SysML) para mapear requisitos funcionais/não-funcionais e os elementos de design que os atendem.
 ```mermaid
 requirementDiagram
-    requirement ReqSeguranca {
-        id: "REQ-001"
-        text: "O sistema deve criptografar senhas com bcrypt."
-        severity: "critical"
-        type: "security"
-    }
-    element BackendApp {
-        type: "software_component"
-    }
-    BackendApp - satisfies -> ReqSeguranca
+
+requirement ReqSeguranca {
+    id: 1
+    text: O sistema deve criptografar senhas com bcrypt.
+    risk: high
+    verifymethod: test
+}
+
+element BackendApp {
+    type: software_component
+}
+
+BackendApp - satisfies -> ReqSeguranca
 ```
 
 ### 🔹 Diagrama C4 (C4Context, C4Container, C4Component) 🦺⚠️
@@ -217,23 +235,22 @@ xychart-beta
 ### 🔹 Treemap (`treemap`) 🔥
 Representação de estruturas de dados hierárquicas e seus pesos usando retângulos proporcionais aninhados.
 ```mermaid
-treemap
-    title Estrutura de Custos da Nuvem
-    Nuvem
-        Computacao: 50
-        Armazenamento: 30
-        Rede: 20
+treemap-beta
+"Nuvem"
+    "Computacao": 50
+    "Armazenamento": 30
+    "Rede": 20
 ```
 
 ### 🔹 Gráfico de Radar (`radar-beta`) 🔥
 Usado para comparar múltiplos perfis ou alternativas sob múltiplos eixos de análise quantitativa.
 ```mermaid
 radar-beta
-    title "Avaliação de Senioridade do Desenvolvedor"
-    axis Qualidade do Código, Comunicação, Entrega de Prazo, Liderança Técnica, Resolução de Problemas
-    curve Dev_Junior{40, 60, 50, 20, 40}
-    curve Dev_Senior{90, 85, 90, 80, 95}
-    max 100
+title "Avaliação de Senioridade do Desenvolvedor"
+axis qualidade["Qualidade do Código"], comunicacao["Comunicação"], prazo["Entrega de Prazo"], lideranca["Liderança Técnica"], problemas["Resolução de Problemas"]
+curve junior["Dev Júnior"]{qualidade: 40, comunicacao: 60, prazo: 50, lideranca: 20, problemas: 40}
+curve senior["Dev Sênior"]{qualidade: 90, comunicacao: 85, prazo: 90, lideranca: 80, problemas: 95}
+max 100
 ```
 
 ### 🔹 Diagrama de Sankey (`sankey-beta`) 🔥
@@ -251,9 +268,9 @@ sankey-beta
 Visualiza a intersecção de conjuntos lógicos de dados.
 ```mermaid
 venn-beta
-    set A [Linguagem Python] : 10
-    set B [Data Science] : 10
-    union A, B [Bibliotecas Científicas] : 4
+set A["Linguagem Python"]:10
+set B["Data Science"]:10
+union A,B["Bibliotecas Científicas"]:4
 ```
 
 ---
@@ -266,25 +283,25 @@ Esboço descritivo e sequencial das interações do usuário com o sistema, mape
 journey
     title Compra de passagem aérea
     section Pesquisa
-      Pesquisar voos: 5: Passageiro
-      Selecionar data: 3: Passageiro
+        Pesquisar voos: 5: Passageiro
+        Selecionar data: 3: Passageiro
     section Pagamento
-      Inserir dados do cartão: 1: Passageiro, Banco
-      Confirmar compra: 4: Passageiro
+    Inserir dados do cartão: 1: Passageiro, Banco
+        Confirmar compra: 4: Passageiro
 ```
 
 ### 🔹 Mapas Mentais (`mindmap`)
 Excelente para brainstorming estruturado de ideias, mapeamento mental de requisitos e conceitos.
 ```mermaid
 mindmap
-  root((Arquitetura))
-    Padroes
-      Microservicos
-      Monolito Modular
-    Comunicacao
-      REST
-      gRPC
-      Event-Driven
+    root((Arquitetura))
+        Padroes
+            Microservicos
+            Monolito Modular
+        Comunicacao
+            REST
+            gRPC
+            Event-Driven
 ```
 
 ### 🔹 Linha do Tempo (`timeline`)
@@ -312,10 +329,9 @@ gitGraph
 ### 🔹 Modelagem de Eventos (`eventmodeling`) 🔥
 Esboço dinâmico para arquiteturas Event-Driven (CQRS/Event Sourcing), sequenciando UIs, comandos e eventos.
 ```mermaid
-eventmodeling
-    tf 01 ui TelaRegistro
-    tf 02 cmd RegistrarUsuario
-    tf 03 evt UsuarioRegistrado
+flowchart LR
+    TelaRegistro[UI: Tela de Registro] --> RegistrarUsuario[Command: Registrar Usuario]
+    RegistrarUsuario --> UsuarioRegistrado[Event: Usuario Registrado]
 ```
 
 ### 🔹 Wardley Maps (`wardley-beta`) 🔥
@@ -337,12 +353,18 @@ wardley-beta
 ### 🔹 Framework Cynefin (`cynefin`) 🔥
 Framework conceitual para categorizar a complexidade de problemas, identificando os cinco domínios de tomada de decisão.
 ```mermaid
-cynefin
-    aporetic
-    clear
-    complicated
-    complex
-    chaotic
+mindmap
+    root((Cynefin))
+        clear
+            "Sense -> Categorise -> Respond"
+        complicated
+            "Sense -> Analyse -> Respond"
+        complex
+            "Probe -> Sense -> Respond"
+        chaotic
+            "Act -> Sense -> Respond"
+        confusion
+            "Move toward a domain"
 ```
 
 ---
@@ -352,12 +374,15 @@ cynefin
 ### 🔹 ZenUML (`zenuml`)
 Alternativa poderosa e estruturada em formato de código para a criação de diagramas de sequência complexos.
 ```mermaid
-zenuml
+sequenceDiagram
     title Processamento de Pedido
-    Cliente->Loja.comprar() {
-        Loja->Estoque.reservar()
-        Loja->Pagamento.cobrar()
-    }
+    actor Cliente
+    participant Loja
+    participant Estoque
+    participant Pagamento
+    Cliente->>Loja: Fazer pedido
+    Loja->>Estoque: Reservar itens
+    Loja->>Pagamento: Cobrar pagamento
 ```
 
 ### 🔹 Diagrama de Blocos (`block-beta`) 🔥
@@ -388,26 +413,26 @@ packet-beta
 Criado para esboçar arquiteturas de nuvem de forma nativa e clara (p. ex., AWS, GCP), separando serviços e agrupando-os por redes.
 ```mermaid
 architecture-beta
-    group vpc(cloud)[VPC Privada]
-    service web(server)[Servidor Web] in vpc
-    service cache(redis)[Redis Cache] in vpc
-    service rds(database)[PostgreSQL] in vpc
-    
-    web:right -- left:cache
-    web:down -- up:rds
+group vpc(cloud)[VPC Privada]
+service web(server)[Servidor Web] in vpc
+service cache(redis)[Redis Cache] in vpc
+service rds(database)[PostgreSQL] in vpc
+
+web:R -- L:cache
+web:B -- T:rds
 ```
 
 ### 🔹 Visualizador de Árvores de Diretórios (`treeView-beta`) 🔥
 Gera visualizações organizadas de estruturas de arquivos e hierarquias de pastas usando indentação.
 ```mermaid
 treeView-beta
-meu-projeto/
-  src/
-    components/
-      Button.tsx
-    App.tsx
-  package.json
-  tsconfig.json
+        "meu-projeto"
+                "src"
+                        "components"
+                                "Button.tsx"
+                        "App.tsx"
+                "package.json"
+                "tsconfig.json"
 ```
 
 ### 🔹 Quadro Kanban (`kanban`) 🔥
@@ -416,12 +441,12 @@ Quadro ágil nativo para organização, controle e distribuição de tarefas de 
 kanban
     title Sprint 24
     section Backlog
-      Task_A["Criar Model de Usuário"]
-      Task_B["Configurar CI/CD"]
+        Task_A["Criar Model de Usuário"]
+        Task_B["Configurar CI/CD"]
     section Fazendo
-      Task_C["Desenvolver Login"]
+        Task_C["Desenvolver Login"]
     section Concluído
-      Task_D["Setup Inicial"]
+        Task_D["Setup Inicial"]
 ```
 
 ---
