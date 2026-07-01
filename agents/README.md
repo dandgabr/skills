@@ -9,8 +9,14 @@ Este diretório contém as definições declarativas dos agentes do projeto util
 ├── README.md               # Este guia explicativo
 ├── documenter\
 │   └── agent.yaml          # Definição do Agente Documentador e Designer
-└── software-architect\
-    └── agent.yaml          # Definição do Agente Arquiteto de Software
+├── software-architect\
+│   └── agent.yaml          # Definição do Agente Arquiteto de Software
+├── fullstack-developer\
+│   └── agent.yaml          # Definição do Agente de Desenvolvimento Full Stack
+├── devops-engineer\
+│   └── agent.yaml          # Definição do Agente de DevOps
+└── security-specialist\
+    └── agent.yaml          # Definição do Agente Especialista em Segurança
 ```
 
 ## 🤖 Agentes Disponíveis
@@ -18,12 +24,27 @@ Este diretório contém as definições declarativas dos agentes do projeto util
 ### 1. [documenter](documenter/agent.yaml)
 - **Modelo Base**: `gemini-2.0-flash`
 - **Função**: Especializado em desenhar diagramas estruturais, de dados, estratégicos e técnicos utilizando toda a sintaxe do Mermaid.js.
-- **Skill Associada**: [documentation-designer](../skills/documentation-designer/SKILL.md)
+- **Skill Associada**: [documentation-designer](../skills/general/documentation-designer/SKILL.md)
 
 ### 2. [software-architect](software-architect/agent.yaml)
 - **Modelo Base**: `gemini-2.0-flash`
 - **Função**: Especializado na aplicação de DDD, SOLID, gerenciamento de JVM/plataforma interna e orquestração de Padrões de Projeto (Design Patterns).
-- **Skill Associada**: [software-architect](../skills/software-architect/SKILL.md)
+- **Skill Associada**: [software-architect](../skills/general/software-architect/SKILL.md)
+
+### 3. [fullstack-developer](fullstack-developer/agent.yaml)
+- **Modelo Base**: `gemini-2.0-flash`
+- **Função**: Projetar e implementar soluções web fim a fim (Backend e Frontend), garantindo legibilidade, integridade de código e documentação.
+- **Skills Associadas**: [backend-developer](../skills/general/backend-developer/SKILL.md), [frontend-developer](../skills/general/frontend-developer/SKILL.md) e [clean-code-reusability](../skills/general/clean-code-reusability/SKILL.md)
+
+### 4. [devops-engineer](devops-engineer/agent.yaml)
+- **Modelo Base**: `gemini-2.0-flash`
+- **Função**: Provisionamento de infraestrutura como código (IaC), deploy e operação confiável de pipelines e containers.
+- **Skill Associada**: [devops-engineer](../skills/general/devops-engineer/SKILL.md)
+
+### 5. [security-specialist](security-specialist/agent.yaml)
+- **Modelo Base**: `gemini-2.0-flash`
+- **Função**: Modelagem de ameaças, controles de código seguro baseados em OWASP ASVS, auditorias, DevSecOps e conformidade regulatória de privacidade.
+- **Skills Associadas**: [appsec-owasp-asvs](../skills/security/appsec-owasp-asvs/SKILL.md), [devsecops-engineer](../skills/security/devsecops-engineer/SKILL.md), [security-grc-compliance](../skills/security/security-grc-compliance/SKILL.md), [security-privacy](../skills/security/security-privacy/SKILL.md) e [threat-modeler](../skills/security/threat-modeler/SKILL.md)
 
 ## 🚀 Como Invocá-los via ADK 2.0
 

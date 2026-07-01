@@ -62,8 +62,8 @@ Ative esta skill quando o pedido envolver:
 
 ## 🔗 Integrações Recomendadas
 
-- [devsecops-engineer](../devsecops-engineer/SKILL.md): use quando a automacao precisar incluir hardening, SCA, SAST, secrets ou controles de seguranca.
-- [security-architect-sabsa](../security-architect-sabsa/SKILL.md): use quando a infraestrutura precisar ser alinhada a zonas de confianca ou requisitos arquiteturais.
+- [devsecops-engineer](../../security/devsecops-engineer/SKILL.md): use quando a automacao precisar incluir hardening, SCA, SAST, secrets ou controles de seguranca.
+- [security-architect-sabsa](../../security/security-architect-sabsa/SKILL.md): use quando a infraestrutura precisar ser alinhada a zonas de confianca ou requisitos arquiteturais.
 - [software-architect](../software-architect/SKILL.md): use quando as decisoes de plataforma impactarem topologia, modularizacao ou contrato entre servicos.
 
 ---

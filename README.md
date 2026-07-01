@@ -29,7 +29,10 @@ A estrutura foi projetada para ser modular, extensível e compatível com as esp
 │   └── patterns/         # Padrões de Projeto (22 habilidades dp-*)
 └── agents/               # Diretório contendo os agentes configurados (ADK 2.0)
     ├── documenter/       # Agente Documentador e Designer
-    └── software-architect/ # Agente Arquiteto de Software
+    ├── software-architect/ # Agente Arquiteto de Software
+    ├── fullstack-developer/ # Agente Desenvolvedor Full Stack
+    ├── devops-engineer/  # Agente de DevOps
+    └── security-specialist/ # Agente Especialista em Segurança
 ```
 
 ## 🛠️ Como Utilizar
@@ -74,7 +77,7 @@ Abaixo está a listagem detalhada de todas as skills disponíveis no ecossistema
 | :--- | :--- | :--- |
 | **backend-developer** | [`skills/general/backend-developer`](skills/general/backend-developer/SKILL.md) | Atua como Desenvolvedor Backend sênior, projetando APIs robustas, integrando bancos de dados eficientes, aplicando concorrência segura, otimizando performance e criando testes de integração robustos. |
 | **frontend-developer** | [`skills/general/frontend-developer`](skills/general/frontend-developer/SKILL.md) | Atua como Desenvolvedor Frontend sênior, criando interfaces ricas, componentização avançada, gerenciamento de estado global eficiente, otimização de Core Web Vitals e conformidade com acessibilidade (WCAG). |
-| **devops-engineer** | [`skills/devops-engineer`](skills/devops-engineer/SKILL.md) | Atua como Engenheiro de DevOps com foco em Terraform, Ansible, containers (Docker, Podman e afins) e Kubernetes, desenhando automação de infraestrutura, deploy e operação confiável. |
+| **devops-engineer** | [`skills/general/devops-engineer`](skills/general/devops-engineer/SKILL.md) | Atua como Engenheiro de DevOps com foco em Terraform, Ansible, containers (Docker, Podman e afins) e Kubernetes, desenhando automação de infraestrutura, deploy e operação confiável. |
 | **product-owner** | [`skills/general/product-owner`](skills/general/product-owner/SKILL.md) | Atua como Product Owner (PO), refinando histórias de usuários com critérios de aceitação BDD (Cucumber), gerenciando o Product Backlog e priorizando entregas com foco em valor de negócio (ROI). |
 | **qa-engineer** | [`skills/general/qa-engineer`](skills/general/qa-engineer/SKILL.md) | Atua como Engenheiro de QA (Quality Assurance), elaborando estratégias de testes de software, automatizando testes E2E e de APIs, validando regressões e gerando relatórios de defeitos. |
 | **scrum-master** | [`skills/general/scrum-master`](skills/general/scrum-master/SKILL.md) | Atua como Scrum Master e Agile Coach, facilitando cerimônias ágeis (Planning, Review, Retrospective, Dailies), eliminando impedimentos, gerenciando conflitos e monitorando métricas de produtividade (Velocity, Burndown). |
