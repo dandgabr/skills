@@ -15,6 +15,7 @@ A estrutura foi projetada para ser modular, extensível e compatível com as esp
 │   ├── documentation-designer/ # Skill auxiliar de desenhos e diagramas (Mermaid)
 │   ├── backend-developer/ # Papéis de Desenvolvimento (Backend, Frontend, QA, etc.)
 │   ├── appsec-owasp-asvs/ # Segurança da Informação, Modelagem e Conformidade
+│   ├── pentester-owasp-api-security-2023/ # Pentest ético focado em OWASP API Security Top 10 2023
 │   ├── tech-typescript/  # Stacks de tecnologia específicas (Vue, TS, Testes)
 │   ├── dp-*/             # 22 Habilidades de Padrões de Projeto (Design Patterns do GoF)
 │   └── template-skill/   # Exemplo/Template de skill
@@ -32,6 +33,7 @@ Escreva no arquivo [AGENTS.md](AGENTS.md) as regras de comportamento gerais que 
 Neste repositório, as decisões de engenharia, segurança e práticas de desenvolvimento estão modularizadas e integradas:
 - **[software-architect](skills/software-architect/SKILL.md)**: Atua como a skill coordenadora. Quando o agente precisa propor decisões de arquitetura de alto nível, aplicar DDD ou realizar modelagem lógica, ele carrega essa skill.
 - **Segurança da Informação e DevSecOps**: Skills como **[appsec-owasp-asvs](skills/appsec-owasp-asvs/SKILL.md)** e **[devsecops-engineer](skills/devsecops-engineer/SKILL.md)** são empregadas para garantir a conformidade regulatória (LGPD/GDPR), design seguro de sistemas e automações de segurança em pipelines.
+- **Pentest de APIs**: A skill **[pentester-owasp-api-security-2023](skills/pentester-owasp-api-security-2023/SKILL.md)** complementa o ecossistema para auditorias seguras em APIs REST, GraphQL, SOAP e microsserviços com base no OWASP API Security Top 10 2023.
 - **Desenvolvimento por Papéis**: Skills especializadas por domínio (**[backend-developer](skills/backend-developer/SKILL.md)**, **[frontend-developer](skills/frontend-developer/SKILL.md)**, **[qa-engineer](skills/qa-engineer/SKILL.md)**, **[ui-ux-designer](skills/ui-ux-designer/SKILL.md)**) definem os padrões esperados para cada disciplina da equipe.
 - **[Design Patterns (dp-*)](skills/dp-factory-method/SKILL.md)**: Habilidades de apoio específicas para cada um dos 22 padrões clássicos de projeto (Gang of Four). A skill de arquiteto direciona a invocação dessas de forma condicional dependendo do cenário.
 - **[documentation-designer](skills/documentation-designer/SKILL.md)**: Skill auxiliar especializada em documentar sistemas e desenhar diagramas estruturais, de dados, estratégicos e técnicos utilizando toda a sintaxe moderna do Mermaid.js.
@@ -120,3 +122,7 @@ Abaixo está a listagem detalhada de todas as skills disponíveis no ecossistema
 | :--- | :--- | :--- |
 | **documentation-designer** | [`skills/documentation-designer`](skills/documentation-designer/SKILL.md) | Auxilia na elaboração de documentação técnica rica e no desenho de diagramas estruturais, de dados, estratégicos e técnicos utilizando toda a sintaxe do Mermaid.js. |
 | **template-skill** | [`skills/template-skill`](skills/template-skill/SKILL.md) | Um template básico que demonstra como estruturar uma habilidade (skill) personalizada para agentes de IA. |
+
+## Licença
+
+Este repositório usa uma licença de uso livre para fins não comerciais, com uso comercial permitido somente mediante autorização escrita prévia. Consulte o arquivo [LICENSE](LICENSE) para os termos completos.
