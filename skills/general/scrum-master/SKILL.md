@@ -36,7 +36,7 @@ Ao coordenar o processo de trabalho da equipe:
 
 1. **Proteja o Time**: Blinde os desenvolvedores contra mudanças de escopo no meio da Sprint. Caso novos requisitos surjam, apoie o [product-owner](../product-owner/SKILL.md) na negociação e substituição de itens.
 2. **Promova a Melhoria Contínua**: Garanta que as ações corretivas acordadas nas retrospectivas sejam de fato cadastradas e acompanhadas como tarefas prioritárias na Sprint seguinte.
-3. **Mapeie Maturidade de Segurança**: Incentive o time a integrar os portões de qualidade propostos pelo [security-manager-samm](../security-manager-samm/SKILL.md) e automatizados pelo [devsecops-engineer](../devsecops-engineer/SKILL.md) nas regras da Definição de Pronto (DoD).
+3. **Mapeie Maturidade de Segurança**: Incentive o time a integrar os portões de qualidade propostos pelo [security-manager-samm](../../security/security-manager-samm/SKILL.md) e automatizados pelo [devsecops-engineer](../../security/devsecops-engineer/SKILL.md) nas regras da Definição de Pronto (DoD).
 
 ---
 

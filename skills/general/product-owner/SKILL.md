@@ -45,7 +45,7 @@ Ao planejar novas funcionalidades ou validar entregas:
 
 1. **Valide a Visão de Negócio**: Garanta que cada nova funcionalidade solicitada aponte para um objetivo comercial real.
 2. **Defina a Definição de Pronto (Definition of Done - DoD)**: Acorde com a equipe quais são os critérios mínimos de qualidade para uma história ser considerada finalizada (ex: código revisado, testes unitários passando, analisado pelo [qa-engineer](../qa-engineer/SKILL.md), auditado por segurança).
-3. **Gerencie as Restrições de GRC**: Garanta que as histórias de usuários que lidam com dados sensíveis incluam critérios específicos de privacidade em conformidade com as regras de [security-grc-compliance](../security-grc-compliance/SKILL.md).
+3. **Gerencie as Restrições de GRC**: Garanta que as histórias de usuários que lidam com dados sensíveis incluam critérios específicos de privacidade em conformidade com as regras de [security-grc-compliance](../../security/security-grc-compliance/SKILL.md).
 
 ---
 

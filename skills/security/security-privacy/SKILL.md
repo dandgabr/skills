@@ -70,7 +70,7 @@ Ao projetar novas APIs, tabelas de banco de dados ou fluxos de usuários:
 
 Esta skill complementa diretamente o fluxo de desenvolvimento seguro e governança:
 - [security-grc-compliance](../security-grc-compliance/SKILL.md): Fornece os controles técnicos que implementam as políticas de compliance e leis de privacidade.
-- [software-architect](../software-architect/SKILL.md): Apoia no desenho de arquiteturas que suportam portabilidade de dados, exclusões em cascata e pseudonimização estrutural.
+- [software-architect](../../general/software-architect/SKILL.md): Apoia no desenho de arquiteturas que suportam portabilidade de dados, exclusões em cascata e pseudonimização estrutural.
 - [threat-modeler](../threat-modeler/SKILL.md): Integra riscos de vazamento de privacidade (padrão LINDDUN) na modelagem de ameaças dos sistemas.
-- [backend-developer](../backend-developer/SKILL.md): Guia na criptografia de dados em banco de dados, sanitização de logs e APIs de direitos do titular.
-- [frontend-developer](../frontend-developer/SKILL.md): Guia no gerenciamento de consentimento (banners de cookies), visibilidade de dados sensíveis na UI e segurança do lado do cliente.
+- [backend-developer](../../general/backend-developer/SKILL.md): Guia na criptografia de dados em banco de dados, sanitização de logs e APIs de direitos do titular.
+- [frontend-developer](../../general/frontend-developer/SKILL.md): Guia no gerenciamento de consentimento (banners de cookies), visibilidade de dados sensíveis na UI e segurança do lado do cliente.

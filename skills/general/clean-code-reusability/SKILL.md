@@ -59,5 +59,5 @@ Esta skill atua de forma transversal e deve ser consultada por todas as habilida
 - [backend-developer](../backend-developer/SKILL.md): Garante que APIs, serviços e repositórios não dupliquem regras de negócio e persistência.
 - [frontend-developer](../frontend-developer/SKILL.md): Evita a criação de componentes ou hooks duplicados e assegura boas práticas de organização de código client-side.
 - [software-architect](../software-architect/SKILL.md): Apoia na manutenção da coesão do design, promovendo abstrações limpas e DRY.
-- [tech-typescript](../tech-typescript/SKILL.md): Orienta a reutilização de tipos e a documentação via JSDoc.
-- [tech-python](../tech-python/SKILL.md): Orienta o estilo PEP 8, a criação de docstrings corretas e a redução de complexidade ciclomática.
+- [tech-typescript](../../tech/tech-typescript/SKILL.md): Orienta a reutilização de tipos e a documentação via JSDoc.
+- [tech-python](../../tech/tech-python/SKILL.md): Orienta o estilo PEP 8, a criação de docstrings corretas e a redução de complexidade ciclomática.

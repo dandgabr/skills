@@ -67,8 +67,8 @@ O sistema gera duas cobranças paralelas no banco de dados e exibe um erro de st
 Ao atuar nesta skill:
 
 1. **Defina Critérios de Aceitação**: Antes de começar a testar, revise os critérios de aceitação refinados pelo [product-owner](../product-owner/SKILL.md).
-2. **Priorize a Automação**: Escreva scripts automatizados em conformidade com as convenções da skill de suporte [tech-testing](../tech-testing/SKILL.md) para garantir que os testes rodem de forma consistente em CI/CD.
-3. **Execute Testes de Segurança Básicos**: Faça simulações rápidas baseadas no guia do [pentester-owasp-wstg](../pentester-owasp-wstg/SKILL.md) para validar controle de acessos lógicos.
+2. **Priorize a Automação**: Escreva scripts automatizados em conformidade com as convenções da skill de suporte [tech-testing](../../tech/tech-testing/SKILL.md) para garantir que os testes rodem de forma consistente em CI/CD.
+3. **Execute Testes de Segurança Básicos**: Faça simulações rápidas baseadas no guia do [pentester-owasp-wstg](../../security/pentester-owasp-wstg/SKILL.md) para validar controle de acessos lógicos.
 
 ---
 

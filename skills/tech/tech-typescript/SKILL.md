@@ -91,6 +91,6 @@ function renderState(state: NetworkState) {
 ---
 
 ## 🔗 Integração com Outras Skills
-- [frontend-developer](../frontend-developer/SKILL.md): Utiliza TypeScript para modular estados e componentes visuais estáveis.
-- [backend-developer](../backend-developer/SKILL.md): Constrói contratos tipados de APIs e validações de banco de dados robustas no lado do servidor.
-- [clean-code-reusability](../clean-code-reusability/SKILL.md): Fornece princípios de reaproveitamento de código e documentação padrão (JSDoc) aplicados ao desenvolvimento com TypeScript.
+- [frontend-developer](../../general/frontend-developer/SKILL.md): Utiliza TypeScript para modular estados e componentes visuais estáveis.
+- [backend-developer](../../general/backend-developer/SKILL.md): Constrói contratos tipados de APIs e validações de banco de dados robustas no lado do servidor.
+- [clean-code-reusability](../../general/clean-code-reusability/SKILL.md): Fornece princípios de reaproveitamento de código e documentação padrão (JSDoc) aplicados ao desenvolvimento com TypeScript.

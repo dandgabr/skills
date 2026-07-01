@@ -36,10 +36,10 @@ Ao atuar nesta skill, estruture as suas decisões em torno dos seguintes pilares
 
 Ao escrever código frontend:
 
-1. **Aproveite a Tipagem do Backend**: Use contratos tipados comuns em [tech-typescript](../tech-typescript/SKILL.md) para garantir que as respostas da API batam perfeitamente com os dados consumidos.
+1. **Aproveite a Tipagem do Backend**: Use contratos tipados comuns em [tech-typescript](../../tech/tech-typescript/SKILL.md) para garantir que as respostas da API batam perfeitamente com os dados consumidos.
 2. **Código Limpo, Reutilização e Documentação**: Antes de criar novos componentes, hooks ou funções utilitárias, consulte a skill [clean-code-reusability](../clean-code-reusability/SKILL.md) para garantir a não duplicação e seguir as práticas de clean code e documentação recomendadas.
-3. **Utilize Frameworks de Forma Eficiente**: Aplique os padrões modulares da skill [tech-vue](../tech-vue/SKILL.md) (ou equivalentes reativos).
-4. **Escreva Testes de Interface**: Crie testes automatizados (unitários de componentes e testes E2E/fluxos de usuários) baseando-se em [tech-testing](../tech-testing/SKILL.md).
+3. **Utilize Frameworks de Forma Eficiente**: Aplique os padrões modulares da skill [tech-vue](../../tech/tech-vue/SKILL.md) (ou equivalentes reativos).
+4. **Escreva Testes de Interface**: Crie testes automatizados (unitários de componentes e testes E2E/fluxos de usuários) baseando-se em [tech-testing](../../tech/tech-testing/SKILL.md).
 
 ---
 
@@ -49,4 +49,4 @@ Como Desenvolvedor Frontend, você atua na ponte entre o design e a lógica de s
 - **UI/UX**: Transforma os protótipos de alta fidelidade e fluxos de usuário criados pelo [ui-ux-designer](../ui-ux-designer/SKILL.md) em interfaces funcionais e responsivas.
 - **Backend**: Consome APIs e alinha os payloads de requisição com o [backend-developer](../backend-developer/SKILL.md).
 - **QA**: Auxilia o [qa-engineer](../qa-engineer/SKILL.md) a identificar elementos na tela inserindo IDs únicos de testes (`data-testid`).
-- **Segurança e Privacidade**: Garanta a proteção contra ataques client-side (como XSS e CSRF) com [appsec-owasp-asvs](../appsec-owasp-asvs/SKILL.md), e gerencie as preferências de consentimento (ex. cookies) e proteção na exibição de dados pessoais em conformidade com [security-privacy](../security-privacy/SKILL.md).
+- **Segurança e Privacidade**: Garanta a proteção contra ataques client-side (como XSS e CSRF) com [appsec-owasp-asvs](../../security/appsec-owasp-asvs/SKILL.md), e gerencie as preferências de consentimento (ex. cookies) e proteção na exibição de dados pessoais em conformidade com [security-privacy](../../security/security-privacy/SKILL.md).

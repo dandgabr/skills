@@ -50,28 +50,28 @@ Consulte a matriz abaixo para determinar qual skill de padrão de projeto carreg
 
 | Cenário de Negócio / Problema Arquitetural | Padrão Recomendado | Skill Clicável para Invocação |
 | :--- | :---: | :--- |
-| Criar uma família de produtos de diferentes variantes de forma compatível. | **Abstract Factory** | [dp-abstract-factory](../dp-abstract-factory/SKILL.md) |
-| Construir objetos complexos com fluxos de fabricação passo a passo. | **Builder** | [dp-builder](../dp-builder/SKILL.md) |
-| Criação de objetos que dependem da classe criadora em tempo de execução. | **Factory Method** | [dp-factory-method](../dp-factory-method/SKILL.md) |
-| Clonar objetos sem depender ou expor a implementação concreta deles. | **Prototype** | [dp-prototype](../dp-prototype/SKILL.md) |
-| Garantir uma única instância compartilhada para um recurso global complexo. | **Singleton** | [dp-singleton](../dp-singleton/SKILL.md) |
-| Integrar um serviço legado/externo cuja interface é incompatível com a atual. | **Adapter** | [dp-adapter](../dp-adapter/SKILL.md) |
-| Desacoplar uma abstração de sua implementação (evitando explosão de subclasses). | **Bridge** | [dp-bridge](../dp-bridge/SKILL.md) |
-| Representar estruturas de árvore em que folhas e containers são tratados iguais. | **Composite** | [dp-composite](../dp-composite/SKILL.md) |
-| Adicionar responsabilidades a objetos em tempo de execução sem usar herança. | **Decorator** | [dp-decorator](../dp-decorator/SKILL.md) |
-| Prover uma interface simples e unificada para um subsistema altamente complexo. | **Facade** | [dp-facade](../dp-facade/SKILL.md) |
-| Compartilhar dados comuns (estado intrínseco) de milhares de objetos em memória. | **Flyweight** | [dp-flyweight](../dp-flyweight/SKILL.md) |
-| Interceptar acesso a recursos pesados (caching, logging, lazy load, segurança). | **Proxy** | [dp-proxy](../dp-proxy/SKILL.md) |
-| Processar requisições em cascata onde múltiplos tratadores dinâmicos existem. | **Chain of Responsibility** | [dp-chain-of-responsibility](../dp-chain-of-responsibility/SKILL.md) |
-| Encapsular operações em objetos de ação para suporte a filas, logs e Undo. | **Command** | [dp-command](../dp-command/SKILL.md) |
-| Percorrer elementos de coleções sem expor sua representação interna. | **Iterator** | [dp-iterator](../dp-iterator/SKILL.md) |
-| Mediar interações caóticas e comunicações diretas entre muitos objetos. | **Mediator** | [dp-mediator](../dp-mediator/SKILL.md) |
-| Salvar e restaurar backups do estado de um objeto violando zero encapsulamento. | **Memento** | [dp-memento](../dp-memento/SKILL.md) |
-| Definir dependências onde múltiplos objetos devem ser notificados ao mudar de estado. | **Observer** | [dp-observer](../dp-observer/SKILL.md) |
-| Alterar o comportamento de um objeto dinamicamente quando seu estado muda. | **State** | [dp-state](../dp-state/SKILL.md) |
-| Encapsular algoritmos intercambiáveis que resolvem o mesmo problema comercial. | **Strategy** | [dp-strategy](../dp-strategy/SKILL.md) |
-| Fornecer um esqueleto de algoritmo fixo, mas permitindo redefinir passos chaves. | **Template Method** | [dp-template-method](../dp-template-method/SKILL.md) |
-| Executar operações em elementos de uma estrutura sem alterar as classes deles. | **Visitor** | [dp-visitor](../dp-visitor/SKILL.md) |
+| Criar uma família de produtos de diferentes variantes de forma compatível. | **Abstract Factory** | [dp-abstract-factory](../../patterns/dp-abstract-factory/SKILL.md) |
+| Construir objetos complexos com fluxos de fabricação passo a passo. | **Builder** | [dp-builder](../../patterns/dp-builder/SKILL.md) |
+| Criação de objetos que dependem da classe criadora em tempo de execução. | **Factory Method** | [dp-factory-method](../../patterns/dp-factory-method/SKILL.md) |
+| Clonar objetos sem depender ou expor a implementação concreta deles. | **Prototype** | [dp-prototype](../../patterns/dp-prototype/SKILL.md) |
+| Garantir uma única instância compartilhada para um recurso global complexo. | **Singleton** | [dp-singleton](../../patterns/dp-singleton/SKILL.md) |
+| Integrar um serviço legado/externo cuja interface é incompatível com a atual. | **Adapter** | [dp-adapter](../../patterns/dp-adapter/SKILL.md) |
+| Desacoplar uma abstração de sua implementação (evitando explosão de subclasses). | **Bridge** | [dp-bridge](../../patterns/dp-bridge/SKILL.md) |
+| Representar estruturas de árvore em que folhas e containers são tratados iguais. | **Composite** | [dp-composite](../../patterns/dp-composite/SKILL.md) |
+| Adicionar responsabilidades a objetos em tempo de execução sem usar herança. | **Decorator** | [dp-decorator](../../patterns/dp-decorator/SKILL.md) |
+| Prover uma interface simples e unificada para um subsistema altamente complexo. | **Facade** | [dp-facade](../../patterns/dp-facade/SKILL.md) |
+| Compartilhar dados comuns (estado intrínseco) de milhares de objetos em memória. | **Flyweight** | [dp-flyweight](../../patterns/dp-flyweight/SKILL.md) |
+| Interceptar acesso a recursos pesados (caching, logging, lazy load, segurança). | **Proxy** | [dp-proxy](../../patterns/dp-proxy/SKILL.md) |
+| Processar requisições em cascata onde múltiplos tratadores dinâmicos existem. | **Chain of Responsibility** | [dp-chain-of-responsibility](../../patterns/dp-chain-of-responsibility/SKILL.md) |
+| Encapsular operações em objetos de ação para suporte a filas, logs e Undo. | **Command** | [dp-command](../../patterns/dp-command/SKILL.md) |
+| Percorrer elementos de coleções sem expor sua representação interna. | **Iterator** | [dp-iterator](../../patterns/dp-iterator/SKILL.md) |
+| Mediar interações caóticas e comunicações diretas entre muitos objetos. | **Mediator** | [dp-mediator](../../patterns/dp-mediator/SKILL.md) |
+| Salvar e restaurar backups do estado de um objeto violando zero encapsulamento. | **Memento** | [dp-memento](../../patterns/dp-memento/SKILL.md) |
+| Definir dependências onde múltiplos objetos devem ser notificados ao mudar de estado. | **Observer** | [dp-observer](../../patterns/dp-observer/SKILL.md) |
+| Alterar o comportamento de um objeto dinamicamente quando seu estado muda. | **State** | [dp-state](../../patterns/dp-state/SKILL.md) |
+| Encapsular algoritmos intercambiáveis que resolvem o mesmo problema comercial. | **Strategy** | [dp-strategy](../../patterns/dp-strategy/SKILL.md) |
+| Fornecer um esqueleto de algoritmo fixo, mas permitindo redefinir passos chaves. | **Template Method** | [dp-template-method](../../patterns/dp-template-method/SKILL.md) |
+| Executar operações em elementos de uma estrutura sem alterar as classes deles. | **Visitor** | [dp-visitor](../../patterns/dp-visitor/SKILL.md) |
 
 ---
 
@@ -82,5 +82,5 @@ Quando requisitado a definir a arquitetura ou desenhar o código de um novo comp
 2. **Defina as Abstrações**: Modele interfaces claras, priorizando a composição e a imutabilidade estrutural.
 3. **Mapeie os Desafios Estruturais**: Consulte a tabela de Design Patterns acima. 
 4. **Invoque a Skill Específica**: Carregue e execute as regras contidas no link da skill do padrão de projeto escolhido para orientar a geração do código concreto.
-5. **Garanta Clean Code, Reusabilidade e Privacidade**: Siga rigorosamente a skill [clean-code-reusability](../clean-code-reusability/SKILL.md) para design livre de redundâncias e a skill [security-privacy](../security-privacy/SKILL.md) para modelar fluxos e estruturas que respeitem a privacidade por padrão (Privacy by Default) e facilitem portabilidade e expiração de dados pessoais.
+5. **Garanta Clean Code, Reusabilidade e Privacidade**: Siga rigorosamente a skill [clean-code-reusability](../clean-code-reusability/SKILL.md) para design livre de redundâncias e a skill [security-privacy](../../security/security-privacy/SKILL.md) para modelar fluxos e estruturas que respeitem a privacidade por padrão (Privacy by Default) e facilitem portabilidade e expiração de dados pessoais.
 6. **Escreva Testes**: Projete testes unitários com TDD antes ou em conjunto com a escrita do código para validar a alta coesão e o baixo acoplamento do design.

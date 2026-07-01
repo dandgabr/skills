@@ -110,11 +110,11 @@ def test_increment(value, expected):
 ---
 
 ## 🔗 Integração com Outras Skills
-- [backend-developer](../backend-developer/SKILL.md): use quando o projeto Python precisar de desenho de APIs, persistência e arquitetura de backend.
+- [backend-developer](../../general/backend-developer/SKILL.md): use quando o projeto Python precisar de desenho de APIs, persistência e arquitetura de backend.
 - [tech-testing](../tech-testing/SKILL.md): use para aprofundar a estratégia de testes, pirâmide de testes e ferramentas de automação.
-- [devsecops-engineer](../devsecops-engineer/SKILL.md): use quando o fluxo Python envolver packaging, containers, CI/CD, secrets ou hardening.
-- [security-champions](../security-champions/SKILL.md): use para triagem de riscos de segurança e delegação para skills especialistas quando necessário.
-- [clean-code-reusability](../clean-code-reusability/SKILL.md): orienta a detecção de redundâncias e aplicação de padrões de clean code e docstrings no desenvolvimento em Python.
+- [devsecops-engineer](../../security/devsecops-engineer/SKILL.md): use quando o fluxo Python envolver packaging, containers, CI/CD, secrets ou hardening.
+- [security-champions](../../security/security-champions/SKILL.md): use para triagem de riscos de segurança e delegação para skills especialistas quando necessário.
+- [clean-code-reusability](../../general/clean-code-reusability/SKILL.md): orienta a detecção de redundâncias e aplicação de padrões de clean code e docstrings no desenvolvimento em Python.
 
 ---
 
