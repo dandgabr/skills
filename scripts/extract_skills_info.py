@@ -50,9 +50,9 @@ for s in skills_info:
         dp_skills.append(s)
     elif folder.startswith("tech-"):
         tech_skills.append(s)
-    elif folder in ["appsec-owasp-asvs", "pentester-owasp-wstg", "secops-incident-responder", "security-architect-sabsa", "security-grc-compliance", "security-manager-samm", "threat-modeler", "devsecops-engineer"]:
+    elif folder in ["appsec-owasp-asvs", "pentester-owasp-wstg", "secops-incident-responder", "security-architect-sabsa", "security-grc-compliance", "security-manager-samm", "threat-modeler", "devsecops-engineer", "security-champions"]:
         sec_skills.append(s)
-    elif folder in ["backend-developer", "frontend-developer", "qa-engineer", "scrum-master", "product-owner", "ui-ux-designer", "software-architect"]:
+    elif folder in ["backend-developer", "frontend-developer", "qa-engineer", "scrum-master", "product-owner", "ui-ux-designer", "software-architect", "devops-engineer"]:
         dev_skills.append(s)
     else:
         other_skills.append(s)

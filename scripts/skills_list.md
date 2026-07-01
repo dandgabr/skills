@@ -3,6 +3,7 @@
 | Skill / Caminho | Nome da Habilidade | Descrição / Caso de Uso |
 | :--- | :--- | :--- |
 | [`backend-developer`](skills/backend-developer/SKILL.md) | **backend-developer** | Atua como Desenvolvedor Backend sênior, projetando APIs robustas, integrando bancos de dados eficientes, aplicando concorrência segura, otimizando performance e criando testes de integração robustos. |
+| [`devops-engineer`](skills/devops-engineer/SKILL.md) | **devops-engineer** | Atua como Engenheiro de DevOps com foco em Terraform, Ansible, containers (Docker, Podman e afins) e Kubernetes, desenhando automacao de infraestrutura, deploy e operacao confiavel. |
 | [`frontend-developer`](skills/frontend-developer/SKILL.md) | **frontend-developer** | Atua como Desenvolvedor Frontend sênior, criando interfaces ricas, componentização avançada, gerenciamento de estado global eficiente, otimização de Core Web Vitals e conformidade com acessibilidade (WCAG). |
 | [`product-owner`](skills/product-owner/SKILL.md) | **product-owner** | Atua como Product Owner (PO), refinando histórias de usuários com critérios de aceitação BDD (Cucumber), gerenciando o Product Backlog e priorizando entregas com foco em valor de negócio (ROI). |
 | [`qa-engineer`](skills/qa-engineer/SKILL.md) | **qa-engineer** | Atua como Engenheiro de QA (Quality Assurance), elaborando estratégias de testes de software, automatizando testes E2E e de APIs, validando regressões e gerando relatórios de defeitos. |
@@ -16,10 +17,10 @@
 | :--- | :--- | :--- |
 | [`appsec-owasp-asvs`](skills/appsec-owasp-asvs/SKILL.md) | **appsec-owasp-asvs** | Atua como Especialista em Application Security (AppSec) baseado no OWASP ASVS v5.0.0 integrado ao NIST SSDF, CWE e CERT Secure Coding, aplicando controles de código seguro em design e implementação. |
 | [`devsecops-engineer`](skills/devsecops-engineer/SKILL.md) | **devsecops-engineer** | Atua como Engenheiro de DevSecOps, automatizando verificações de segurança no pipeline de CI/CD (SAST, DAST, SCA), gerenciando secrets de forma segura e garantindo a segurança em Cloud e Containers. |
-| [`pentester-owasp-api-security-2023`](skills/pentester-owasp-api-security-2023/SKILL.md) | **pentester-owasp-api-security-2023** | Atua como Pentester Ético especializado no OWASP API Security Top 10 2023, estruturando auditorias de APIs REST, GraphQL, SOAP e microsserviços. |
 | [`pentester-owasp-wstg`](skills/pentester-owasp-wstg/SKILL.md) | **pentester-owasp-wstg** | Atua como Pentester Ético e Especialista em Testes de Invasão sênior estruturando auditorias sob o framework OWASP WSTG v4.2, correlacionando-as com técnicas MITRE ATT&CK. |
 | [`secops-incident-responder`](skills/secops-incident-responder/SKILL.md) | **secops-incident-responder** | Atua como Analista de SecOps e Resposta a Incidentes, estruturando playbooks de resposta a ataques (NIST SP 800-61), monitoramento operacional (SIEM), hardening de ambientes de produção e planos de Disaster Recovery. |
 | [`security-architect-sabsa`](skills/security-architect-sabsa/SKILL.md) | **security-architect-sabsa** | Atua como Arquiteto de Segurança de Sistemas usando o framework SABSA alinhado ao TOGAF e NIST CSF, traduzindo objetivos de negócios em controles de segurança e modelando zonas de confiança Zero Trust. |
+| [`security-champions`](skills/security-champions/SKILL.md) | **security-champions** | Atua como Security Champion da equipe de engenharia, disseminando praticas seguras, triando riscos e delegando demandas para as skills especializadas de seguranca quando necessario. |
 | [`security-grc-compliance`](skills/security-grc-compliance/SKILL.md) | **security-grc-compliance** | Atua como Analista de Governança, Riscos e Conformidade (GRC), estruturando políticas de segurança, alinhando frameworks (ISO 27001, PCI-DSS, LGPD/GDPR) e medindo a eficácia de segurança com métricas organizacionais. |
 | [`security-manager-samm`](skills/security-manager-samm/SKILL.md) | **security-manager-samm** | Atua como Gestor de Segurança usando o framework OWASP SAMM alinhado ao BSIMM e CIS Controls para governar, avaliar e elevar a maturidade de segurança do SDLC, gerindo regras e criando novas skills. |
 | [`threat-modeler`](skills/threat-modeler/SKILL.md) | **threat-modeler** | Atua como Especialista em Modelagem de Ameaças (Threat Modeling), utilizando frameworks como STRIDE, PASTA e LINDDUN para antecipar ataques, identificar riscos e especificar requisitos de segurança. |
@@ -63,5 +64,6 @@
 
 | Skill / Caminho | Nome da Habilidade | Descrição / Caso de Uso |
 | :--- | :--- | :--- |
-| [`documentation-designer`](skills/documentation-designer/SKILL.md) | **documentation-designer** | Auxilia na elaboração de documentação técnica rica e no desenho de diagramas estruturais, de dados, estratégicos e técnicos utilizando toda a sintaxe do Mermaid.js. |
+| [`documentation-designer`](skills/documentation-designer/SKILL.md) | **documentation-designer** | Auxilia na elaboração de documentação técnica rica e no desenho de diagramas visuais e fluxogramas utilizando a sintaxe do Mermaid.js. |
+| [`pentester-owasp-api-security-2023`](skills/pentester-owasp-api-security-2023/SKILL.md) | **pentester-owasp-api-security-2023** | Atua como Pentester Ético especializado no OWASP API Security Top 10 2023, estruturando auditorias de APIs REST, GraphQL, SOAP e microsserviços. |
 | [`template-skill`](skills/template-skill/SKILL.md) | **template-skill** | Um template básico que demonstra como estruturar uma habilidade (skill) personalizada para agentes de IA. |
