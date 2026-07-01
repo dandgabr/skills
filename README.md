@@ -12,9 +12,11 @@ A estrutura foi projetada para ser modular, extensível e compatível com as esp
 ├── skills.json           # Registro de caminhos de skills externas e heranças
 ├── skills/               # Diretório contendo as skills (regras de contexto)
 │   ├── software-architect/ # Skill principal de Arquiteto de Software
+│   ├── clean-code-reusability/ # Garantia de código limpo, reuso e documentação
 │   ├── documentation-designer/ # Skill auxiliar de desenhos e diagramas (Mermaid)
 │   ├── backend-developer/ # Papéis de Desenvolvimento (Backend, Frontend, QA, etc.)
 │   ├── appsec-owasp-asvs/ # Segurança da Informação, Modelagem e Conformidade
+│   ├── security-privacy/ # Especialista em privacidade de dados (LGPD, GDPR, ISO 27701)
 │   ├── pentester-owasp-api-security-2023/ # Pentest ético focado em OWASP API Security Top 10 2023
 │   ├── tech-typescript/  # Stacks de tecnologia específicas (Vue, TS, Testes)
 │   ├── dp-*/             # 22 Habilidades de Padrões de Projeto (Design Patterns do GoF)
@@ -32,7 +34,8 @@ Escreva no arquivo [AGENTS.md](AGENTS.md) as regras de comportamento gerais que 
 ### 2. O Ecossistema de Engenharia, Segurança, Design Patterns e Documentação
 Neste repositório, as decisões de engenharia, segurança e práticas de desenvolvimento estão modularizadas e integradas:
 - **[software-architect](skills/software-architect/SKILL.md)**: Atua como a skill coordenadora. Quando o agente precisa propor decisões de arquitetura de alto nível, aplicar DDD ou realizar modelagem lógica, ele carrega essa skill.
-- **Segurança da Informação e DevSecOps**: Skills como **[appsec-owasp-asvs](skills/appsec-owasp-asvs/SKILL.md)**, **[devsecops-engineer](skills/devsecops-engineer/SKILL.md)** e **[security-champions](skills/security-champions/SKILL.md)** são empregadas para garantir a conformidade regulatória (LGPD/GDPR), design seguro de sistemas e automações de segurança em pipelines.
+- **[clean-code-reusability](skills/clean-code-reusability/SKILL.md)**: Garante a escrita de código limpo, manutenível, sem redundâncias e estruturado segundo boas práticas de documentação em qualquer stack.
+- **Segurança da Informação, DevSecOps e Privacidade**: Skills como **[appsec-owasp-asvs](skills/appsec-owasp-asvs/SKILL.md)**, **[devsecops-engineer](skills/devsecops-engineer/SKILL.md)**, **[security-champions](skills/security-champions/SKILL.md)** e **[security-privacy](skills/security-privacy/SKILL.md)** são empregadas para garantir o design seguro, conformidade regulatória (LGPD/GDPR/ISO 27701) e proteção à privacidade por design e por padrão.
 - **Pentest de APIs**: A skill **[pentester-owasp-api-security-2023](skills/pentester-owasp-api-security-2023/SKILL.md)** complementa o ecossistema para auditorias seguras em APIs REST, GraphQL, SOAP e microsserviços com base no OWASP API Security Top 10 2023.
 - **Desenvolvimento por Papéis**: Skills especializadas por domínio (**[backend-developer](skills/backend-developer/SKILL.md)**, **[frontend-developer](skills/frontend-developer/SKILL.md)**, **[qa-engineer](skills/qa-engineer/SKILL.md)**, **[ui-ux-designer](skills/ui-ux-designer/SKILL.md)**) definem os padrões esperados para cada disciplina da equipe.
 - **[Design Patterns (dp-*)](skills/dp-factory-method/SKILL.md)**: Habilidades de apoio específicas para cada um dos 22 padrões clássicos de projeto (Gang of Four). A skill de arquiteto direciona a invocação dessas de forma condicional dependendo do cenário.
