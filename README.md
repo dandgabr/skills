@@ -32,7 +32,8 @@ A estrutura foi projetada para ser modular, extensível e compatível com as esp
     ├── software-architect/ # Agente Arquiteto de Software
     ├── fullstack-developer/ # Agente Desenvolvedor Full Stack
     ├── devops-engineer/  # Agente de DevOps
-    └── security-specialist/ # Agente Especialista em Segurança
+    ├── security-specialist/ # Agente Especialista em Segurança
+    └── pentester-agent/  # Agente de Pentest Ético
 ```
 
 ## 🛠️ Como Utilizar

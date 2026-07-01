@@ -15,8 +15,10 @@ Este diretório contém as definições declarativas dos agentes do projeto util
 │   └── agent.yaml          # Definição do Agente de Desenvolvimento Full Stack
 ├── devops-engineer\
 │   └── agent.yaml          # Definição do Agente de DevOps
-└── security-specialist\
-    └── agent.yaml          # Definição do Agente Especialista em Segurança
+├── security-specialist\
+│   └── agent.yaml          # Definição do Agente Especialista em Segurança
+└── pentester-agent\
+    └── agent.yaml          # Definição do Agente de Pentest Ético
 ```
 
 ## 🤖 Agentes Disponíveis
@@ -45,6 +47,11 @@ Este diretório contém as definições declarativas dos agentes do projeto util
 - **Modelo Base**: `gemini-2.0-flash`
 - **Função**: Modelagem de ameaças, controles de código seguro baseados em OWASP ASVS, auditorias, DevSecOps e conformidade regulatória de privacidade.
 - **Skills Associadas**: [appsec-owasp-asvs](../skills/security/appsec-owasp-asvs/SKILL.md), [devsecops-engineer](../skills/security/devsecops-engineer/SKILL.md), [security-grc-compliance](../skills/security/security-grc-compliance/SKILL.md), [security-privacy](../skills/security/security-privacy/SKILL.md) e [threat-modeler](../skills/security/threat-modeler/SKILL.md)
+
+### 6. [pentester-agent](pentester-agent/agent.yaml)
+- **Modelo Base**: `gemini-2.0-flash`
+- **Função**: Executar análises ofensivas estruturadas baseadas em OWASP WSTG e API Security usando utilitários CLI (nmap, curl, zap-cli, tshark), delegando ao time de desenvolvimento a codificação de scripts de exploração customizados de forma limpa.
+- **Skills Associadas**: [pentester-owasp-wstg](../skills/security/pentester-owasp-wstg/SKILL.md) e [pentester-owasp-api-security-2023](../skills/security/pentester-owasp-api-security-2023/SKILL.md)
 
 ## 🚀 Como Invocá-los via ADK 2.0
 
