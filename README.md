@@ -108,6 +108,9 @@ Abaixo está a listagem detalhada de todas as skills disponíveis no ecossistema
 | **tech-python** | [`skills/tech/tech-python`](skills/tech/tech-python/SKILL.md) | Fornece padrões de engenharia de software em Python, cobrindo estilo de código, tipagem, estruturas de projeto, frameworks populares como Django, Flask e FastAPI, além de boas práticas para testes, packaging e operação. |
 | **tech-typescript** | [`skills/tech/tech-typescript`](skills/tech/tech-typescript/SKILL.md) | Fornece padrões de engenharia de software seguro e robusto usando TypeScript, cobrindo generics, tipos avançados, segurança estrita de compilador e mapeamento defensivo de dados. |
 | **tech-vue** | [`skills/tech/tech-vue`](skills/tech/tech-vue/SKILL.md) | Fornece padrões de desenvolvimento modular e de alta performance usando o ecossistema Vue 3, cobrindo Composition API, TypeScript, Pinia, Vue Router e otimizações de reatividade. |
+| **tech-lua** | [`skills/tech/tech-lua`](skills/tech/tech-lua/SKILL.md) | Fornece padrões de engenharia de software em Lua. Cobre o uso de local variables, manipulação eficiente de tabelas, metamétodos/metatables, closures, concorrência cooperativa com coroutines, otimização de performance e integração com C/C++ usando a API nativa ou LuaJIT FFI. |
+| **tech-cheat-engine** | [`skills/tech/tech-cheat-engine`](skills/tech/tech-cheat-engine/SKILL.md) | Especialista em desenvolvimento de scripts Auto Assembler e Lua para Cheat Engine 7.5 e 7.7. Fornece padrões de injeção de código, manipulação de memória e técnicas de conversão e compatibilidade de scripts entre as versões 7.5 e 7.7. |
+
 
 ### 🧩 Padrões de Projeto (Design Patterns - GoF)
 | Habilidade | Caminho da Skill | Descrição / Caso de Uso |
