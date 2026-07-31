@@ -110,6 +110,9 @@ Abaixo está a listagem detalhada de todas as skills disponíveis no ecossistema
 | **tech-vue** | [`skills/tech/tech-vue`](skills/tech/tech-vue/SKILL.md) | Fornece padrões de desenvolvimento modular e de alta performance usando o ecossistema Vue 3, cobrindo Composition API, TypeScript, Pinia, Vue Router e otimizações de reatividade. |
 | **tech-lua** | [`skills/tech/tech-lua`](skills/tech/tech-lua/SKILL.md) | Fornece padrões de engenharia de software em Lua. Cobre o uso de local variables, manipulação eficiente de tabelas, metamétodos/metatables, closures, concorrência cooperativa com coroutines, otimização de performance e integração com C/C++ usando a API nativa ou LuaJIT FFI. |
 | **tech-cheat-engine** | [`skills/tech/tech-cheat-engine`](skills/tech/tech-cheat-engine/SKILL.md) | Especialista em desenvolvimento de scripts Auto Assembler e Lua para Cheat Engine 7.5 e 7.7. Fornece padrões de injeção de código, manipulação de memória e técnicas de conversão e compatibilidade de scripts entre as versões 7.5 e 7.7. |
+| **tech-powershell** | [`skills/tech/tech-powershell`](skills/tech/tech-powershell/SKILL.md) | Fornece padrões de engenharia de software em PowerShell (Windows PowerShell 5.1 e PowerShell 7+ Core). Cobre automação, gestão de pipeline de objetos, modularização (módulos de script/manifestos), tratamento de erros defensivo (Try/Catch/Finally, ErrorActionPreference), tipagem forte, PSCustomObject e boas práticas de segurança (ExecutionPolicy, remoting e credenciais). |
+| **tech-bash** | [`skills/tech/tech-bash`](skills/tech/tech-bash/SKILL.md) | Fornece padrões de engenharia de software em Bash/Shell Scripting. Cobre execução estrita e segura (set -euo pipefail), manipulação defensiva de variáveis e aspas, funções modulares, verificação de dependências, manipulação de arquivos/redirecionamento, além de integração com ShellCheck e boas práticas de portabilidade. |
+
 
 
 ### 🧩 Padrões de Projeto (Design Patterns - GoF)
