@@ -29,6 +29,9 @@ A estrutura foi projetada para ser modular, extensível e compatível com as esp
 │   ├── framework/        # Frameworks e Ferramentas (Vue, Testing, etc.)
 │   │   ├── framework-vue/
 │   │   └── ...
+│   ├── programs/         # Programas e Softwares Especializados (Cheat Engine, etc.)
+│   │   ├── program-cheat-engine/
+│   │   └── ...
 │   └── patterns/         # Padrões de Projeto (22 habilidades dp-*)
 └── agents/               # Diretório contendo os agentes configurados (ADK 2.0)
     ├── documenter/       # Agente Documentador e Designer
@@ -115,13 +118,18 @@ Abaixo está a listagem detalhada de todas as skills disponíveis no ecossistema
 | **lang-powershell** | [`skills/languages/lang-powershell`](skills/languages/lang-powershell/SKILL.md) | Fornece padrões de engenharia de software em PowerShell (Windows PowerShell 5.1 e PowerShell 7+ Core). Cobre automação, gestão de pipeline de objetos, modularização (módulos de script/manifestos), tratamento de erros defensivo (Try/Catch/Finally, ErrorActionPreference), tipagem forte, PSCustomObject e boas práticas de segurança (ExecutionPolicy, remoting e credenciais). |
 | **lang-typst** | [`skills/languages/lang-typst`](skills/languages/lang-typst/SKILL.md) | Fornece padrões de engenharia e tipografia digital moderna usando Typst. Cobre sintaxe de marcação, funções customizadas, criação de templates reutilizáveis, regras de exibição (show/set rules), matemática avançada, tabelas, layout de páginas e bibliografia via Hayagriva/BibTeX. |
 | **lang-latex** | [`skills/languages/lang-latex`](skills/languages/lang-latex/SKILL.md) | Fornece padrões de engenharia e tipografia acadêmica/científica em LaTeX (LaTeX2e e LuaLaTeX/XeLaTeX). Cobre estruturação modular de documentos multinível, gestão de bibliografia com BibLaTeX/Biber, ilustrações com TikZ, formatação matemática rigorosa (amsmath/mathtools), comandos customizados (newcommand/ProvideDocumentCommand) e prevenção de erros comuns de compilação. |
-| **lang-cheat-engine** | [`skills/languages/lang-cheat-engine`](skills/languages/lang-cheat-engine/SKILL.md) | Especialista em desenvolvimento de scripts Auto Assembler e Lua para Cheat Engine 7.5 e 7.7. Fornece padrões de injeção de código, manipulação de memória e técnicas de conversão e compatibilidade de scripts entre as versões 7.5 e 7.7. |
 
 ### 🧱 Frameworks e Ferramentas (Framework)
 | Habilidade | Caminho da Skill | Descrição / Caso de Uso |
 | :--- | :--- | :--- |
 | **framework-vue** | [`skills/framework/framework-vue`](skills/framework/framework-vue/SKILL.md) | Fornece padrões de desenvolvimento modular e de alta performance usando o ecossistema Vue 3, cobrindo Composition API, TypeScript, Pinia, Vue Router e otimizações de reatividade. |
 | **framework-testing** | [`skills/framework/framework-testing`](skills/framework/framework-testing/SKILL.md) | Fornece diretrizes e boas práticas para testes de software robustos, cobrindo TDD, Pirâmide de Testes, Unitários, Integração e E2E, além de ferramentas como Vitest, Jest e Playwright. |
+
+### 🖥️ Programas e Softwares (Programs)
+| Habilidade | Caminho da Skill | Descrição / Caso de Uso |
+| :--- | :--- | :--- |
+| **program-cheat-engine** | [`skills/programs/program-cheat-engine`](skills/programs/program-cheat-engine/SKILL.md) | Especialista em desenvolvimento de scripts Auto Assembler e Lua para Cheat Engine 7.5 e 7.7. Fornece padrões de injeção de código, manipulação de memória e técnicas de conversão e compatibilidade de scripts entre as versões 7.5 e 7.7. |
+
 
 
 
