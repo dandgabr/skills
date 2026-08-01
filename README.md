@@ -22,9 +22,12 @@ A estrutura foi projetada para ser modular, extensível e compatível com as esp
 │   │   ├── security-privacy/
 │   │   ├── threat-modeler/
 │   │   └── ...
-│   ├── tech/             # Tecnologias, Linguagens e Testes de Software
-│   │   ├── tech-python/
-│   │   ├── tech-typescript/
+│   ├── languages/        # Linguagens de Programação e Tipografia (Python, TS, Lua, Bash, etc.)
+│   │   ├── lang-python/
+│   │   ├── lang-typescript/
+│   │   └── ...
+│   ├── framework/        # Frameworks e Ferramentas (Vue, Testing, etc.)
+│   │   ├── framework-vue/
 │   │   └── ...
 │   └── patterns/         # Padrões de Projeto (22 habilidades dp-*)
 └── agents/               # Diretório contendo os agentes configurados (ADK 2.0)
@@ -101,20 +104,25 @@ Abaixo está a listagem detalhada de todas as skills disponíveis no ecossistema
 | **security-privacy** | [`skills/security/security-privacy`](skills/security/security-privacy/SKILL.md) | Atua como Especialista em Privacidade de Dados, orientando o design, a implementação e a auditoria de sistemas em conformidade com leis (LGPD, GDPR), frameworks (NIST Privacy Framework, Privacy by Design) e padrões internacionais (ISO/IEC 27701). |
 | **threat-modeler** | [`skills/security/threat-modeler`](skills/security/threat-modeler/SKILL.md) | Atua como Especialista em Modelagem de Ameaças (Threat Modeling), utilizando frameworks como STRIDE, PASTA e LINDDUN para antecipar ataques, identificar riscos e especificar requisitos de segurança. |
 
-### 💻 Tecnologias e Linguagens
+### 🔤 Linguagens de Programação e Marcação (Languages)
 | Habilidade | Caminho da Skill | Descrição / Caso de Uso |
 | :--- | :--- | :--- |
-| **tech-testing** | [`skills/tech/tech-testing`](skills/tech/tech-testing/SKILL.md) | Fornece diretrizes e boas práticas para testes de software robustos, cobrindo TDD, Pirâmide de Testes, Unitários, Integração e E2E, além de ferramentas como Vitest, Jest e Playwright. |
-| **tech-python** | [`skills/tech/tech-python`](skills/tech/tech-python/SKILL.md) | Fornece padrões de engenharia de software em Python, cobrindo estilo de código, tipagem, estruturas de projeto, frameworks populares como Django, Flask e FastAPI, além de boas práticas para testes, packaging e operação. |
-| **tech-typescript** | [`skills/tech/tech-typescript`](skills/tech/tech-typescript/SKILL.md) | Fornece padrões de engenharia de software seguro e robusto usando TypeScript, cobrindo generics, tipos avançados, segurança estrita de compilador e mapeamento defensivo de dados. |
-| **tech-vue** | [`skills/tech/tech-vue`](skills/tech/tech-vue/SKILL.md) | Fornece padrões de desenvolvimento modular e de alta performance usando o ecossistema Vue 3, cobrindo Composition API, TypeScript, Pinia, Vue Router e otimizações de reatividade. |
-| **tech-lua** | [`skills/tech/tech-lua`](skills/tech/tech-lua/SKILL.md) | Fornece padrões de engenharia de software em Lua. Cobre o uso de local variables, manipulação eficiente de tabelas, metamétodos/metatables, closures, concorrência cooperativa com coroutines, otimização de performance e integração com C/C++ usando a API nativa ou LuaJIT FFI. |
-| **tech-cheat-engine** | [`skills/tech/tech-cheat-engine`](skills/tech/tech-cheat-engine/SKILL.md) | Especialista em desenvolvimento de scripts Auto Assembler e Lua para Cheat Engine 7.5 e 7.7. Fornece padrões de injeção de código, manipulação de memória e técnicas de conversão e compatibilidade de scripts entre as versões 7.5 e 7.7. |
-| **tech-powershell** | [`skills/tech/tech-powershell`](skills/tech/tech-powershell/SKILL.md) | Fornece padrões de engenharia de software em PowerShell (Windows PowerShell 5.1 e PowerShell 7+ Core). Cobre automação, gestão de pipeline de objetos, modularização (módulos de script/manifestos), tratamento de erros defensivo (Try/Catch/Finally, ErrorActionPreference), tipagem forte, PSCustomObject e boas práticas de segurança (ExecutionPolicy, remoting e credenciais). |
-| **tech-bash** | [`skills/tech/tech-bash`](skills/tech/tech-bash/SKILL.md) | Fornece padrões de engenharia de software em Bash/Shell Scripting. Cobre execução estrita e segura (set -euo pipefail), manipulação defensiva de variáveis e aspas, funções modulares, verificação de dependências, manipulação de arquivos/redirecionamento, além de integração com ShellCheck e boas práticas de portabilidade. |
-| **tech-typst** | [`skills/tech/tech-typst`](skills/tech/tech-typst/SKILL.md) | Fornece padrões de engenharia e tipografia digital moderna usando Typst. Cobre sintaxe de marcação, funções customizadas, criação de templates reutilizáveis, regras de exibição (show/set rules), matemática avançada, tabelas, layout de páginas e bibliografia via Hayagriva/BibTeX. |
-| **tech-perl** | [`skills/tech/tech-perl`](skills/tech/tech-perl/SKILL.md) | Fornece padrões de engenharia de software em Perl moderno (Perl 5.30+). Cobre uso estrito de pragmas (use strict; use warnings; use utf8;), subrotinas com assinaturas (signatures), Orientação a Objetos moderna (Moo/MooX ou Perl 5.38+ builtin class), expressões regulares defensivas, manipulação segura de arquivos com lexically scoped filehandles e boas práticas CPAN. |
-| **tech-latex** | [`skills/tech/tech-latex`](skills/tech/tech-latex/SKILL.md) | Fornece padrões de engenharia e tipografia acadêmica/científica em LaTeX (LaTeX2e e LuaLaTeX/XeLaTeX). Cobre estruturação modular de documentos multinível, gestão de bibliografia com BibLaTeX/Biber, ilustrações com TikZ, formatação matemática rigorosa (amsmath/mathtools), comandos customizados (newcommand/ProvideDocumentCommand) e prevenção de erros comuns de compilação. |
+| **lang-python** | [`skills/languages/lang-python`](skills/languages/lang-python/SKILL.md) | Fornece padrões de engenharia de software em Python, cobrindo estilo de código, tipagem, estruturas de projeto, frameworks populares como Django, Flask e FastAPI, além de boas práticas para testes, packaging e operação. |
+| **lang-typescript** | [`skills/languages/lang-typescript`](skills/languages/lang-typescript/SKILL.md) | Fornece padrões de engenharia de software seguro e robusto usando TypeScript, cobrindo generics, tipos avançados, segurança estrita de compilador e mapeamento defensivo de dados. |
+| **lang-lua** | [`skills/languages/lang-lua`](skills/languages/lang-lua/SKILL.md) | Fornece padrões de engenharia de software em Lua. Cobre o uso de local variables, manipulação eficiente de tabelas, metamétodos/metatables, closures, concorrência cooperativa com coroutines, otimização de performance e integração com C/C++ usando a API nativa ou LuaJIT FFI. |
+| **lang-perl** | [`skills/languages/lang-perl`](skills/languages/lang-perl/SKILL.md) | Fornece padrões de engenharia de software em Perl moderno (Perl 5.30+). Cobre uso estrito de pragmas (use strict; use warnings; use utf8;), subrotinas com assinaturas (signatures), Orientação a Objetos moderna (Moo/MooX ou Perl 5.38+ builtin class), expressões regulares defensivas, manipulação segura de arquivos com lexically scoped filehandles e boas práticas CPAN. |
+| **lang-bash** | [`skills/languages/lang-bash`](skills/languages/lang-bash/SKILL.md) | Fornece padrões de engenharia de software em Bash/Shell Scripting. Cobre execução estrita e segura (set -euo pipefail), manipulação defensiva de variáveis e aspas, funções modulares, verificação de dependências, manipulação de arquivos/redirecionamento, além de integração com ShellCheck e boas práticas de portabilidade. |
+| **lang-powershell** | [`skills/languages/lang-powershell`](skills/languages/lang-powershell/SKILL.md) | Fornece padrões de engenharia de software em PowerShell (Windows PowerShell 5.1 e PowerShell 7+ Core). Cobre automação, gestão de pipeline de objetos, modularização (módulos de script/manifestos), tratamento de erros defensivo (Try/Catch/Finally, ErrorActionPreference), tipagem forte, PSCustomObject e boas práticas de segurança (ExecutionPolicy, remoting e credenciais). |
+| **lang-typst** | [`skills/languages/lang-typst`](skills/languages/lang-typst/SKILL.md) | Fornece padrões de engenharia e tipografia digital moderna usando Typst. Cobre sintaxe de marcação, funções customizadas, criação de templates reutilizáveis, regras de exibição (show/set rules), matemática avançada, tabelas, layout de páginas e bibliografia via Hayagriva/BibTeX. |
+| **lang-latex** | [`skills/languages/lang-latex`](skills/languages/lang-latex/SKILL.md) | Fornece padrões de engenharia e tipografia acadêmica/científica em LaTeX (LaTeX2e e LuaLaTeX/XeLaTeX). Cobre estruturação modular de documentos multinível, gestão de bibliografia com BibLaTeX/Biber, ilustrações com TikZ, formatação matemática rigorosa (amsmath/mathtools), comandos customizados (newcommand/ProvideDocumentCommand) e prevenção de erros comuns de compilação. |
+| **lang-cheat-engine** | [`skills/languages/lang-cheat-engine`](skills/languages/lang-cheat-engine/SKILL.md) | Especialista em desenvolvimento de scripts Auto Assembler e Lua para Cheat Engine 7.5 e 7.7. Fornece padrões de injeção de código, manipulação de memória e técnicas de conversão e compatibilidade de scripts entre as versões 7.5 e 7.7. |
+
+### 🧱 Frameworks e Ferramentas (Framework)
+| Habilidade | Caminho da Skill | Descrição / Caso de Uso |
+| :--- | :--- | :--- |
+| **framework-vue** | [`skills/framework/framework-vue`](skills/framework/framework-vue/SKILL.md) | Fornece padrões de desenvolvimento modular e de alta performance usando o ecossistema Vue 3, cobrindo Composition API, TypeScript, Pinia, Vue Router e otimizações de reatividade. |
+| **framework-testing** | [`skills/framework/framework-testing`](skills/framework/framework-testing/SKILL.md) | Fornece diretrizes e boas práticas para testes de software robustos, cobrindo TDD, Pirâmide de Testes, Unitários, Integração e E2E, além de ferramentas como Vitest, Jest e Playwright. |
+
 
 
 

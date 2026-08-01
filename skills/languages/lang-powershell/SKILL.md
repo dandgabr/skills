@@ -1,5 +1,5 @@
 ---
-name: "tech-powershell"
+name: "lang-powershell"
 description: "Fornece padrões de engenharia de software em PowerShell (Windows PowerShell 5.1 e PowerShell 7+ Core). Cobre automação, gestão de pipeline de objetos, modularização (módulos de script/manifestos), tratamento de erros defensivo (Try/Catch/Finally, ErrorActionPreference), tipagem forte, PSCustomObject e boas práticas de segurança (ExecutionPolicy, remoting e credenciais)."
 ---
 

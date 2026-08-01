@@ -1,5 +1,5 @@
 ---
-name: "tech-latex"
+name: "lang-latex"
 description: "Fornece padrões de engenharia e tipografia acadêmica/científica em LaTeX (LaTeX2e e LuaLaTeX/XeLaTeX). Cobre estruturação modular de documentos multinível, gestão de bibliografia com BibLaTeX/Biber, ilustrações com TikZ, formatação matemática rigorosa (amsmath/mathtools), comandos customizados (newcommand/ProvideDocumentCommand) e prevenção de erros comuns de compilação."
 ---
 

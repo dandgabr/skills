@@ -1,5 +1,5 @@
 ---
-name: "tech-typescript"
+name: "lang-typescript"
 description: "Fornece padrões de engenharia de software seguro e robusto usando TypeScript, cobrindo generics, tipos avançados, segurança estrita de compilador e mapeamento defensivo de dados."
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: "tech-perl"
+name: "lang-perl"
 description: "Fornece padrões de engenharia de software em Perl moderno (Perl 5.30+). Cobre uso estrito de pragmas (use strict; use warnings; use utf8;), subrotinas com assinaturas (signatures), Orientação a Objetos moderna (Moo/MooX ou Perl 5.38+ builtin class), expressões regulares defensivas, manipulação segura de arquivos com lexically scoped filehandles e boas práticas CPAN."
 ---
 

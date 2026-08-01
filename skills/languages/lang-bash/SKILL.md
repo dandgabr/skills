@@ -1,5 +1,5 @@
 ---
-name: "tech-bash"
+name: "lang-bash"
 description: "Fornece padrões de engenharia de software em Bash/Shell Scripting. Cobre execução estrita e segura (set -euo pipefail), manipulação defensiva de variáveis e aspas, funções modulares, verificação de dependências, manipulação de arquivos/redirecionamento, além de integração com ShellCheck e boas práticas de portabilidade."
 ---
 

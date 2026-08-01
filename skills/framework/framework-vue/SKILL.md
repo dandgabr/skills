@@ -1,5 +1,5 @@
 ---
-name: "tech-vue"
+name: "framework-vue"
 description: "Fornece padrões de desenvolvimento modular e de alta performance usando o ecossistema Vue 3, cobrindo Composition API, TypeScript, Pinia, Vue Router e otimizações de reatividade."
 ---
 

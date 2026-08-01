@@ -1,5 +1,5 @@
 ---
-name: "tech-python"
+name: "lang-python"
 description: "Fornece padrões de engenharia de software em Python, cobrindo estilo de código, tipagem, estruturas de projeto, frameworks populares como Django, Flask e FastAPI, além de boas práticas para testes, packaging e operacao."
 ---
 

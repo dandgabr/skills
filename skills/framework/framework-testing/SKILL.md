@@ -1,5 +1,5 @@
 ---
-name: "tech-testing"
+name: "framework-testing"
 description: "Fornece diretrizes e boas práticas para testes de software robustos, cobrindo TDD, Pirâmide de Testes, Unitários, Integração e E2E, além de ferramentas como Vitest, Jest e Playwright."
 ---
 

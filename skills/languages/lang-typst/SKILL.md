@@ -1,5 +1,5 @@
 ---
-name: "tech-typst"
+name: "lang-typst"
 description: "Fornece padrões de engenharia e tipografia digital moderna usando Typst. Cobre sintaxe de marcação, funções customizadas, criação de templates reutilizáveis, regras de exibição (show/set rules), matemática avançada, tabelas, layout de páginas e bibliografia via Hayagriva/BibTeX."
 ---
 

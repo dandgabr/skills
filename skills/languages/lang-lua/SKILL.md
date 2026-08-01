@@ -1,5 +1,5 @@
 ---
-name: "tech-lua"
+name: "lang-lua"
 description: "Fornece padrões de engenharia de software em Lua. Cobre o uso de local variables, manipulação eficiente de tabelas, metamétodos/metatables, closures, concorrência cooperativa com coroutines, otimização de performance e integração com C/C++ usando a API nativa ou LuaJIT FFI."
 ---
 
