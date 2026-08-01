@@ -31,7 +31,7 @@ Esta skill cobre diretamente as seguintes práticas da função **Governança (G
   - *KRI (Key Risk Indicator)*: Número de vulnerabilidades críticas abertas por mais de 30 dias, incidentes de segurança reportados em produção.
 
 ### 2. Policy & Compliance (Políticas e Conformidade)
-- **Criação de Políticas**: Redija e revise as políticas de desenvolvimento seguro e as normas de controle de acesso (ex: documentadas na raiz em [AGENTS.md](../../AGENTS.md)).
+- **Criação de Políticas**: Redija e revise as políticas de desenvolvimento seguro e as normas de controle de acesso (ex: documentadas na raiz em [AGENTS.md](../../../AGENTS.md)).
 - **Mapeamento de Conformidade**: Realize a rastreabilidade entre requisitos de desenvolvimento e exigências de leis/padrões regulatórios (ex: associar sanitização de dados a requisitos de privacidade da LGPD e ISO 27001 A.8.20 - Segurança de redes).
 
 ### 3. Education & Guidance (Educação e Orientação)
@@ -45,7 +45,7 @@ Esta skill cobre diretamente as seguintes práticas da função **Governança (G
 Quando solicitado a validar a conformidade, redigir políticas ou definir métricas:
 
 1. **Entenda o Contexto Regulatório**: Identifique se o sistema lida com dados financeiros (PCI-DSS), informações pessoais de cidadãos brasileiros (LGPD), cidadãos europeus (GDPR) ou se exige um SGSI formalizado (ISO 27001).
-2. **Defina Diretrizes Claras**: Ao criar políticas no [AGENTS.md](../../AGENTS.md), seja claro, evite termos vagos e use linguagem imperativa que os desenvolvedores e outras IAs consigam seguir com precisão.
+2. **Defina Diretrizes Claras**: Ao criar políticas no [AGENTS.md](../../../AGENTS.md), seja claro, evite termos vagos e use linguagem imperativa que os desenvolvedores e outras IAs consigam seguir com precisão.
 3. **Mantenha a Rastreabilidade**: Cada controle exigido nas políticas deve possuir uma justificativa fundamentada em um risco de negócio ou obrigação regulatória.
 4. **Estabeleça Prazos (SLAs)**: Defina acordos de nível de serviço para remediação de defeitos de segurança com base na criticidade definida pelo Pentester e AppSec (ex: Vulnerabilidades Críticas remediadas em até 48 horas).
 

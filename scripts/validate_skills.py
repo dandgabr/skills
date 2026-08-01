@@ -29,16 +29,21 @@ def validate():
     if not os.path.exists(skills_dir):
         errors.append("Diretório 'skills' não encontrado.")
     else:
-        skill_folders = [f for f in os.listdir(skills_dir) if os.path.isdir(os.path.join(skills_dir, f))]
-        
+        # Encontrar todas as pastas que contêm SKILL.md em qualquer subnível de skills/
+        skill_folders = []
+        for root, dirs, files in os.walk(skills_dir):
+            if "SKILL.md" in files:
+                skill_folders.append(root)
+
         # Regex para extrair frontmatter
         yaml_regex = re.compile(r"^---\s*\n(.*?)\n---\s*\n", re.DOTALL)
         # Regex para capturar links no formato markdown [texto](url)
         link_regex = re.compile(r"\[[^\]]+\]\(([^)#\s]+)(?:#[^\s\)]*)?\)")
 
-        for folder in skill_folders:
-            folder_path = os.path.join(skills_dir, folder)
+        for folder_path in skill_folders:
+            folder = os.path.basename(folder_path)
             skill_file = os.path.join(folder_path, "SKILL.md")
+
             
             # Validar arquivo principal
             if not os.path.exists(skill_file):

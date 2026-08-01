@@ -81,4 +81,4 @@ function increment() {
 
 ## 🔗 Integração com Outras Skills
 - [frontend-developer](../../general/frontend-developer/SKILL.md): Utiliza as diretrizes Vue para orquestrar componentes e implementar o Design System visual do projeto.
-- [tech-typescript](../tech-typescript/SKILL.md): Fornece os tipos estruturais que validam props e stores do Vue.
+- [tech-typescript](../../languages/lang-typescript/SKILL.md): Fornece os tipos estruturais que validam props e stores do Vue.

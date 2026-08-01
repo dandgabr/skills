@@ -42,14 +42,14 @@ Ao escrever código backend:
    - Capture e formate todas as exceções para evitar vazamentos de memória ou stack traces ao cliente (consulte [appsec-owasp-asvs](../../security/appsec-owasp-asvs/SKILL.md)).
    - Garanta a não-gravação de dados pessoais identificáveis (PII) nos logs da aplicação e utilize criptografia e pseudonimização onde necessário seguindo a skill [security-privacy](../../security/security-privacy/SKILL.md).
    - Utilize logging estruturado contendo IDs de correlação de requisição (*Correlation IDs*) para rastreamento de problemas distribuídos.
-4. **Escreva Testes**: Siga as diretrizes de [tech-testing](../../tech/tech-testing/SKILL.md) para construir testes unitários e de integração (p. ex., simulando banco de dados em memória ou utilizando containers de teste).
+4. **Escreva Testes**: Siga as diretrizes de [framework-testing](../../framework/framework-testing/SKILL.md) para construir testes unitários e de integração (p. ex., simulando banco de dados em memória ou utilizando containers de teste).
 
 ---
 
 ## 🔗 Integração no Time de Desenvolvimento
 
 Como Desenvolvedor Backend, você trabalha de forma coordenada no time de engenharia:
-- **Frontend**: Alinha os contratos de API com o [frontend-developer](../frontend-developer/SKILL.md), utilizando tipagem segura compartilhada com [tech-typescript](../../tech/tech-typescript/SKILL.md).
+- **Frontend**: Alinha os contratos de API com o [frontend-developer](../frontend-developer/SKILL.md), utilizando tipagem segura compartilhada com [lang-typescript](../../languages/lang-typescript/SKILL.md).
 - **QA**: Fornece endpoints de teste e dados mockados para o [qa-engineer](../qa-engineer/SKILL.md) validar cenários de E2E.
 - **PO**: Transforma os requisitos de histórias do [product-owner](../product-owner/SKILL.md) em arquiteturas lógicas e tarefas de código acionáveis.
 - **Segurança e Privacidade**: Colabora com o [security-architect-sabsa](../../security/security-architect-sabsa/SKILL.md) para desenhar Zonas de Confiança e APIs protegidas, além de aplicar as diretrizes de [security-privacy](../../security/security-privacy/SKILL.md) para garantir a segurança no tratamento de dados pessoais.
