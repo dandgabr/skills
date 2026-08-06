@@ -7,55 +7,55 @@ A estrutura foi projetada para ser modular, extensível e compatível com as esp
 ## 📁 Estrutura de Pastas
 
 ```text
-├── README.md             # Este guia explicativo
-├── AGENTS.md             # Regras gerais do projeto, estilo e restrições
-├── skills.json           # Registro de caminhos de skills externas e heranças
-├── skills/               # Diretório contendo as skills organizadas por temas
-│   ├── general/          # Papéis e Engenharia Geral (Backend, Frontend, Arquitetura, Nuvens, etc.)
-│   │   ├── blockchain-cryptocurrency/ # Especialista em Blockchain, Smart Contracts, Web3, EVM e DeFi
-│   │   ├── financial-transaction-processing/ # Processamento Financeiro (Pix, SPI, ISO 20022, SWIFT, ISO 8583)
-│   │   ├── cloud-aws/       # Especialista em Nuvem AWS (Well-Architected, Compute, Storage, Databases, VPC, IaC)
-│   │   ├── cloud-azure/     # Especialista em Nuvem Azure (CAF, Well-Architected, AKS, VNets, Bicep/Terraform)
-│   │   ├── cloud-gcp/       # Especialista em Nuvem GCP (Cloud Architecture Framework, GKE, BigQuery, Global VPC)
-│   │   ├── cloud-oci/       # Especialista em Nuvem OCI (Architecture Center, Bare Metal, Autonomous DB, VCN)
+├── README.md
+├── AGENTS.md
+├── skills.json
+├── skills/
+│   ├── general/
+│   │   ├── blockchain-cryptocurrency/
+│   │   ├── financial-transaction-processing/
+│   │   ├── cloud-aws/
+│   │   ├── cloud-azure/
+│   │   ├── cloud-gcp/
+│   │   ├── cloud-oci/
 │   │   ├── software-architect/
 │   │   ├── backend-developer/
 │   │   ├── frontend-developer/
 │   │   ├── clean-code-reusability/
 │   │   └── ...
-│   ├── security/         # Segurança da Informação, DevSecOps, IAM, PCI DSS e Saúde
-│   │   ├── pci-dss-compliance/ # Conformidade PCI DSS v4.0 (Escopo CDE, CHD/SAD, Requisitos, Payment HSMs)
-│   │   ├── healthtech-standards-security/ # Tecnologias Médicas, Interoperabilidade e Segurança (HL7, FHIR, DICOM, OMOP)
-│   │   ├── iam-access-aws/ # Gestão de Acessos e IAM na AWS (SCPs, STS, ABAC)
-│   │   ├── iam-access-azure/ # Gestão de Acessos e IAM no Azure e Entra ID (PIM, RBAC, Managed Identities)
-│   │   ├── iam-access-gcp/ # Gestão de Acessos e IAM no GCP (VPC-SC, Service Account Impersonation)
-│   │   ├── iam-access-oci/ # Gestão de Acessos e IAM na OCI (OCI Policy Syntax, Compartments, Instance Principals)
+│   ├── security/
+│   │   ├── pci-dss-compliance/
+│   │   ├── healthtech-standards-security/
+│   │   ├── iam-access-aws/
+│   │   ├── iam-access-azure/
+│   │   ├── iam-access-gcp/
+│   │   ├── iam-access-oci/
 │   │   ├── appsec-owasp-asvs/
 │   │   ├── security-privacy/
 │   │   └── ...
-│   ├── languages/        # Linguagens de Programação e Tipografia (C, C++, Python, TS, Lua, Bash, etc.)
+│   ├── languages/
 │   │   ├── lang-c/
 │   │   ├── lang-cpp/
 │   │   ├── lang-python/
 │   │   ├── lang-typescript/
 │   │   └── ...
-│   ├── framework/        # Frameworks e Ferramentas (Vue, Testing, etc.)
+│   ├── framework/
 │   │   ├── framework-vue/
 │   │   └── ...
-│   ├── programs/         # Programas e Softwares Especializados
-│   │   ├── gemini-enterprise/ # Especialista em Gemini Enterprise, Workspace, Code Assist e Vertex AI
-│   │   ├── power-automate/ # Especialista em Power Automate (Cloud Flows, Desktop RPA, WDL, DLP)
-│   │   ├── power-bi/      # Especialista em Power BI & Fabric (DAX, Star Schema, M, RLS/OLS)
+│   ├── programs/
+│   │   ├── gemini-enterprise/
+│   │   ├── power-automate/
+│   │   ├── power-bi/
 │   │   ├── program-cheat-engine/
 │   │   └── ...
-│   └── patterns/         # Padrões de Projeto (22 habilidades dp-*)
-└── agents/               # Diretório contendo os agentes configurados (ADK 2.0)
-    ├── documenter/       # Agente Documentador e Designer
-    ├── software-architect/ # Agente Arquiteto de Software
-    ├── fullstack-developer/ # Agente Desenvolvedor Full Stack
-    ├── devops-engineer/  # Agente de DevOps
-    ├── security-specialist/ # Agente Especialista em Segurança
-    └── pentester-agent/  # Agente de Pentest Ético
+│   └── patterns/
+└── agents/
+    ├── documenter/
+    ├── software-architect/
+    ├── fullstack-developer/
+    ├── devops-engineer/
+    ├── security-specialist/
+    └── pentester-agent/
 ```
 
 ## 🛠️ Como Utilizar
