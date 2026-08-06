@@ -47,18 +47,22 @@ other_skills = []
 for s in sorted(skills_info, key=lambda x: x["name"]):
     name = s["name"]
     folder = s["folder"]
-    if name.startswith("dp-") or folder.startswith("dp-"):
+    rel_path = s["rel_path"]
+    if name.startswith("dp-") or folder.startswith("dp-") or "skills/patterns" in rel_path:
         dp_skills.append(s)
-    elif name.startswith("lang-") or "languages" in s["rel_path"]:
+    elif name.startswith("lang-") or "skills/languages" in rel_path:
         lang_skills.append(s)
-    elif name.startswith("framework-") or "framework" in s["rel_path"]:
+    elif name.startswith("framework-") or "skills/framework" in rel_path:
         framework_skills.append(s)
-    elif name.startswith("program-") or "programs" in s["rel_path"]:
+    elif name.startswith("program-") or "skills/programs" in rel_path:
         program_skills.append(s)
-    elif folder in ["appsec-owasp-asvs", "pentester-owasp-wstg", "pentester-owasp-api-security-2023", "secops-incident-responder", "security-architect-sabsa", "security-grc-compliance", "security-manager-samm", "threat-modeler", "devsecops-engineer", "security-champions", "security-privacy", "sast-code-review", "sca-dependency-analysis"]:
+    elif "skills/security" in rel_path:
         sec_skills.append(s)
-    elif folder in ["backend-developer", "frontend-developer", "qa-engineer", "scrum-master", "product-owner", "ui-ux-designer", "software-architect", "devops-engineer", "clean-code-reusability", "documentation-designer"]:
-        dev_skills.append(s)
+    elif "skills/general" in rel_path:
+        if folder in ["documentation-designer", "template-skill"]:
+            other_skills.append(s)
+        else:
+            dev_skills.append(s)
     else:
         other_skills.append(s)
 
