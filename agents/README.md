@@ -26,32 +26,32 @@ Este diretório contém as definições declarativas dos agentes do projeto util
 ### 1. [documenter](documenter/agent.yaml)
 - **Modelo Base**: `gemini-2.0-flash`
 - **Função**: Especializado em desenhar diagramas estruturais, de dados, estratégicos e técnicos utilizando toda a sintaxe do Mermaid.js.
-- **Skill Associada**: [documentation-designer](../skills/general/documentation-designer/SKILL.md)
+- **Skill Associada**: [documentation-designer](..\skills\general\engineering-practices\documentation-designer\SKILL.md)
 
 ### 2. [software-architect](software-architect/agent.yaml)
 - **Modelo Base**: `gemini-2.0-flash`
 - **Função**: Especializado na aplicação de DDD, SOLID, gerenciamento de JVM/plataforma interna e orquestração de Padrões de Projeto (Design Patterns).
-- **Skill Associada**: [software-architect](../skills/general/software-architect/SKILL.md)
+- **Skill Associada**: [software-architect](..\skills\general\roles\software-architect\SKILL.md)
 
 ### 3. [fullstack-developer](fullstack-developer/agent.yaml)
 - **Modelo Base**: `gemini-2.0-flash`
 - **Função**: Projetar e implementar soluções web fim a fim (Backend e Frontend), garantindo legibilidade, integridade de código e documentação.
-- **Skills Associadas**: [backend-developer](../skills/general/backend-developer/SKILL.md), [frontend-developer](../skills/general/frontend-developer/SKILL.md) e [clean-code-reusability](../skills/general/clean-code-reusability/SKILL.md)
+- **Skills Associadas**: [backend-developer](..\skills\general\roles\backend-developer\SKILL.md), [frontend-developer](..\skills\general\roles\frontend-developer\SKILL.md) e [clean-code-reusability](..\skills\general\engineering-practices\clean-code-reusability\SKILL.md)
 
 ### 4. [devops-engineer](devops-engineer/agent.yaml)
 - **Modelo Base**: `gemini-2.0-flash`
 - **Função**: Provisionamento de infraestrutura como código (IaC), deploy e operação confiável de pipelines e containers.
-- **Skill Associada**: [devops-engineer](../skills/general/devops-engineer/SKILL.md)
+- **Skill Associada**: [devops-engineer](..\skills\general\roles\devops-engineer\SKILL.md)
 
 ### 5. [security-specialist](security-specialist/agent.yaml)
 - **Modelo Base**: `gemini-2.0-flash`
 - **Função**: Modelagem de ameaças, controles de código seguro baseados em OWASP ASVS, auditorias, DevSecOps e conformidade regulatória de privacidade.
-- **Skills Associadas**: [appsec-owasp-asvs](../skills/security/appsec-owasp-asvs/SKILL.md), [devsecops-engineer](../skills/security/devsecops-engineer/SKILL.md), [security-grc-compliance](../skills/security/security-grc-compliance/SKILL.md), [security-privacy](../skills/security/security-privacy/SKILL.md) e [threat-modeler](../skills/security/threat-modeler/SKILL.md)
+- **Skills Associadas**: [appsec-owasp-asvs](..\skills\security\appsec\appsec-owasp-asvs\SKILL.md), [devsecops-engineer](..\skills\security\ops-architecture\devsecops-engineer\SKILL.md), [security-grc-compliance](..\skills\security\grc-compliance\security-grc-compliance\SKILL.md), [security-privacy](..\skills\security\grc-compliance\security-privacy\SKILL.md) e [threat-modeler](..\skills\security\ops-architecture\threat-modeler\SKILL.md)
 
 ### 6. [pentester-agent](pentester-agent/agent.yaml)
 - **Modelo Base**: `gemini-2.0-flash`
 - **Função**: Executar análises ofensivas estruturadas baseadas em OWASP WSTG e API Security usando utilitários CLI (nmap, curl, zap-cli, tshark), delegando ao time de desenvolvimento a codificação de scripts de exploração customizados de forma limpa.
-- **Skills Associadas**: [pentester-owasp-wstg](../skills/security/pentester-owasp-wstg/SKILL.md) e [pentester-owasp-api-security-2023](../skills/security/pentester-owasp-api-security-2023/SKILL.md)
+- **Skills Associadas**: [pentester-owasp-wstg](..\skills\security\appsec\pentester-owasp-wstg\SKILL.md) e [pentester-owasp-api-security-2023](..\skills\security\appsec\pentester-owasp-api-security-2023\SKILL.md)
 
 ## 🚀 Como Invocá-los via ADK 2.0
 

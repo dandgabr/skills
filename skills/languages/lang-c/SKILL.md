@@ -256,11 +256,11 @@ static inline void print_string(const char *val) {
 
 ## 🔗 Integração com Outras Skills
 
-- [clean-code-reusability](../../general/clean-code-reusability/SKILL.md): Garante eliminação de código duplicado, modularização de bibliotecas C e aplicação de boas práticas de documentação Doxygen.
-- [backend-developer](../../general/backend-developer/SKILL.md): Orienta a construção de drivers de rede, proxies, serviços IPC e integrações nativas de alto desempenho.
-- [devsecops-engineer](../../security/devsecops-engineer/SKILL.md): Orienta a integração de sanitizers (ASan/UBSan), verificação estática no pipeline CI/CD e compilação hardening.
-- [appsec-owasp-asvs](../../security/appsec-owasp-asvs/SKILL.md): Fornece requisitos de segurança contra estouros de pilha/heap, acesso de memória inválido e vulnerabilidades de formato de string.
-- [software-architect](../../general/software-architect/SKILL.md): Apoia no desenho de arquiteturas modulares de baixo nível, APIs orientadas a componentes e abstrações de hardware.
+- [clean-code-reusability](..\..\general\engineering-practices\clean-code-reusability/SKILL.md): Garante eliminação de código duplicado, modularização de bibliotecas C e aplicação de boas práticas de documentação Doxygen.
+- [backend-developer](..\..\general\roles\backend-developer/SKILL.md): Orienta a construção de drivers de rede, proxies, serviços IPC e integrações nativas de alto desempenho.
+- [devsecops-engineer](..\..\security\ops-architecture\devsecops-engineer/SKILL.md): Orienta a integração de sanitizers (ASan/UBSan), verificação estática no pipeline CI/CD e compilação hardening.
+- [appsec-owasp-asvs](..\..\security\appsec\appsec-owasp-asvs/SKILL.md): Fornece requisitos de segurança contra estouros de pilha/heap, acesso de memória inválido e vulnerabilidades de formato de string.
+- [software-architect](..\..\general\roles\software-architect/SKILL.md): Apoia no desenho de arquiteturas modulares de baixo nível, APIs orientadas a componentes e abstrações de hardware.
 
 ---
 

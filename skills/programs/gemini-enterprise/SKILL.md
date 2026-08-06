@@ -76,6 +76,6 @@ Esta skill orienta a inteligência artificial a agir como um **Especialista em G
 
 ## 🔗 Integração com Outras Skills de Segurança e Nuvem
 
-- Para configurar controles de IAM no GCP e Service Accounts para Vertex AI, consulte a skill [iam-access-gcp](../../security/iam-access-gcp/SKILL.md).
-- Para diretrizes de governança de segurança em nuvem, consulte a skill [csa-cloud-security](../../security/csa-cloud-security/SKILL.md).
-- Para alinhar o desenvolvimento de software aos padrões de Clean Code, consulte a skill [clean-code-reusability](../../general/clean-code-reusability/SKILL.md).
+- Para configurar controles de IAM no GCP e Service Accounts para Vertex AI, consulte a skill [iam-access-gcp](..\..\security\cloud-iam\iam-access-gcp/SKILL.md).
+- Para diretrizes de governança de segurança em nuvem, consulte a skill [csa-cloud-security](..\..\security\cloud-iam\csa-cloud-security/SKILL.md).
+- Para alinhar o desenvolvimento de software aos padrões de Clean Code, consulte a skill [clean-code-reusability](..\..\general\engineering-practices\clean-code-reusability/SKILL.md).

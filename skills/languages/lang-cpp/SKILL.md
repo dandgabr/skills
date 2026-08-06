@@ -228,11 +228,11 @@ void write_log(const char* message) {
 
 ## 🔗 Integração com Outras Skills
 
-- [clean-code-reusability](../../general/clean-code-reusability/SKILL.md): Assegura reutilização de componentes e modelos de design modernos sem duplicação de templates ou classes.
-- [backend-developer](../../general/backend-developer/SKILL.md): Orienta o desenvolvimento de micro-serviços C++ gRPC/HTTP de alta throughput e baixa latência.
-- [devsecops-engineer](../../security/devsecops-engineer/SKILL.md): Guia o uso de sanitizers, análise de dependências (SCA) e ferramentas de análise estática nos pipelines de CI/CD.
-- [appsec-owasp-asvs](../../security/appsec-owasp-asvs/SKILL.md): Garante conformidade contra falhas de segurança de memória, estouro de inteiros e gerenciamento incorreto de ponteiros.
-- [software-architect](../../general/software-architect/SKILL.md): Apoia no desenho de arquiteturas de sistemas distribuídos, motores de jogos, compiladores e abstrações DDD de alto desempenho.
+- [clean-code-reusability](..\..\general\engineering-practices\clean-code-reusability/SKILL.md): Assegura reutilização de componentes e modelos de design modernos sem duplicação de templates ou classes.
+- [backend-developer](..\..\general\roles\backend-developer/SKILL.md): Orienta o desenvolvimento de micro-serviços C++ gRPC/HTTP de alta throughput e baixa latência.
+- [devsecops-engineer](..\..\security\ops-architecture\devsecops-engineer/SKILL.md): Guia o uso de sanitizers, análise de dependências (SCA) e ferramentas de análise estática nos pipelines de CI/CD.
+- [appsec-owasp-asvs](..\..\security\appsec\appsec-owasp-asvs/SKILL.md): Garante conformidade contra falhas de segurança de memória, estouro de inteiros e gerenciamento incorreto de ponteiros.
+- [software-architect](..\..\general\roles\software-architect/SKILL.md): Apoia no desenho de arquiteturas de sistemas distribuídos, motores de jogos, compiladores e abstrações DDD de alto desempenho.
 
 ---
 

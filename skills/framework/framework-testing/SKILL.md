@@ -72,6 +72,6 @@ describe('PaymentService', () => {
 ---
 
 ## 🔗 Integração com Outras Skills
-- [qa-engineer](../../general/qa-engineer/SKILL.md): Utiliza os princípios de testes funcionais e E2E para projetar planos de teste abrangentes.
-- [backend-developer](../../general/backend-developer/SKILL.md): Aplica testes de integração para validar a conexão e a robustez lógica de APIs e DBs.
-- [frontend-developer](../../general/frontend-developer/SKILL.md): Constrói testes unitários de componentes UI e testes de renderização.
+- [qa-engineer](..\..\general\roles\qa-engineer/SKILL.md): Utiliza os princípios de testes funcionais e E2E para projetar planos de teste abrangentes.
+- [backend-developer](..\..\general\roles\backend-developer/SKILL.md): Aplica testes de integração para validar a conexão e a robustez lógica de APIs e DBs.
+- [frontend-developer](..\..\general\roles\frontend-developer/SKILL.md): Constrói testes unitários de componentes UI e testes de renderização.
