@@ -55,7 +55,7 @@ for s in sorted(skills_info, key=lambda x: x["name"]):
         framework_skills.append(s)
     elif name.startswith("program-") or "programs" in s["rel_path"]:
         program_skills.append(s)
-    elif folder in ["appsec-owasp-asvs", "pentester-owasp-wstg", "pentester-owasp-api-security-2023", "secops-incident-responder", "security-architect-sabsa", "security-grc-compliance", "security-manager-samm", "threat-modeler", "devsecops-engineer", "security-champions", "security-privacy"]:
+    elif folder in ["appsec-owasp-asvs", "pentester-owasp-wstg", "pentester-owasp-api-security-2023", "secops-incident-responder", "security-architect-sabsa", "security-grc-compliance", "security-manager-samm", "threat-modeler", "devsecops-engineer", "security-champions", "security-privacy", "sast-code-review", "sca-dependency-analysis"]:
         sec_skills.append(s)
     elif folder in ["backend-developer", "frontend-developer", "qa-engineer", "scrum-master", "product-owner", "ui-ux-designer", "software-architect", "devops-engineer", "clean-code-reusability", "documentation-designer"]:
         dev_skills.append(s)
