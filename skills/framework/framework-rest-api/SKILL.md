@@ -19,13 +19,16 @@ Esta skill orienta a inteligência artificial a atuar como especialista em desig
 ### 2. Semântica dos Verbos HTTP
 | Verbo | Propósito | Idempotente? | Seguro (Safe)? | Resposta Típica de Sucesso |
 | :--- | :--- | :---: | :---: | :--- |
-| **GET** | Recuperar representação de recurso(s) | Sim | Sim | `200 OK` |
-| **POST** | Criar um novo recurso subordinado ou ação | Não | Não | `201 Created` (com header `Location`) |
+| **GET** | Recuperar representação de recurso(s) sem corpo na requisição | Sim | Sim | `200 OK` |
+| **QUERY** | Consultar/filtrar recursos com corpo na requisição (RFC 10008) | Sim | Sim | `200 OK` ou `304 Not Modified` |
+| **POST** | Criar um novo recurso subordinado ou executar uma ação não-idempotente | Não | Não | `201 Created` (com header `Location`) |
 | **PUT** | Substituir integralmente um recurso existente | Sim | Não | `200 OK` ou `204 No Content` |
 | **PATCH** | Modificar parcialmente um recurso | Não* | Não | `200 OK` ou `204 No Content` |
 | **DELETE** | Remover um recurso | Sim | Não | `204 No Content` ou `200 OK` |
 | **HEAD** | Recuperar apenas os cabeçalhos (metadados) | Sim | Sim | `200 OK` (sem corpo) |
 | **OPTIONS** | Consultar métodos e opções suportadas (CORS) | Sim | Sim | `204 No Content` |
+
+> **Nota sobre o método QUERY (RFC 10008)**: O método `QUERY` resolve a limitação do `GET` (que não aceita payload de requisição) e evita o uso indevido do `POST` para operações somente leitura. É seguro, idempotente e navegável via cache por proxies/CDNs (calculando a chave de cache incluindo o digest do corpo da requisição).
 
 ---
 
@@ -56,6 +59,7 @@ Não retorne formatos de erro proprietários ou códigos de status genéricos `2
 ### 1. Paginação de Alto Desempenho
 - **Paginação baseada em Cursor (Recomendada para alta escala)**:
   - `GET /api/v1/events?limit=20&starting_after=evt_12345`
+  - `QUERY /api/v1/events` (passando filtros complexos e cursor no corpo JSON da requisição)
 - **Paginação Offset/Limit (Uso em tabelas com navegação direta de páginas)**:
   - `GET /api/v1/users?page=2&limit=50`
 
@@ -78,6 +82,7 @@ X-RateLimit-Reset: 1770460000
    - Implemente controle de acesso granular baseados em escopos (**OAuth 2.0 / OpenID Connect**).
 2. **CORS (Cross-Origin Resource Sharing)**:
    - Configure o cabeçalho `Access-Control-Allow-Origin` para origens estritamente confiáveis. Proíba o uso de wildcard `*` em APIs autenticadas.
+   - Garanta que o método `QUERY` (por não ser CORS-safelisted) exija requisição preflight `OPTIONS`.
 3. **Idempotência em Operações Críticas**:
    - Suporte o cabeçalho `Idempotency-Key` em operações `POST` de pagamento ou criação de pedidos para evitar duplicações por retentativas de rede.
 
@@ -85,6 +90,7 @@ X-RateLimit-Reset: 1770460000
 
 ## 🔗 Integração com Outras Skills
 
+- Para especificações completas do protocolo HTTP, cabeçalhos, negociação e regras de transportes (HTTP/1.1, HTTP/2, HTTP/3), consulte [protocol-http](../protocol-http/SKILL.md).
 - Para projetar a arquitetura completa e integração com backend, consulte [backend-developer](../../general/roles/backend-developer/SKILL.md) e [software-architect](../../general/roles/software-architect/SKILL.md).
 - Para auditoria de vulnerabilidades em APIs REST segundo o OWASP API Security Top 10 2023, consulte [pentester-owasp-api-security-2023](../../security/appsec/pentester-owasp-api-security-2023/SKILL.md) e [appsec-owasp-asvs](../../security/appsec/appsec-owasp-asvs/SKILL.md).
 - Para implementar APIs RESTful em TypeScript ou Python, consulte [lang-typescript](../../languages/lang-typescript/SKILL.md) e [lang-python](../../languages/lang-python/SKILL.md).
