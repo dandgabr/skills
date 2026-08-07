@@ -235,6 +235,6 @@ Abaixo está a listagem detalhada de todas as skills disponíveis no ecossistema
 
 ## Licença
 
-Este repositório usa uma licença de uso livre para fins não comerciais, com uso comercial permitido somente mediante autorização escrita prévia. Consulte o arquivo [LICENSE](LICENSE) para os termos completos.
+Este repositório está sob a licença [GPLv3](LICENSE). Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 
