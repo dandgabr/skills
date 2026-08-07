@@ -104,7 +104,16 @@ ORDER BY rank;
 
 ---
 
+## 🔒 Hardening e Criptografia em Bancos Embarcados (OWASP MASVS & ASVS)
+
+- **Criptografia em Repouso**: Em sistemas operacionais móveis ou desktop, adote **SEE (SQLite Encryption Extension)** ou **SQLCipher** (AES-256) para proteger arquivos `.db` contra exfiltração física ou engenharia reversa.
+- **Proteção de Permissões no SO**: Restrinja as permissões do arquivo de banco de dados (`chmod 600`) para acesso exclusivo do processo proprietário da aplicação.
+- **Mitigação de SQL Injection**: Obrigatoriamente utilize parâmetros vinculados (*prepared statements*) em vez de concatenação de strings em `sqlite3_exec`.
+
+---
+
 ## 🔗 Integração com Outras Skills
 
 - Para integrar SQLite em aplicações desktop, mobile ou embarcadas em Python/C/Rust, consulte [lang-python](../../../languages/lang-python/SKILL.md), [lang-c](../../../languages/lang-c/SKILL.md) e [lang-rust](../../../languages/lang-rust/SKILL.md).
 - Para diretrizes gerais de administração de bancos de dados relacionais, consulte [dba-database-administrator](../../roles/dba-database-administrator/SKILL.md).
+- Para requisitos de segurança em armazenamento móvel e embarcado, consulte [appsec-owasp-masvs](../../../security/appsec/appsec-owasp-masvs/SKILL.md) e [appsec-owasp-asvs](../../../security/appsec/appsec-owasp-asvs/SKILL.md).

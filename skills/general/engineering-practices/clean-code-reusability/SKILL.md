@@ -28,7 +28,12 @@ Ao atuar nesta skill, paute suas decisões técnicas nos seguintes pilares funda
 - **Centralização de Helpers**: Mantenha funções utilitárias em locais apropriados (como `utils/`, `helpers/` ou arquivos compartilhados do domínio) e exporte-as de forma clara.
 - **Refatoração de Duplicações**: Se identificar trechos de código redundantes já existentes no codebase durante a sua análise, sugira ou execute a consolidação deles em uma única abstração compartilhada.
 
-### 3. Documentação Correta e Significativa
+### 3. Código Limpo Seguro (Secure Clean Code & SAST)
+- **Zero Segredos Hardcoded**: Nunca insira senhas, chaves de API, tokens JWT ou certs diretamente no código. Utilize variáveis de ambiente ou gerenciadores de secrets (ex: HashiCorp Vault, AWS Secrets Manager).
+- **Tratamento Seguro de Erros**: Trate exceções sem expor stack traces sensíveis, informações de infraestrutura ou dados pessoais (PII) ao usuário final.
+- **Sanitização e Validação no Ponto de Contato**: Aplique validação estrita em todas as entradas de dados externos (prevenção de SQLi, XSS, Path Traversal e Insecure Deserialization).
+
+### 4. Documentação Correta e Significativa
 - **Foco no "Porquê", não no "O quê"**: Evite documentações redundantes que apenas repetem a assinatura da função. Foque em explicar regras de negócio complexas, decisões de design não óbvias ou restrições técnicas.
 - **Padrões de Mercado**:
   - **TypeScript/JavaScript**: Use o padrão **JSDoc** detalhando tipos, parâmetros (`@param`), retornos (`@returns`) e possíveis exceções (`@throws`).
@@ -48,8 +53,8 @@ Sempre que for solicitado a criar, modificar ou revisar um código:
    - Desenhe a função mantendo-a focada e alinhada com as convenções da linguagem do projeto.
 3. **Escrita e Documentação**:
    - Implemente a lógica sem redundâncias e escreva a documentação apropriada (JSDoc, Docstrings).
-4. **Verificação de Regras Estáticas**:
-   - Garanta conformidade com ferramentas de lint (ESLint, Pylint, Flake8) e formatação (Prettier, Black).
+4. **Verificação de Regras Estáticas e Segurança**:
+   - Garanta conformidade com ferramentas de lint (ESLint, Pylint, Flake8) e análise estática de segurança (consulte [sast-code-review](../../../security/appsec/sast-code-review/SKILL.md) e [appsec-owasp-asvs](../../../security/appsec/appsec-owasp-asvs/SKILL.md)).
 
 ---
 
@@ -59,5 +64,6 @@ Esta skill atua de forma transversal e deve ser consultada por todas as habilida
 - [backend-developer](../../roles/backend-developer/SKILL.md): Garante que APIs, serviços e repositórios não dupliquem regras de negócio e persistência.
 - [frontend-developer](../../roles/frontend-developer/SKILL.md): Evita a criação de componentes ou hooks duplicados e assegura boas práticas de organização de código client-side.
 - [software-architect](../../roles/software-architect/SKILL.md): Apoia na manutenção da coesão do design, promovendo abstrações limpas e DRY.
+- [sast-code-review](../../../security/appsec/sast-code-review/SKILL.md): Valida a ausência de antipadrões de segurança e vulnerabilidades no código limpo.
 - [lang-typescript](../../../languages/lang-typescript/SKILL.md): Orienta a reutilização de tipos e a documentação via JSDoc.
 - [lang-python](../../../languages/lang-python/SKILL.md): Orienta o estilo PEP 8, a criação de docstrings corretas e a redução de complexidade ciclomática.

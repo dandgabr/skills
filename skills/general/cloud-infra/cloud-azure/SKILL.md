@@ -114,3 +114,4 @@ Esta skill orienta a inteligência artificial a agir como um **Especialista em N
 - Para políticas de Entra ID, Azure RBAC, PIM e Managed Identities, consulte a skill [iam-access-azure](../../../security/cloud-iam/iam-access-azure/SKILL.md).
 - Para automação de pipelines CI/CD e gerenciamento de containers, consulte a skill [devops-engineer](../../roles/devops-engineer/SKILL.md).
 - Para encriptação de discos e gestão de chaves em Azure Key Vault, consulte a skill [cryptography-pqc-standards](../../../security/crypto-pki/cryptography-pqc-standards/SKILL.md).
+- Para conformidade com os controles da Cloud Security Alliance (CCM v4) e benchmarks de segurança CIS em nuvem Azure, consulte [csa-cloud-security](../../../security/cloud-iam/csa-cloud-security/SKILL.md) e [cis-controls](../../../security/grc-compliance/cis-controls/SKILL.md).

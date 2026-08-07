@@ -26,3 +26,10 @@ Descreva claramente o que esta skill faz, quais problemas ela resolve e por que 
 - **`examples/`**: Arquivos contendo boas práticas, snippets de código padrão ou casos de teste.
 - **`resources/`**: Ativos diversos que servem de apoio (planilhas, imagens de referência, JSONs de configuração).
 - **`references/`**: Documentação técnica de APIs, bibliotecas ou conceitos teóricos extensos.
+
+---
+
+## 🔒 Diretrizes Globais de Segurança e Conformidade
+Toda nova skill criada a partir deste template deve referenciar e cumprir os padrões de segurança apropriados:
+- **Segurança de Aplicação**: Respeite os controles do [appsec-owasp-asvs](../../../security/appsec/appsec-owasp-asvs/SKILL.md) e boas práticas de código seguro [clean-code-reusability](../clean-code-reusability/SKILL.md).
+- **Privacidade por Design**: Garanta conformidade com LGPD/GDPR e isolamento de dados sensíveis (PII) consultando a skill [security-privacy](../../../security/grc-compliance/security-privacy/SKILL.md).

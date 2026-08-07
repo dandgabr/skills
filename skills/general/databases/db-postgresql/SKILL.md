@@ -87,7 +87,19 @@ WHERE u.created_at >= '2026-01-01' AND o.status = 'COMPLETED';
 
 ---
 
+## 🔒 Hardening e Conformidade de Segurança (OWASP ASVS & CIS PostgreSQL Benchmark)
+
+- **Criptografia em Trânsito**: Force conexões cifradas TLS 1.3/1.2 (`ssl = on`, `ssl_min_protocol_version = 'TLSv1.2'`).
+- **Controle de Acesso Estrito (`pg_hba.conf`)**: Proíba autenticação `trust` ou `md5`; exija `scram-sha-256` para todas as conexões remotas.
+- **Princípio do Menor Privilégio e Row Level Security (RLS)**:
+  - Nunca execute aplicações como superusuário `postgres`.
+  - Habilite RLS para isolamento de dados multitenant (`ALTER TABLE tbl ENABLE ROW LEVEL SECURITY;`).
+- **Auditoria (`pgaudit`)**: Habilite a extensão `pgaudit` para registrar operações DDL e modificações de tabelas sensíveis sem sobrecarregar o log de sistema.
+
+---
+
 ## 🔗 Integração com Outras Skills
 
 - Para integrar PostgreSQL em aplicações backend, consulte [backend-developer](../../roles/backend-developer/SKILL.md) e [lang-python](../../../languages/lang-python/SKILL.md).
 - Para diretrizes gerais de administração de bancos de dados, consulte [dba-database-administrator](../../roles/dba-database-administrator/SKILL.md).
+- Para validação de requisitos de segurança em bancos de dados (V8/V14), consulte [appsec-owasp-asvs](../../../security/appsec/appsec-owasp-asvs/SKILL.md), [cis-controls](../../../security/grc-compliance/cis-controls/SKILL.md) e [security-privacy](../../../security/grc-compliance/security-privacy/SKILL.md).

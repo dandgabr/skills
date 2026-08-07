@@ -451,7 +451,39 @@ kanban
 
 ---
 
+## 🔒 6. Diagramação de Segurança e Zonas de Confiança (Trust Boundaries)
+
+Ao documentar a arquitetura de segurança, utilize o Mermaid para ilustrar Zonas de Confiança (Trust Boundaries), autenticação mTLS/TLS, WAF, firewalls e gateways de API:
+
+```mermaid
+flowchart LR
+    subgraph Internet ["Zona Pública (Untrusted)"]
+        User["Navegador / Mobile"]
+    end
+
+    subgraph DMZ ["Zona DMZ (Edge Security)"]
+        WAF["AWS WAF / Cloudflare"]
+        Proxy["NGINX Reverse Proxy (mTLS)"]
+    end
+
+    subgraph Internal ["Zona Interna de Aplicação (Trusted)"]
+        API["API Gateway (JWT / OAuth2)"]
+        Microservice["Microsserviço de Negócio"]
+    end
+
+    subgraph SecureDB ["Zona Protegida de Dados (High Security)"]
+        DB[(PostgreSQL Cifrado AES-256)]
+    end
+
+    User -->|HTTPS TLS 1.3| WAF --> Proxy
+    Proxy -->|TLS Mutável| API --> Microservice
+    Microservice -->|Conexão Autenticada| DB
+```
+
+---
+
 ## 🤝 Integração com Outras Skills
 
 - **Sob a Skill [software-architect](../../roles/software-architect/SKILL.md)**: Use diagramas do Mermaid para mapear a separação lógica de camadas (Layers), fluxo de integração de APIs e topologias de rede.
+- **Sob a Skill [threat-modeler](../../../security/ops-architecture/threat-modeler/SKILL.md)**: Use diagramas de fluxo de dados (DFD) e zonas de confiança para modelar vetores de ataque e vetores STRIDE.
 - **Sob as Skills de Design Patterns [dp-*](../../../patterns/creational/dp-factory-method/SKILL.md)**: Use diagramas de classe (`classDiagram`) do Mermaid para esboçar a relação conceitual de herança, composição e interfaces dos padrões estruturados ou compartilhamentais envolvidos.

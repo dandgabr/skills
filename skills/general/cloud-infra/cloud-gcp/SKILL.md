@@ -112,3 +112,4 @@ Estruturação de soluções de alta confiabilidade alinhadas às diretrizes do 
 - Para políticas de IAM no GCP, Service Account Impersonation e VPC Service Controls, consulte a skill [iam-access-gcp](../../../security/cloud-iam/iam-access-gcp/SKILL.md).
 - Para integração de modelos de IA e Vertex AI no GCP, consulte a skill [gemini-enterprise](../../../programs/gemini-enterprise/SKILL.md).
 - Para automação de infraestrutura com Terraform e Kubernetes, consulte a skill [devops-engineer](../../roles/devops-engineer/SKILL.md).
+- Para alinhamento aos controles da Cloud Security Alliance (CCM v4) e benchmarks de segurança CIS para Google Cloud, consulte [csa-cloud-security](../../../security/cloud-iam/csa-cloud-security/SKILL.md) e [cis-controls](../../../security/grc-compliance/cis-controls/SKILL.md).

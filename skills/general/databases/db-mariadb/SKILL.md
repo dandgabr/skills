@@ -84,7 +84,20 @@ mariabackup --prepare --target-dir=/var/backups/mariadb/full
 
 ---
 
+## 🔒 Hardening e Conformidade de Segurança (OWASP ASVS & CIS MariaDB Benchmark)
+
+- **Criptografia em Repouso e em Trânsito**:
+  - Habilite criptografia nativa de tabelas InnoDB (`innodb_encrypt_tables = ON`, `innodb_encrypt_log = ON`).
+  - Force conexões TLS 1.3 (`ssl = ON`, `require_secure_transport = ON`).
+- **Autenticação Segura e Controle de Acesso**:
+  - Remova usuários anônimos e bancos de teste (`mariadb-secure-installation`).
+  - Utilize o plugin de autenticação `ed25519` ou `caching_sha2_password` para todas as contas de usuário.
+- **Auditoria (`server_audit`)**: Habilite o plugin `server_audit` para auditoria de conexões, consultas DDL e acessos a dados sensíveis.
+
+---
+
 ## 🔗 Integração com Outras Skills
 
 - Para integrar MariaDB em ecossistemas de desenvolvimento backend, consulte [backend-developer](../../roles/backend-developer/SKILL.md).
 - Para diretrizes gerais de administração de bancos de dados relacionais e NoSQL, consulte [dba-database-administrator](../../roles/dba-database-administrator/SKILL.md).
+- Para validação de controles de segurança em bancos de dados (V8/V14), consulte [appsec-owasp-asvs](../../../security/appsec/appsec-owasp-asvs/SKILL.md), [cis-controls](../../../security/grc-compliance/cis-controls/SKILL.md) e [security-privacy](../../../security/grc-compliance/security-privacy/SKILL.md).

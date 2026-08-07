@@ -107,7 +107,19 @@ db.orders.aggregate([
 
 ---
 
+## 🔒 Hardening e Conformidade de Segurança (OWASP ASVS & CIS MongoDB Benchmark)
+
+- **Autenticação Obrigatória e TLS**:
+  - Habilite autenticação de controle de acesso (`security.authorization: enabled`).
+  - Exija conexões cifradas TLS 1.3/1.2 (`net.tls.mode: requireTLS`).
+- **Autenticação Interna do Cluster**: Utilize certificados X.509 ou chave de arquivo (*keyFile*) para comunicação entre nós de Replica Set ou Shards.
+- **Criptografia no Nível de Campo (CSFLE - Client-Side Field Level Encryption)**: Cifre dados sensíveis (PII, números de cartão) no cliente usando chaves KMS antes da transmissão para o banco.
+- **Validação de Esquema (`$jsonSchema`)**: Aplique Schema Validation na coleção para evitar injeção de operador NoSQL (`$where`, `$gt: ""`).
+
+---
+
 ## 🔗 Integração com Outras Skills
 
 - Para integrar MongoDB em APIs Node.js/TypeScript ou Python, consulte [backend-developer](../../roles/backend-developer/SKILL.md), [lang-typescript](../../../languages/lang-typescript/SKILL.md) e [lang-python](../../../languages/lang-python/SKILL.md).
 - Para diretrizes gerais de administração de bancos de dados NoSQL e SQL, consulte [dba-database-administrator](../../roles/dba-database-administrator/SKILL.md).
+- Para validação de segurança e conformidade de dados (V8/V14), consulte [appsec-owasp-asvs](../../../security/appsec/appsec-owasp-asvs/SKILL.md), [cis-controls](../../../security/grc-compliance/cis-controls/SKILL.md) e [security-privacy](../../../security/grc-compliance/security-privacy/SKILL.md).

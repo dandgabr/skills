@@ -45,3 +45,4 @@ Como UX/UI Designer, você colabora para criar a melhor experiência e unificar 
 - **PO**: Ajuda o [product-owner](../product-owner/SKILL.md) a validar ideias com protótipos rápidos antes que as estórias sejam programadas.
 - **Frontend**: Fornece especificações exatas de estilos (handover) e componentes do Design System para o [frontend-developer](../frontend-developer/SKILL.md).
 - **QA**: Auxilia o [qa-engineer](../qa-engineer/SKILL.md) a definir cenários de teste visuais e fluxos alternativos de layout.
+- **Privacidade e Segurança (Privacy & Security UX)**: Colabora com [security-privacy](../../../security/grc-compliance/security-privacy/SKILL.md) e [appsec-owasp-asvs](../../../security/appsec/appsec-owasp-asvs/SKILL.md) para incorporar Privacy-by-Design (controles de consentimento LGPD/GDPR, transparência na coleta de dados, mascaramento visual de campos sensíveis/senhas e indicadores de autenticidade anti-phishing).
