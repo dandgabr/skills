@@ -24,7 +24,7 @@ A estrutura foi projetada para ser modular, extensível e compatível com as esp
 │   │   ├── grc-compliance/         # ISO 27000, NIST CSF, PCI-DSS, Privacy, SAMM, GRC
 │   │   └── ops-architecture/       # DevSecOps, Threat Modeler, SABSA, MFA, SecOps
 │   ├── languages/                  # Bash, C, C++, Python, TypeScript, Lua, LaTeX, etc.
-│   ├── framework/                  # Vue, Testing
+│   ├── framework/                  # Pytest, Unittest, Nose2, Ward, Jest, Mocha, Criterion, Vue, etc.
 │   ├── programs/                   # Gemini Enterprise, Power BI, Power Automate, etc.
 │   └── patterns/
 │       ├── behavioral/             # Chain of Resp., Strategy, Observer, State, etc.
@@ -149,8 +149,15 @@ Abaixo está a listagem detalhada de todas as skills disponíveis no ecossistema
 ### 🧱 Frameworks e Ferramentas (Framework)
 | Habilidade | Caminho da Skill | Descrição / Caso de Uso |
 | :--- | :--- | :--- |
-| **framework-testing** | [`skills/framework/framework-testing`](skills/framework\framework-testing/SKILL.md) | Fornece diretrizes e boas práticas para testes de software robustos, cobrindo TDD, Pirâmide de Testes, Unitários, Integração e E2E, além de ferramentas como Vitest, Jest e Playwright. |
-| **framework-vue** | [`skills/framework/framework-vue`](skills/framework\framework-vue/SKILL.md) | Fornece padrões de desenvolvimento modular e de alta performance usando o ecossistema Vue 3, cobrindo Composition API, TypeScript, Pinia, Vue Router e otimizações de reatividade. |
+| **framework-criterion** | [`skills/framework/framework-criterion`](skills/framework/framework-criterion/SKILL.md) | Atua como Especialista em testes unitários para a linguagem C utilizando Criterion, cobrindo macros Test, cr_assert/cr_expect, ciclos de vida (.init/.fini), teste de sinais/crashes, captura de stdout/stderr e integração com CMake. |
+| **framework-jest** | [`skills/framework/framework-jest`](skills/framework/framework-jest/SKILL.md) | Atua como Especialista em testes automatizados com Jest no ecossistema JavaScript e TypeScript, cobrindo Mocks, Spies, Snapshots, testes assíncronos, fake timers e suporte ao Node.js e React. |
+| **framework-mocha** | [`skills/framework/framework-mocha`](skills/framework/framework-mocha/SKILL.md) | Atua como Especialista em testes automatizados com Mocha em JavaScript e Node.js, cobrindo interfaces BDD/TDD, integração com Chai (expect/assert) e Sinon.js (Spies, Stubs, Mocks) e testes assíncronos. |
+| **framework-nose2** | [`skills/framework/framework-nose2`](skills/framework/framework-nose2/SKILL.md) | Atua como Especialista em testes automatizados com Nose2 em Python, cobrindo configuração via unittest.cfg, plugins de cobertura e multiprocessamento, parametrização com @params e suítes dinâmicas. |
+| **framework-pytest** | [`skills/framework/framework-pytest`](skills/framework/framework-pytest/SKILL.md) | Atua como Especialista em testes automatizados com Pytest em Python, cobrindo fixtures, parametrização, mocks, plugins (pytest-cov, pytest-asyncio, pytest-xdist), conftest.py e estratégias de TDD. |
+| **framework-testing** | [`skills/framework/framework-testing`](skills/framework/framework-testing/SKILL.md) | Fornece diretrizes e boas práticas para testes de software robustos, cobrindo TDD, Pirâmide de Testes, Unitários, Integração e E2E, além de ferramentas como Vitest, Jest e Playwright. |
+| **framework-unittest** | [`skills/framework/framework-unittest`](skills/framework/framework-unittest/SKILL.md) | Atua como Especialista em testes automatizados com a biblioteca nativa unittest do Python, cobrindo TestCase, asserções, métodos de ciclo de vida (setUp/tearDown), subtests, unittest.mock (@patch, MagicMock) e test discovery. |
+| **framework-vue** | [`skills/framework/framework-vue`](skills/framework/framework-vue/SKILL.md) | Fornece padrões de desenvolvimento modular e de alta performance usando o ecossistema Vue 3, cobrindo Composition API, TypeScript, Pinia, Vue Router e otimizações de reatividade. |
+| **framework-ward** | [`skills/framework/framework-ward`](skills/framework/framework-ward/SKILL.md) | Atua como Especialista em testes automatizados com o framework Ward em Python, cobrindo testes declarativos com @test, injeção de dependências por @fixture, asserções com expect() e testes assíncronos. |
 
 ### 🖥️ Programas e Softwares (Programs)
 | Habilidade | Caminho da Skill | Descrição / Caso de Uso |
@@ -189,10 +196,17 @@ Abaixo está a listagem detalhada de todas as skills disponíveis no ecossistema
 ### ⚙️ Auxiliares e Templates
 | Habilidade | Caminho da Skill | Descrição / Caso de Uso |
 | :--- | :--- | :--- |
-| **documentation-designer** | [`skills/general/documentation-designer`](skills/general\engineering-practices\documentation-designer/SKILL.md) | Auxilia na elaboração de documentação técnica rica e no desenho de diagramas estruturais, de dados, estratégicos e técnicos utilizando toda a sintaxe do Mermaid.js. |
-| **template-skill** | [`skills/general/template-skill`](skills/general\engineering-practices\template-skill/SKILL.md) | Um template básico que demonstra como estruturar uma habilidade (skill) personalizada para agentes de IA. |
+| **documentation-designer** | [`skills/general/documentation-designer`](skills/general/engineering-practices/documentation-designer/SKILL.md) | Auxilia na elaboração de documentação técnica rica e no desenho de diagramas estruturais, de dados, estratégicos e técnicos utilizando toda a sintaxe do Mermaid.js. |
+| **template-skill** | [`skills/general/template-skill`](skills/general/engineering-practices/template-skill/SKILL.md) | Um template básico que demonstra como estruturar uma habilidade (skill) personalizada para agentes de IA. |
+
+### 🛠️ Scripts Utilitários
+- **`scripts/pdf_to_markdown.py`**: Converte livros e documentos PDF de referência para arquivos Markdown (`.md`) estruturados, preservando sumários (TOC), marcadores de páginas e blocos de código para auxiliar a IA na criação de novas skills.
+  - Exemplo: `python scripts/pdf_to_markdown.py "caminho/para/livro.pdf"`
+  - Exemplo TOC: `python scripts/pdf_to_markdown.py "caminho/para/livro.pdf" --toc-only`
+  - Exemplo Pasta: `python scripts/pdf_to_markdown.py --dir "caminho/para/pasta_pdfs"`
 
 ## Licença
 
 Este repositório usa uma licença de uso livre para fins não comerciais, com uso comercial permitido somente mediante autorização escrita prévia. Consulte o arquivo [LICENSE](LICENSE) para os termos completos.
+
 

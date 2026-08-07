@@ -27,3 +27,11 @@ Este arquivo define as diretrizes gerais de comportamento, padrões de projeto e
 - **Antes de programar**: Entenda os requisitos, valide a estrutura existente e, se necessário, planeje em voz alta no chat. **Sempre faça uma busca prévia no codebase, de acordo com as regras de [clean-code-reusability](skills\general\engineering-practices\clean-code-reusability\SKILL.md), para garantir a reutilização de funções e lógicas existentes antes de criar novos blocos de código.**
 - **Durante a implementação**: Use commits pequenos e descritivos.
 - **Após concluir**: Teste localmente as alterações propostas e revise eventuais mensagens de lint.
+
+## 📚 Workflow para Criação de Skills a partir de Referências em PDF
+
+Quando for solicitada a criação ou aprimoramento de uma skill baseada em referências em PDF:
+1. **Extração / Conversão de PDF para Markdown**: Execute o script embutido `python scripts/pdf_to_markdown.py <caminho_do_pdf>` para converter o livro ou documento em um arquivo `.md` estruturado (ou utilize a opção `--toc-only` para extrair primeiro a tabela de conteúdos/capítulos).
+2. **Análise de Conteúdo**: Inspecione o arquivo Markdown gerado para extrair definições técnicas, formulários, frameworks e exemplos de código relevantes.
+3. **Elaboração da Skill**: Construa ou aprimore a skill em `skills/<categoria>/<subcategoria>/<nome-skill>/SKILL.md` e registre a nova skill na tabela de catálogo em `README.md`.
+
