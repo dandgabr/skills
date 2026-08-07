@@ -1,243 +1,200 @@
 ---
 name: "lang-cpp"
-description: "Fornece padrões de engenharia de software em C++ moderno (C++23, C++20, C++17). Cobre metaprogramação de templates, conceitos (Concepts), módulos, corrotinas, intervalos (Ranges), gestão de memória via RAII e smart pointers, tratamento de erro tipado (std::expected), compilação com CMake/vcpkg/Conan e testes com Catch2/GTest."
+description: "Fornece padrões de engenharia de software em C++ moderno baseados na norma internacional ISO/IEC 14882 (com foco em C++23 - ISO/IEC 14882:2024, C++20, C++17 e C++14) e na documentação do en.cppreference.com, cobrindo RAII, Smart Pointers, Concepts, Modules, Coroutines, std::expected, std::print, Ranges, CMake e C++ Core Guidelines."
 ---
 
-# Habilidade de IA: Engenharia de C++ (C++ Specialist)
+# Habilidade de IA: Engenharia de C++ Moderno (ISO/IEC 14882 Specialist)
 
-Esta skill orienta a inteligência artificial a atuar como especialista na linguagem **C++ moderno**, cobrindo principalmente **C++23 (ISO/IEC 14882:2023)** e **C++20**, com visões sobre **C++26**. O objetivo é orientar a construção de sistemas de altíssima performance, engines, sistemas distribuídos, microsserviços e bibliotecas de alto desempenho alinhados aos **C++ Core Guidelines**, promovendo abstrações de custo zero (*zero-overhead abstractions*), gestão determinística de recursos via RAII, type safety estrita, metaprogramação de templates moderna e compilabilidade limpa.
+Esta skill orienta a inteligência artificial a atuar como especialista na linguagem **C++ moderno**, baseando-se estritamente na norma internacional oficial **ISO/IEC 14882** e nas referências técnicas do [en.cppreference.com](https://en.cppreference.com/). O foco engloba a revisão mais recente **C++23 (ISO/IEC 14882:2024)**, **C++20 (ISO/IEC 14882:2020)**, C++17, C++14 e C++11, garantindo o cumprimento dos princípios de *Zero-Cost Abstractions*, gestão segura de recursos via **RAII**, concorrência destemida e alinhamento com as **C++ Core Guidelines**.
 
 ---
 
-## 🧭 Diretrizes de Desenvolvimento em C++ Moderno
+## 🧭 Evolução dos Padrões ISO/IEC 14882 e Recursos C++ Modernos
 
-Ao atuar nesta skill, aplique rigorosamente os seguintes padrões de engenharia:
+Ao projetar software em C++, utilize as ferramentas e abstrações mais recentes suportadas pelo compilador do projeto:
 
-### 1. Padrões Modernos e Recursos de Linguagem (C++23 & C++20)
-- **Recursos Fundamentais de C++20**:
-  - **Concepts & Constraints**: Substitua metaprogramação SFINAE complexa (`std::enable_if_t`) por conceitos nativos (`template<typename T> requires ...` ou `std::integral auto`).
-  - **Módulos (`import std;` / `export module`)**: Substitua a inclusão tradicional de cabeçalhos por Módulos C++ sempre que o suporte de toolchain permitir, isolando macros e acelerando dramaticamente a compilação.
-  - **Ranges & Views (`std::ranges`, `std::views`)**: Escreva pipelines de transformação de dados declarativos, composíveis e preguiçosos (*lazy evaluation*) sem alocações desnecessárias.
-  - **Corrotinas (`co_await`, `co_yield`, `co_return`)**: Utilize corrotinas para geradores sequenciais e programação assíncrona orientada a eventos.
-  - **Utilitários Tipados**: Use `std::span` para visões de memória contíguas sem cópia, `std::format` para formatação segura de strings e `std::jthread` / `std::stop_token` para concorrência com encerramento automático RAII.
-- **Recursos Avançados de C++23**:
-  - **Tratamento de Erros Declarativo (`std::expected<T, E>`)**: Substitua exceções custosas em caminhos de alto fluxo e códigos de erro numéricos por `std::expected` com operações monádicas (`.and_then()`, `.transform()`, `.or_else()`).
-  - **E/S Formatada de Alta Performance**: Prefira `std::print` e `std::println` a `<iostream>` ou `printf`.
-  - **Parâmetro de Objeto Explícito ("Deduced this")**: Simplifique o padrão CRTP (Curiously Recurring Template Pattern) e elimine duplicações de métodos `const` e `non-const`.
-  - **Abstrações Adicionais**: Explore `std::mdspan` para matrizes multidimensionais, `std::generator` para geradores de corrotinas padronizados, e contêineres de memória contígua `std::flat_map` e `std::flat_set`.
+### 1. ISO/IEC 14882:2024 (C++23 - Padrão Mais Recente)
+- **Tratamento de Erro Monádico (`std::expected`)**: Substituto eficiente para exceções e código de erro tradicional (`std::expected<T, E>`), fornecendo encadeamento com `.and_then()`, `.transform()` e `.or_else()`.
+- **Formatador e Impressão Nativa (`std::print` / `std::println`)**: Impressão direta e tipada para streams sem a sobrecarga de `std::cout` (`#include <print>`).
+- **Novos Contêineres de Desempenho (`std::flat_map` / `std::flat_set`)**: Adaptadores de contêiner baseados em vetores contíguos de memória com excelente localidade de cache.
+- **Geradores e Corrotinas (`std::generator`)**: Criação simplificada de iteradores e sequências lazily-evaluated baseados em corrotinas (`co_yield`).
+- **Deducing `this` (Explicit Object Parameters)**: Simplificação de métodos de classe, recursão de lambdas e padrão CRTP.
+- **Utilitários Adicionais**: Inversão de bytes nativa (`std::byteswap`), extensões de `std::span` e atributo `[[assume(expr)]]`.
 
-### 2. Gerenciamento de Memória, RAII e Tipagem Defensiva
-- **RAII (Resource Acquisition Is Initialization) Estrito**:
-  - Proíba o uso manual de `new` e `delete`. Gerencie todo o ciclo de vida de memória e recursos (arquivos, sockets, mutexes) através de escopos de objetos.
-  - Use `std::unique_ptr` para posse exclusiva e `std::shared_ptr` / `std::weak_ptr` apenas quando a posse for compartilhada de forma indispensável. Prefira `std::make_unique` e `std::make_shared`.
-- **Semântica de Movimento (Move Semantics)**:
-  - Utilize referências Rvalue (`T&&`), `std::move` para transferência de propriedade de recursos e `std::forward` para repasse perfeito (*perfect forwarding*) em templates.
-- **Tipos de Valor em Vez de Ponteiros Nulos**:
-  - Substitua o uso de ponteiros brutos opcionais por `std::optional<T>`.
-  - Substitua `void*` e `unions` não seguras por `std::variant<Ts...>` e `std::any`.
-  - Evite parâmetros de saída por ponteiro/referência (`out parameters`); retorne tuplas, estruturas ou `std::expected`.
-- **Constness & Avaliação em Tempo de Compilação**:
-  - Declare variáveis, parâmetros e métodos como `const` ou `constexpr` / `consteval` por padrão. Mova computações pesadas ou validações para o tempo de compilação sempre que possível.
+### 2. ISO/IEC 14882:2020 (C++20)
+- **Conceitos e Restrições (`concepts` e `requires`)**: Validação de metaprogramação no tempo de compilação com mensagens de erro legíveis (`template <std::integral T>`).
+- **Módulos do C++ (`module`, `import`, `export`)**: Substituição do modelo tradicional de headers (`#include`) por módulos compilados com isolamento de escopo e tempos de build drasticamente reduzidos.
+- **Ranges e Pipelines (`std::ranges`)**: Composição de algoritmos de forma funcional utilizando o operador pipe `|` (`views::filter`, `views::transform`).
+- **Corrotinas Nativas**: Suporte a funções suspensíveis com `co_await`, `co_yield` e `co_return`.
+- **Operador Espaçonave (`<=>` / Three-Way Comparison)**: Geração automática de todos os operadores de comparação (`auto operator<=>const = default;`).
+- **Formatação de Texto (`std::format`)**: Interpolação de strings rápida e segura inspirada na sintaxe do Python.
+- **Concorrência e Threads**: `std::jthread` (thread com RAII e auto-join) e tokens de cancelamento (`std::stop_token`).
 
-### 3. Estrutura de Projeto e Ferramental Moderno
-- **Modern CMake (3.25+)**:
-  - Utilize CMake orientado a alvos (*target-based CMake*).
-  - Configure o padrão C++23:
-    ```cmake
-    target_compile_features(my_target PRIVATE cxx_std_23)
-    set(CMAKE_CXX_STANDARD 23)
-    set(CMAKE_CXX_STANDARD_REQUIRED ON)
-    set(CMAKE_CXX_EXTENSIONS OFF)
-    ```
-- **Gerenciadores de Pacotes**:
-  - Utilize **vcpkg** ou **Conan 2.x** para declarar e consumir dependências de forma reprodutiva.
-- **Análise Estática e Sanitizers**:
-  - Aplique regras do **C++ Core Guidelines** via **Clang-Tidy**.
-  - Execute testes automatizados habilitando AddressSanitizer (`-fsanitize=address`), UndefinedBehaviorSanitizer (`-fsanitize=undefined`) e ThreadSanitizer (`-fsanitize=thread`).
-- **Flags de Compilador Estritas**:
-  - **GCC/Clang**: `-Wall -Wextra -Wpedantic -Wshadow -Wnon-virtual-dtor -Wold-style-cast -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wnull-dereference -Wdouble-promotion -Wformat=2 -Werror`
-  - **MSVC**: `/W4 /WX /permissive-`
+### 3. ISO/IEC 14882:2017 (C++17) & 14882:2014 (C++14)
+- **C++17**: Tipos utilitários de valor (`std::optional`, `std::variant`, `std::any`), visualização sem alocação (`std::string_view`), Structured Bindings (`auto [x, y] = point;`), suporte a arquivos (`std::filesystem`), `if` com inicializador local e algoritmos paralelos (`std::execution::par`).
+- **C++14**: `std::make_unique`, lambdas genéricas (`auto x`), `std::shared_lock` e `constexpr` relaxado.
 
-### 4. Testabilidade e Qualidade
-- **Frameworks de Testes Modernos**:
-  - Adote **Catch2 v3**, **GoogleTest (gtest/gmock)** ou **doctest**.
-  - Escreva testes unitários expressivos utilizando BDD (`SCENARIO`, `GIVEN`, `WHEN`, `THEN`) ou fixtures bem encapsuladas.
+### 4. ISO/IEC 14882:2011 (C++11 - A Base do C++ Moderno)
+- Semântica de Movimento (*Move Semantics*) com rvalue references (`std::move`, `std::forward`).
+- Smart Pointers para RAII: `std::unique_ptr` (posse exclusiva), `std::shared_ptr` e `std::weak_ptr`.
+- Concorrência nativa: `<thread>`, `<mutex>`, `<atomic>`, `<future>`.
+
+---
+
+## 🛠️ Diretrizes de Engenharia e C++ Core Guidelines
+
+### 1. RAII (Resource Acquisition Is Initialization)
+- **Zero Vazamentos Manuais**: Nunca invoque `new` ou `delete` explicitamente. Encapsule a gestão de recursos (memória, sockets, arquivos, mutexes) em objetos RAII (`std::unique_ptr`, `std::lock_guard`, `std::fstream`).
+- **Regra dos Zero, Três ou Cinco (Rule of Zero/3/5)**: Se uma classe precisa gerenciar recursos explicitamente, defina ou delete os 5 métodos especiais (destrutor, construtor de cópia, atribuição por cópia, construtor de movimento, atribuição por movimento). Prefira a *Rule of Zero* delegando a gestão para smart pointers e contêineres padrão.
+
+### 2. Tratamento Seguro de Erros e Imutabilidade
+- **`const` por Padrão**: Marque variáveis, referências e métodos membros como `const` sempre que o valor não sofrer mutação.
+- **`constexpr` e `consteval`**: Mova o máximo de computação possível para o tempo de compilação.
+- **`noexcept`**: Marque funções que garantidamente não lançam exceções (especialmente construtores de movimento e operadores de movimentação).
 
 ---
 
 ## 🧰 Padrões de Código Recomendados
 
-### 1. Tratamento de Erros Monádico com `std::expected` (C++23)
-
+### 1. C++23: Tratamento de Erros Monádico com `std::expected` e Impressão Nativa (`std::print`)
 ```cpp
-#include <expected>
-#include <string>
-#include <string_view>
 #include <print>
+#include <expected>
+#include <string_view>
 
-enum class ParseError {
-    EmptyInput,
-    InvalidCharacter,
-    OutOfRange
+enum class MathError {
+    DivisionByZero,
+    NegativeLogarithm
 };
 
-[[nodiscard]] constexpr std::expected<int, ParseError> parse_port(std::string_view str) noexcept {
-    if (str.empty()) {
-        return std::unexpected(ParseError::EmptyInput);
+constexpr std::expected<double, MathError> divide(double a, double b) noexcept {
+    if (b == 0.0) {
+        return std::unexpected(MathError::DivisionByZero);
     }
-    
-    int port = 0;
-    for (char ch : str) {
-        if (ch < '0' || ch > '9') {
-            return std::unexpected(ParseError::InvalidCharacter);
-        }
-        port = port * 10 + (ch - '0');
-        if (port > 65535) {
-            return std::unexpected(ParseError::OutOfRange);
-        }
-    }
-    
-    return port;
+    return a / b;
 }
 
 int main() {
-    auto result = parse_port("8080")
-        .transform([](int port) {
-            return std::format("Server listening on port: {}", port);
-        })
-        .or_else([](ParseError err) -> std::expected<std::string, ParseError> {
-            return std::string("Failed to parse configuration port.");
-        });
+    auto result = divide(10.0, 2.0)
+        .transform([](double val) { return val * 100.0; });
 
-    if (result) {
-        std::println("{}", *result);
+    if (result.has_value()) {
+        std::println("[+] Sucesso! Resultado calculado: {:.2f}", result.value());
+    } else {
+        std::println(stderr, "[-] Erro no cálculo matemático.");
     }
+    return 0;
 }
 ```
 
-### 2. Processamento com C++20 Ranges e Views
-
+### 2. C++20: Conceitos, Ranges e Operador Espaçonave (`<=>`)
 ```cpp
 #include <iostream>
 #include <vector>
 #include <ranges>
-#include <string>
-#include <print>
+#include <concepts>
+#include <compare>
 
-struct Product {
+// Definição de conceito em C++20
+template <typename T>
+concept Numeric = std::integral<T> || std::floating_point<T>;
+
+struct Item {
     std::string name;
     double price;
-    bool in_stock;
+
+    // Operador de comparação espaçonave C++20
+    auto operator<=>(const Item&) const = default;
 };
 
-int main() {
-    const std::vector<Product> catalog = {
-        {"Laptop", 1200.0, true},
-        {"Mouse", 25.0, true},
-        {"Keyboard", 75.0, false},
-        {"Monitor", 300.0, true},
-        {"USB Cable", 10.0, true}
-    };
-
-    // Pipeline de transformação em tempo de execução sem criar vetores intermediários
-    auto premium_in_stock_names = catalog
-        | std::views::filter([](const Product& p) { return p.in_stock && p.price > 50.0; })
-        | std::views::transform([](const Product& p) { return p.name; });
-
-    std::println("Produtos em estoque acima de $50:");
-    for (const auto& name : premium_in_stock_names) {
-        std::println(" - {}", name);
+template <Numeric T>
+T calculate_sum(const std::vector<T>& values) {
+    T sum = 0;
+    for (const auto& v : values) {
+        sum += v;
     }
-}
-```
-
-### 3. Concepts e Constraints em Tempo de Compilação (C++20)
-
-```cpp
-#include <concepts>
-#include <iostream>
-#include <vector>
-#include <print>
-
-// Definição de um conceito customizado
-template<typename T>
-concept Serializable = requires(T a) {
-    { a.serialize() } -> std::same_as<std::string>;
-};
-
-class User {
-public:
-    explicit User(std::string name) : name_(std::move(name)) {}
-    
-    [[nodiscard]] std::string serialize() const {
-        return std::format(R"({{"user": "{}"}})", name_);
-    }
-private:
-    std::string name_;
-};
-
-// Função genérica restrita pelo conceito
-template<Serializable T>
-void send_over_network(const T& payload) {
-    std::println("Sending payload: {}", payload.serialize());
+    return sum;
 }
 
 int main() {
-    User user{"Alice"};
-    send_over_network(user); // Compila perfeitamente
+    std::vector<int> numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
-    // int val = 42;
-    // send_over_network(val); // Erro de compilação claro: int não satisfaz Serializable
+    // Filtro e transformação com C++20 Ranges
+    auto even_squares = numbers 
+        | std::views::filter([](int n) { return n % 2 == 0; })
+        | std::views::transform([](int n) { return n * n; });
+
+    std::cout << "[+] Quadrados pares: ";
+    for (int val : even_squares) {
+        std::cout << val << " ";
+    }
+    std::cout << "\n";
+    return 0;
 }
 ```
 
-### 4. RAII com Smart Pointers e Custom Deleter
-
+### 3. Gestão Segura de Recursos com Smart Pointers (`std::unique_ptr`)
 ```cpp
 #include <memory>
-#include <cstdio>
-#include <print>
+#include <string>
+#include <iostream>
 
-struct FileCloser {
-    void operator()(FILE* fp) const noexcept {
-        if (fp) {
-            std::println("Closing file handle via RAII...");
-            std::fclose(fp);
-        }
+class DatabaseConnection {
+public:
+    explicit DatabaseConnection(std::string conn_str) 
+        : connection_string_(std::move(conn_str)) {
+        std::cout << "[+] Conexão aberta: " << connection_string_ << "\n";
     }
+
+    ~DatabaseConnection() {
+        std::cout << "[-] Conexão fechada automaticamente por RAII.\n";
+    }
+
+    void execute_query(std::string_view query) const {
+        std::cout << "    Executando: " << query << "\n";
+    }
+
+private:
+    std::string connection_string_;
 };
 
-using UniqueFile = std::unique_ptr<FILE, FileCloser>;
-
-[[nodiscard]] UniqueFile make_unique_file(const char* filename, const char* mode) {
-    return UniqueFile(std::fopen(filename, mode));
+int main() {
+    // Alocação segura sem chamar 'new'
+    auto db = std::make_unique<DatabaseConnection>("Server=localhost;Port=5432;");
+    db->execute_query("SELECT * FROM users;");
+    
+    // Conexão desalocada automaticamente no término do escopo
+    return 0;
 }
+```
 
-void write_log(const char* message) {
-    auto file = make_unique_file("app.log", "a");
-    if (!file) {
-        std::println(stderr, "Could not open log file");
-        return;
-    }
-    std::fputs(message, file.get());
-    // O arquivo é fechado automaticamente ao sair da função
-}
+---
+
+## ⚙️ Configuração de Build System Moderno (CMakeLists.txt C++23)
+
+```cmake
+cmake_minimum_required(VERSION 3.26)
+project(cpp23_modern_project CXX)
+
+# Impoe o padrão C++23 (ISO/IEC 14882:2024)
+set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+add_executable(app_main src/main.cpp)
+
+# Bateria estrita de compilação e flags de segurança
+if (MSVC)
+    target_compile_options(app_main PRIVATE /W4 /WX /permissive-)
+else()
+    target_compile_options(app_main PRIVATE -Wall -Wextra -Wpedantic -Wconversion -Wshadow -Werror)
+endif()
 ```
 
 ---
 
 ## 🔗 Integração com Outras Skills
 
-- [clean-code-reusability](..\..\general\engineering-practices\clean-code-reusability/SKILL.md): Assegura reutilização de componentes e modelos de design modernos sem duplicação de templates ou classes.
-- [backend-developer](..\..\general\roles\backend-developer/SKILL.md): Orienta o desenvolvimento de micro-serviços C++ gRPC/HTTP de alta throughput e baixa latência.
-- [devsecops-engineer](..\..\security\ops-architecture\devsecops-engineer/SKILL.md): Guia o uso de sanitizers, análise de dependências (SCA) e ferramentas de análise estática nos pipelines de CI/CD.
-- [appsec-owasp-asvs](..\..\security\appsec\appsec-owasp-asvs/SKILL.md): Garante conformidade contra falhas de segurança de memória, estouro de inteiros e gerenciamento incorreto de ponteiros.
-- [software-architect](..\..\general\roles\software-architect/SKILL.md): Apoia no desenho de arquiteturas de sistemas distribuídos, motores de jogos, compiladores e abstrações DDD de alto desempenho.
-
----
-
-## ⚙️ Regras de Decisão
-
-- **C++ Core Guidelines**: Siga impreterivelmente os C++ Core Guidelines da comunidade.
-- **Zero Raw Ownership**: Nunca utilize ponteiros brutos para representar posse de memória.
-- **Preferir Abstrações Nativas**: Use `std::expected`, `std::optional`, `std::variant`, `std::span` e `std::ranges` em vez de construir tipos próprios equivalentes.
+- Para desenvolvimento e interoperabilidade direta com código C (C23/C17), consulte [lang-c](../lang-c/SKILL.md).
+- Para realizar testes unitários em código C++ utilizando frameworks modernos, consulte [framework-testing](../../framework/framework-testing/SKILL.md) e [framework-criterion](../../framework/framework-criterion/SKILL.md).
+- Para auditoria de vulnerabilidades de segurança de memória, Use-After-Free, buffer overflows e segurança de código C++, consulte [sast-code-review](../../security/appsec/sast-code-review/SKILL.md) e [appsec-owasp-asvs](../../security/appsec/appsec-owasp-asvs/SKILL.md).
