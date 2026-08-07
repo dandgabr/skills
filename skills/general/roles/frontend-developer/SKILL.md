@@ -38,7 +38,7 @@ Ao escrever código frontend:
 
 1. **Aproveite a Tipagem do Backend**: Use contratos tipados comuns em [lang-typescript](../../../languages/lang-typescript/SKILL.md) para garantir que as respostas da API batam perfeitamente com os dados consumidos.
 2. **Código Limpo, Reutilização e Documentação**: Antes de criar novos componentes, hooks ou funções utilitárias, consulte a skill [clean-code-reusability](../../engineering-practices/clean-code-reusability/SKILL.md) para garantir a não duplicação e seguir as práticas de clean code e documentação recomendadas.
-3. **Utilize Frameworks de Forma Eficiente**: Aplique os padrões modulares da skill [framework-vue](../../../framework/framework-vue/SKILL.md) (ou equivalentes reativos).
+3. **Utilize Frameworks de Forma Eficiente**: Aplique os padrões modulares e reativos das skills [framework-react](../../../framework/framework-react/SKILL.md) ou [framework-vue](../../../framework/framework-vue/SKILL.md).
 4. **Escreva Testes de Interface**: Crie testes automatizados (unitários de componentes e testes E2E/fluxos de usuários) baseando-se em [framework-testing](../../../framework/framework-testing/SKILL.md).
 
 ---
@@ -47,6 +47,6 @@ Ao escrever código frontend:
 
 Como Desenvolvedor Frontend, você atua na ponte entre o design e a lógica de servidores:
 - **UI/UX**: Transforma os protótipos de alta fidelidade e fluxos de usuário criados pelo [ui-ux-designer](../ui-ux-designer/SKILL.md) em interfaces funcionais e responsivas.
-- **Backend**: Consome APIs e alinha os payloads de requisição com o [backend-developer](../backend-developer/SKILL.md).
+- **Backend**: Consome APIs RESTful ([framework-rest-api](../../../framework/framework-rest-api/SKILL.md)) ou gRPC-Web ([framework-grpc](../../../framework/framework-grpc/SKILL.md)) e alinha os payloads com o [backend-developer](../backend-developer/SKILL.md).
 - **QA**: Auxilia o [qa-engineer](../qa-engineer/SKILL.md) a identificar elementos na tela inserindo IDs únicos de testes (`data-testid`).
 - **Segurança e Privacidade**: Garanta a proteção contra ataques client-side (como XSS e CSRF) com [appsec-owasp-asvs](../../../security/appsec/appsec-owasp-asvs/SKILL.md), e gerencie as preferências de consentimento (ex. cookies) e proteção na exibição de dados pessoais em conformidade com [security-privacy](../../../security/grc-compliance/security-privacy/SKILL.md).
