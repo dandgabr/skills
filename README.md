@@ -36,6 +36,11 @@ A estrutura foi projetada para ser modular, extensível e compatível com as esp
     ├── software-architect/
     ├── fullstack-developer/
     ├── devops-engineer/
+    ├── dba-specialist/
+    ├── telecom-voice-specialist/
+    ├── cloud-infrastructure-architect/
+    ├── qa-testing-specialist/
+    ├── ai-security-specialist/
     ├── security-specialist/
     └── pentester-agent/
 ```
