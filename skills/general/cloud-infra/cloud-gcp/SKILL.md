@@ -109,6 +109,6 @@ Estruturação de soluções de alta confiabilidade alinhadas às diretrizes do 
 
 ## 🔗 Integração com Outras Skills
 
-- Para políticas de IAM no GCP, Service Account Impersonation e VPC Service Controls, consulte a skill [iam-access-gcp](..\..\..\security\cloud-iam\iam-access-gcp/SKILL.md).
-- Para integração de modelos de IA e Vertex AI no GCP, consulte a skill [gemini-enterprise](..\..\..\programs\gemini-enterprise/SKILL.md).
-- Para automação de infraestrutura com Terraform e Kubernetes, consulte a skill [devops-engineer](..\..\roles\devops-engineer/SKILL.md).
+- Para políticas de IAM no GCP, Service Account Impersonation e VPC Service Controls, consulte a skill [iam-access-gcp](../../../security/cloud-iam/iam-access-gcp/SKILL.md).
+- Para integração de modelos de IA e Vertex AI no GCP, consulte a skill [gemini-enterprise](../../../programs/gemini-enterprise/SKILL.md).
+- Para automação de infraestrutura com Terraform e Kubernetes, consulte a skill [devops-engineer](../../roles/devops-engineer/SKILL.md).

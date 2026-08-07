@@ -112,7 +112,7 @@ Todas as soluções propostas devem ser alinhadas aos 6 pilares do **AWS Well-Ar
 
 ## 🔗 Integração com Outras Skills
 
-- Para políticas de IAM, SCPs, STS e controle de acessos no AWS IAM, consulte a skill [iam-access-aws](..\..\..\security\cloud-iam\iam-access-aws/SKILL.md).
-- Para encriptação de objetos S3, KMS e XTS-AES em EBS, consulte a skill [cryptography-pqc-standards](..\..\..\security\crypto-pki\cryptography-pqc-standards/SKILL.md).
-- Para automação de infraestrutura com Terraform e Ansible, consulte a skill [devops-engineer](..\..\roles\devops-engineer/SKILL.md).
-- Para alinhamento aos controles da Cloud Security Alliance (CCM v4), consulte a skill [csa-cloud-security](..\..\..\security\cloud-iam\csa-cloud-security/SKILL.md).
+- Para políticas de IAM, SCPs, STS e controle de acessos no AWS IAM, consulte a skill [iam-access-aws](../../../security/cloud-iam/iam-access-aws/SKILL.md).
+- Para encriptação de objetos S3, KMS e XTS-AES em EBS, consulte a skill [cryptography-pqc-standards](../../../security/crypto-pki/cryptography-pqc-standards/SKILL.md).
+- Para automação de infraestrutura com Terraform e Ansible, consulte a skill [devops-engineer](../../roles/devops-engineer/SKILL.md).
+- Para alinhamento aos controles da Cloud Security Alliance (CCM v4), consulte a skill [csa-cloud-security](../../../security/cloud-iam/csa-cloud-security/SKILL.md).

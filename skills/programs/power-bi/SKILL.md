@@ -110,6 +110,6 @@ TOTALYTD([Vendas Totais], D_Calendario[Data])
 
 ## 🔗 Integração com Outras Skills
 
-- Para automação de alertas e envio de relatórios do Power BI via e-mail/Teams, consulte a skill [power-automate](..\power-automate/SKILL.md).
-- Para configuração de identidades e RLS no Entra ID (Azure AD), consulte a skill [iam-access-azure](..\..\security\cloud-iam\iam-access-azure/SKILL.md).
-- Para integração de modelos de BI com data warehouses e bancos de dados SQL, consulte a skill [backend-developer](..\..\general\roles\backend-developer/SKILL.md).
+- Para automação de alertas e envio de relatórios do Power BI via e-mail/Teams, consulte a skill [power-automate](../power-automate/SKILL.md).
+- Para configuração de identidades e RLS no Entra ID (Azure AD), consulte a skill [iam-access-azure](../../security/cloud-iam/iam-access-azure/SKILL.md).
+- Para integração de modelos de BI com data warehouses e bancos de dados SQL, consulte a skill [backend-developer](../../general/roles/backend-developer/SKILL.md).

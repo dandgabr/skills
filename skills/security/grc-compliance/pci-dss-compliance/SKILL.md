@@ -99,6 +99,6 @@ Dados críticos utilizados para autorizar transações. **PROIBIÇÃO ABSOLUTA D
 
 ## 🔗 Integração com Outras Skills
 
-- Para arquitetura de encriptação, FPE (FF1/FF3-1) e Key Wrapping, consulte a skill [cryptography-pqc-standards](..\..\crypto-pki\cryptography-pqc-standards/SKILL.md).
-- Para arquitetura de pagamentos, ISO 8583 e gateways no Brasil/Exterior, consulte a skill [financial-transaction-processing](..\..\..\general\domains\financial-transaction-processing/SKILL.md).
-- Para controles de IAM e PAM no CDE, consulte a skill [iam-access-management](..\..\cloud-iam\iam-access-management/SKILL.md).
+- Para arquitetura de encriptação, FPE (FF1/FF3-1) e Key Wrapping, consulte a skill [cryptography-pqc-standards](../../crypto-pki/cryptography-pqc-standards/SKILL.md).
+- Para arquitetura de pagamentos, ISO 8583 e gateways no Brasil/Exterior, consulte a skill [financial-transaction-processing](../../../general/domains/financial-transaction-processing/SKILL.md).
+- Para controles de IAM e PAM no CDE, consulte a skill [iam-access-management](../../cloud-iam/iam-access-management/SKILL.md).

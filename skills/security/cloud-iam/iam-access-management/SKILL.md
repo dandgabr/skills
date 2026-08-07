@@ -110,7 +110,7 @@ Quando solicitado a desenhar, auditar ou resolver questões de controle de acess
 
 ## 🔗 Integração com Outras Skills de Segurança
 
-- Para alinhar o IAM às especificações de autenticação e garantia do NIST (SP 800-63-3/4 AAL1/AAL2/AAL3), consulte a skill [nist-frameworks-csf](..\..\grc-compliance\nist-frameworks-csf/SKILL.md).
-- Para controles de IAM em nuvem conforme a Cloud Security Alliance (CCM v4 - IAM domain), consulte a skill [csa-cloud-security](..\csa-cloud-security/SKILL.md).
-- Para alinhar a gestão de identidades aos controles 5 e 6 do CIS Controls v8, consulte a skill [cis-controls](..\..\grc-compliance\cis-controls/SKILL.md).
-- Para requisitos de controle de acesso exigidos no anexo A da ISO 27001:2022 (A.5.15 a A.5.18, A.8.2 a A.8.5), consulte a skill [iso-27000-series](..\..\grc-compliance\iso-27000-series/SKILL.md).
+- Para alinhar o IAM às especificações de autenticação e garantia do NIST (SP 800-63-3/4 AAL1/AAL2/AAL3), consulte a skill [nist-frameworks-csf](../../grc-compliance/nist-frameworks-csf/SKILL.md).
+- Para controles de IAM em nuvem conforme a Cloud Security Alliance (CCM v4 - IAM domain), consulte a skill [csa-cloud-security](../csa-cloud-security/SKILL.md).
+- Para alinhar a gestão de identidades aos controles 5 e 6 do CIS Controls v8, consulte a skill [cis-controls](../../grc-compliance/cis-controls/SKILL.md).
+- Para requisitos de controle de acesso exigidos no anexo A da ISO 27001:2022 (A.5.15 a A.5.18, A.8.2 a A.8.5), consulte a skill [iso-27000-series](../../grc-compliance/iso-27000-series/SKILL.md).

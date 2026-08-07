@@ -56,8 +56,8 @@ Sempre que for solicitado a criar, modificar ou revisar um código:
 ## 🔗 Integração com Outras Skills de Desenvolvimento
 
 Esta skill atua de forma transversal e deve ser consultada por todas as habilidades de desenvolvimento:
-- [backend-developer](..\..\roles\backend-developer/SKILL.md): Garante que APIs, serviços e repositórios não dupliquem regras de negócio e persistência.
-- [frontend-developer](..\..\roles\frontend-developer/SKILL.md): Evita a criação de componentes ou hooks duplicados e assegura boas práticas de organização de código client-side.
-- [software-architect](..\..\roles\software-architect/SKILL.md): Apoia na manutenção da coesão do design, promovendo abstrações limpas e DRY.
-- [lang-typescript](..\..\..\languages\lang-typescript/SKILL.md): Orienta a reutilização de tipos e a documentação via JSDoc.
-- [lang-python](..\..\..\languages\lang-python/SKILL.md): Orienta o estilo PEP 8, a criação de docstrings corretas e a redução de complexidade ciclomática.
+- [backend-developer](../../roles/backend-developer/SKILL.md): Garante que APIs, serviços e repositórios não dupliquem regras de negócio e persistência.
+- [frontend-developer](../../roles/frontend-developer/SKILL.md): Evita a criação de componentes ou hooks duplicados e assegura boas práticas de organização de código client-side.
+- [software-architect](../../roles/software-architect/SKILL.md): Apoia na manutenção da coesão do design, promovendo abstrações limpas e DRY.
+- [lang-typescript](../../../languages/lang-typescript/SKILL.md): Orienta a reutilização de tipos e a documentação via JSDoc.
+- [lang-python](../../../languages/lang-python/SKILL.md): Orienta o estilo PEP 8, a criação de docstrings corretas e a redução de complexidade ciclomática.

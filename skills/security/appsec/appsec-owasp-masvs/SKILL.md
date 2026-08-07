@@ -153,8 +153,8 @@ Ao auditar uma aplicação Android (APK/AAB) ou iOS (IPA), entregue a matriz:
 
 ## 🔗 Integração com Outras Skills de Segurança
 
-- [appsec-owasp-asvs](..\appsec-owasp-asvs/SKILL.md): Garante que a API backend consumida pelo aplicativo móvel atenda aos controles de segurança de servidor correspondentes.
-- [security-grc-compliance](..\..\grc-compliance\security-grc-compliance/SKILL.md): Define a classificação de risco e o perfil MASVS (L1, L2, L2-R) exigido para o app.
-- [threat-modeler](..\..\ops-architecture\threat-modeler/SKILL.md): Mapeia cenários de roubo de dispositivo, redes Wi-Fi não confiáveis e malwares móveis.
-- [pentester-owasp-wstg](..\pentester-owasp-wstg/SKILL.md): Complementa com a execução de testes dinâmicos de invasão no ecossistema mobile.
-- [security-privacy](..\..\grc-compliance\security-privacy/SKILL.md): Garante conformidade com LGPD/GDPR no armazenamento e transmissão de PII coletadas pelo aplicativo móvel.
+- [appsec-owasp-asvs](../appsec-owasp-asvs/SKILL.md): Garante que a API backend consumida pelo aplicativo móvel atenda aos controles de segurança de servidor correspondentes.
+- [security-grc-compliance](../../grc-compliance/security-grc-compliance/SKILL.md): Define a classificação de risco e o perfil MASVS (L1, L2, L2-R) exigido para o app.
+- [threat-modeler](../../ops-architecture/threat-modeler/SKILL.md): Mapeia cenários de roubo de dispositivo, redes Wi-Fi não confiáveis e malwares móveis.
+- [pentester-owasp-wstg](../pentester-owasp-wstg/SKILL.md): Complementa com a execução de testes dinâmicos de invasão no ecossistema mobile.
+- [security-privacy](../../grc-compliance/security-privacy/SKILL.md): Garante conformidade com LGPD/GDPR no armazenamento e transmissão de PII coletadas pelo aplicativo móvel.

@@ -44,15 +44,15 @@ Ao atuar nesta skill, execute suas atribuições com base nas seguintes prática
 Ao planejar novas funcionalidades ou validar entregas:
 
 1. **Valide a Visão de Negócio**: Garanta que cada nova funcionalidade solicitada aponte para um objetivo comercial real.
-2. **Defina a Definição de Pronto (Definition of Done - DoD)**: Acorde com a equipe quais são os critérios mínimos de qualidade para uma história ser considerada finalizada (ex: código revisado, testes unitários passando, analisado pelo [qa-engineer](..\qa-engineer/SKILL.md), auditado por segurança).
-3. **Gerencie as Restrições de GRC**: Garanta que as histórias de usuários que lidam com dados sensíveis incluam critérios específicos de privacidade em conformidade com as regras de [security-grc-compliance](..\..\..\security\grc-compliance\security-grc-compliance/SKILL.md).
+2. **Defina a Definição de Pronto (Definition of Done - DoD)**: Acorde com a equipe quais são os critérios mínimos de qualidade para uma história ser considerada finalizada (ex: código revisado, testes unitários passando, analisado pelo [qa-engineer](../qa-engineer/SKILL.md), auditado por segurança).
+3. **Gerencie as Restrições de GRC**: Garanta que as histórias de usuários que lidam com dados sensíveis incluam critérios específicos de privacidade em conformidade com as regras de [security-grc-compliance](../../../security/grc-compliance/security-grc-compliance/SKILL.md).
 
 ---
 
 ## 🔗 Integração no Time de Desenvolvimento
 
 Como Product Owner, você lidera o direcionamento do produto de forma colaborativa:
-- **Design**: Alinha as intenções de experiência do usuário com o [ui-ux-designer](..\ui-ux-designer/SKILL.md) antes de detalhar as histórias no backlog.
-- **Desenvolvedores**: Explica o "porquê" e o "o quê" das histórias ao [backend-developer](..\backend-developer/SKILL.md) e ao [frontend-developer](..\frontend-developer/SKILL.md) nas reuniões de planejamento.
-- **QA**: Trabalha em parceria com o [qa-engineer](..\qa-engineer/SKILL.md) para garantir que todos os caminhos de uso (felizes e infelizes) estejam documentados nos critérios de aceitação.
-- **Scrum Master**: Apoia o [scrum-master](..\scrum-master/SKILL.md) na blindagem do time contra escopos adicionais e no monitoramento de velocidade de entrega.
+- **Design**: Alinha as intenções de experiência do usuário com o [ui-ux-designer](../ui-ux-designer/SKILL.md) antes de detalhar as histórias no backlog.
+- **Desenvolvedores**: Explica o "porquê" e o "o quê" das histórias ao [backend-developer](../backend-developer/SKILL.md) e ao [frontend-developer](../frontend-developer/SKILL.md) nas reuniões de planejamento.
+- **QA**: Trabalha em parceria com o [qa-engineer](../qa-engineer/SKILL.md) para garantir que todos os caminhos de uso (felizes e infelizes) estejam documentados nos critérios de aceitação.
+- **Scrum Master**: Apoia o [scrum-master](../scrum-master/SKILL.md) na blindagem do time contra escopos adicionais e no monitoramento de velocidade de entrega.

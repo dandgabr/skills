@@ -125,9 +125,9 @@ Ao projetar, analisar ou auditar uma infraestrutura de rede:
 
 ## 🔗 Integração com Outras Skills de Segurança
 
-- Para alinhar o uso de criptografia e suítes nos túneis IPsec, TLS 1.3, QUIC e mTLS, consulte a skill [cryptography-pqc-standards](..\..\crypto-pki\cryptography-pqc-standards/SKILL.md).
-- Para alinhar o controle de acesso e federação de redes aos provedores de identidade IAM, consulte a skill [iam-access-management](..\..\cloud-iam\iam-access-management/SKILL.md).
-- Para integrar a segurança de rede às matrizes de controles da Cloud Security Alliance (CCM v4 - IVS & IPY), consulte a skill [csa-cloud-security](..\..\cloud-iam\csa-cloud-security/SKILL.md).
-- Para implementar o hardening de infraestrutura de rede alinhado aos CIS Controls (Control 12 e 13) e CIS Benchmarks de Redes, consulte a skill [cis-controls](..\cis-controls/SKILL.md).
-- Para alinhar os controles de rede com a ISO/IEC 27001 (A.8.20 - Network Security e A.8.21 - Security of network services), consulte a skill [iso-27000-series](..\iso-27000-series/SKILL.md).
-- Para monitoramento e resposta a incidentes de rede via SIEM/SOAR e análise PCAP, consulte a skill [secops-incident-responder](..\..\ops-architecture\secops-incident-responder/SKILL.md).
+- Para alinhar o uso de criptografia e suítes nos túneis IPsec, TLS 1.3, QUIC e mTLS, consulte a skill [cryptography-pqc-standards](../../crypto-pki/cryptography-pqc-standards/SKILL.md).
+- Para alinhar o controle de acesso e federação de redes aos provedores de identidade IAM, consulte a skill [iam-access-management](../../cloud-iam/iam-access-management/SKILL.md).
+- Para integrar a segurança de rede às matrizes de controles da Cloud Security Alliance (CCM v4 - IVS & IPY), consulte a skill [csa-cloud-security](../../cloud-iam/csa-cloud-security/SKILL.md).
+- Para implementar o hardening de infraestrutura de rede alinhado aos CIS Controls (Control 12 e 13) e CIS Benchmarks de Redes, consulte a skill [cis-controls](../cis-controls/SKILL.md).
+- Para alinhar os controles de rede com a ISO/IEC 27001 (A.8.20 - Network Security e A.8.21 - Security of network services), consulte a skill [iso-27000-series](../iso-27000-series/SKILL.md).
+- Para monitoramento e resposta a incidentes de rede via SIEM/SOAR e análise PCAP, consulte a skill [secops-incident-responder](../../ops-architecture/secops-incident-responder/SKILL.md).

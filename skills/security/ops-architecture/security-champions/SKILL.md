@@ -37,13 +37,13 @@ Ative esta skill sempre que a solicitacao envolver um destes cenarios:
 
 ## 🔗 Mapa de Delegacao
 
-- [appsec-owasp-asvs](..\..\appsec\appsec-owasp-asvs/SKILL.md): use para codificacao segura, revisao defensiva e controles de aplicacao.
-- [threat-modeler](..\threat-modeler/SKILL.md): use para STRIDE, PASTA, LINDDUN e identificacao de superficies de ataque.
-- [security-architect-sabsa](..\security-architect-sabsa/SKILL.md): use para zonas de confianca, requisitos arquiteturais e controles de alto nivel.
-- [devsecops-engineer](..\devsecops-engineer/SKILL.md): use para pipelines, IaC, secrets, containers e hardening automatizado.
-- [secops-incident-responder](..\secops-incident-responder/SKILL.md): use para incidentes, contencao, monitoramento e recuperacao.
-- [pentester-owasp-wstg](..\..\appsec\pentester-owasp-wstg/SKILL.md): use para validacao ofensiva e testes praticos de exploracao.
-- [security-manager-samm](..\..\grc-compliance\security-manager-samm/SKILL.md): use para maturidade, governanca e priorizacao do programa de seguranca.
+- [appsec-owasp-asvs](../../appsec/appsec-owasp-asvs/SKILL.md): use para codificacao segura, revisao defensiva e controles de aplicacao.
+- [threat-modeler](../threat-modeler/SKILL.md): use para STRIDE, PASTA, LINDDUN e identificacao de superficies de ataque.
+- [security-architect-sabsa](../security-architect-sabsa/SKILL.md): use para zonas de confianca, requisitos arquiteturais e controles de alto nivel.
+- [devsecops-engineer](../devsecops-engineer/SKILL.md): use para pipelines, IaC, secrets, containers e hardening automatizado.
+- [secops-incident-responder](../secops-incident-responder/SKILL.md): use para incidentes, contencao, monitoramento e recuperacao.
+- [pentester-owasp-wstg](../../appsec/pentester-owasp-wstg/SKILL.md): use para validacao ofensiva e testes praticos de exploracao.
+- [security-manager-samm](../../grc-compliance/security-manager-samm/SKILL.md): use para maturidade, governanca e priorizacao do programa de seguranca.
 
 ---
 

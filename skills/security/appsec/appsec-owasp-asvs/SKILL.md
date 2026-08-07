@@ -21,9 +21,9 @@ Complemente as verificações do ASVS com as seguintes bases de conhecimento:
 
 ## 🛡️ Níveis de Segurança ASVS e Relação com o GRC
 
-Antes de propor ou validar controles, identifique qual nível de segurança se aplica ao escopo do projeto (conforme definido pela política de risco em [security-grc-compliance](..\..\grc-compliance\security-grc-compliance/SKILL.md)):
-* **Nível 1 (Oportunista):** Proteção básica contra vulnerabilidades comuns (CWEs frequentes). Automatizável por ferramentas de SAST/DAST configuradas pelo [devsecops-engineer](..\..\ops-architecture\devsecops-engineer/SKILL.md).
-* **Nível 2 (Padrão):** **(Recomendado por padrão)** Apropriado para aplicações corporativas com dados sensíveis (PII, dados de pagamento, LGPD). Requer análise manual profunda e modelagem com [threat-modeler](..\..\ops-architecture\threat-modeler/SKILL.md).
+Antes de propor ou validar controles, identifique qual nível de segurança se aplica ao escopo do projeto (conforme definido pela política de risco em [security-grc-compliance](../../grc-compliance/security-grc-compliance/SKILL.md)):
+* **Nível 1 (Oportunista):** Proteção básica contra vulnerabilidades comuns (CWEs frequentes). Automatizável por ferramentas de SAST/DAST configuradas pelo [devsecops-engineer](../../ops-architecture/devsecops-engineer/SKILL.md).
+* **Nível 2 (Padrão):** **(Recomendado por padrão)** Apropriado para aplicações corporativas com dados sensíveis (PII, dados de pagamento, LGPD). Requer análise manual profunda e modelagem com [threat-modeler](../../ops-architecture/threat-modeler/SKILL.md).
 * **Nível 3 (Avançado):** Exigido para transações críticas de alto risco, sistemas bancários ou alta exposição.
 
 ---
@@ -127,17 +127,17 @@ Ao auditar código ou desenhar implementações, siga rigorosamente as diretrize
 Quando solicitado a validar ou gerar código focado em segurança de aplicação:
 
 1. **Avalie contra Diretrizes da Linguagem (CERT):** Certifique-se de que o código proposto não utiliza recursos inseguros nativos da linguagem (ex: `eval()` em JavaScript, `shell=True` no subprocess do Python, ou vulnerabilidades de ponteiros/buffer em linguagens compiladas).
-2. **Identifique a Ameaça e a Mitigação:** Conecte o código que você está revisando à modelagem gerada em [threat-modeler](..\..\ops-architecture\threat-modeler/SKILL.md).
-3. **Mapeie o Requisito Regulatório:** Certifique-se de que a implementação atende às políticas de proteção de dados escritas pela skill [security-grc-compliance](..\..\grc-compliance\security-grc-compliance/SKILL.md).
+2. **Identifique a Ameaça e a Mitigação:** Conecte o código que você está revisando à modelagem gerada em [threat-modeler](../../ops-architecture/threat-modeler/SKILL.md).
+3. **Mapeie o Requisito Regulatório:** Certifique-se de que a implementação atende às políticas de proteção de dados escritas pela skill [security-grc-compliance](../../grc-compliance/security-grc-compliance/SKILL.md).
 4. **Submeta Correções:** Apresente as correções no formato de diffs de código fáceis de aplicar, citando o requisito ASVS exato e o CWE associado.
 
 ---
 
 ## 🔗 Integração com Outras Skills de Segurança
 
-- [security-grc-compliance](..\..\grc-compliance\security-grc-compliance/SKILL.md): Define o nível ASVS exigido e as políticas regulatórias de proteção de dados.
-- [threat-modeler](..\..\ops-architecture\threat-modeler/SKILL.md): Fornece os cenários de ameaça que o desenvolvedor deve mitigar no código.
-- [security-architect-sabsa](..\..\ops-architecture\security-architect-sabsa/SKILL.md): Fornece as diretrizes de design de alto nível e zonas de confiança onde o código será executado.
-- [devsecops-engineer](..\..\ops-architecture\devsecops-engineer/SKILL.md): Automatiza a execução das regras do ASVS no pipeline por meio de SAST/SCA.
-- [pentester-owasp-wstg](..\pentester-owasp-wstg/SKILL.md): Tenta burlar os controles ASVS em tempo de execução para atestar a qualidade deles.
-- [secops-incident-responder](..\..\ops-architecture\secops-incident-responder/SKILL.md): Consome os logs gerados em conformidade com as regras AppSec para fins de detecção de intrusão.
+- [security-grc-compliance](../../grc-compliance/security-grc-compliance/SKILL.md): Define o nível ASVS exigido e as políticas regulatórias de proteção de dados.
+- [threat-modeler](../../ops-architecture/threat-modeler/SKILL.md): Fornece os cenários de ameaça que o desenvolvedor deve mitigar no código.
+- [security-architect-sabsa](../../ops-architecture/security-architect-sabsa/SKILL.md): Fornece as diretrizes de design de alto nível e zonas de confiança onde o código será executado.
+- [devsecops-engineer](../../ops-architecture/devsecops-engineer/SKILL.md): Automatiza a execução das regras do ASVS no pipeline por meio de SAST/SCA.
+- [pentester-owasp-wstg](../pentester-owasp-wstg/SKILL.md): Tenta burlar os controles ASVS em tempo de execução para atestar a qualidade deles.
+- [secops-incident-responder](../../ops-architecture/secops-incident-responder/SKILL.md): Consome os logs gerados em conformidade com as regras AppSec para fins de detecção de intrusão.

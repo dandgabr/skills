@@ -127,6 +127,6 @@ Esta skill orienta a inteligência artificial a agir como um **Especialista em A
 
 ## 🔗 Integração com Outras Skills
 
-- Para integrar IAM com segurança de transporte e encriptação S3/KMS, consulte a skill [cryptography-pqc-standards](..\..\crypto-pki\cryptography-pqc-standards/SKILL.md).
-- Para diretrizes gerais de controle de acesso e federação, consulte a skill [iam-access-management](..\iam-access-management/SKILL.md).
-- Para alinhar o IAM AWS aos frameworks de compliance e segurança de nuvem, consulte a skill [csa-cloud-security](..\csa-cloud-security/SKILL.md).
+- Para integrar IAM com segurança de transporte e encriptação S3/KMS, consulte a skill [cryptography-pqc-standards](../../crypto-pki/cryptography-pqc-standards/SKILL.md).
+- Para diretrizes gerais de controle de acesso e federação, consulte a skill [iam-access-management](../iam-access-management/SKILL.md).
+- Para alinhar o IAM AWS aos frameworks de compliance e segurança de nuvem, consulte a skill [csa-cloud-security](../csa-cloud-security/SKILL.md).

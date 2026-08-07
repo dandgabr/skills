@@ -168,6 +168,6 @@ Ao revisar uma aplicação baseada em LLM/SLM, entregue o relatório estruturado
 
 ## 🔗 Integração com Outras Skills do Ecossistema
 
-- Para alinhar a segurança do LLM com a governança e compliance de dados gerais, consulte [security-privacy](..\..\grc-compliance\security-privacy/SKILL.md) e [security-grc-compliance](..\..\grc-compliance\security-grc-compliance/SKILL.md).
-- Para modelar vetores de ataque específicos na camada de aplicação web que consome o LLM, consulte [pentester-owasp-api-security-2023](..\..\appsec\pentester-owasp-api-security-2023/SKILL.md) e [appsec-owasp-asvs](..\..\appsec\appsec-owasp-asvs/SKILL.md).
-- Para integrar chamadas de modelos no backend de forma limpa e manutenível, consulte [backend-developer](..\..\..\general\roles\backend-developer/SKILL.md).
+- Para alinhar a segurança do LLM com a governança e compliance de dados gerais, consulte [security-privacy](../../grc-compliance/security-privacy/SKILL.md) e [security-grc-compliance](../../grc-compliance/security-grc-compliance/SKILL.md).
+- Para modelar vetores de ataque específicos na camada de aplicação web que consome o LLM, consulte [pentester-owasp-api-security-2023](../../appsec/pentester-owasp-api-security-2023/SKILL.md) e [appsec-owasp-asvs](../../appsec/appsec-owasp-asvs/SKILL.md).
+- Para integrar chamadas de modelos no backend de forma limpa e manutenível, consulte [backend-developer](../../../general/roles/backend-developer/SKILL.md).

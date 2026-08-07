@@ -103,6 +103,6 @@ request.auth.access_levels["accessPolicies/12345/accessLevels/VpnAccess"]
 
 ## 🔗 Integração com Outras Skills
 
-- Para integrar GCP IAM com o ecossistema Gemini Enterprise e Vertex AI, consulte a skill [gemini-enterprise](..\..\..\programs\gemini-enterprise/SKILL.md).
-- Para diretrizes de governança geral de identidades e PAM, consulte a skill [iam-access-management](..\iam-access-management/SKILL.md).
-- Para alinhar o GCP aos controles do CIS Google Cloud Computing Foundations Benchmark, consulte a skill [cis-controls](..\..\grc-compliance\cis-controls/SKILL.md).
+- Para integrar GCP IAM com o ecossistema Gemini Enterprise e Vertex AI, consulte a skill [gemini-enterprise](../../../programs/gemini-enterprise/SKILL.md).
+- Para diretrizes de governança geral de identidades e PAM, consulte a skill [iam-access-management](../iam-access-management/SKILL.md).
+- Para alinhar o GCP aos controles do CIS Google Cloud Computing Foundations Benchmark, consulte a skill [cis-controls](../../grc-compliance/cis-controls/SKILL.md).

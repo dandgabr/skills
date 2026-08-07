@@ -453,5 +453,5 @@ kanban
 
 ## 🤝 Integração com Outras Skills
 
-- **Sob a Skill [software-architect](..\..\roles\software-architect/SKILL.md)**: Use diagramas do Mermaid para mapear a separação lógica de camadas (Layers), fluxo de integração de APIs e topologias de rede.
-- **Sob as Skills de Design Patterns [dp-*](..\..\..\patterns\creational\dp-factory-method/SKILL.md)**: Use diagramas de classe (`classDiagram`) do Mermaid para esboçar a relação conceitual de herança, composição e interfaces dos padrões estruturados ou compartilhamentais envolvidos.
+- **Sob a Skill [software-architect](../../roles/software-architect/SKILL.md)**: Use diagramas do Mermaid para mapear a separação lógica de camadas (Layers), fluxo de integração de APIs e topologias de rede.
+- **Sob as Skills de Design Patterns [dp-*](../../../patterns/creational/dp-factory-method/SKILL.md)**: Use diagramas de classe (`classDiagram`) do Mermaid para esboçar a relação conceitual de herança, composição e interfaces dos padrões estruturados ou compartilhamentais envolvidos.

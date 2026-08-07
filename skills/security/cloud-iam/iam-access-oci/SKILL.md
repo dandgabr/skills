@@ -105,6 +105,6 @@ All {resource.type = 'instance', resource.tag.Operations.Environment = 'Prod'}
 
 ## 🔗 Integração com Outras Skills
 
-- Para diretrizes gerais de controle de acesso, RBAC e PAM, consulte a skill [iam-access-management](..\iam-access-management/SKILL.md).
-- Para diretrizes de governança de segurança em nuvem, consulte a skill [csa-cloud-security](..\csa-cloud-security/SKILL.md).
-- Para alinhar o OCI aos controles de rede e criptografia, consulte a skill [network-security-onprem-cloud](..\..\grc-compliance\network-security-onprem-cloud/SKILL.md).
+- Para diretrizes gerais de controle de acesso, RBAC e PAM, consulte a skill [iam-access-management](../iam-access-management/SKILL.md).
+- Para diretrizes de governança de segurança em nuvem, consulte a skill [csa-cloud-security](../csa-cloud-security/SKILL.md).
+- Para alinhar o OCI aos controles de rede e criptografia, consulte a skill [network-security-onprem-cloud](../../grc-compliance/network-security-onprem-cloud/SKILL.md).

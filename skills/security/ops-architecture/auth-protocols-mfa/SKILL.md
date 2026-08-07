@@ -126,8 +126,8 @@ Ao desenhar, revisar ou integrar arquiteturas de login e autorização:
 
 ## 🔗 Integração com Outras Skills de Segurança
 
-- Para alinhar os certificados e assinaturas digitais de mTLS, WebAuthn e Smartcards à arquitetura de PKI, consulte a skill [pki-digital-signatures](..\..\crypto-pki\pki-digital-signatures/SKILL.md).
-- Para aplicar controles de acesso e IAM no Active Directory, Windows, Linux, AWS, Azure, GCP, OCI, SAP e Salesforce, consulte a skill [iam-access-management](..\..\cloud-iam\iam-access-management/SKILL.md).
-- Para alinhar os requisitos de autenticação digital às diretrizes do NIST (SP 800-63-3/4 IAL, AAL, FAL), consulte a skill [nist-frameworks-csf](..\..\grc-compliance\nist-frameworks-csf/SKILL.md).
-- Para validar a implementação segura de APIs REST e prevenção de falhas de autenticação de APIs (OWASP API2:2023 - Broken Authentication), consulte a skill [pentester-owasp-api-security-2023](..\..\appsec\pentester-owasp-api-security-2023/SKILL.md).
-- Para auditar implementações de JWT e mecanismos de login no código-fonte, consulte a skill [sast-code-review](..\..\appsec\sast-code-review/SKILL.md).
+- Para alinhar os certificados e assinaturas digitais de mTLS, WebAuthn e Smartcards à arquitetura de PKI, consulte a skill [pki-digital-signatures](../../crypto-pki/pki-digital-signatures/SKILL.md).
+- Para aplicar controles de acesso e IAM no Active Directory, Windows, Linux, AWS, Azure, GCP, OCI, SAP e Salesforce, consulte a skill [iam-access-management](../../cloud-iam/iam-access-management/SKILL.md).
+- Para alinhar os requisitos de autenticação digital às diretrizes do NIST (SP 800-63-3/4 IAL, AAL, FAL), consulte a skill [nist-frameworks-csf](../../grc-compliance/nist-frameworks-csf/SKILL.md).
+- Para validar a implementação segura de APIs REST e prevenção de falhas de autenticação de APIs (OWASP API2:2023 - Broken Authentication), consulte a skill [pentester-owasp-api-security-2023](../../appsec/pentester-owasp-api-security-2023/SKILL.md).
+- Para auditar implementações de JWT e mecanismos de login no código-fonte, consulte a skill [sast-code-review](../../appsec/sast-code-review/SKILL.md).

@@ -94,7 +94,7 @@ Ao planejar ou implementar melhorias de segurança baseadas no CIS:
 
 ## 🔗 Integração com Outras Skills de Segurança
 
-- Para correlacionar o CIS Control 5 e 6 aos princípios de gestão de acesso em nuvem e AD, consulte a skill [iam-access-management](..\..\cloud-iam\iam-access-management/SKILL.md).
-- Para alinhar a segurança de software do CIS Control 16 com a validação OWASP ASVS, consulte a skill [appsec-owasp-asvs](..\..\appsec\appsec-owasp-asvs/SKILL.md).
-- Para mapear a correspondência dos CIS Controls com o NIST CSF 2.0 e SP 800-53, consulte a skill [nist-frameworks-csf](..\nist-frameworks-csf/SKILL.md).
-- Para alinhar o hardening com a conformidade auditável da ISO 27001 (A.8.9 - Configuration Management), consulte a skill [iso-27000-series](..\iso-27000-series/SKILL.md).
+- Para correlacionar o CIS Control 5 e 6 aos princípios de gestão de acesso em nuvem e AD, consulte a skill [iam-access-management](../../cloud-iam/iam-access-management/SKILL.md).
+- Para alinhar a segurança de software do CIS Control 16 com a validação OWASP ASVS, consulte a skill [appsec-owasp-asvs](../../appsec/appsec-owasp-asvs/SKILL.md).
+- Para mapear a correspondência dos CIS Controls com o NIST CSF 2.0 e SP 800-53, consulte a skill [nist-frameworks-csf](../nist-frameworks-csf/SKILL.md).
+- Para alinhar o hardening com a conformidade auditável da ISO 27001 (A.8.9 - Configuration Management), consulte a skill [iso-27000-series](../iso-27000-series/SKILL.md).

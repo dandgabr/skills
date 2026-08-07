@@ -104,6 +104,6 @@ interface IERC20 {
 
 ## 🔗 Integração com Outras Skills
 
-- Para aprofundamento em Zero-Knowledge Proofs (zk-SNARKs/zk-STARKs) e criptografia limiar, consulte a skill [cryptography-pqc-standards](..\..\..\security\crypto-pki\cryptography-pqc-standards/SKILL.md).
-- Para desenvolvimento de APIs backend de integração Web3 (Web3.js, Ethers.js, Viem), consulte a skill [backend-developer](..\..\roles\backend-developer/SKILL.md).
-- Para testes automatizados e segurança de código, consulte a skill [sast-code-review](..\..\..\security\appsec\sast-code-review/SKILL.md).
+- Para aprofundamento em Zero-Knowledge Proofs (zk-SNARKs/zk-STARKs) e criptografia limiar, consulte a skill [cryptography-pqc-standards](../../../security/crypto-pki/cryptography-pqc-standards/SKILL.md).
+- Para desenvolvimento de APIs backend de integração Web3 (Web3.js, Ethers.js, Viem), consulte a skill [backend-developer](../../roles/backend-developer/SKILL.md).
+- Para testes automatizados e segurança de código, consulte a skill [sast-code-review](../../../security/appsec/sast-code-review/SKILL.md).

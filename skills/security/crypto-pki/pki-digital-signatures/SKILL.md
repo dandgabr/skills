@@ -118,7 +118,7 @@ Com o desenvolvimento da computação quântica, assinaturas baseadas em RSA e E
 
 ## 🔗 Integração com Outras Skills de Segurança
 
-- Para alinhar o uso de PKI à criptografia de transporte (TLS 1.3, mTLS, ECH, QUIC), consulte a skill principal [cryptography-pqc-standards](..\cryptography-pqc-standards/SKILL.md).
-- Para integrar a automação de certificados (Cert-Manager, Vault) em pipelines de CI/CD e infraestrutura como código, consulte a skill [devsecops-engineer](..\..\ops-architecture\devsecops-engineer/SKILL.md).
-- Para alinhar o uso de identidades de certificados digitais e mTLS nos provedores de nuvem e AD CS, consulte a skill [iam-access-management](..\..\cloud-iam\iam-access-management/SKILL.md).
-- Para requisitos de controle de chaves e auditorias conforme a ISO 27001 (A.8.24), consulte a skill [iso-27000-series](..\..\grc-compliance\iso-27000-series/SKILL.md).
+- Para alinhar o uso de PKI à criptografia de transporte (TLS 1.3, mTLS, ECH, QUIC), consulte a skill principal [cryptography-pqc-standards](../cryptography-pqc-standards/SKILL.md).
+- Para integrar a automação de certificados (Cert-Manager, Vault) em pipelines de CI/CD e infraestrutura como código, consulte a skill [devsecops-engineer](../../ops-architecture/devsecops-engineer/SKILL.md).
+- Para alinhar o uso de identidades de certificados digitais e mTLS nos provedores de nuvem e AD CS, consulte a skill [iam-access-management](../../cloud-iam/iam-access-management/SKILL.md).
+- Para requisitos de controle de chaves e auditorias conforme a ISO 27001 (A.8.24), consulte a skill [iso-27000-series](../../grc-compliance/iso-27000-series/SKILL.md).

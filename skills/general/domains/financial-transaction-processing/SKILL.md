@@ -122,6 +122,6 @@ Idempotency-Key: 7b9e83c2-84b1-4c6e-821a-298317a9412d
 
 ## 🔗 Integração com Outras Skills
 
-- Para adequação de ambiente a normas de segurança de cartões de crédito e escopo CDE, consulte a skill [pci-dss-compliance](..\..\..\security\grc-compliance\pci-dss-compliance/SKILL.md).
-- Para assinaturas digitais RSADSSA-PSS e encriptação de payloads Pix/SPB, consulte a skill [cryptography-pqc-standards](..\..\..\security\crypto-pki\cryptography-pqc-standards/SKILL.md).
-- Para desenvolvimento de APIs REST resilientes e microsserviços de pagamento, consulte a skill [backend-developer](..\..\roles\backend-developer/SKILL.md).
+- Para adequação de ambiente a normas de segurança de cartões de crédito e escopo CDE, consulte a skill [pci-dss-compliance](../../../security/grc-compliance/pci-dss-compliance/SKILL.md).
+- Para assinaturas digitais RSADSSA-PSS e encriptação de payloads Pix/SPB, consulte a skill [cryptography-pqc-standards](../../../security/crypto-pki/cryptography-pqc-standards/SKILL.md).
+- Para desenvolvimento de APIs REST resilientes e microsserviços de pagamento, consulte a skill [backend-developer](../../roles/backend-developer/SKILL.md).

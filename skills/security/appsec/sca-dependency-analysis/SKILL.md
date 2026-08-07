@@ -132,7 +132,7 @@ Ao ser solicitada para realizar uma análise de dependências ou auditar manifes
 
 ## 🔗 Integração com Outras Skills
 
-- **[devsecops-engineer](..\..\ops-architecture\devsecops-engineer/SKILL.md)**: Integra os scanners de SCA (Trivy, OWASP Dependency-Check, Snyk) nas etapas de build do CI/CD com Quality Gates.
-- **[security-grc-compliance](..\..\grc-compliance\security-grc-compliance/SKILL.md)**: Fornece o inventário de SBOM e relatórios de licenças open-source para auditorias de conformidade legal e governança.
-- **[appsec-owasp-asvs](..\appsec-owasp-asvs/SKILL.md)**: Valida os requisitos da categoria de Componentes e Bibliotecas de Terceiros do ASVS.
-- **[sast-code-review](..\sast-code-review/SKILL.md)**: Trabalha em conjunto para cobrir tanto o código próprio (SAST) quanto o código importado de terceiros (SCA).
+- **[devsecops-engineer](../../ops-architecture/devsecops-engineer/SKILL.md)**: Integra os scanners de SCA (Trivy, OWASP Dependency-Check, Snyk) nas etapas de build do CI/CD com Quality Gates.
+- **[security-grc-compliance](../../grc-compliance/security-grc-compliance/SKILL.md)**: Fornece o inventário de SBOM e relatórios de licenças open-source para auditorias de conformidade legal e governança.
+- **[appsec-owasp-asvs](../appsec-owasp-asvs/SKILL.md)**: Valida os requisitos da categoria de Componentes e Bibliotecas de Terceiros do ASVS.
+- **[sast-code-review](../sast-code-review/SKILL.md)**: Trabalha em conjunto para cobrir tanto o código próprio (SAST) quanto o código importado de terceiros (SCA).

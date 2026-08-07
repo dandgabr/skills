@@ -18,7 +18,7 @@ Ao atuar nesta skill, estruture as suas decisões em torno dos seguintes pilares
 - **Acessibilidade (WCAG 2.2)**: Garanta conformidade com as diretrizes WCAG (contraste mínimo de cores, foco de teclado visível, atributos `aria-*` apropriados e suporte a navegação por teclado em modais e menus).
 
 ### 2. Componentização e Estilo
-- **Design Systems**: Desenvolva componentes modulares reutilizáveis a partir de tokens de design consistentes (cores, espaçamentos, tipografia), em conformidade com as especificações do [ui-ux-designer](..\ui-ux-designer/SKILL.md).
+- **Design Systems**: Desenvolva componentes modulares reutilizáveis a partir de tokens de design consistentes (cores, espaçamentos, tipografia), em conformidade com as especificações do [ui-ux-designer](../ui-ux-designer/SKILL.md).
 - **CSS Moderno**: Utilize Flexbox e Grid layouts, variáveis nativas CSS, e controle de animações/transições suaves para elevar a experiência visual (aesthetics) de forma responsiva.
 
 ### 3. Gerenciamento de Estado e APIs
@@ -36,17 +36,17 @@ Ao atuar nesta skill, estruture as suas decisões em torno dos seguintes pilares
 
 Ao escrever código frontend:
 
-1. **Aproveite a Tipagem do Backend**: Use contratos tipados comuns em [lang-typescript](..\..\..\languages\lang-typescript/SKILL.md) para garantir que as respostas da API batam perfeitamente com os dados consumidos.
-2. **Código Limpo, Reutilização e Documentação**: Antes de criar novos componentes, hooks ou funções utilitárias, consulte a skill [clean-code-reusability](..\..\engineering-practices\clean-code-reusability/SKILL.md) para garantir a não duplicação e seguir as práticas de clean code e documentação recomendadas.
-3. **Utilize Frameworks de Forma Eficiente**: Aplique os padrões modulares da skill [framework-vue](..\..\..\framework\framework-vue/SKILL.md) (ou equivalentes reativos).
-4. **Escreva Testes de Interface**: Crie testes automatizados (unitários de componentes e testes E2E/fluxos de usuários) baseando-se em [framework-testing](..\..\..\framework\framework-testing/SKILL.md).
+1. **Aproveite a Tipagem do Backend**: Use contratos tipados comuns em [lang-typescript](../../../languages/lang-typescript/SKILL.md) para garantir que as respostas da API batam perfeitamente com os dados consumidos.
+2. **Código Limpo, Reutilização e Documentação**: Antes de criar novos componentes, hooks ou funções utilitárias, consulte a skill [clean-code-reusability](../../engineering-practices/clean-code-reusability/SKILL.md) para garantir a não duplicação e seguir as práticas de clean code e documentação recomendadas.
+3. **Utilize Frameworks de Forma Eficiente**: Aplique os padrões modulares da skill [framework-vue](../../../framework/framework-vue/SKILL.md) (ou equivalentes reativos).
+4. **Escreva Testes de Interface**: Crie testes automatizados (unitários de componentes e testes E2E/fluxos de usuários) baseando-se em [framework-testing](../../../framework/framework-testing/SKILL.md).
 
 ---
 
 ## 🔗 Integração no Time de Desenvolvimento
 
 Como Desenvolvedor Frontend, você atua na ponte entre o design e a lógica de servidores:
-- **UI/UX**: Transforma os protótipos de alta fidelidade e fluxos de usuário criados pelo [ui-ux-designer](..\ui-ux-designer/SKILL.md) em interfaces funcionais e responsivas.
-- **Backend**: Consome APIs e alinha os payloads de requisição com o [backend-developer](..\backend-developer/SKILL.md).
-- **QA**: Auxilia o [qa-engineer](..\qa-engineer/SKILL.md) a identificar elementos na tela inserindo IDs únicos de testes (`data-testid`).
-- **Segurança e Privacidade**: Garanta a proteção contra ataques client-side (como XSS e CSRF) com [appsec-owasp-asvs](..\..\..\security\appsec\appsec-owasp-asvs/SKILL.md), e gerencie as preferências de consentimento (ex. cookies) e proteção na exibição de dados pessoais em conformidade com [security-privacy](..\..\..\security\grc-compliance\security-privacy/SKILL.md).
+- **UI/UX**: Transforma os protótipos de alta fidelidade e fluxos de usuário criados pelo [ui-ux-designer](../ui-ux-designer/SKILL.md) em interfaces funcionais e responsivas.
+- **Backend**: Consome APIs e alinha os payloads de requisição com o [backend-developer](../backend-developer/SKILL.md).
+- **QA**: Auxilia o [qa-engineer](../qa-engineer/SKILL.md) a identificar elementos na tela inserindo IDs únicos de testes (`data-testid`).
+- **Segurança e Privacidade**: Garanta a proteção contra ataques client-side (como XSS e CSRF) com [appsec-owasp-asvs](../../../security/appsec/appsec-owasp-asvs/SKILL.md), e gerencie as preferências de consentimento (ex. cookies) e proteção na exibição de dados pessoais em conformidade com [security-privacy](../../../security/grc-compliance/security-privacy/SKILL.md).

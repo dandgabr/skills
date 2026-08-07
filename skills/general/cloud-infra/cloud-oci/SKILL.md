@@ -105,6 +105,6 @@ Esta skill orienta a inteligência artificial a agir como um **Especialista em N
 
 ## 🔗 Integração com Outras Skills
 
-- Para políticas de IAM do OCI, grupos dinâmicos e linguagem de políticas, consulte a skill [iam-access-oci](..\..\..\security\cloud-iam\iam-access-oci/SKILL.md).
-- Para automação de infraestrutura com Terraform e Ansible, consulte a skill [devops-engineer](..\..\roles\devops-engineer/SKILL.md).
-- Para encriptação de volumes de bloco OCI e gestão de chaves em OCI Vault, consulte a skill [cryptography-pqc-standards](..\..\..\security\crypto-pki\cryptography-pqc-standards/SKILL.md).
+- Para políticas de IAM do OCI, grupos dinâmicos e linguagem de políticas, consulte a skill [iam-access-oci](../../../security/cloud-iam/iam-access-oci/SKILL.md).
+- Para automação de infraestrutura com Terraform e Ansible, consulte a skill [devops-engineer](../../roles/devops-engineer/SKILL.md).
+- Para encriptação de volumes de bloco OCI e gestão de chaves em OCI Vault, consulte a skill [cryptography-pqc-standards](../../../security/crypto-pki/cryptography-pqc-standards/SKILL.md).

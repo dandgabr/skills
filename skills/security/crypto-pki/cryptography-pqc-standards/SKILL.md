@@ -185,7 +185,7 @@ Protocolos criptográficos onde uma parte (*Prover*) pode provar para outra part
 
 ## 🔗 Integração com Outras Skills de Segurança
 
-- Para detalhes sobre infraestrutura X.509, ACME, HSMs PKCS#11 e assinaturas digitais (CAdES, XAdES, PAdES, eIDAS, ICP-Brasil), consulte a skill [pki-digital-signatures](..\pki-digital-signatures/SKILL.md).
-- Para adequação de criptografia e gestão de chaves aos controles organizacionais ISO/IEC 27001 (A.8.24), consulte a skill [iso-27000-series](..\..\grc-compliance\iso-27000-series/SKILL.md).
-- Para alinhar a proteção de chaves e segredos em nuvem (AWS KMS, Azure Key Vault, GCP KMS) aos controles da CSA CCM v4 (CEK & DSP), consulte a skill [csa-cloud-security](..\..\cloud-iam\csa-cloud-security/SKILL.md).
-- Para integrar KMS e segredos em pipelines de CI/CD e infraestrutura de containers, consulte a skill [devsecops-engineer](..\..\ops-architecture\devsecops-engineer/SKILL.md).
+- Para detalhes sobre infraestrutura X.509, ACME, HSMs PKCS#11 e assinaturas digitais (CAdES, XAdES, PAdES, eIDAS, ICP-Brasil), consulte a skill [pki-digital-signatures](../pki-digital-signatures/SKILL.md).
+- Para adequação de criptografia e gestão de chaves aos controles organizacionais ISO/IEC 27001 (A.8.24), consulte a skill [iso-27000-series](../../grc-compliance/iso-27000-series/SKILL.md).
+- Para alinhar a proteção de chaves e segredos em nuvem (AWS KMS, Azure Key Vault, GCP KMS) aos controles da CSA CCM v4 (CEK & DSP), consulte a skill [csa-cloud-security](../../cloud-iam/csa-cloud-security/SKILL.md).
+- Para integrar KMS e segredos em pipelines de CI/CD e infraestrutura de containers, consulte a skill [devsecops-engineer](../../ops-architecture/devsecops-engineer/SKILL.md).

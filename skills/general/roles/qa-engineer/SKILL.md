@@ -66,15 +66,15 @@ O sistema gera duas cobranças paralelas no banco de dados e exibe um erro de st
 
 Ao atuar nesta skill:
 
-1. **Defina Critérios de Aceitação**: Antes de começar a testar, revise os critérios de aceitação refinados pelo [product-owner](..\product-owner/SKILL.md).
-2. **Priorize a Automação**: Escreva scripts automatizados em conformidade com as convenções da skill de suporte [framework-testing](..\..\..\framework\framework-testing/SKILL.md) para garantir que os testes rodem de forma consistente em CI/CD.
-3. **Execute Testes de Segurança Básicos**: Faça simulações rápidas baseadas no guia do [pentester-owasp-wstg](..\..\..\security\appsec\pentester-owasp-wstg/SKILL.md) para validar controle de acessos lógicos.
+1. **Defina Critérios de Aceitação**: Antes de começar a testar, revise os critérios de aceitação refinados pelo [product-owner](../product-owner/SKILL.md).
+2. **Priorize a Automação**: Escreva scripts automatizados em conformidade com as convenções da skill de suporte [framework-testing](../../../framework/framework-testing/SKILL.md) para garantir que os testes rodem de forma consistente em CI/CD.
+3. **Execute Testes de Segurança Básicos**: Faça simulações rápidas baseadas no guia do [pentester-owasp-wstg](../../../security/appsec/pentester-owasp-wstg/SKILL.md) para validar controle de acessos lógicos.
 
 ---
 
 ## 🔗 Integração no Time de Desenvolvimento
 
 Como Engenheiro de QA, você garante a qualidade ao conectar os requisitos às implementações:
-- **PO**: Alinha as expectativas de negócio e valida se as histórias entregues satisfazem os critérios de aceitação do [product-owner](..\product-owner/SKILL.md).
-- **Frontend / Backend**: Reporta bugs detalhados para os devs e sugere pontos de teste adicionais, alinhados com [frontend-developer](..\frontend-developer/SKILL.md) e [backend-developer](..\backend-developer/SKILL.md).
-- **Agile**: Alerta sobre gargalos no pipeline de homologação durante as reuniões coordenadas pelo [scrum-master](..\scrum-master/SKILL.md).
+- **PO**: Alinha as expectativas de negócio e valida se as histórias entregues satisfazem os critérios de aceitação do [product-owner](../product-owner/SKILL.md).
+- **Frontend / Backend**: Reporta bugs detalhados para os devs e sugere pontos de teste adicionais, alinhados com [frontend-developer](../frontend-developer/SKILL.md) e [backend-developer](../backend-developer/SKILL.md).
+- **Agile**: Alerta sobre gargalos no pipeline de homologação durante as reuniões coordenadas pelo [scrum-master](../scrum-master/SKILL.md).

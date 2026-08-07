@@ -76,6 +76,6 @@ Ao identificar que o sistema está ativamente sob ataque ou após a confirmaçã
 
 ## 🔗 Integração com Outras Skills de Segurança
 
-- Para correlacionar eventos de infraestrutura física às metas operacionais de resiliência e zonas de rede lógicas, consulte a skill [security-architect-sabsa](..\security-architect-sabsa/SKILL.md).
-- Para auditar se os logs operacionais estão sendo gerados de forma adequada e com privacidade (sem conter dados sensíveis de usuários), consulte a skill [appsec-owasp-asvs](..\..\appsec\appsec-owasp-asvs/SKILL.md).
-- Para realizar simulações de incidentes de segurança (Red Team vs Blue Team) e testar a eficácia da detecção, consulte a skill [pentester-owasp-wstg](..\..\appsec\pentester-owasp-wstg/SKILL.md).
+- Para correlacionar eventos de infraestrutura física às metas operacionais de resiliência e zonas de rede lógicas, consulte a skill [security-architect-sabsa](../security-architect-sabsa/SKILL.md).
+- Para auditar se os logs operacionais estão sendo gerados de forma adequada e com privacidade (sem conter dados sensíveis de usuários), consulte a skill [appsec-owasp-asvs](../../appsec/appsec-owasp-asvs/SKILL.md).
+- Para realizar simulações de incidentes de segurança (Red Team vs Blue Team) e testar a eficácia da detecção, consulte a skill [pentester-owasp-wstg](../../appsec/pentester-owasp-wstg/SKILL.md).

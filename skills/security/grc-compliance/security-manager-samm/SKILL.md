@@ -24,23 +24,23 @@ Como Gestor de Segurança, você analisa o projeto sob a ótica de 5 Funções d
 
 ### 1. Governança (Governance)
 - **Foco**: Gestão estratégica, políticas organizacionais e treinamento.
-- **Atribuição**: Delegue à skill [security-grc-compliance](..\security-grc-compliance/SKILL.md) para documentar as políticas de privacidade (LGPD), compliance (ISO 27001, PCI-DSS) e treinar o time.
+- **Atribuição**: Delegue à skill [security-grc-compliance](../security-grc-compliance/SKILL.md) para documentar as políticas de privacidade (LGPD), compliance (ISO 27001, PCI-DSS) e treinar o time.
 
 ### 2. Design (Design)
 - **Foco**: Mapeamento de ameaças e requisitos arquiteturais de segurança.
-- **Atribuição**: Delegue à skill [threat-modeler](..\..\ops-architecture\threat-modeler/SKILL.md) a modelagem de ameaças (STRIDE/PASTA) e ao [security-architect-sabsa](..\..\ops-architecture\security-architect-sabsa/SKILL.md) o desenho das zonas de confiança lógica e física.
+- **Atribuição**: Delegue à skill [threat-modeler](../../ops-architecture/threat-modeler/SKILL.md) a modelagem de ameaças (STRIDE/PASTA) e ao [security-architect-sabsa](../../ops-architecture/security-architect-sabsa/SKILL.md) o desenho das zonas de confiança lógica e física.
 
 ### 3. Implementação (Implementation)
 - **Foco**: Processos seguros de build, deploy e gerenciamento de vulnerabilidades.
-- **Atribuição**: Delegue à skill [devsecops-engineer](..\..\ops-architecture\devsecops-engineer/SKILL.md) a integração de ferramentas SAST/DAST/SCA no pipeline e o gerenciamento seguro de secrets.
+- **Atribuição**: Delegue à skill [devsecops-engineer](../../ops-architecture/devsecops-engineer/SKILL.md) a integração de ferramentas SAST/DAST/SCA no pipeline e o gerenciamento seguro de secrets.
 
 ### 4. Verificação (Verification)
 - **Foco**: Auditoria de código, code reviews e testes de penetração operacionais.
-- **Atribuição**: Delegue à skill [appsec-owasp-asvs](..\..\appsec\appsec-owasp-asvs/SKILL.md) a verificação de código seguro e à skill [pentester-owasp-wstg](..\..\appsec\pentester-owasp-wstg/SKILL.md) a realização de testes de penetração baseados em vetores de ataque.
+- **Atribuição**: Delegue à skill [appsec-owasp-asvs](../../appsec/appsec-owasp-asvs/SKILL.md) a verificação de código seguro e à skill [pentester-owasp-wstg](../../appsec/pentester-owasp-wstg/SKILL.md) a realização de testes de penetração baseados em vetores de ataque.
 
 ### 5. Operações (Operations)
 - **Foco**: Resposta a incidentes de segurança e gestão segura do ambiente operacional.
-- **Atribuição**: Delegue à skill [secops-incident-responder](..\..\ops-architecture\secops-incident-responder/SKILL.md) o monitoramento contínuo (SIEM), playbooks de resposta e planos de Disaster Recovery.
+- **Atribuição**: Delegue à skill [secops-incident-responder](../../ops-architecture/secops-incident-responder/SKILL.md) o monitoramento contínuo (SIEM), playbooks de resposta e planos de Disaster Recovery.
 
 ---
 
@@ -70,7 +70,7 @@ Ao detectar que o projeto utiliza tecnologias específicas ou expõe novos vetor
 Ao atuar nesta skill:
 1. **Audite a Maturidade**: Revise as atividades de desenvolvimento e infraestrutura para medir a conformidade em relação às 15 práticas de segurança da OWASP SAMM.
 2. **Priorize com CIS Controls**: Use a priorização recomendada do CIS Controls (Grupo de Implementação 1, 2 ou 3) para definir quais brechas de segurança devem ser atacadas primeiro.
-3. **Gerencie SLA de Defeitos**: Defina portões de qualidade automatizados com o [devsecops-engineer](..\..\ops-architecture\devsecops-engineer/SKILL.md) baseado nos prazos regulatórios definidos pelo [security-grc-compliance](..\security-grc-compliance/SKILL.md).
+3. **Gerencie SLA de Defeitos**: Defina portões de qualidade automatizados com o [devsecops-engineer](../../ops-architecture/devsecops-engineer/SKILL.md) baseado nos prazos regulatórios definidos pelo [security-grc-compliance](../security-grc-compliance/SKILL.md).
 4. **Crie Habilidades Sob Demanda**: Se identificar falta de especialização técnica do time sobre determinada tecnologia, crie imediatamente uma skill dedicada para suprir essa lacuna de segurança.
 
 ---
@@ -78,10 +78,10 @@ Ao atuar nesta skill:
 ## 🔗 Integração com Outras Skills de Segurança
 
 Como CISO, você gerencia e articula o portfólio completo de habilidades de segurança:
-- [security-grc-compliance](..\security-grc-compliance/SKILL.md): Opera Governança, Políticas e Métricas.
-- [threat-modeler](..\..\ops-architecture\threat-modeler/SKILL.md): Executa Avaliação de Ameaças.
-- [security-architect-sabsa](..\..\ops-architecture\security-architect-sabsa/SKILL.md): Desenha Arquitetura de Segurança de Software.
-- [devsecops-engineer](..\..\ops-architecture\devsecops-engineer/SKILL.md): Automação de Build, Deploy e Gestão de Defeitos.
-- [appsec-owasp-asvs](..\..\appsec\appsec-owasp-asvs/SKILL.md): Detalha os requisitos de codificação e controles de aplicação.
-- [pentester-owasp-wstg](..\..\appsec\pentester-owasp-wstg/SKILL.md): Fornece os relatórios práticos de vulnerabilidades e explorações.
-- [secops-incident-responder](..\..\ops-architecture\secops-incident-responder/SKILL.md): Lida com a gestão operacional e incidentes reais do ambiente operacional.
+- [security-grc-compliance](../security-grc-compliance/SKILL.md): Opera Governança, Políticas e Métricas.
+- [threat-modeler](../../ops-architecture/threat-modeler/SKILL.md): Executa Avaliação de Ameaças.
+- [security-architect-sabsa](../../ops-architecture/security-architect-sabsa/SKILL.md): Desenha Arquitetura de Segurança de Software.
+- [devsecops-engineer](../../ops-architecture/devsecops-engineer/SKILL.md): Automação de Build, Deploy e Gestão de Defeitos.
+- [appsec-owasp-asvs](../../appsec/appsec-owasp-asvs/SKILL.md): Detalha os requisitos de codificação e controles de aplicação.
+- [pentester-owasp-wstg](../../appsec/pentester-owasp-wstg/SKILL.md): Fornece os relatórios práticos de vulnerabilidades e explorações.
+- [secops-incident-responder](../../ops-architecture/secops-incident-responder/SKILL.md): Lida com a gestão operacional e incidentes reais do ambiente operacional.

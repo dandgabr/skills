@@ -93,8 +93,8 @@ Quando solicitado a desenhar, avaliar ou auditar uma solução baseada nos padr�
 
 ## 🔗 Integração com Outras Skills de Segurança
 
-- Para avaliação de criptografia alinhada ao NIST (SP 800-57, FIPS 203/204/205 PQC), consulte a skill [cryptography-pqc-standards](..\..\crypto-pki\cryptography-pqc-standards/SKILL.md).
-- Para implementação prática de IAM e controle de acesso nos provedores de nuvem e AD alinhados ao NIST SP 800-63, consulte a skill [iam-access-management](..\..\cloud-iam\iam-access-management/SKILL.md).
-- Para conformidade e governança geral, consulte a skill [security-grc-compliance](..\security-grc-compliance/SKILL.md).
-- Para mapeamento com os 18 controles do CIS, consulte a skill [cis-controls](..\cis-controls/SKILL.md).
-- Para arquitetura de segurança SABSA e ZTA, consulte a skill [security-architect-sabsa](..\..\ops-architecture\security-architect-sabsa/SKILL.md).
+- Para avaliação de criptografia alinhada ao NIST (SP 800-57, FIPS 203/204/205 PQC), consulte a skill [cryptography-pqc-standards](../../crypto-pki/cryptography-pqc-standards/SKILL.md).
+- Para implementação prática de IAM e controle de acesso nos provedores de nuvem e AD alinhados ao NIST SP 800-63, consulte a skill [iam-access-management](../../cloud-iam/iam-access-management/SKILL.md).
+- Para conformidade e governança geral, consulte a skill [security-grc-compliance](../security-grc-compliance/SKILL.md).
+- Para mapeamento com os 18 controles do CIS, consulte a skill [cis-controls](../cis-controls/SKILL.md).
+- Para arquitetura de segurança SABSA e ZTA, consulte a skill [security-architect-sabsa](../../ops-architecture/security-architect-sabsa/SKILL.md).

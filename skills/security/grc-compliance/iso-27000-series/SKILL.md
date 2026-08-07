@@ -100,8 +100,8 @@ Quando solicitado a desenhar, preparar a certificação ou auditar uma organiza�
 
 ## 🔗 Integração com Outras Skills de Segurança
 
-- Para alinhamento dos controles tecnológicos ISO 27002 (A.8.24) às melhores práticas criptográficas e quânticas, consulte a skill [cryptography-pqc-standards](..\..\crypto-pki\cryptography-pqc-standards/SKILL.md).
-- Para detalhamento dos controles de acesso ISO 27002 (A.5.15 a A.5.18, A.8.2 a A.8.5), consulte a skill [iam-access-management](..\..\cloud-iam\iam-access-management/SKILL.md).
-- Para alinhamento com requisitos de nuvem específicos da CSA CCM v4, consulte a skill [csa-cloud-security](..\..\cloud-iam\csa-cloud-security/SKILL.md).
-- Para alinhamento do SGSI com a governança geral corporativa, consulte a skill [security-grc-compliance](..\security-grc-compliance/SKILL.md).
-- Para alinhamento dos requisitos de privacidade ISO 27701 com LGPD e GDPR, consulte a skill [security-privacy](..\security-privacy/SKILL.md).
+- Para alinhamento dos controles tecnológicos ISO 27002 (A.8.24) às melhores práticas criptográficas e quânticas, consulte a skill [cryptography-pqc-standards](../../crypto-pki/cryptography-pqc-standards/SKILL.md).
+- Para detalhamento dos controles de acesso ISO 27002 (A.5.15 a A.5.18, A.8.2 a A.8.5), consulte a skill [iam-access-management](../../cloud-iam/iam-access-management/SKILL.md).
+- Para alinhamento com requisitos de nuvem específicos da CSA CCM v4, consulte a skill [csa-cloud-security](../../cloud-iam/csa-cloud-security/SKILL.md).
+- Para alinhamento do SGSI com a governança geral corporativa, consulte a skill [security-grc-compliance](../security-grc-compliance/SKILL.md).
+- Para alinhamento dos requisitos de privacidade ISO 27701 com LGPD e GDPR, consulte a skill [security-privacy](../security-privacy/SKILL.md).

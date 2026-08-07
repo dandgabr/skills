@@ -145,17 +145,17 @@ Como Arquiteto SABSA, você integra o framework aos padrões corporativos globai
 Quando solicitado a propor, desenhar ou auditar a arquitetura de segurança de um sistema:
 
 1. **Fase 1: Mapear Drivers e Requisitos (Contextual)**:
-   - Consulte a skill [security-grc-compliance](..\..\grc-compliance\security-grc-compliance/SKILL.md) para identificar obrigações legais, regulatórias e apetite de risco da empresa.
+   - Consulte a skill [security-grc-compliance](../../grc-compliance/security-grc-compliance/SKILL.md) para identificar obrigações legais, regulatórias e apetite de risco da empresa.
 2. **Fase 2: Construir o BAP (Conceitual)**:
    - Crie a tabela do Perfil de Atributos de Negócio, definindo métricas quantitativas de sucesso.
 3. **Fase 3: Projetar Domínios e Zonas de Confiança (Lógica)**:
-   - Desenhe o diagrama lógico de domínios e solicite uma análise defensiva à skill [threat-modeler](..\threat-modeler/SKILL.md) (STRIDE/PASTA).
+   - Desenhe o diagrama lógico de domínios e solicite uma análise defensiva à skill [threat-modeler](../threat-modeler/SKILL.md) (STRIDE/PASTA).
 4. **Fase 4: Selecionar Tecnologias e Mecanismos (Física)**:
-   - Defina os componentes concretos de infraestrutura e nuvem junto com a skill [devsecops-engineer](..\devsecops-engineer/SKILL.md).
+   - Defina os componentes concretos de infraestrutura e nuvem junto com a skill [devsecops-engineer](../devsecops-engineer/SKILL.md).
 5. **Fase 5: Especificar Padrões de Código e APIs (Componente)**:
-   - Estabeleça os controles de código seguro alinhados ao [appsec-owasp-asvs](..\..\appsec\appsec-owasp-asvs/SKILL.md).
+   - Estabeleça os controles de código seguro alinhados ao [appsec-owasp-asvs](../../appsec/appsec-owasp-asvs/SKILL.md).
 6. **Fase 6: Definir Monitoramento e Operações (Operacional)**:
-   - Estabeleça playbooks de SIEM/SOC e resposta a incidentes integrados com a skill [secops-incident-responder](..\secops-incident-responder/SKILL.md).
+   - Estabeleça playbooks de SIEM/SOC e resposta a incidentes integrados com a skill [secops-incident-responder](../secops-incident-responder/SKILL.md).
 
 ---
 
@@ -163,11 +163,11 @@ Quando solicitado a propor, desenhar ou auditar a arquitetura de segurança de u
 
 O Arquiteto SABSA atua como maestro da segurança da informação no ecossistema de habilidades:
 
-- **[security-grc-compliance](..\..\grc-compliance\security-grc-compliance/SKILL.md)**: Fornece entradas de conformidade, leis de privacidade e apetite a riscos.
-- **[threat-modeler](..\threat-modeler/SKILL.md)**: Valida a camada lógica e encontra ameaças arquiteturais.
-- **[appsec-owasp-asvs](..\..\appsec\appsec-owasp-asvs/SKILL.md)**: Define e valida os controles de codificação segura na camada de componente.
-- **[devsecops-engineer](..\devsecops-engineer/SKILL.md)**: Provisiona a infraestrutura como código (IaC) e pipelines seguros na camada física.
-- **[pentester-owasp-wstg](..\..\appsec\pentester-owasp-wstg/SKILL.md)**: Executa auditorias ofensivas para testar a resistência dos domínios de confiança.
-- **[secops-incident-responder](..\secops-incident-responder/SKILL.md)**: Monitora a operação contínua e responde a incidentes em produção.
-- **[security-manager-samm](..\..\grc-compliance\security-manager-samm/SKILL.md)**: Governa a evolução da maturidade de segurança da equipe de software.
-- **[clean-code-reusability](..\..\..\general\engineering-practices\clean-code-reusability/SKILL.md)**: Garante que os diagramas, políticas e especificações de segurança sejam escritos sem duplicação e reutilizando definições existentes.
+- **[security-grc-compliance](../../grc-compliance/security-grc-compliance/SKILL.md)**: Fornece entradas de conformidade, leis de privacidade e apetite a riscos.
+- **[threat-modeler](../threat-modeler/SKILL.md)**: Valida a camada lógica e encontra ameaças arquiteturais.
+- **[appsec-owasp-asvs](../../appsec/appsec-owasp-asvs/SKILL.md)**: Define e valida os controles de codificação segura na camada de componente.
+- **[devsecops-engineer](../devsecops-engineer/SKILL.md)**: Provisiona a infraestrutura como código (IaC) e pipelines seguros na camada física.
+- **[pentester-owasp-wstg](../../appsec/pentester-owasp-wstg/SKILL.md)**: Executa auditorias ofensivas para testar a resistência dos domínios de confiança.
+- **[secops-incident-responder](../secops-incident-responder/SKILL.md)**: Monitora a operação contínua e responde a incidentes em produção.
+- **[security-manager-samm](../../grc-compliance/security-manager-samm/SKILL.md)**: Governa a evolução da maturidade de segurança da equipe de software.
+- **[clean-code-reusability](../../../general/engineering-practices/clean-code-reusability/SKILL.md)**: Garante que os diagramas, políticas e especificações de segurança sejam escritos sem duplicação e reutilizando definições existentes.

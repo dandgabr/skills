@@ -168,6 +168,6 @@ Ao avaliar um assistente de voz ou sistema STT/TTS:
 
 ## 🔗 Integração com Outras Skills do Ecossistema
 
-- Para conectar comandos de voz traduzidos em chamadas de API backend seguras, consulte [backend-developer](..\..\..\general\roles\backend-developer/SKILL.md) e [pentester-owasp-api-security-2023](..\..\appsec\pentester-owasp-api-security-2023/SKILL.md).
-- Para alinhar o armazenamento e processamento de biometria de voz com regulamentações de privacidade, consulte [security-privacy](..\..\grc-compliance\security-privacy/SKILL.md).
-- Para modelar ameaças gerais do ecossistema onde o assistente de voz está instalado, consulte [threat-modeler](..\..\ops-architecture\threat-modeler/SKILL.md).
+- Para conectar comandos de voz traduzidos em chamadas de API backend seguras, consulte [backend-developer](../../../general/roles/backend-developer/SKILL.md) e [pentester-owasp-api-security-2023](../../appsec/pentester-owasp-api-security-2023/SKILL.md).
+- Para alinhar o armazenamento e processamento de biometria de voz com regulamentações de privacidade, consulte [security-privacy](../../grc-compliance/security-privacy/SKILL.md).
+- Para modelar ameaças gerais do ecossistema onde o assistente de voz está instalado, consulte [threat-modeler](../../ops-architecture/threat-modeler/SKILL.md).

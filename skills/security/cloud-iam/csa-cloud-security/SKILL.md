@@ -109,8 +109,8 @@ Quando solicitado a desenhar ou auditar um serviço ou provedor de nuvem:
 
 ## 🔗 Integração com Outras Skills de Segurança
 
-- Para mapear controles da CSA CCM v4 com a ISO/IEC 27017 (Nuvem) e ISO/IEC 27018 (Privacidade em Nuvem), consulte a skill [iso-27000-series](..\..\grc-compliance\iso-27000-series/SKILL.md).
-- Para alinhar o domínio CEK (Criptografia) da CCM aos algoritmos pós-quânticos e recomendações FIPS/ISO, consulte a skill [cryptography-pqc-standards](..\..\crypto-pki\cryptography-pqc-standards/SKILL.md).
-- Para alinhar os controles de IAM da nuvem (domínio IAM) ao AWS, Azure, GCP e OCI, consulte a skill [iam-access-management](..\iam-access-management/SKILL.md).
-- Para mapear a correspondência dos controles de nuvem da CSA com os benchmarks de hardening de nuvem do CIS, consulte a skill [cis-controls](..\..\grc-compliance\cis-controls/SKILL.md).
-- Para validação de DevSecOps e segurança em esteiras de deploy para a nuvem, consulte a skill [devsecops-engineer](..\..\ops-architecture\devsecops-engineer/SKILL.md).
+- Para mapear controles da CSA CCM v4 com a ISO/IEC 27017 (Nuvem) e ISO/IEC 27018 (Privacidade em Nuvem), consulte a skill [iso-27000-series](../../grc-compliance/iso-27000-series/SKILL.md).
+- Para alinhar o domínio CEK (Criptografia) da CCM aos algoritmos pós-quânticos e recomendações FIPS/ISO, consulte a skill [cryptography-pqc-standards](../../crypto-pki/cryptography-pqc-standards/SKILL.md).
+- Para alinhar os controles de IAM da nuvem (domínio IAM) ao AWS, Azure, GCP e OCI, consulte a skill [iam-access-management](../iam-access-management/SKILL.md).
+- Para mapear a correspondência dos controles de nuvem da CSA com os benchmarks de hardening de nuvem do CIS, consulte a skill [cis-controls](../../grc-compliance/cis-controls/SKILL.md).
+- Para validação de DevSecOps e segurança em esteiras de deploy para a nuvem, consulte a skill [devsecops-engineer](../../ops-architecture/devsecops-engineer/SKILL.md).

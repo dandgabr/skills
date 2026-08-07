@@ -117,6 +117,6 @@ AzureActivity
 
 ## 🔗 Integração com Outras Skills
 
-- Para integrar automações do Power BI e Power Automate com Entra ID, consulte as skills [power-bi](..\..\..\programs\power-bi/SKILL.md) e [power-automate](..\..\..\programs\power-automate/SKILL.md).
-- Para diretrizes de governança geral de identidades e PAM, consulte a skill [iam-access-management](..\iam-access-management/SKILL.md).
-- Para alinhar o IAM ao CIS Microsoft Azure Foundations Benchmark, consulte a skill [cis-controls](..\..\grc-compliance\cis-controls/SKILL.md).
+- Para integrar automações do Power BI e Power Automate com Entra ID, consulte as skills [power-bi](../../../programs/power-bi/SKILL.md) e [power-automate](../../../programs/power-automate/SKILL.md).
+- Para diretrizes de governança geral de identidades e PAM, consulte a skill [iam-access-management](../iam-access-management/SKILL.md).
+- Para alinhar o IAM ao CIS Microsoft Azure Foundations Benchmark, consulte a skill [cis-controls](../../grc-compliance/cis-controls/SKILL.md).

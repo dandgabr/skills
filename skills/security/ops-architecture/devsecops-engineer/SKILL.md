@@ -54,6 +54,6 @@ Quando solicitado a desenhar pipelines, scripts de build ou avaliar a segurança
 
 ## 🔗 Integração com Outras Skills de Segurança
 
-- Para traduzir as restrições físicas do pipeline e containers em topologias físicas de arquitetura empresarial, consulte a skill [security-architect-sabsa](..\security-architect-sabsa/SKILL.md).
-- Para alinhar os scanners SAST às regras específicas de desenvolvimento de software seguro recomendadas pelo time, consulte a skill [appsec-owasp-asvs](..\..\appsec\appsec-owasp-asvs/SKILL.md).
-- Para integrar testes dinâmicos automáticos (DAST) ou simular ataques a containers no pipeline, consulte a skill [pentester-owasp-wstg](..\..\appsec\pentester-owasp-wstg/SKILL.md).
+- Para traduzir as restrições físicas do pipeline e containers em topologias físicas de arquitetura empresarial, consulte a skill [security-architect-sabsa](../security-architect-sabsa/SKILL.md).
+- Para alinhar os scanners SAST às regras específicas de desenvolvimento de software seguro recomendadas pelo time, consulte a skill [appsec-owasp-asvs](../../appsec/appsec-owasp-asvs/SKILL.md).
+- Para integrar testes dinâmicos automáticos (DAST) ou simular ataques a containers no pipeline, consulte a skill [pentester-owasp-wstg](../../appsec/pentester-owasp-wstg/SKILL.md).
