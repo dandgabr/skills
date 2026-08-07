@@ -93,4 +93,5 @@ function renderState(state: NetworkState) {
 ## 🔗 Integração com Outras Skills
 - [frontend-developer](../../general/roles/frontend-developer/SKILL.md): Utiliza TypeScript para modular estados e componentes visuais estáveis.
 - [backend-developer](../../general/roles/backend-developer/SKILL.md): Constrói contratos tipados de APIs e validações de banco de dados robustas no lado do servidor.
+- [dba-database-administrator](../../general/roles/dba-database-administrator/SKILL.md): Modela e otimiza acessos de dados em TypeScript (Prisma, TypeORM, Drizzle, Mongoose) alinhados aos motores [db-postgresql](../../general/databases/db-postgresql/SKILL.md), [db-mongodb](../../general/databases/db-mongodb/SKILL.md), [db-mariadb](../../general/databases/db-mariadb/SKILL.md) e [db-sqlite](../../general/databases/db-sqlite/SKILL.md).
 - [clean-code-reusability](../../general/engineering-practices/clean-code-reusability/SKILL.md): Fornece princípios de reaproveitamento de código e documentação padrão (JSDoc) aplicados ao desenvolvimento com TypeScript.

@@ -32,6 +32,7 @@ Ao atuar nesta skill, você deve estruturar suas decisões em torno de 5 domíni
   3. *Domain Layer* (Coração imutável do negócio - livre de infraestrutura)
   4. *Infrastructure Layer* (Persistência, frameworks, rede e IO)
 - **Padrões Táticos**: Isole persistências cruas (DAOs e SQL) usando Repositórios que simulam coleções em memória na camada de domínio.
+- **Arquitetura e Persistência de Dados**: Para definir estratégias de isolamento de transações, particionamento e réplicas em bancos SQL/NoSQL, consulte a skill [dba-database-administrator](../dba-database-administrator/SKILL.md) e as subskills [db-postgresql](../../databases/db-postgresql/SKILL.md), [db-mariadb](../../databases/db-mariadb/SKILL.md), [db-sqlite](../../databases/db-sqlite/SKILL.md) e [db-mongodb](../../databases/db-mongodb/SKILL.md).
 
 ### 4. Decisões Macroarquiteturais e Topologia de Sistemas
 - **Tiers vs. Layers**: Separe lógicas (*layers*) de separações físicas (*tiers*). Distribua componentes pela rede (RPC, REST) apenas sob estrita necessidade, gerenciando os trade-offs de latência de rede com DTOs e caches inteligentes.

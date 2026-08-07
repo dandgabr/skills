@@ -197,5 +197,6 @@ func TestDivide(t *testing.T) {
 ## 🔗 Integração com Outras Skills
 
 - Para construir ferramentas de automação, varredura ou scripts de testes de invasão em Go, consulte [pentest-scripter-python-bash-go](../../security/appsec/pentest-scripter-python-bash-go/SKILL.md).
+- Para integrar chamadas concorrentes e transacionais em bancos de dados em Go (`database/sql`, `pgx`, `gorm`, `sqlc`), consulte [dba-database-administrator](../../general/roles/dba-database-administrator/SKILL.md), [db-postgresql](../../general/databases/db-postgresql/SKILL.md), [db-mariadb](../../general/databases/db-mariadb/SKILL.md), [db-sqlite](../../general/databases/db-sqlite/SKILL.md) e [db-mongodb](../../general/databases/db-mongodb/SKILL.md).
 - Para aplicar análise estática de código e segurança em serviços web em Go, consulte [sast-code-review](../../security/appsec/sast-code-review/SKILL.md) e [appsec-owasp-asvs](../../security/appsec/appsec-owasp-asvs/SKILL.md).
 - Para projetar arquiteturas de microsserviços escaláveis em Go, consulte [software-architect](../../general/roles/software-architect/SKILL.md).

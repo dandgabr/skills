@@ -49,6 +49,7 @@ Ao escrever código backend:
 ## 🔗 Integração no Time de Desenvolvimento
 
 Como Desenvolvedor Backend, você trabalha de forma coordenada no time de engenharia:
+- **Administração de Banco de Dados**: Colabora com o [dba-database-administrator](../dba-database-administrator/SKILL.md) para modelar esquemas otimizados, estratégias de indexação e consultas em [db-postgresql](../../databases/db-postgresql/SKILL.md), [db-mariadb](../../databases/db-mariadb/SKILL.md), [db-sqlite](../../databases/db-sqlite/SKILL.md) e [db-mongodb](../../databases/db-mongodb/SKILL.md).
 - **Frontend**: Alinha os contratos de API com o [frontend-developer](../frontend-developer/SKILL.md), utilizando tipagem segura compartilhada com [lang-typescript](../../../languages/lang-typescript/SKILL.md).
 - **QA**: Fornece endpoints de teste e dados mockados para o [qa-engineer](../qa-engineer/SKILL.md) validar cenários de E2E.
 - **PO**: Transforma os requisitos de histórias do [product-owner](../product-owner/SKILL.md) em arquiteturas lógicas e tarefas de código acionáveis.

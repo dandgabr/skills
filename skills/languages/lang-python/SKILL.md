@@ -152,5 +152,6 @@ if __name__ == "__main__":
 ## 🔗 Integração com Outras Skills
 
 - Para criar suítes de testes unitários e de integração parametrizadas em Python, consulte [framework-pytest](../../framework/framework-pytest/SKILL.md) e [framework-unittest](../../framework/framework-unittest/SKILL.md).
+- Para integrar e otimizar acessos a bancos de dados relacionais e NoSQL em Python (SQLAlchemy, psycopg, PyMongo, Tortoise ORM), consulte [dba-database-administrator](../../general/roles/dba-database-administrator/SKILL.md), [db-postgresql](../../general/databases/db-postgresql/SKILL.md), [db-sqlite](../../general/databases/db-sqlite/SKILL.md), [db-mariadb](../../general/databases/db-mariadb/SKILL.md) e [db-mongodb](../../general/databases/db-mongodb/SKILL.md).
 - Para desenvolver ferramentas ofensivas, scripts de rede e utilitários de segurança em Python, consulte [pentest-scripter-python-bash-go](../../security/appsec/pentest-scripter-python-bash-go/SKILL.md).
 - Para auditar código Python contra falhas de segurança (SAST) e aplicar correções de código limpo, consulte [sast-code-review](../../security/appsec/sast-code-review/SKILL.md) e [clean-code-reusability](../../general/engineering-practices/clean-code-reusability/SKILL.md).
