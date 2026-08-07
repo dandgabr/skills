@@ -1,46 +1,54 @@
 ---
 name: "lang-c"
-description: "Fornece padrões de engenharia de software em C moderno baseados na norma internacional ISO/IEC 9899 (com foco em C23 - ISO/IEC 9899:2024, C17, C11 e C99), cobrindo novas palavras-chave (nullptr, bool, constexpr), atributos ([[nodiscard]], [[deprecated]]), matemática segura (<stdckdint.h>), operações binárias (<stdbit.h>), depuração de memória e CMake."
+description: "Fornece padrões de engenharia de software em C moderno baseados na norma internacional ISO/IEC 9899 (com foco em C23 - ISO/IEC 9899:2024, C17, C11 e C99) e nas referências oficiais de en.cppreference.com/w/c, cobrindo palavras-chave (nullptr, bool, constexpr), atributos ([[nodiscard]], [[deprecated]]), matemática segura (<stdckdint.h>), operações de bits (<stdbit.h>), depuração de memória e CMake."
 ---
 
-# Habilidade de IA: Engenharia de C Moderno (ISO/IEC 9899 Specialist)
+# Habilidade de IA: Engenharia de C Moderno (ISO/IEC 9899 & cppreference Specialist)
 
-Esta skill orienta a inteligência artificial a atuar como especialista na linguagem **C moderno**, baseando-se estritamente na norma internacional oficial **ISO/IEC 9899** (publicada pelo ISO JTC1/SC22/WG14 em [iso-9899.info](https://www.iso-9899.info/wiki/The_Standard)). O foco principal é a versão mais recente **C23 (ISO/IEC 9899:2024)**, mantendo suporte às revisões C17, C11 e C99 para a construção de sistemas de baixo nível de alta performance, seguros e isentos de Comportamentos Indefinidos (*Undefined Behavior - UB*).
+Esta skill orienta a inteligência artificial a atuar como especialista na linguagem **C moderno**, baseando-se estritamente na norma internacional oficial **ISO/IEC 9899** (publicada pelo ISO JTC1/SC22/WG14 em [iso-9899.info](https://www.iso-9899.info/wiki/The_Standard)) e na documentação oficial de referência do C em [en.cppreference.com/w/c](https://en.cppreference.com/w/c). O foco principal é a versão mais recente **C23 (ISO/IEC 9899:2024)**, mantendo suporte às revisões C17, C11 e C99 para a construção de sistemas de baixo nível de alta performance, seguros e isentos de Comportamentos Indefinidos (*Undefined Behavior - UB*).
 
 ---
 
-## 🧭 Evolução dos Padrões ISO/IEC 9899
+## 🧭 Especificações da Linguagem C (en.cppreference.com/w/c)
 
-Ao desenvolver em C, alinhe os recursos da linguagem com a revisão apropriada do padrão:
+Ao desenvolver em C, consulte a especificação e as tabelas formais dos cabeçalhos da Biblioteca Padrão no `cppreference`:
 
 ### 1. ISO/IEC 9899:2024 (C23 - Padrão Mais Recente)
 - **Novas Palavras-Chave Nativas**:
-  - `nullptr`: Substitui `NULL` (ponteiro nulo com tipo próprio `nullptr_t` prevenindo ambiguidades com números).
-  - `bool`, `true`, `false`: Tornam-se palavras-chave nativas sem necessidade de `<stdbool.h>`.
-  - `static_assert`, `alignas`, `alignof`, `thread_local`: Palavras-chave simplificadas (sem o prefixo `_` do C11).
-  - `constexpr`: Avaliação de constantes imutáveis em tempo de compilação.
-  - `auto`: Inferência de tipos de variáveis em tempo de compilação.
-  - `typeof` e `typeof_unqual`: Operadores de inspeção de tipos.
-- **Atributos Padronizados (`[[attribute]]`)**:
-  - Sintaxe unificada para metadados: `[[nodiscard]]`, `[[maybe_unused]]`, `[[deprecated]]`, `[[likely]]`, `[[unlikely]]`, `[[fallthrough]]`, `[[noreturn]]`.
-- **Novas Bibliotecas e Funções de Segurança**:
-  - `<stdckdint.h>`: Operações aritméticas com detecção de estouro (*checked integer arithmetic*): `ckd_add`, `ckd_sub`, `ckd_mul`.
-  - `<stdbit.h>`: Manipulação de bits padronizada: `stdc_count_ones`, `stdc_leading_zeros`, `stdc_has_single_bit`.
-  - `memset_explicit`: Limpeza segura de dados confidenciais na memória que previne otimizações de eliminação do compilador.
-  - `memalignment`: Verificação de alinhamento de ponteiros.
-  - `strdup` e `strndup`: Duplicação dinâmica de strings padronizada na libc.
-- **Melhorias de Sintaxe e Pré-processador**:
-  - Diretiva `#embed`: Inclusão direta de arquivos binários em arrays no tempo de compilação.
-  - Diretivas `#elifdef` e `#elifndef`, macros `__has_include` e `__VA_OPT__`.
+  - `nullptr`: Tipo estrito `nullptr_t` para ponteiros nulos, substituindo a ambiguidade numérica do `NULL`.
+  - `bool`, `true`, `false`: Tipos booleanos nativos (sem dependência de `<stdbool.h>`).
+  - `constexpr`: Avaliação de constantes imutáveis no tempo de compilação.
+  - `auto`: Inferência automática de tipos na declaração de variáveis.
+  - `typeof` e `typeof_unqual`: Operadores de inspeção de tipo em tempo de compilação.
+  - `static_assert`, `alignas`, `alignof`, `thread_local`: Palavras-chave simplificadas (sem prefixo `_`).
+- **Sintaxe Unificada de Atributos (`[[attribute]]`)**:
+  - `[[nodiscard]]`: Alerta se o valor retornado por uma função for ignorado.
+  - `[[maybe_unused]]`: Suprime avisos para variáveis ou parâmetros intencionalmente não utilizados.
+  - `[[deprecated("motivo")]]`: Sinaliza funções ou tipos obsoletos.
+  - `[[likely]]` / `[[unlikely]]`: Pistas de otimização para previsão de desvio (*branch prediction*).
+  - `[[fallthrough]]`: Declaração explícita de queda intencional em instruções `switch`.
+  - `[[noreturn]]`: Indica que a função nunca retorna (ex: `exit`, `abort`).
+- **Novos Cabeçalhos e Funções de Segurança da Libc**:
+  - **`<stdckdint.h>`**: Operações aritméticas inteiras com checagem de estouro (*checked integer arithmetic*): `ckd_add`, `ckd_sub`, `ckd_mul`.
+  - **`<stdbit.h>`**: Manipulação de bits padronizada: `stdc_count_ones`, `stdc_leading_zeros`, `stdc_trailing_zeros`, `stdc_has_single_bit`, `stdc_bit_ceil`.
+  - `memset_explicit`: Sanitização de memória confidencial (senhas, chaves) imune a otimizações de eliminação do compilador.
+  - `memalignment`: Verificação de alinhamento em bytes de ponteiros.
+  - `strdup` e `strndup`: Alocação e duplicação dinâmica de strings padronizada na libc.
+  - `unreachable()`: Macro de otimização para caminhos de código inalcançáveis (`<stddef.h>`).
+- **Pré-processador e E/S Modernos**:
+  - `#embed`: Inclusão direta de recursos binários em dados no tempo de compilação.
+  - `#elifdef` e `#elifndef`, macros `__has_include` e `__VA_OPT__`.
   - Formato de inteiros binários `%b` e `%B` em `printf`/`scanf` e literais `0b1010`.
-  - Inicialização estática de structs com chaves vazias: `struct Point p = {};`.
+  - Inicialização nula com chaves vazias: `struct Buffer buf = {};`.
 
 ### 2. ISO/IEC 9899:2018 (C17) & 9899:2011 (C11)
-- **C11**: Suporte nativo a threads (`<threads.h>`), operações atômicas (`<stdatomic.h>`), seletores genéricos (`_Generic`), structs/unions anônimas e exclusão da função insegura `gets()`.
-- **C17**: Revisão de correção de defeitos técnicos (TCs) sem introdução de novas sintaxes.
+- **`<threads.h>` (C11)**: Gestão de threads nativas (`thrd_create`, `thrd_join`), exclusão mútua (`mtx_t`, `mtx_lock`, `mtx_unlock`) e variáveis de condição (`cnd_t`).
+- **`<stdatomic.h>` (C11)**: Tipos e operações atômicas sem lock (`atomic_int`, `atomic_store`, `atomic_load`, `atomic_compare_exchange_strong`).
+- **`_Generic`**: Seleção genérica de expressões baseada em tipos para macros polimórficas.
+- **C17**: Correções técnicas e esclarecimentos de ambiguidades da norma C11 sem adição de novas características sintáticas.
 
 ### 3. ISO/IEC 9899:1999 (C99)
-- Comentários de linha `//`, inicializadores nomeados (`.field = val`), literais compostos, `inline`, qualificador `restrict`, suporte a VLA (evitar em código seguro) e inteiros de largura fixa em `<stdint.h>`.
+- Comentários de linha `//`, inicializadores nomeados (`.field = val`), literais compostos, `inline`, qualificador `restrict`, inteiros de largura fixa em `<stdint.h>` e tipos complexos `<complex.h>`.
 
 ---
 
@@ -49,7 +57,7 @@ Ao desenvolver em C, alinhe os recursos da linguagem com a revisão apropriada d
 ### 1. Prevenção Estrita de Comportamento Indefinido (Undefined Behavior - UB)
 - **Gestão de Memória Segura**:
   - Sempre zere ou inicialize memória alocada dinamicamente (`malloc`/`calloc`).
-  - Atribua `NULL` ou `nullptr` a ponteiros imediatamente após liberá-los com `free()`.
+  - Atribua `nullptr` (C23) ou `NULL` a ponteiros imediatamente após liberá-los com `free()`.
   - Em alocações contendo dados de senhas ou chaves, utilize `memset_explicit()` antes do `free()`.
 - **Estouro de Inteiros**: Evite estouro de inteiros sinalizados utilizando as funções checked de `<stdckdint.h>` (C23) ou verificações prévias de limites.
 - **Evitar VLAs (Variable Length Arrays)**: Prefira alocação dinâmica em heap ou tamanhos fixos para evitar estouro de pilha (*stack overflow*).
@@ -60,7 +68,7 @@ Ao desenvolver em C, alinhe os recursos da linguagem com a revisão apropriada d
 
 ---
 
-## 🧰 Padrões de Código C23 Recomendados
+## 🧰 Padrões de Código C23 Recomendados (cppreference style)
 
 ### 1. Aritmética Inteira Segura e Atributos (`<stdckdint.h>` & C23)
 ```c
@@ -94,16 +102,31 @@ int main(void) {
 }
 ```
 
-### 2. Uso do `nullptr`, Atributos e Limpeza Segura de Memória (`memset_explicit`)
+### 2. Manipulação de Bits Nativa C23 (`<stdbit.h>`)
+```c
+#include <stdio.h>
+#include <stdbit.h>
+#include <stdint.h>
+
+int main(void) {
+    uint32_t mask = 0b00111010;
+    
+    // Funções padronizadas de contagem de bits em C23 (stdbit.h)
+    unsigned int ones = stdc_count_ones(mask);
+    bool is_power_of_two = stdc_has_single_bit(mask);
+
+    printf("[+] Número de bits 1: %u\n", ones);
+    printf("[+] É potência de dois? %s\n", is_power_of_two ? "sim" : "não");
+
+    return 0;
+}
+```
+
+### 3. Uso do `nullptr`, Atributos e Limpeza Segura de Memória (`memset_explicit`)
 ```c
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-typedef struct {
-    char username[32];
-    char password_hash[64];
-} [[deprecated("Use UserAccountSecure no C23")]] LegacyUser;
 
 typedef struct {
     char username[32];
