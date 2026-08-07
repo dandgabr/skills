@@ -1,125 +1,156 @@
 ---
 name: "lang-python"
-description: "Fornece padrões de engenharia de software em Python, cobrindo estilo de código, tipagem, estruturas de projeto, frameworks populares como Django, Flask e FastAPI, além de boas práticas para testes, packaging e operacao."
+description: "Fornece padrões de engenharia de software em Python 3 baseados na documentação oficial (docs.python.org/pt-br/3), cobrindo o Zen do Python (PEP 20), guia de estilo (PEP 8), Data Model (__dunder__), Pattern Matching (PEP 634), Tipagem Avançada (PEP 484/695), Asyncio, Biblioteca Padrão e frameworks modernos."
 ---
 
-# Habilidade de IA: Engenharia de Python (Python Specialist)
+# Habilidade de IA: Engenharia de Python (Python 3 Specialist)
 
-Esta skill orienta a inteligência artificial a atuar como especialista em **Python** com foco em código legível, manutenível, testável e compatível com o ecossistema moderno da linguagem. O objetivo é combinar fundamentos da linguagem com práticas pragmáticas para aplicações web, APIs, automações, bibliotecas e serviços.
-
----
-
-## 🧭 Diretrizes de Desenvolvimento em Python
-
-Ao atuar nesta skill, aplique rigorosamente os seguintes padrões:
-
-### 1. Estilo e Legibilidade
-- **PEP 8**: Preserve nomenclatura clara, indentação consistente, linhas razoavelmente curtas e organização previsível de imports.
-- **PEP 20**: Prefira simplicidade, explicitamente legível e comportamento claro a truques de implementação.
-- **PEP 257**: Documente módulos, classes, funções e métodos públicos com docstrings objetivas quando isso agregar contexto real.
-- **Funções Pequenas**: Mantenha funções com responsabilidade única e extraia lógica repetida para helpers bem nomeados.
-
-### 2. Tipagem e Robustez
-- **Type Hints**: Use anotações de tipo de forma consistente em APIs públicas, contratos entre camadas e objetos centrais do domínio.
-- **Protocolos e Tipos Estruturais**: Prefira `Protocol`, `TypedDict`, `dataclass` e `Enum` quando isso tornar o contrato mais explícito.
-- **Validação em Tempo de Execução**: Não confie apenas em anotações; valide entradas externas com bibliotecas como **Pydantic**, **attrs**, **marshmallow** ou validadores do próprio framework usado.
-
-### 3. Estrutura de Projeto
-- **Pacotes e Camadas**: Organize o código por domínio ou responsabilidade, evitando módulos gigantes e acoplamento excessivo.
-- **Configuração por Ambiente**: Centralize configuração em variáveis de ambiente e arquivos de configuração por ambiente, sem segredos no repositório.
-- **Dependências Reprodutíveis**: Use `poetry`, `uv`, `pip-tools` ou `requirements.txt` travado quando a reprodutibilidade for importante.
-
-### 4. Testabilidade
-- **Pytest como Padrão**: Use `pytest` para testes unitários e de integração sempre que possível.
-- **Fixtures e Parametrização**: Prefira fixtures bem nomeadas e testes parametrizados para cobrir variações sem duplicação.
-- **Isolamento**: Mantenha testes rápidos, determinísticos e independentes de rede, sistema de arquivos ou relógio sempre que o cenário permitir.
+Esta skill orienta a inteligência artificial a atuar como especialista na linguagem **Python 3**, alinhada rigorosamente às diretrizes da documentação oficial da linguagem ([docs.python.org/pt-br/3](https://docs.python.org/pt-br/3/)), a Referência da Linguagem (*Language Reference*), a Referência da Biblioteca Padrão (*Standard Library*) e as Propostas de Aprimoramento do Python (PEPs). O objetivo é construir código idiomático, expressivo, manutenível, seguro e de alta performance.
 
 ---
 
-## 🛠️ Frameworks e Ecossistema Python
+## 🧭 Diretrizes Gerais e Fundamentos da Linguagem (docs.python.org)
 
-### 1. Django
-- Use **Django** quando o problema exigir um framework completo com ORM, admin, autenticação, formulários e convenções fortes.
-- Estruture apps por responsabilidade e mantenha views finas, movendo regras de negócio para services, use cases ou domain modules.
-- Use **Django REST Framework** quando for necessário construir APIs REST consistentes, com serializers, permissions e viewsets bem definidos.
+Ao atuar nesta skill, aplique rigorosamente os princípios oficiais da Python Software Foundation:
 
-### 2. Flask
-- Use **Flask** quando for necessária uma aplicação mais enxuta, modular e com alto grau de composição manual.
-- Organize rotas, blueprints, serviços e adapters para evitar crescimento caótico do código.
-- Aplique validação explícita de entrada e tratamento centralizado de erros, já que o framework é deliberadamente mínimo.
+### 1. Filosofia e Estilo Idiomático (PEP 20, PEP 8 & PEP 257)
+- **The Zen of Python (PEP 20)**:
+  - *Belo é melhor que feio. Explícito é melhor que implícito. Simples é melhor que complexo.*
+  - Evite truques ilegíveis de código ("code golf") em favor da clareza e manutenibilidade.
+- **Guia de Estilo PEP 8**:
+  - Nomenclatura: `snake_case` para variáveis, funções e métodos; `PascalCase` para classes; `ALL_CAPS` para constantes.
+  - Indentação estrita com 4 espaços (nunca misturar tabs e espaços).
+  - Organização de imports no topo do arquivo divididos em 3 blocos: (1) Biblioteca Padrão, (2) Bibliotecas de Terceiros e (3) Módulos Locais.
+- **Convenções de Docstrings (PEP 257)**:
+  - Escreva docstrings explicativas para módulos, classes e funções públicas usando a convenção de aspas triplas `"""Texto explicativo."""`.
 
-### 3. FastAPI e APIs Modernas
-- Use **FastAPI** quando o foco for APIs tipadas, documentação automática e validação forte de requisições/respostas.
-- Combine `Pydantic`, `Depends`, routers e injeção de dependências para manter as camadas separadas.
-- Prefira corrotinas assíncronas apenas quando houver ganho real em I/O ou concorrência.
+### 2. Modelo de Dados da Linguagem (Data Model & Dunder Methods)
+- **Métodos Especiais (__dunder__)**: Implemente o comportamento Pythonic das suas classes customizadas utilizando o Data Model oficial:
+  - Representação: `__str__` (para exibição amigável ao usuário) e `__repr__` (para depuração inequívoca).
+  - Context Managers: `__enter__` e `__exit__` (síncrono) ou `__aenter__` e `__aexit__` (assíncrono com `async with`).
+  - Coleções e Iteração: `__len__`, `__getitem__`, `__setitem__`, `__iter__`, `__next__`.
+  - Comparação e Hashing: `__eq__` e `__hash__` para objetos utilizáveis como chaves em dicionários e conjuntos.
 
-### 4. Dados, Jobs e Automação
-- Use **SQLAlchemy** ou o ORM do framework com cuidado para evitar consultas caras e abuso de abstrações.
-- Use **Alembic** para migrações versionadas quando houver banco relacional.
-- Use **Celery**, **RQ**, **Arq** ou fila equivalente para tarefas em background quando o processamento não precisar ser síncrono.
-- Use bibliotecas maduras para scraping, integrações e automações, mas preserve retries, timeout e logs estruturados.
+### 3. Casamento de Padrões Estruturais (Structural Pattern Matching - PEP 634/635/636)
+- Utilize a instrução `match / case` (Python 3.10+) para desestruturar sequências, dicionários e instâncias de classes de forma limpa:
+
+```python
+from dataclasses import dataclass
+
+@dataclass(slots=True)
+class Point:
+    x: float
+    y: float
+
+def process_event(event: tuple | Point) -> str:
+    match event:
+        case Point(x=0, y=0):
+            return "Origem central"
+        case Point(x=x, y=y) if x == y:
+            return f"Ponto na diagonal principal: {x}"
+        case ("click", x, y):
+            return f"Clique no ponteiro: ({x}, {y})"
+        case ("key", str(k)) if len(k) == 1:
+            return f"Tecla pressionada: {k}"
+        case _:
+            return "Evento desconhecido"
+```
+
+### 4. Sistema de Tipagem Estática e Genéricos (PEP 484, PEP 526 & PEP 695)
+- **Anotações de Tipo (`typing`)**: Aplique type hints em assinaturas de funções e atributos centrais do domínio.
+- **Sintaxe Moderna de Genéricos (Python 3.12+ - PEP 695)**:
+  - Declare genéricos diretamente com a palavra-chave `type` e parâmetros entre colchetes:
+
+```python
+# Sintaxe PEP 695 (Python 3.12+)
+type Result[T] = dict[str, T]
+
+class Repository[T]:
+    def __init__(self, initial_data: list[T]) -> None:
+        self._items: list[T] = initial_data
+
+    def get_first(self) -> T | None:
+        return self._items[0] if self._items else None
+```
+
+---
+
+## 🛠️ Destaques da Biblioteca Padrão (Python Standard Library)
+
+Ao implementar soluções, priorize os módulos embutidos maduros da linguagem antes de adicionar dependências externas:
+
+- **Orientação a Objetos e Dados**:
+  - `dataclasses`: Criação de classes de dados com `dataclass(slots=True, frozen=True)`.
+  - `enum`: Definição de enums fortemente tipados (`Enum`, `IntEnum`, `StrEnum`).
+  - `collections`: `defaultdict`, `Counter`, `deque`, `namedtuple`.
+- **E/S e Sistema de Arquivos**:
+  - `pathlib`: Manipulação de caminhos de arquivos orientada a objetos (`Path(__file__).parent`).
+  - `contextlib`: Criação simplificada de gerenciadores de contexto com `@contextmanager`.
+  - `json`: Serialização e parsing seguro de JSON.
+- **Execução Assíncrona e Concorrência**:
+  - `asyncio`: Event loop nativo, corrotinas (`async def`), tarefas (`asyncio.create_task`) e semáforos (`asyncio.Semaphore`).
+  - `concurrent.futures`: Processamento paralelo baseado em threads (`ThreadPoolExecutor`) ou processos (`ProcessPoolExecutor`).
+- **Operação e Depuração**:
+  - `logging`: Logging estruturado configurado por módulos (`logging.getLogger(__name__)`).
+  - `unittest`: Suíte de testes unitários nativa (para compatibilidade sem pacotes externos).
 
 ---
 
 ## 🧰 Padrões de Código Recomendados
 
-### Estrutura de serviço em FastAPI
+### 1. Gerenciador de Contexto Personalizado (`contextlib`)
 ```python
-from fastapi import APIRouter, Depends
-from pydantic import BaseModel
+from contextlib import contextmanager
+from typing import Generator
+import time
+import logging
 
-router = APIRouter()
+logger = logging.getLogger(__name__)
 
-class UserIn(BaseModel):
-    name: str
-
-class UserOut(BaseModel):
-    id: int
-    name: str
-
-@router.post("/users", response_model=UserOut)
-def create_user(payload: UserIn) -> UserOut:
-    user_id = 1
-    return UserOut(id=user_id, name=payload.name)
+@contextmanager
+def execution_timer(task_name: str) -> Generator[None, None, None]:
+    start_time = time.perf_counter()
+    try:
+        yield
+    finally:
+        elapsed = time.perf_counter() - start_time
+        logger.info(f"Tarefa '{task_name}' concluída em {elapsed:.4f}s")
 ```
 
-### Service layer em Django
+### 2. Aplicação Asyncio Nativa com Tratamento de Sinais
 ```python
-from dataclasses import dataclass
+import asyncio
+import logging
 
-@dataclass(frozen=True)
-class CreateInvoiceCommand:
-    customer_id: int
-    amount: float
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger("worker")
 
-class InvoiceService:
-    def create(self, command: CreateInvoiceCommand) -> int:
-        # regras de negocio aqui
-        return 123
+async def worker_task(task_id: int, semaphore: asyncio.Semaphore) -> None:
+    async with semaphore:
+        logger.info(f"Iniciando task {task_id}")
+        await asyncio.sleep(0.5)
+        logger.info(f"Concluída task {task_id}")
+
+async fn main() -> None:
+    semaphore = asyncio.Semaphore(3)
+    tasks = [asyncio.create_task(worker_task(i, semaphore)) for i in range(10)]
+    await asyncio.gather(*tasks)
+
+if __name__ == "__main__":
+    asyncio.run(main())
 ```
 
-### Teste com pytest
-```python
-import pytest
+---
 
-@pytest.mark.parametrize("value, expected", [(1, 2), (2, 3)])
-def test_increment(value, expected):
-    assert value + 1 == expected
-```
+## ⚙️ Gerenciamento de Ambientes e Empacotamento Moderno (PEP 621)
+
+- **`pyproject.toml`**: Centralize metadados do projeto, dependências e configurações de ferramentas (`pytest`, `black`, `mypy`, `ruff`) em um único arquivo conforme a norma PEP 621.
+- **Ambientes Virtuais (`venv`)**: Isolar dependências utilizando o módulo nativo `python -m venv .venv` ou gerenciadores modernos de alta performance como `uv` ou `poetry`.
 
 ---
 
 ## 🔗 Integração com Outras Skills
-- [backend-developer](..\..\general\roles\backend-developer/SKILL.md): use quando o projeto Python precisar de desenho de APIs, persistência e arquitetura de backend.
-- [framework-testing](..\..\framework\framework-testing/SKILL.md): use para aprofundar a estratégia de testes, pirâmide de testes e ferramentas de automação.
-- [devsecops-engineer](..\..\security\ops-architecture\devsecops-engineer/SKILL.md): use quando o fluxo Python envolver packaging, containers, CI/CD, secrets ou hardening.
-- [security-champions](..\..\security\ops-architecture\security-champions/SKILL.md): use para triagem de riscos de segurança e delegação para skills especialistas quando necessário.
-- [clean-code-reusability](..\..\general\engineering-practices\clean-code-reusability/SKILL.md): orienta a detecção de redundâncias e aplicação de padrões de clean code e docstrings no desenvolvimento em Python.
 
----
-
-## ⚙️ Regras de Decisão
-
-- Prefira a solução mais idiomática da comunidade Python antes de inventar abstrações próprias.
-- Não misture lógica de domínio com detalhes de framework sem necessidade clara.
-- Quando houver dúvida entre escrever mais código ou reforçar contratos e testes, priorize contratos explícitos e cobertura de teste.
+- Para criar suítes de testes unitários e de integração parametrizadas em Python, consulte [framework-pytest](../../framework/framework-pytest/SKILL.md) e [framework-unittest](../../framework/framework-unittest/SKILL.md).
+- Para desenvolver ferramentas ofensivas, scripts de rede e utilitários de segurança em Python, consulte [pentest-scripter-python-bash-go](../../security/appsec/pentest-scripter-python-bash-go/SKILL.md).
+- Para auditar código Python contra falhas de segurança (SAST) e aplicar correções de código limpo, consulte [sast-code-review](../../security/appsec/sast-code-review/SKILL.md) e [clean-code-reusability](../../general/engineering-practices/clean-code-reusability/SKILL.md).
