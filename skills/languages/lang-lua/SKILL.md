@@ -133,3 +133,10 @@ ffi.C.printf("Hello from C printf via LuaJIT FFI!\n")
 local point = ffi.new("point_t", 10.5, 20.2)
 ffi.C.printf("Point coordinates: x=%f, y=%f\n", point.x, point.y)
 ```
+
+## 🔒 Questões de Segurança e Práticas Seguras
+
+- **Sandbox Escaping**: Ao executar scripts Lua fornecidos pelo usuário, restrinja o acesso a funções globais perigosas (`load`, `loadstring`, `require`, `os.execute`, `io` e `package` modules).
+- **Tratamento de Metatables**: Proteja metatabelas de objetos internos para evitar que códigos externos alterem comportamentos nativos da aplicação ou escalem privilégios.
+- **Estouros em LuaJIT / APIs C**: Ao realizar integrações com C através da API do Lua, valide rigorosamente os limites da pilha do Lua para evitar corrupção da memória nativa do interpretador.
+

@@ -192,3 +192,9 @@ Onde $lambda_k$ representa a taxa de chegada e $mu_k$ a taxa de serviço do cana
   caption: [Comparativo de Desempenho entre Arquiteturas]
 )
 ```
+
+## 🔒 Questões de Segurança e Práticas Seguras
+
+- **Sandbox Escaping**: Configure o compilador do Typst no modo restrito (sandbox ativo) para prevenir operações arbitrárias de leitura de arquivos locais ou caminhos de rede não autorizados.
+- **Negação de Serviço (DoS)**: Otimize laços, funções recursivas e regras de formatação dinâmica para evitar que scripts maliciosos induzam recursão infinita e consumam toda a CPU do servidor.
+

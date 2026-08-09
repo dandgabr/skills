@@ -194,6 +194,13 @@ func TestDivide(t *testing.T) {
 
 ---
 
+## 🔒 Questões de Segurança e Práticas Seguras
+
+- **Goroutine Leaks e Race Conditions**: Utilize sempre o detector de race conditions do Go (`go test -race`) durante o ciclo de testes. Certifique-se de que todas as goroutines possuem uma condição clara de término para evitar vazamentos de memória.
+- **Manipulação Insegura (`unsafe` Package)**: Minimize o uso do pacote `unsafe`. Casts arbitrários de memória contornam a segurança de tipos do Go e podem levar a corrupções de memória inesperadas.
+- **Geração de Segredos**: Nunca use `math/rand` para gerar tokens, senhas ou identificadores de sessão. Sempre utilize `crypto/rand` para geração de valores criptograficamente seguros.
+- **Injeção de Comando em Processos**: Ao usar `os/exec`, evite passar strings concatenadas diretamente a shells como `sh` ou `bash`. Forneça argumentos como fatias separadas (`[]string`).
+
 ## 🔗 Integração com Outras Skills
 
 - Para construir ferramentas de automação, varredura ou scripts de testes de invasão em Go, consulte [pentest-scripter-python-bash-go](../../security/appsec/pentest-scripter-python-bash-go/SKILL.md).

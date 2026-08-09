@@ -135,3 +135,10 @@ Ao redigir ou refatorar documentos em Markdown, aplique rigidamente as regras de
 - **`examples/`**: Modelos e templates padrão (README técnico, ADR, Changelog).
 - **`resources/`**: Recursos auxiliares e paletas de ícones/badges.
 - **`references/`**: Documentações de referência das especificações CommonMark, GFM e MarkdownLint.
+
+## 🔒 Questões de Segurança e Práticas Seguras
+
+- **Cross-Site Scripting (XSS)**: Sempre sanitize ou desabilite a renderização de tags HTML brutas dentro do Markdown quando o HTML final for exibido em navegadores web.
+- **Injeção de Links**: Use validadores para links e caminhos gerados pelo usuário, garantindo o bloqueio de esquemas perigosos como `javascript:` ou `data:`.
+- **Validação de Imagens e Media**: Redirecione URLs de imagens externas através de proxies de imagens (Image Proxy) para evitar vazamento de IPs de usuários finais.
+

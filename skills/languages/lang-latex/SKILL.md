@@ -172,3 +172,10 @@ Se uma sequência $\{a_n\}$ é limitada e monotônica, então a sequência $\{a_
   \label{fig:tikz_state}
 \end{figure}
 ```
+
+## 🔒 Questões de Segurança e Práticas Seguras
+
+- **Shell Escape (Execução de Código)**: Desabilite a flag `--shell-escape` ao compilar documentos LaTeX contendo código de terceiros não confiáveis, prevenindo chamadas à diretiva `\write18`.
+- **Inclusão Arbitrária de Arquivos**: Limite o acesso a diretivas como `\input`, `\include` e `\import` para evitar leitura arbitrária de arquivos confidenciais do sistema host.
+- **Negação de Serviço (DoS)**: Evite loops de recursão infinita em definições de macros personalizadas que possam paralisar ou travar a CPU do servidor de compilação.
+

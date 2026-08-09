@@ -193,3 +193,10 @@ sub process_transaction ($self, $amount, $currency = 'USD') {
 
 1;
 ```
+
+## 🔒 Questões de Segurança e Práticas Seguras
+
+- **Injeção em `open()`**: Nunca use a sintaxe de dois argumentos da função `open` (ex: `open(FH, "$file")`). Prefira sempre a sintaxe de três argumentos `open(my $fh, '<', $file)` para evitar execução acidental de comandos.
+- **Bypass de Taint Mode**: Sempre ative o Taint Mode (`-T`) em scripts Perl expostos à internet ou CGI para marcar entradas externas como inseguras até que sejam limpas via expressões regulares.
+- **Regular Expression Denial of Service (ReDoS)**: Evite padrões de regex aninhados com quantificadores complexos que possam causar backtracking exponencial catastrófico.
+

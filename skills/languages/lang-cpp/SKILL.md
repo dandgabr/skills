@@ -193,6 +193,13 @@ endif()
 
 ---
 
+## 🔒 Questões de Segurança e Práticas Seguras
+
+- **Gerenciamento de Recursos (RAII)**: Evite gerenciamento manual com `new` e `delete`. Use Smart Pointers (`std::unique_ptr`, `std::shared_ptr`) para mitigar Use-After-Free e Memory Leaks.
+- **Object Slicing e Type Confusion**: Tenha cuidado ao converter ponteiros de classes base para classes derivadas. Use `dynamic_cast` para realizar checagens em tempo de execução de forma segura.
+- **Sobrecarga de Operadores e Construtores de Cópia**: Evite vazamento de recursos na atribuição de objetos implementando corretamente o construtor de cópia e operador de atribuição (Rule of Three/Five/Zero).
+- **Injeção em Métodos Virtuais (vtable hijacking)**: Impeça heranças não intencionais declarando classes ou métodos como `final` para reduzir a superfície de ataque de desvio de fluxo.
+
 ## 🔗 Integração com Outras Skills
 
 - Para desenvolvimento e interoperabilidade direta com código C (C23/C17), consulte [lang-c](../lang-c/SKILL.md).

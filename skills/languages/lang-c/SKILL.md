@@ -180,6 +180,13 @@ endif()
 
 ---
 
+## 🔒 Questões de Segurança e Práticas Seguras
+
+- **Buffer Overflows (CWE-121 / CWE-122)**: Nunca use funções inseguras como `strcpy`, `strcat`, `gets` ou `sprintf`. Substitua-as por equivalentes seguras como `strncpy`, `strncat`, `snprintf` ou funções de strings dinâmicas.
+- **Estouros de Inteiro (CWE-190)**: Valide operações aritméticas antes da execução se o resultado for usado para alocação de memória (ex: `malloc(width * height)`). Use checagens seguras (ou `<stdckdint.h>` em C23).
+- **Use-After-Free & Double Free (CWE-416 / CWE-415)**: Sempre anule ponteiros imediatamente após liberá-los (`free(ptr); ptr = NULL;`) para mitigar ponteiros órfãos.
+- **Strings de Formatação (CWE-134)**: Nunca passe entradas do usuário diretamente como o formato de funções de impressão (use `printf("%s", input)` em vez de `printf(input)`).
+
 ## 🔗 Integração com Outras Skills
 
 - Para compilar componentes em C++23 e interoperabilidade com C, consulte [lang-cpp](../lang-cpp/SKILL.md).

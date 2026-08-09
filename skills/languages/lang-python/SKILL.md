@@ -149,6 +149,13 @@ if __name__ == "__main__":
 
 ---
 
+## 🔒 Questões de Segurança e Práticas Seguras
+
+- **Deserialização Insegura (CWE-502)**: Nunca desserialize dados não confiáveis usando `pickle`, `marshal` ou `shelve`. Ao usar PyYAML, force sempre a chamada por `yaml.safe_load()`.
+- **Injeção de Comandos e Código**: Evite o uso de `eval()`, `exec()` e `subprocess.Popen(..., shell=True)` com dados vindos do usuário. Utilize a API orientada a objetos de listas de argumentos.
+- **Argumentos Mutáveis Padrão**: Evite definir listas ou dicionários como argumentos padrão em funções (ex: `def func(val=[])`), pois eles persistem entre as execuções e podem causar bugs lógicos e vazamento de dados.
+- **Path Traversal (CWE-22)**: Use `pathlib.Path` e valide a segurança de caminhos resolvidos com `Path.resolve()` contra caminhos base (ex: impedindo navegação para pastas superiores via `../`).
+
 ## 🔗 Integração com Outras Skills
 
 - Para criar suítes de testes unitários e de integração parametrizadas em Python, consulte [framework-pytest](../../framework/framework-pytest/SKILL.md) e [framework-unittest](../../framework/framework-unittest/SKILL.md).

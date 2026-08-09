@@ -205,3 +205,11 @@ main() {
 
 main "$@"
 ```
+
+## 🔒 Questões de Segurança e Práticas Seguras
+
+- **Injeção de Comando**: Evite expandir variáveis diretamente em comandos do sistema. Use aspas duplas sempre que possível (`"$var"` em vez de `$var`) para evitar divisão de palavras e globbing.
+- **Definições Seguras de Inicialização**: Use sempre `set -euo pipefail` no início dos scripts para que o interpretador pare imediatamente em caso de erro, variáveis indefinidas ou falhas ocultas em pipelines.
+- **Manipulação de Variável $PATH**: Evite executar binários relativos ou depender de um `$PATH` herdado não controlado. Defina um `$PATH` explícito no início de scripts SUID ou administrativos.
+- **Arquivos Temporários**: Nunca crie arquivos temporários fixos (ex: `/tmp/temp.txt`). Use o comando `mktemp` para gerar nomes de arquivos temporários aleatórios e seguros.
+

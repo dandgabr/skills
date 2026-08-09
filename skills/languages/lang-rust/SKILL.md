@@ -155,6 +155,12 @@ impl ServerConfigBuilder {
 
 ---
 
+## 🔒 Questões de Segurança e Práticas Seguras
+
+- **Blocos Unsafe e Comportamento Indefinido**: Isole blocos `unsafe` ao estrito necessário. Certifique-se de que as premissas de segurança de memória exigidas pelo Rust sejam respeitadas, evitando desalinhamentos de dados ou referências nulas.
+- **Data Races em Unsafe**: Embora o compilador do Rust garanta a thread-safety do código seguro, o uso incorreto de `Send`/`Sync` e ponteiros crus em blocos `unsafe` pode introduzir condições de corrida complexas.
+- **Panics como Vetor de DoS**: Operações aritméticas estritas ou acessos a índices de vetores podem causar `panic!` em runtime se falharem. Use métodos seguros como `.get()` ou `.checked_add()` para evitar interrupções de serviço repentinas.
+
 ## 🔗 Integração com Outras Skills
 
 - Para aplicação de análise estática e revisão de segurança em código Rust, consulte [sast-code-review](../../security/appsec/sast-code-review/SKILL.md) e [appsec-owasp-asvs](../../security/appsec/appsec-owasp-asvs/SKILL.md).

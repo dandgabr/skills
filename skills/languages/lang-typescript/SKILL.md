@@ -90,6 +90,13 @@ function renderState(state: NetworkState) {
 
 ---
 
+## 🔒 Questões de Segurança e Práticas Seguras
+
+- **Prototype Pollution**: Valide e sanitize chaves de objetos que sofrem mesclagem recursiva (deep merge) para evitar a injeção indesejada de propriedades nas classes base do JavaScript (como `__proto__`).
+- **Injeção de Código Dinâmico**: Nunca utilize `eval()`, `Function()` ou passagem de strings para o manipulador `setTimeout()`.
+- **Ataques de ReDoS**: Valide limites de tempo de execução e complexidade em padrões regex aplicados em validação de inputs no servidor Node.js.
+- **Deserialização Insegura de JSON**: Tenha cautela ao converter JSON contendo payloads maliciosos que possam explorar lógicas internas após parsing convencional.
+
 ## 🔗 Integração com Outras Skills
 - [frontend-developer](../../general/roles/frontend-developer/SKILL.md): Utiliza TypeScript para criar aplicações com [framework-react](../../framework/framework-react/SKILL.md) e [framework-vue](../../framework/framework-vue/SKILL.md).
 - [backend-developer](../../general/roles/backend-developer/SKILL.md): Constrói contratos tipados de APIs RESTful ([framework-rest-api](../../framework/framework-rest-api/SKILL.md)) e clientes/servidores gRPC ([framework-grpc](../../framework/framework-grpc/SKILL.md)).

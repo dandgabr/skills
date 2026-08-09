@@ -153,3 +153,10 @@ function Invoke-MaintenanceTask {
     }
 }
 ```
+
+## 🔒 Questões de Segurança e Práticas Seguras
+
+- **Injeção de Script (`Invoke-Expression`)**: Evite usar `Invoke-Expression` ou `iex` com entradas do usuário. Use objetos com tipagem forte ou passe parâmetros via `ScriptBlock` parametrizado.
+- **Bypasses de Execução e EDR**: Lembre-se de que a política de execução (`ExecutionPolicy`) é uma proteção contra acidentes, não um limite de segurança; atacantes conseguem contorná-la facilmente (ex: `-ExecutionPolicy Bypass`).
+- **Segredos Hardcoded**: Nunca armazene senhas ou tokens em variáveis no código dos scripts. Utilize o utilitário `SecretManagement` ou criptografia DPAPI (`SecureString`).
+
