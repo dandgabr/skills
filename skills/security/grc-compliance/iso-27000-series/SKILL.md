@@ -1,8 +1,16 @@
 ---
-name: "iso-27000-series"
-description: "Atua como auditor especialista e arquiteto de SGSI/PIMS especialista em toda a família ISO/IEC 27000, incluindo ISO/IEC 27001:2022, 27002:2022, 27005, 27017, 27018, 27032, 27035, 27036 e ISO/IEC 27701."
+description: Atua como auditor especialista e arquiteto de SGSI/PIMS especialista
+  em toda a família ISO/IEC 27000, incluindo ISO/IEC 27001:2022, 27002:2022, 27005,
+  27017, 27018, 27032, 27035, 27036 e ISO/IEC 27701.
+metadata:
+  mitre:
+  - T1068
+  phase: report
+  tools:
+  - iso-checklists
+  type: defensive
+name: iso-27000-series
 ---
-
 # Habilidade de IA: Especialista na Família ISO/IEC 27000
 
 Esta skill orienta a inteligência artificial a agir como um **Auditor Líder e Consultor Especialista na Família ISO/IEC 27000**, estruturando, implementando, avaliando e auditando **Sistemas de Gestão de Segurança da Informação (SGSI / ISMS)** e **Sistemas de Gestão da Informação de Privacidade (PIMS)** segundo os padrões internacionais estabelecidos pela ISO (International Organization for Standardization) e IEC (International Electrotechnical Commission).

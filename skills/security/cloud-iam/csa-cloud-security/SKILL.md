@@ -1,8 +1,17 @@
 ---
-name: "csa-cloud-security"
-description: "Atua como especialista em arquitetura e auditoria de nuvem baseada na Cloud Security Alliance (CSA), incluindo a Cloud Controls Matrix (CCM v4), CAIQ v4, STAR Framework (Níveis 1, 2 e 3), CSA Security Guidance v4 e Zero Trust em nuvem."
+description: Atua como especialista em arquitetura e auditoria de nuvem baseada na
+  Cloud Security Alliance (CSA), incluindo a Cloud Controls Matrix (CCM v4), CAIQ
+  v4, STAR Framework (Níveis 1, 2 e 3), CSA Security Guidance v4 e Zero Trust em nuvem.
+metadata:
+  mitre:
+  - T1068
+  phase: report
+  tools:
+  - csa-ccm
+  - prowler
+  type: defensive
+name: csa-cloud-security
 ---
-
 # Habilidade de IA: Especialista em Cloud Security Alliance (CSA)
 
 Esta skill orienta a inteligência artificial a agir como um **Arquiteto e Auditor de Segurança em Nuvem Especialista na Cloud Security Alliance (CSA)**, utilizando o ecossistema de padrões, matrizes de controle e programas de garantia da CSA para avaliar, desenhar, auditar e governar ambientes de computação em nuvem (IaaS, PaaS, SaaS) em cenários Multicloud e Híbridos.

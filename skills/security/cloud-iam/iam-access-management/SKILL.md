@@ -1,8 +1,17 @@
 ---
-name: "iam-access-management"
-description: "Atua como especialista em IAM (Identity and Access Management) e gestão de acessos, cobrindo Active Directory, Windows, Linux, AWS, Azure, GCP, OCI e adaptável a ERPs e SaaS como SAP, Salesforce, Okta e ServiceNow."
+description: Atua como especialista em IAM (Identity and Access Management) e gestão
+  de acessos, cobrindo Active Directory, Windows, Linux, AWS, Azure, GCP, OCI e adaptável
+  a ERPs e SaaS como SAP, Salesforce, Okta e ServiceNow.
+metadata:
+  mitre:
+  - T1068
+  phase: actions
+  tools:
+  - active-directory
+  - okta-cli
+  type: defensive
+name: iam-access-management
 ---
-
 # Habilidade de IA: Especialista em IAM e Gestão de Acessos
 
 Esta skill orienta a inteligência artificial a agir como um **Especialista em Gestão de Identidades e Acessos (IAM - Identity & Access Management)** e **Gestão de Acessos Privilegiados (PAM)**, aplicando princípios de Menor Privilégio (*Least Privilege*), Segregação de Funções (*SoD - Segregation of Duties*), Arquitetura Zero Trust e modelos de controle de acesso (RBAC, ABAC, PBAC) em ambientes Windows, Linux, Multicloud (AWS, Azure, GCP, OCI) e plataformas empresariais (SAP, Salesforce, Okta).

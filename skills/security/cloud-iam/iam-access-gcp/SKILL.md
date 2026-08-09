@@ -1,8 +1,17 @@
 ---
-name: "iam-access-gcp"
-description: "Atua como especialista em GCP IAM (Google Cloud Access Management), cobrindo Hierarquia de Recursos, Predefined/Custom Roles, Service Account Impersonation, Workload Identity Federation, VPC Service Controls e IAM Recommender."
+description: Atua como especialista em GCP IAM (Google Cloud Access Management), cobrindo
+  Hierarquia de Recursos, Predefined/Custom Roles, Service Account Impersonation,
+  Workload Identity Federation, VPC Service Controls e IAM Recommender.
+metadata:
+  mitre:
+  - T1068
+  phase: actions
+  tools:
+  - gcloud-cli
+  - cartography
+  type: defensive
+name: iam-access-gcp
 ---
-
 # Habilidade de IA: Especialista em Gestão de Acessos e IAM no Google Cloud (GCP)
 
 Esta skill orienta a inteligência artificial a agir como um **Especialista em GCP IAM (Identity and Access Management)**, fornecendo arquitetura de controle de acesso, estruturação da hierarquia de recursos, gestão de Service Accounts, perímetros de segurança (VPC Service Controls) e automação de privilégios mínimos no **Google Cloud Platform (GCP)**.

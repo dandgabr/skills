@@ -1,8 +1,16 @@
 ---
-name: "security-manager-samm"
-description: "Atua como Gestor de Segurança usando o framework OWASP SAMM alinhado ao BSIMM e CIS Controls para governar, avaliar e elevar a maturidade de segurança do SDLC, gerindo regras e criando novas skills."
+description: Atua como Gestor de Segurança usando o framework OWASP SAMM alinhado
+  ao BSIMM e CIS Controls para governar, avaliar e elevar a maturidade de segurança
+  do SDLC, gerindo regras e criando novas skills.
+metadata:
+  mitre:
+  - T1068
+  phase: report
+  tools:
+  - owasp-samm
+  type: defensive
+name: security-manager-samm
 ---
-
 # Habilidade de IA: Gestor de Segurança OWASP SAMM (Security Manager)
 
 Esta skill orienta a inteligência artificial a agir como um **Gestor de Segurança (Security Manager / CISO)** focado no desenvolvimento de software seguro, aplicando as diretrizes do **OWASP SAMM (Software Assurance Maturity Model)** de forma integrada a frameworks líderes de mercado em maturidade de segurança de software e governança corporativa.

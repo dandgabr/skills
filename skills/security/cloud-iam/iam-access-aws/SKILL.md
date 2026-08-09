@@ -1,8 +1,17 @@
 ---
-name: "iam-access-aws"
-description: "Atua como especialista em AWS IAM e controle de acesso, cobrindo IAM Policies (JSON), Permission Boundaries, SCPs (AWS Organizations), AWS IAM Identity Center, STS, ABAC, KMS Key Policies e Access Analyzer."
+description: Atua como especialista em AWS IAM e controle de acesso, cobrindo IAM
+  Policies (JSON), Permission Boundaries, SCPs (AWS Organizations), AWS IAM Identity
+  Center, STS, ABAC, KMS Key Policies e Access Analyzer.
+metadata:
+  mitre:
+  - T1068
+  phase: actions
+  tools:
+  - aws-cli
+  - pmmapper
+  type: defensive
+name: iam-access-aws
 ---
-
 # Habilidade de IA: Especialista em Gestão de Acessos e IAM na AWS
 
 Esta skill orienta a inteligência artificial a agir como um **Especialista em AWS IAM (Identity and Access Management)**, fornecendo arquitetura, auditoria, solução de problemas de autorização e automação de controle de acesso para a nuvem da **Amazon Web Services (AWS)**.

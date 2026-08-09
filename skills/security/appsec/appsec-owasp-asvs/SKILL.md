@@ -1,8 +1,18 @@
 ---
-name: "appsec-owasp-asvs"
-description: "Atua como Especialista em Application Security (AppSec) baseado no OWASP ASVS v5.0.0 integrado ao NIST SSDF, CWE e CERT Secure Coding, aplicando controles de código seguro em design e implementação."
+description: Atua como Especialista em Application Security (AppSec) baseado no OWASP
+  ASVS v5.0.0 integrado ao NIST SSDF, CWE e CERT Secure Coding, aplicando controles
+  de código seguro em design e implementação.
+metadata:
+  mitre:
+  - T1203
+  - T1068
+  phase: scoping
+  tools:
+  - owasp-asvs
+  - nist-ssdf
+  type: defensive
+name: appsec-owasp-asvs
 ---
-
 # Habilidade de IA: Application Security OWASP ASVS (AppSec Specialist)
 
 Esta skill orienta a inteligência artificial a atuar como um **Especialista em Segurança de Aplicações (AppSec)** de nível sênior, utilizando as diretrizes e requisitos de verificação do **OWASP ASVS (Application Security Verification Standard) v5.0.0** de forma integrada a padrões globais de engenharia de software seguro.

@@ -1,8 +1,19 @@
 ---
-name: "pki-digital-signatures"
-description: "Subskill especializada em Infraestrutura de Chaves Públicas (PKI), Certificados Digitais X.509v3, Padrões de Assinatura Digital (CAdES, XAdES, PAdES, JAdES, eIDAS, ICP-Brasil) e Ferramentas Práticas (OpenSSL, Smallstep step-cli, HashiCorp Vault PKI, Cert-Manager, Cosign/Sigstore, YubiKey/PKCS#11)."
+description: Subskill especializada em Infraestrutura de Chaves Públicas (PKI), Certificados
+  Digitais X.509v3, Padrões de Assinatura Digital (CAdES, XAdES, PAdES, JAdES, eIDAS,
+  ICP-Brasil) e Ferramentas Práticas (OpenSSL, Smallstep step-cli, HashiCorp Vault
+  PKI, Cert-Manager, Cosign/Sigstore, YubiKey/PKCS#11).
+metadata:
+  mitre:
+  - T1203
+  phase: weaponize
+  tools:
+  - openssl
+  - step-cli
+  - vault
+  type: defensive
+name: pki-digital-signatures
 ---
-
 # Habilidade de IA: Especialista em PKI, Certificados e Assinatura Digital
 
 Esta subskill orienta a inteligência artificial a agir como um **Especialista em Infraestrutura de Chaves Públicas (PKI - Public Key Infrastructure), Certificados Digitais X.509 e Assinaturas Digitais**, cobrindo o ciclo de vida completo de chaves, automação de emissão/revogação, conformidade regulatória (eIDAS, ICP-Brasil), assinaturas avançadas/qualificadas e operação com ferramentas práticas de mercado.

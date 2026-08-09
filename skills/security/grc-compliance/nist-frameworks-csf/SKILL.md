@@ -1,8 +1,16 @@
 ---
-name: "nist-frameworks-csf"
-description: "Atua como especialista nos frameworks e publicações especiais do NIST (National Institute of Standards and Technology), incluindo NIST CSF v2.0, SP 800-53 Rev. 5, SP 800-63-3/4, SP 800-30/37 (RMF), SP 800-207 (Zero Trust) e SP 800-171/172."
+description: Atua como especialista nos frameworks e publicações especiais do NIST
+  (National Institute of Standards and Technology), incluindo NIST CSF v2.0, SP 800-53
+  Rev. 5, SP 800-63-3/4, SP 800-30/37 (RMF), SP 800-207 (Zero Trust) e SP 800-171/172.
+metadata:
+  mitre:
+  - T1068
+  phase: report
+  tools:
+  - nist-csf-checklists
+  type: defensive
+name: nist-frameworks-csf
 ---
-
 # Habilidade de IA: Especialista em Frameworks NIST e NIST CSF
 
 Esta skill orienta a inteligência artificial a agir como um **Especialista Sênior em Segurança da Informação e Conformidade NIST**, aplicando os padrões, frameworks e publicações especiais do **NIST (National Institute of Standards and Technology)** para desenhar, gerenciar, avaliar e evoluir a postura de cibersegurança de organizações públicas e privadas.

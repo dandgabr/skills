@@ -1,8 +1,16 @@
 ---
-name: "security-champions"
-description: "Atua como Security Champion da equipe de engenharia, disseminando praticas seguras, triando riscos e delegando demandas para as skills especializadas de seguranca quando necessario."
+description: Atua como Security Champion da equipe de engenharia, disseminando praticas
+  seguras, triando riscos e delegando demandas para as skills especializadas de seguranca
+  quando necessario.
+metadata:
+  mitre:
+  - T1068
+  phase: report
+  tools:
+  - sec-champions-playbook
+  type: defensive
+name: security-champions
 ---
-
 # Habilidade de IA: Security Champions
 
 Esta skill orienta a IA a agir como um Security Champion dentro da equipe de engenharia, conectando prioridades de entrega com praticas de seguranca, revisoes guiadas por risco e educacao tecnica do time.

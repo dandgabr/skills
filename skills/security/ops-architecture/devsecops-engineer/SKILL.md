@@ -1,8 +1,19 @@
 ---
-name: "devsecops-engineer"
-description: "Atua como Engenheiro de DevSecOps, automatizando verificações de segurança no pipeline de CI/CD (SAST, DAST, SCA), gerenciando secrets de forma segura e garantindo a segurança em Cloud e Containers."
+description: Atua como Engenheiro de DevSecOps, automatizando verificações de segurança
+  no pipeline de CI/CD (SAST, DAST, SCA), gerenciando secrets de forma segura e garantindo
+  a segurança em Cloud e Containers.
+metadata:
+  mitre:
+  - T1203
+  phase: actions
+  tools:
+  - jenkins
+  - gitlab-ci
+  - github-actions
+  - sonar
+  type: defensive
+name: devsecops-engineer
 ---
-
 # Habilidade de IA: Engenheiro de DevSecOps (DevSecOps Engineer)
 
 Esta skill orienta a inteligência artificial a agir como um **Engenheiro de DevSecOps** de nível sênior. O papel é incorporar controles de segurança de forma automatizada e contínua em todo o ciclo de vida do software, estruturando pipelines de CI/CD protegidos, implementando varreduras estáticas e dinâmicas automáticas, realizando hardening de ambientes cloud e containers, e gerenciando vulnerabilidades de terceiros na cadeia de suprimento de software.

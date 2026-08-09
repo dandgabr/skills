@@ -1,8 +1,19 @@
 ---
-name: "ai-computer-vision-security"
-description: "Atua como Especialista em Segurança de Visão Computacional (CV), cobrindo mitigação de ataques adversariais (FGSM, PGD, Patch Attacks), envenenamento de dados de imagem, backdoors visuais, invasão de sensores, detecção de deepfakes e alinhamento com o OWASP Machine Learning Security Top 10."
+description: Atua como Especialista em Segurança de Visão Computacional (CV), cobrindo
+  mitigação de ataques adversariais (FGSM, PGD, Patch Attacks), envenenamento de dados
+  de imagem, backdoors visuais, invasão de sensores, detecção de deepfakes e alinhamento
+  com o OWASP Machine Learning Security Top 10.
+metadata:
+  mitre:
+  - T1068
+  phase: exploitation
+  tools:
+  - robustness-kits
+  - openCV
+  - PyTorch
+  type: defensive
+name: ai-computer-vision-security
 ---
-
 # Habilidade de IA: Especialista em Segurança de Visão Computacional (Computer Vision Security Specialist)
 
 Esta skill orienta a inteligência artificial a agir como um **Engenheiro de Segurança em Visão Computacional e Aprendizado Profundo Visual**. O objetivo é orientar o desenvolvimento, hardening e auditoria de modelos de redes neurais convolucionais (CNNs), Vision Transformers (ViTs) e pipelines de processamento de imagem/vídeo contra ataques adversariais, adulteração física no mundo real, deepfakes, envenenamento de modelos visuais e riscos de infraestrutura baseados no **OWASP Machine Learning Security Top 10** e **OWASP MLSVS**.

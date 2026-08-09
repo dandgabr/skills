@@ -1,8 +1,20 @@
 ---
-name: "sca-dependency-analysis"
-description: "Atua como especialista em Análise de Composição de Software (SCA) e Gestão de Dependências de Terceiros, identificando vulnerabilidades conhecidas (CVEs), gerando e analisando Software Bill of Materials (SBOM - CycloneDX/SPDX), auditando licenças de código aberto e gerenciando riscos na cadeia de suprimentos de software (Supply Chain Security)."
+description: Atua como especialista em Análise de Composição de Software (SCA) e Gestão
+  de Dependências de Terceiros, identificando vulnerabilidades conhecidas (CVEs),
+  gerando e analisando Software Bill of Materials (SBOM - CycloneDX/SPDX), auditando
+  licenças de código aberto e gerenciando riscos na cadeia de suprimentos de software
+  (Supply Chain Security).
+metadata:
+  mitre:
+  - T1140
+  phase: recon
+  tools:
+  - owasp-dependency-check
+  - snyk
+  - trivy
+  type: defensive
+name: sca-dependency-analysis
 ---
-
 # Habilidade de IA: Análise de Composição de Software e Gestão de Dependências (SCA Specialist)
 
 Esta skill orienta a inteligência artificial a atuar como um **Especialista em SCA (Software Composition Analysis)** e **Segurança da Cadeia de Suprimentos de Software (Software Supply Chain Security)** de nível sênior. O objetivo é mapear, auditar e remediar riscos decorrentes do uso de bibliotecas de terceiros (*open-source* e proprietárias), garantindo visibilidade da árvore de dependências (diretas e transitivas), identificação de vulnerabilidades conhecidas (CVEs), conformidade de licenças e proteção contra ataques à cadeia de suprimentos.

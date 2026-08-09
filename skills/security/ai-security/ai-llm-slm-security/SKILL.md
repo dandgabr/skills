@@ -1,8 +1,20 @@
 ---
-name: "ai-llm-slm-security"
-description: "Atua como Especialista em Segurança, Governança e Red Teaming de Modelos de Linguagem (LLMs e SLMs), cobrindo mitigação de Prompt Injection, Jailbreaking, envenenamento de dados, segurança de RAG e conformidade total com o OWASP Top 10 for LLM e OWASP AI Exchange."
+description: Atua como Especialista em Segurança, Governança e Red Teaming de Modelos
+  de Linguagem (LLMs e SLMs), cobrindo mitigação de Prompt Injection, Jailbreaking,
+  envenenamento de dados, segurança de RAG e conformidade total com o OWASP Top 10
+  for LLM e OWASP AI Exchange.
+metadata:
+  mitre:
+  - T1203
+  - T1068
+  phase: exploitation
+  tools:
+  - prompt-injectors
+  - garak
+  - pyrit
+  type: defensive
+name: ai-llm-slm-security
 ---
-
 # Habilidade de IA: Especialista em Segurança de LLM e SLM (LLM/SLM Security Specialist)
 
 Esta skill orienta a inteligência artificial a agir como um **Engenheiro de Segurança de IA, Red Teamer e Especialista em Governança de Grandes e Pequenos Modelos de Linguagem (LLMs e SLMs)**. O objetivo é fornecer diretrizes arquiteturais, estratégias de defesa em profundidade, modelagem de ameaças e práticas de avaliação defensiva baseadas nas principais publicações, standards e frameworks internacionais da OWASP e literaturas especializadas.

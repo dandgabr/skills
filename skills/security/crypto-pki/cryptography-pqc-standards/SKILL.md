@@ -1,8 +1,19 @@
 ---
-name: "cryptography-pqc-standards"
-description: "Atua como especialista em engenharia de criptografia, descriptografia, gestão de chaves (DEK/KEK/Envelope Encryption), criptografia em repouso (FDE, XTS-AES, TDE), criptografia avançada (Homomórfica, FPE, Searchable Encryption, ZKP, MPC/Threshold), criptografia pós-quântica (PQC) e protocolos de criptografia de transporte (TLS 1.3, ECH, mTLS, QUIC, DTLS 1.3, WireGuard, IPsec, SSH e PKI)."
+description: Atua como especialista em engenharia de criptografia, descriptografia,
+  gestão de chaves (DEK/KEK/Envelope Encryption), criptografia em repouso (FDE, XTS-AES,
+  TDE), criptografia avançada (Homomórfica, FPE, Searchable Encryption, ZKP, MPC/Threshold),
+  criptografia pós-quântica (PQC) e protocolos de criptografia de transporte (TLS
+  1.3, ECH, mTLS, QUIC, DTLS 1.3, WireGuard, IPsec, SSH e PKI).
+metadata:
+  mitre:
+  - T1203
+  phase: weaponize
+  tools:
+  - openssl
+  - step-cli
+  type: defensive
+name: cryptography-pqc-standards
 ---
-
 # Habilidade de IA: Engenheiro de Criptografia, Gestão de Chaves, Criptografia em Repouso, Avançada e PQC
 
 Esta skill orienta a inteligência artificial a agir como um **Especialista em Engenharia Criptográfica, Criptografia de Dados e Comunicações**, fornecendo recomendações técnicas e especificações de arquitetura para a proteção de dados em repouso (at rest), em trânsito (in transit) e em processamento/uso (in use/computation). 

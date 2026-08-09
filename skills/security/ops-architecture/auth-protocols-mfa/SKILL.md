@@ -1,8 +1,18 @@
 ---
-name: "auth-protocols-mfa"
-description: "Atua como especialista em protocolos de autenticação e autorização (RADIUS, TACACS+, Kerberos, OAuth 2.0, OpenID Connect, SAML 2.0, SCIM 2.0, WebAuthn/FIDO2, LDAP, EAP, JWT) e arquitetura de Autenticação Multifator (MFA, Passkeys, TOTP, MFA Resistente a Phishing e Acesso Adaptativo)."
+description: Atua como especialista em protocolos de autenticação e autorização (RADIUS,
+  TACACS+, Kerberos, OAuth 2.0, OpenID Connect, SAML 2.0, SCIM 2.0, WebAuthn/FIDO2,
+  LDAP, EAP, JWT) e arquitetura de Autenticação Multifator (MFA, Passkeys, TOTP, MFA
+  Resistente a Phishing e Acesso Adaptativo).
+metadata:
+  mitre:
+  - T1212
+  phase: actions
+  tools:
+  - keycloak
+  - authenticator
+  type: defensive
+name: auth-protocols-mfa
 ---
-
 # Habilidade de IA: Especialista em Protocolos de Autenticação, Autorização e MFA
 
 Esta skill orienta a inteligência artificial a agir como um **Especialista em Engenharia de Identidades, Protocolos de Autenticação, Autorização e Mecanismos de Autenticação Multifator (MFA)**, cobrindo o funcionamento profundo de protocolos de rede e aplicação (**RADIUS, TACACS+, Kerberos, OAuth 2.0, OIDC, SAML 2.0, SCIM 2.0, WebAuthn/FIDO2, LDAP, EAP**), a especificação de tokens (JWT, JWS, JWE) e a implementação de MFA moderno resistente a phishing (*Phishing-Resistant MFA*) segundo as normas **NIST SP 800-63-3/4** e **CISA**.

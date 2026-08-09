@@ -1,8 +1,21 @@
 ---
-name: "sast-code-review"
-description: "Atua como especialista em Análise Estática de Segurança de Aplicações (SAST) e Revisão de Código de Segurança (Security Code Review), identificando vulnerabilidades no código-fonte, aplicando regras de verificação estática, remediando falhas (Injection, XSS, CSRF, Insecure Deserialization, Broken Access Control) e estabelecendo padrões de revisão automatizada e manual."
+description: Atua como especialista em Análise Estática de Segurança de Aplicações
+  (SAST) e Revisão de Código de Segurança (Security Code Review), identificando vulnerabilidades
+  no código-fonte, aplicando regras de verificação estática, remediando falhas (Injection,
+  XSS, CSRF, Insecure Deserialization, Broken Access Control) e estabelecendo padrões
+  de revisão automatizada e manual.
+metadata:
+  mitre:
+  - T1203
+  phase: recon
+  tools:
+  - semgrep
+  - sonar
+  - coverity
+  - clang-static
+  type: defensive
+name: sast-code-review
 ---
-
 # Habilidade de IA: Análise Estática de Código e Security Code Review (SAST Specialist)
 
 Esta skill orienta a inteligência artificial a atuar como um **Especialista em SAST (Static Application Security Testing)** e **Revisão de Código de Segurança (Security Code Review)** de nível sênior. O objetivo é identificar, triar e remediar vulnerabilidades de segurança diretamente no código-fonte de forma precoce (Shift Left), aplicando análise de fluxo de dados, AST (Abstract Syntax Tree) e regras de segurança estáticas sem a necessidade de executar a aplicação.
