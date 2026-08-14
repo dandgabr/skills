@@ -23,16 +23,16 @@ tools:
     server: snyk
     description: Servidor MCP do Snyk integrado ao Gemini CLI para consulta estruturada de vulnerabilidades e auditoria de projetos.
   - type: skill_integration
-    path: ../../skills/security/appsec-owasp-asvs/SKILL.md
+    path: ../../skills/security/appsec/appsec-owasp-asvs/SKILL.md
   - type: skill_integration
-    path: ../../skills/security/devsecops-engineer/SKILL.md
+    path: ../../skills/security/ops-architecture/devsecops-engineer/SKILL.md
   - type: skill_integration
-    path: ../../skills/security/sast-code-review/SKILL.md
+    path: ../../skills/security/appsec/sast-code-review/SKILL.md
   - type: skill_integration
-    path: ../../skills/security/sca-dependency-analysis/SKILL.md
+    path: ../../skills/security/appsec/sca-dependency-analysis/SKILL.md
   - type: skill_integration
-    path: ../../skills/security/security-grc-compliance/SKILL.md
+    path: ../../skills/security/grc-compliance/security-grc-compliance/SKILL.md
   - type: skill_integration
-    path: ../../skills/security/security-privacy/SKILL.md
+    path: ../../skills/security/grc-compliance/security-privacy/SKILL.md
   - type: skill_integration
-    path: ../../skills/security/threat-modeler/SKILL.md
+    path: ../../skills/security/ops-architecture/threat-modeler/SKILL.md

@@ -27,8 +27,10 @@ Este diretório contém as definições declarativas dos agentes do projeto util
 │   └── agent.yaml                      # Agente Especialista em Segurança de IA (LLM/CV/Voice)
 ├── security-specialist\
 │   └── agent.yaml                      # Agente Especialista em Segurança e DevSecOps
-└── pentester-agent\
-    └── agent.yaml                      # Agente de Pentest Ético e Red Teaming
+├── pentester-agent\
+│   └── agent.yaml                      # Agente de Pentest Ético e Red Teaming
+└── project-reviewer\
+    └── agent.yaml                      # Agente Revisor de Projetos Especialista
 ```
 
 ## 🤖 Agentes Disponíveis
@@ -87,6 +89,11 @@ Este diretório contém as definições declarativas dos agentes do projeto util
 - **Modelo Base**: `gemini-2.0-flash`
 - **Função**: Executar análises ofensivas estruturadas baseadas em OWASP WSTG, API Security, Cloud e Red Team Scripting usando utilitários CLI (nmap, curl, zap-cli, tshark).
 - **Skills Associadas**: [pentester-owasp-wstg](../skills/security/appsec/pentester-owasp-wstg/SKILL.md), [pentester-owasp-api-security-2023](../skills/security/appsec/pentester-owasp-api-security-2023/SKILL.md), [pentest-cloud-aws-azure-gcp](../skills/security/appsec/pentest-cloud-aws-azure-gcp/SKILL.md), [pentest-web-application-modern](../skills/security/appsec/pentest-web-application-modern/SKILL.md) e [pentest-scripter-python-bash-go](../skills/security/appsec/pentest-scripter-python-bash-go/SKILL.md)
+
+### 12. [project-reviewer](project-reviewer/agent.yaml)
+- **Modelo Base**: `gemini-2.0-flash`
+- **Função**: Revisar, padronizar e distribuir requisitos de negócio entre Banco de Dados, Backend e Frontend, garantindo a aplicação de boas práticas de arquitetura e segurança.
+- **Skills Associadas**: [project-reviewer](../skills/general/roles/project-reviewer/SKILL.md), [clean-code-reusability](../skills/general/engineering-practices/clean-code-reusability/SKILL.md), [appsec-owasp-asvs](../skills/security/appsec/appsec-owasp-asvs/SKILL.md) e [security-privacy](../skills/security/grc-compliance/security-privacy/SKILL.md)
 
 ## 🚀 Como Invocá-los via ADK 2.0
 

@@ -9,4 +9,4 @@ instruction: >
   invocar/orquestrar dinamicamente as skills de Design Patterns (dp-*) de acordo com as necessidades.
 tools:
   - type: skill_integration
-    path: ../../skills/general/software-architect/SKILL.md
+    path: ../../skills/general/roles/software-architect/SKILL.md

@@ -160,5 +160,5 @@ Compile a prova de conceito sob diferentes perfis para aferir a eficácia de seg
 ---
 
 ## 🔒 Diretrizes Globais de Segurança e Conformidade
-- Siga estritamente as diretivas estabelecidas no [appsec-owasp-asvs](../../../security/appsec/appsec-owasp-asvs/SKILL.md) e [clean-code-reusability](../../general/engineering-practices/clean-code-reusability/SKILL.md).
+- Siga estritamente as diretivas estabelecidas no [appsec-owasp-asvs](../../../security/appsec/appsec-owasp-asvs/SKILL.md) e [clean-code-reusability](../../../general/engineering-practices/clean-code-reusability/SKILL.md).
 - Substitua funções e padrões legados inseguros por tipos de alocação de memória gerenciada e abstrações seguras modernas.

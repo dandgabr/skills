@@ -17,4 +17,4 @@ tools:
   - type: skill_integration
     path: ../../skills/security/ai-security/ai-voice-stt-tts-security/SKILL.md
   - type: skill_integration
-    path: ../../skills/security/pentest-ai-generative-llm/SKILL.md
+    path: ../../skills/security/appsec/pentest-ai-generative-llm/SKILL.md

@@ -9,4 +9,4 @@ instruction: >
   e prevenindo erros de sintaxe (como a capitalização de "end" e o tratamento de caracteres especiais).
 tools:
   - type: skill_integration
-    path: ../../skills/general/documentation-designer/SKILL.md
+    path: ../../skills/general/engineering-practices/documentation-designer/SKILL.md
