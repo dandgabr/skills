@@ -29,9 +29,12 @@ Este diretório contém as definições declarativas dos agentes do projeto util
 │   └── agent.yaml                      # Agente Especialista em Segurança e DevSecOps
 ├── pentester-agent\
 │   └── agent.yaml                      # Agente de Pentest Ético e Red Teaming
-└── project-reviewer\
-    └── agent.yaml                      # Agente Revisor de Projetos Especialista
+├── project-reviewer\
+│   └── agent.yaml                      # Agente Revisor de Projetos Especialista
+└── reverse-engineer-agent\
+    └── agent.yaml                      # Agente de Engenharia Reversa e Baixo Nível
 ```
+
 
 ## 🤖 Agentes Disponíveis
 
@@ -95,7 +98,13 @@ Este diretório contém as definições declarativas dos agentes do projeto util
 - **Função**: Revisar, padronizar e distribuir requisitos de negócio entre Banco de Dados, Backend e Frontend, garantindo a aplicação de boas práticas de arquitetura e segurança.
 - **Skills Associadas**: [project-reviewer](../skills/general/roles/project-reviewer/SKILL.md), [clean-code-reusability](../skills/general/engineering-practices/clean-code-reusability/SKILL.md), [appsec-owasp-asvs](../skills/security/appsec/appsec-owasp-asvs/SKILL.md) e [security-privacy](../skills/security/grc-compliance/security-privacy/SKILL.md)
 
+### 13. [reverse-engineer-agent](reverse-engineer-agent/agent.yaml)
+- **Modelo Base**: `gemini-2.0-flash`
+- **Função**: Depuração, análise dinâmica de binários, manipulação direta de RAM (Cheat Engine), automação de comandos em WinDbg e validação de segurança de código de baixo nível.
+- **Skills Associadas**: [program-cheat-engine](../skills/programs/program-cheat-engine/SKILL.md), [program-windbg](../skills/programs/program-windbg/SKILL.md), [memory-manipulation](../skills/security/appsec/memory-manipulation/SKILL.md), [sast-code-review](../skills/security/appsec/sast-code-review/SKILL.md) e [appsec-owasp-asvs](../skills/security/appsec/appsec-owasp-asvs/SKILL.md)
+
 ## 🚀 Como Invocá-los via ADK 2.0
+
 
 Para instanciar e rodar esses agentes em seus scripts ou fluxos colaborativos baseados em grafo do ADK 2.0, você pode carregá-los declarativamente usando o runtime do ADK:
 

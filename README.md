@@ -199,6 +199,8 @@ Abaixo está a listagem detalhada de todas as skills disponíveis no ecossistema
 | **power-automate** | [`skills/programs/power-automate`](skills/programs/power-automate/SKILL.md) | Atua como especialista em Microsoft Power Automate, cobrindo Cloud Flows (Automated, Instant, Scheduled), Desktop Flows (RPA), Process Mining, AI Builder, conectores personalizados e arquitetura de governança/DLP. |
 | **power-bi** | [`skills/programs/power-bi`](skills/programs/power-bi/SKILL.md) | Atua como especialista em Microsoft Power BI e Microsoft Fabric, cobrindo modelagem dimensional (Star Schema), linguagem DAX avançada, Power Query (M), RLS/OLS, Dataflows/Datamarts e otimização de performance. |
 | **program-cheat-engine** | [`skills/programs/program-cheat-engine`](skills/programs/program-cheat-engine/SKILL.md) | Especialista em desenvolvimento de scripts Auto Assembler e Lua para Cheat Engine 7.5 e 7.7. Fornece padrões de injeção de código, manipulação de memória e técnicas de conversão e compatibilidade de scripts entre as versões 7.5 e 7.7. |
+| **program-windbg** | [`skills/programs/program-windbg`](skills/programs/program-windbg/SKILL.md) | Permite automatizar e interagir com o depurador WinDbg (Windows Debugger) e com o motor de depuração do Windows através de `cdb.exe` e APIs nativas (`dbgeng.dll`). |
+
 
 ### 🧩 Padrões de Projeto (Design Patterns - GoF)
 | Habilidade | Caminho da Skill | Descrição / Caso de Uso |
