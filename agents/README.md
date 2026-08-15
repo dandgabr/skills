@@ -13,6 +13,8 @@ Este diretório contém as definições declarativas dos agentes do projeto util
 │   └── agent.yaml                      # Agente Arquiteto de Software
 ├── fullstack-developer\
 │   └── agent.yaml                      # Agente Desenvolvedor Full Stack
+├── moodle-specialist\
+│   └── agent.yaml                      # Agente Especialista em Moodle LMS e EdTech
 ├── devops-engineer\
 │   └── agent.yaml                      # Agente Engenheiro de DevOps e DevSecOps
 ├── dba-specialist\
@@ -31,8 +33,10 @@ Este diretório contém as definições declarativas dos agentes do projeto util
 │   └── agent.yaml                      # Agente de Pentest Ético e Red Teaming
 ├── project-reviewer\
 │   └── agent.yaml                      # Agente Revisor de Projetos Especialista
-└── reverse-engineer-agent\
-    └── agent.yaml                      # Agente de Engenharia Reversa e Baixo Nível
+├── reverse-engineer-agent\
+│   └── agent.yaml                      # Agente de Engenharia Reversa e Baixo Nível
+└── skill-creator\
+    └── agent.yaml                      # Agente Especialista em Criação e Governança de Skills
 ```
 
 
@@ -55,8 +59,8 @@ Este diretório contém as definições declarativas dos agentes do projeto util
 
 ### 4. [devops-engineer](devops-engineer/agent.yaml)
 - **Modelo Base**: `gemini-2.0-flash`
-- **Função**: Provisionamento de infraestrutura como código (IaC), deploy e operação confiável de pipelines CI/CD com segurança integrada (DevSecOps).
-- **Skills Associadas**: [devops-engineer](../skills/general/roles/devops-engineer/SKILL.md), [devsecops-engineer](../skills/security/ops-architecture/devsecops-engineer/SKILL.md) e [cis-controls](../skills/security/grc-compliance/cis-controls/SKILL.md)
+- **Função**: Provisionamento de infraestrutura como código (IaC), plataformas internas (Backstage), orquestração de containers (Docker, Podman, CRI-O, K8s), governança GitHub e pipelines CI/CD (GitHub Actions) com segurança integrada (DevSecOps).
+- **Skills Associadas**: [devops-engineer](../skills/general/roles/devops-engineer/SKILL.md), [program-github](../skills/programs/github/SKILL.md), [github-actions](../skills/programs/github-actions/SKILL.md), [containers](../skills/programs/containers/SKILL.md), [devsecops-engineer](../skills/security/ops-architecture/devsecops-engineer/SKILL.md) e [cis-controls](../skills/security/grc-compliance/cis-controls/SKILL.md)
 
 ### 5. [dba-specialist](dba-specialist/agent.yaml)
 - **Modelo Base**: `gemini-2.0-flash`
@@ -102,6 +106,16 @@ Este diretório contém as definições declarativas dos agentes do projeto util
 - **Modelo Base**: `gemini-2.0-flash`
 - **Função**: Depuração, análise dinâmica de binários, manipulação direta de RAM (Cheat Engine), automação de comandos em WinDbg e validação de segurança de código de baixo nível.
 - **Skills Associadas**: [program-cheat-engine](../skills/programs/program-cheat-engine/SKILL.md), [program-windbg](../skills/programs/program-windbg/SKILL.md), [memory-manipulation](../skills/security/appsec/memory-manipulation/SKILL.md), [sast-code-review](../skills/security/appsec/sast-code-review/SKILL.md) e [appsec-owasp-asvs](../skills/security/appsec/appsec-owasp-asvs/SKILL.md)
+
+### 14. [moodle-specialist](moodle-specialist/agent.yaml)
+- **Modelo Base**: `gemini-2.0-flash`
+- **Função**: Especialista em ciclo completo de desenvolvimento, infraestrutura física, banco de dados (DBA), temas de design/UX e metodologias de Andragogia e EdTech para o Moodle LMS.
+- **Skills Associadas**: [program-moodle](../skills/programs/moodle/SKILL.md), [program-moodle-dba](../skills/programs/moodle-dba/SKILL.md), [program-moodle-design](../skills/programs/moodle-design/SKILL.md), [program-moodle-infra](../skills/programs/moodle-infra/SKILL.md), [program-moodle-plugins](../skills/programs/moodle-plugins/SKILL.md) e [edtech-andragogy](../skills/general/domains/edtech-andragogy/SKILL.md)
+
+### 15. [skill-creator](skill-creator/agent.yaml)
+- **Modelo Base**: `gemini-2.0-flash`
+- **Função**: Especialista em arquitetura, criação, aprimoramento e catalogação de Skills do projeto, dominando a conversão de livros/documentos PDF em Markdown estruturado, elaboração de SKILL.md de padrão de produção, interconexão de habilidades e governança do repositório.
+- **Skills Associadas**: [clean-code-reusability](../skills/general/engineering-practices/clean-code-reusability/SKILL.md) e [documentation-designer](../skills/general/engineering-practices/documentation-designer/SKILL.md)
 
 ## 🚀 Como Invocá-los via ADK 2.0
 
