@@ -3,7 +3,7 @@ import re
 import json
 
 def validate():
-    base_dir = r"B:\Code\Skills"
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     errors = []
     warnings = []
     
@@ -162,7 +162,7 @@ def validate():
     # 4. Validar links locais no README.md e AGENTS.md
     # Regex para capturar links no formato markdown [texto](url)
     link_regex = re.compile(r"\[[^\]]+\]\(([^)#\s]+)(?:#[^\s\)]*)?\)")
-    for other_file in ["README.md", "AGENTS.md", "agents\\README.md"]:
+    for other_file in ["README.md", "AGENTS.md", os.path.join("agents", "README.md")]:
         other_file_path = os.path.join(base_dir, other_file)
         if os.path.exists(other_file_path):
             try:

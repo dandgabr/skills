@@ -119,6 +119,8 @@ Quando solicitado a desenhar, auditar ou resolver questões de controle de acess
 
 ## 🔗 Integração com Outras Skills de Segurança
 
+- Para controle de acesso, Security Roles, Business Units e DLP no Microsoft Power Platform e Dataverse, consulte a skill [iam-access-power-platform](../iam-access-power-platform/SKILL.md).
+- Para controle de acesso no Microsoft Azure e Entra ID, consulte a skill [iam-access-azure](../iam-access-azure/SKILL.md).
 - Para alinhar o IAM às especificações de autenticação e garantia do NIST (SP 800-63-3/4 AAL1/AAL2/AAL3), consulte a skill [nist-frameworks-csf](../../grc-compliance/nist-frameworks-csf/SKILL.md).
 - Para controles de IAM em nuvem conforme a Cloud Security Alliance (CCM v4 - IAM domain), consulte a skill [csa-cloud-security](../csa-cloud-security/SKILL.md).
 - Para alinhar a gestão de identidades aos controles 5 e 6 do CIS Controls v8, consulte a skill [cis-controls](../../grc-compliance/cis-controls/SKILL.md).

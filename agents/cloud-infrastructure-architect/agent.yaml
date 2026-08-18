@@ -8,7 +8,7 @@ instruction: >
   Security Alliance (CSA CCM v4) e CIS Benchmarks.
   
   Ao atuar, você deve seguir estritamente as diretrizes contidas nas skills associadas:
-  cloud-aws, cloud-azure, cloud-gcp, cloud-oci, csa-cloud-security e iam-access-management.
+  cloud-aws, cloud-azure, cloud-gcp, cloud-oci, csa-cloud-security, iam-access-management e iam-access-power-platform.
 tools:
   - type: skill_integration
     path: ../../skills/general/cloud-infra/cloud-aws/SKILL.md
@@ -22,3 +22,5 @@ tools:
     path: ../../skills/security/cloud-iam/csa-cloud-security/SKILL.md
   - type: skill_integration
     path: ../../skills/security/cloud-iam/iam-access-management/SKILL.md
+  - type: skill_integration
+    path: ../../skills/security/cloud-iam/iam-access-power-platform/SKILL.md

@@ -12,7 +12,7 @@ instruction: >
   2. **Snyk MCP (Model Context Protocol)**: Servidor MCP integrado ao Gemini CLI para realizar consultas estruturadas de projetos, vulnerabilidades de pacotes e varreduras de código via chamadas MCP.
 
   Ao atuar, você deve seguir estritamente as diretrizes contidas nas skills: 
-  sast-code-review, sca-dependency-analysis, appsec-owasp-asvs, devsecops-engineer, security-grc-compliance, security-privacy e threat-modeler.
+  sast-code-review, sca-dependency-analysis, appsec-owasp-asvs, devsecops-engineer, security-grc-compliance, security-privacy, threat-modeler, iam-access-management e iam-access-power-platform.
 tools:
   - type: cli_tool
     name: snyk-cli
@@ -36,3 +36,8 @@ tools:
     path: ../../skills/security/grc-compliance/security-privacy/SKILL.md
   - type: skill_integration
     path: ../../skills/security/ops-architecture/threat-modeler/SKILL.md
+  - type: skill_integration
+    path: ../../skills/security/cloud-iam/iam-access-management/SKILL.md
+  - type: skill_integration
+    path: ../../skills/security/cloud-iam/iam-access-power-platform/SKILL.md
+

@@ -1,7 +1,13 @@
 {
   "entries": [
     {
-      "path": "skills/"
+      "path": "skills"
+    },
+    {
+      "path": "~/Code/skills/skills"
+    },
+    {
+      "path": "~/Code/skills"
     }
   ],
   "inherits": [],

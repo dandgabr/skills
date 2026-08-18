@@ -1,0 +1,10 @@
+{
+  "entries": [
+    {
+      "path": "agents"
+    },
+    {
+      "path": "../agents"
+    }
+  ]
+}

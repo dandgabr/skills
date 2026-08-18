@@ -35,6 +35,7 @@ A estrutura foi projetada para ser modular, extensível e compatível com as esp
     ├── documenter/
     ├── software-architect/
     ├── fullstack-developer/
+    ├── moodle-specialist/
     ├── devops-engineer/
     ├── dba-specialist/
     ├── telecom-voice-specialist/
@@ -42,7 +43,11 @@ A estrutura foi projetada para ser modular, extensível e compatível com as esp
     ├── qa-testing-specialist/
     ├── ai-security-specialist/
     ├── security-specialist/
-    └── pentester-agent/
+    ├── iam-specialist/
+    ├── pentester-agent/
+    ├── project-reviewer/
+    ├── reverse-engineer-agent/
+    └── skill-creator/
 ```
 
 ## 🛠️ Como Utilizar
@@ -127,6 +132,7 @@ Abaixo está a listagem detalhada de todas as skills disponíveis no ecossistema
 | **iam-access-gcp** | [`skills/security/iam-access-gcp`](skills/security/cloud-iam/iam-access-gcp/SKILL.md) | Atua como especialista em GCP IAM (Google Cloud Access Management), cobrindo Hierarquia de Recursos, Predefined/Custom Roles, Service Account Impersonation, Workload Identity Federation, VPC Service Controls e IAM Recommender. |
 | **iam-access-management** | [`skills/security/iam-access-management`](skills/security/cloud-iam/iam-access-management/SKILL.md) | Atua como especialista em IAM (Identity and Access Management) e gestão de acessos, cobrindo Active Directory, Windows, Linux, AWS, Azure, GCP, OCI e adaptável a ERPs e SaaS como SAP, Salesforce, Okta e ServiceNow. |
 | **iam-access-oci** | [`skills/security/iam-access-oci`](skills/security/cloud-iam/iam-access-oci/SKILL.md) | Atua como especialista em OCI IAM (Oracle Cloud Infrastructure Access Management), cobrindo Sintaxe de Políticas OCI, Compartimentos, Domínios de Identidade, Dynamic Groups, Instance Principals e Políticas de Sign-on. |
+| **iam-access-power-platform** | [`skills/security/iam-access-power-platform`](skills/security/cloud-iam/iam-access-power-platform/SKILL.md) | Atua como especialista em IAM (Identity and Access Management) do Microsoft Power Platform, Power Apps e Dataverse, cobrindo Security Roles, Privileges, Business Units, Teams (Owner/Access/Group), Column-Level Security, Hierarchy Security, DLP Policies, Environment Roles, Managed Environments e ALM Security. |
 | **iso-27000-series** | [`skills/security/iso-27000-series`](skills/security/grc-compliance/iso-27000-series/SKILL.md) | Atua como auditor especialista e arquiteto de SGSI/PIMS especialista em toda a família ISO/IEC 27000, incluindo ISO/IEC 27001:2022, 27002:2022, 27005, 27017, 27018, 27032, 27035, 27036 e ISO/IEC 27701. |
 | **memory-manipulation** | [`skills/security/memory-manipulation`](skills/security/appsec/memory-manipulation/SKILL.md) | Atua como especialista em manipulação de memória e segurança de baixo nível, cobrindo alocação dinâmica, gerenciamento de ponteiros, vulnerabilidades (buffer overflows, UAF, double free), técnicas ofensivas (heap grooming, ROP) e mitigações modernas (MTE, CFI, ASan). |
 | **network-security-onprem-cloud** | [`skills/security/network-security-onprem-cloud`](skills/security/grc-compliance/network-security-onprem-cloud/SKILL.md) | Atua como especialista em arquitetura, engenharia e operação de segurança de redes (Network Security) abrangendo ambientes On-Premise, Híbridos e Multicloud (AWS, Azure, GCP, OCI), cobrindo NGFW, microsegmentação, SASE/SSE, ZTNA, IDS/IPS, SD-WAN, WAF e mitigação de DDoS. |

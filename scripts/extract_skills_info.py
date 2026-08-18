@@ -1,7 +1,7 @@
 import os
 import re
 
-base_dir = r"B:\Code\skills"
+base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 skills_dir = os.path.join(base_dir, "skills")
 
 yaml_regex = re.compile(r"^---\s*\n(.*?)\n---\s*\n", re.DOTALL)

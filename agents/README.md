@@ -31,6 +31,8 @@ Este diretório contém as definições declarativas dos agentes do projeto util
 │   └── agent.yaml                      # Agente Especialista em Segurança e DevSecOps
 ├── pentester-agent\
 │   └── agent.yaml                      # Agente de Pentest Ético e Red Teaming
+├── iam-specialist\
+│   └── agent.yaml                      # Agente Especialista em IAM, Entra ID, Power Platform e Cloud Access
 ├── project-reviewer\
 │   └── agent.yaml                      # Agente Revisor de Projetos Especialista
 ├── reverse-engineer-agent\
@@ -38,7 +40,6 @@ Este diretório contém as definições declarativas dos agentes do projeto util
 └── skill-creator\
     └── agent.yaml                      # Agente Especialista em Criação e Governança de Skills
 ```
-
 
 ## 🤖 Agentes Disponíveis
 
@@ -92,27 +93,32 @@ Este diretório contém as definições declarativas dos agentes do projeto util
 - **Função**: Modelagem de ameaças, controles de código seguro baseados em OWASP ASVS, auditorias, DevSecOps e conformidade regulatória de privacidade.
 - **Skills Associadas**: [appsec-owasp-asvs](../skills/security/appsec/appsec-owasp-asvs/SKILL.md), [devsecops-engineer](../skills/security/ops-architecture/devsecops-engineer/SKILL.md), [security-grc-compliance](../skills/security/grc-compliance/security-grc-compliance/SKILL.md), [security-privacy](../skills/security/grc-compliance/security-privacy/SKILL.md) e [threat-modeler](../skills/security/ops-architecture/threat-modeler/SKILL.md)
 
-### 11. [pentester-agent](pentester-agent/agent.yaml)
+### 11. [iam-specialist](iam-specialist/agent.yaml)
+- **Modelo Base**: `gemini-2.0-flash`
+- **Função**: Projetar, auditar e gerenciar arquiteturas de controle de acesso (RBAC/ABAC/PBAC), governança de identidades (PIM/PAM), federação SSO (SAML/OIDC), provisionamento SCIM e politicas de acesso em nuvem e plataformas corporativas (Power Platform, Dataverse, Entra ID, AWS, Azure, GCP, OCI).
+- **Skills Associadas**: [iam-access-management](../skills/security/cloud-iam/iam-access-management/SKILL.md), [iam-access-power-platform](../skills/security/cloud-iam/iam-access-power-platform/SKILL.md), [iam-access-azure](../skills/security/cloud-iam/iam-access-azure/SKILL.md), [iam-access-aws](../skills/security/cloud-iam/iam-access-aws/SKILL.md), [iam-access-gcp](../skills/security/cloud-iam/iam-access-gcp/SKILL.md), [iam-access-oci](../skills/security/cloud-iam/iam-access-oci/SKILL.md) e [csa-cloud-security](../skills/security/cloud-iam/csa-cloud-security/SKILL.md)
+
+### 12. [pentester-agent](pentester-agent/agent.yaml)
 - **Modelo Base**: `gemini-2.0-flash`
 - **Função**: Executar análises ofensivas estruturadas baseadas em OWASP WSTG, API Security, Cloud e Red Team Scripting usando utilitários CLI (nmap, curl, zap-cli, tshark).
 - **Skills Associadas**: [pentester-owasp-wstg](../skills/security/appsec/pentester-owasp-wstg/SKILL.md), [pentester-owasp-api-security-2023](../skills/security/appsec/pentester-owasp-api-security-2023/SKILL.md), [pentest-cloud-aws-azure-gcp](../skills/security/appsec/pentest-cloud-aws-azure-gcp/SKILL.md), [pentest-web-application-modern](../skills/security/appsec/pentest-web-application-modern/SKILL.md) e [pentest-scripter-python-bash-go](../skills/security/appsec/pentest-scripter-python-bash-go/SKILL.md)
 
-### 12. [project-reviewer](project-reviewer/agent.yaml)
+### 13. [project-reviewer](project-reviewer/agent.yaml)
 - **Modelo Base**: `gemini-2.0-flash`
 - **Função**: Revisar, padronizar e distribuir requisitos de negócio entre Banco de Dados, Backend e Frontend, garantindo a aplicação de boas práticas de arquitetura e segurança.
 - **Skills Associadas**: [project-reviewer](../skills/general/roles/project-reviewer/SKILL.md), [clean-code-reusability](../skills/general/engineering-practices/clean-code-reusability/SKILL.md), [appsec-owasp-asvs](../skills/security/appsec/appsec-owasp-asvs/SKILL.md) e [security-privacy](../skills/security/grc-compliance/security-privacy/SKILL.md)
 
-### 13. [reverse-engineer-agent](reverse-engineer-agent/agent.yaml)
+### 14. [reverse-engineer-agent](reverse-engineer-agent/agent.yaml)
 - **Modelo Base**: `gemini-2.0-flash`
 - **Função**: Depuração, análise dinâmica de binários, manipulação direta de RAM (Cheat Engine), automação de comandos em WinDbg e validação de segurança de código de baixo nível.
 - **Skills Associadas**: [program-cheat-engine](../skills/programs/program-cheat-engine/SKILL.md), [program-windbg](../skills/programs/program-windbg/SKILL.md), [memory-manipulation](../skills/security/appsec/memory-manipulation/SKILL.md), [sast-code-review](../skills/security/appsec/sast-code-review/SKILL.md) e [appsec-owasp-asvs](../skills/security/appsec/appsec-owasp-asvs/SKILL.md)
 
-### 14. [moodle-specialist](moodle-specialist/agent.yaml)
+### 15. [moodle-specialist](moodle-specialist/agent.yaml)
 - **Modelo Base**: `gemini-2.0-flash`
 - **Função**: Especialista em ciclo completo de desenvolvimento, infraestrutura física, banco de dados (DBA), temas de design/UX e metodologias de Andragogia e EdTech para o Moodle LMS.
 - **Skills Associadas**: [program-moodle](../skills/programs/moodle/SKILL.md), [program-moodle-dba](../skills/programs/moodle-dba/SKILL.md), [program-moodle-design](../skills/programs/moodle-design/SKILL.md), [program-moodle-infra](../skills/programs/moodle-infra/SKILL.md), [program-moodle-plugins](../skills/programs/moodle-plugins/SKILL.md) e [edtech-andragogy](../skills/general/domains/edtech-andragogy/SKILL.md)
 
-### 15. [skill-creator](skill-creator/agent.yaml)
+### 16. [skill-creator](skill-creator/agent.yaml)
 - **Modelo Base**: `gemini-2.0-flash`
 - **Função**: Especialista em arquitetura, criação, aprimoramento e catalogação de Skills do projeto, dominando a conversão de livros/documentos PDF em Markdown estruturado, elaboração de SKILL.md de padrão de produção, interconexão de habilidades e governança do repositório.
 - **Skills Associadas**: [clean-code-reusability](../skills/general/engineering-practices/clean-code-reusability/SKILL.md) e [documentation-designer](../skills/general/engineering-practices/documentation-designer/SKILL.md)

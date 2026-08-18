@@ -6,7 +6,7 @@ import zipfile
 from pathlib import Path
 
 def export_all_skills():
-    base_dir = Path("B:/Code/Skills")
+    base_dir = Path(__file__).resolve().parent.parent
     skills_dir = base_dir / "skills"
     export_dir = base_dir / "all_skills_export"
     export_skills_dir = export_dir / "skills"
