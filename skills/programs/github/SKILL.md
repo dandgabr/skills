@@ -845,9 +845,39 @@ exclude:
 
 ---
 
+## 🛡️ Protocolo de Permissões Estruturadas em Ambiente de Agente
+
+Quando o agente opera em ambiente restrito/sandbox e necessita solicitar autorizações explícitas do usuário para operações do GitHub:
+
+### Regras de Interação
+- Utilize **`gh`** CLI (sempre especificando `-R ORG/REPO`). Nunca utilize `curl` direto contra a API ou scripts avulsos.
+- Para operações de branch (push, pull, fetch, checkout), utilize **`git`** sobre HTTPS.
+
+### Formato de Solicitação de Permissões
+```shell
+<command-binary>.<action>(<resource_json>)
+```
+
+Campos do `resource_json`:
+- `org`: Organização mandatória (`*` para todas).
+- `repo`: Repositório mandatório (`*` para todos).
+- `pr`: Número do PR opcional (`*` para todos). Ações: `read`, `create`, `update`, `approve`, `merge`.
+- `issue`: Número da Issue opcional (`*` para todas). Ações: `read`, `create`, `update`.
+- `contents`: Conteúdo do repositório (`*`). Ações: `read`.
+- `branch`: Nome do branch (`*` para todos). Ações: `create` (novo branch), `update` (push em existente/force push), `delete`.
+
+#### Exemplos:
+- **Criar Issue**: `gh.create({"org": "myorg", "repo": "myrepo", "issue": "*"})`
+- **Comentar em PR**: `gh.update({"org": "myorg", "repo": "myrepo", "pr": "123"})`
+- **Aprovar PR**: `gh.approve({"org": "myorg", "repo": "myrepo", "pr": "123"})`
+- **Push para Branch Existente**: `git.update({"org": "myorg", "repo": "myrepo", "branch": "feature/my-feature"})`
+
+---
+
 ## 🔗 Habilidades Relacionadas
 
 - [github-actions](../github-actions/SKILL.md)
 - [containers](../containers/SKILL.md)
+- [agy-customizations](../agy-customizations/SKILL.md)
 - [devops-engineer](../../general/roles/devops-engineer/SKILL.md)
 - [devsecops-engineer](../../security/ops-architecture/devsecops-engineer/SKILL.md)

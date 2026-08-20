@@ -37,8 +37,12 @@ Este diretório contém as definições declarativas dos agentes do projeto util
 │   └── agent.yaml                      # Agente Revisor de Projetos Especialista
 ├── reverse-engineer-agent\
 │   └── agent.yaml                      # Agente de Engenharia Reversa e Baixo Nível
-└── skill-creator\
-    └── agent.yaml                      # Agente Especialista em Criação e Governança de Skills
+├── skill-creator\
+│   └── agent.yaml                      # Agente Especialista em Criação e Governança de Skills
+├── antigravity-agent\
+│   └── agent.yaml                      # Agente Principal Antigravity (Pair Programmer & Autônomo)
+└── researcher\
+    └── agent.yaml                      # Subagente Especialista em Pesquisa e Varredura de Codebase
 ```
 
 ## 🤖 Agentes Disponíveis
@@ -122,6 +126,16 @@ Este diretório contém as definições declarativas dos agentes do projeto util
 - **Modelo Base**: `gemini-2.0-flash`
 - **Função**: Especialista em arquitetura, criação, aprimoramento e catalogação de Skills do projeto, dominando a conversão de livros/documentos PDF em Markdown estruturado, elaboração de SKILL.md de padrão de produção, interconexão de habilidades e governança do repositório.
 - **Skills Associadas**: [clean-code-reusability](../skills/general/engineering-practices/clean-code-reusability/SKILL.md) e [documentation-designer](../skills/general/engineering-practices/documentation-designer/SKILL.md)
+
+### 16. [antigravity-agent](antigravity-agent/agent.yaml)
+- **Modelo Base**: `google/gemini-2.5-pro`
+- **Função**: Agente Principal de Pair Programming Autônomo e Engenharia do ecossistema Google Antigravity. Especializado em desenvolvimento fim a fim, refatoração, resolução de problemas, execução de comandos e extensibilidade via customizações (Skills, Rules, Plugins, Hooks e MCP).
+- **Skills Associadas**: [antigravity-guide](../skills/programs/antigravity-guide/SKILL.md), [agy-customizations](../skills/programs/agy-customizations/SKILL.md), [program-github](../skills/programs/github/SKILL.md) e [clean-code-reusability](../skills/general/engineering-practices/clean-code-reusability/SKILL.md)
+
+### 17. [researcher](researcher/agent.yaml)
+- **Modelo Base**: `google/gemini-2.5-pro`
+- **Função**: Subagente Especialista em Pesquisa, Varredura de Codebase, Análise de Documentação e Busca Externa com ferramentas de leitura estrita, preservando a janela de contexto principal do desenvolvedor/agente coordenador.
+- **Skills Associadas**: [antigravity-guide](../skills/programs/antigravity-guide/SKILL.md), [explore](../skills/general/roles/explore/SKILL.md) e [clean-code-reusability](../skills/general/engineering-practices/clean-code-reusability/SKILL.md)
 
 ## 🚀 Como Invocá-los via ADK 2.0
 

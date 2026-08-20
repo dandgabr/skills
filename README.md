@@ -35,7 +35,6 @@ A estrutura foi projetada para ser modular, extensível e compatível com as esp
     ├── documenter/
     ├── software-architect/
     ├── fullstack-developer/
-    ├── moodle-specialist/
     ├── devops-engineer/
     ├── dba-specialist/
     ├── telecom-voice-specialist/
@@ -47,7 +46,10 @@ A estrutura foi projetada para ser modular, extensível e compatível com as esp
     ├── pentester-agent/
     ├── project-reviewer/
     ├── reverse-engineer-agent/
-    └── skill-creator/
+    ├── moodle-specialist/
+    ├── skill-creator/
+    ├── antigravity-agent/
+    └── researcher/
 ```
 
 ## 🛠️ Como Utilizar
@@ -100,11 +102,14 @@ Abaixo está a listagem detalhada de todas as skills disponíveis no ecossistema
 | **dba-database-administrator** | [`skills/general/dba-database-administrator`](skills/general/roles/dba-database-administrator/SKILL.md) | Atua como Administrador de Banco de Dados (DBA) sênior para sistemas SQL e NoSQL, cobrindo modelagem de dados, estratégias de indexação, otimização de consultas (EXPLAIN), concorrência (ACID/BASE), alta disponibilidade, backups (PITR) e segurança. |
 | **devops-engineer** | [`skills/general/devops-engineer`](skills/general/roles/devops-engineer/SKILL.md) | Atua como Engenheiro de DevOps e Platform Engineering sênior, cobrindo Terraform (IaC), Ansible, Vagrant, Kubernetes (GitOps/ArgoCD), containers (Docker/Podman), Backstage (IDP), CI/CD, Packer (Golden Images), observabilidade (Prometheus/Grafana/OpenTelemetry) e estratégias de deploy (Blue-Green, Canary). |
 | **edtech-andragogy** | [`skills/general/domains/edtech-andragogy`](skills/general/domains/edtech-andragogy/SKILL.md) | Atua como especialista em Tecnologia Educacional (EdTech) e metodologias de ensino para adultos (Andragogia), dominando design instrucional, gamificação e padrões de interoperabilidade (SCORM, LTI, xAPI). |
+| **explore** | [`skills/general/explore`](skills/general/roles/explore/SKILL.md) | Atua como agente especializado em exploração rápida de codebases, busca de padrões, entendimento de estrutura e resposta a perguntas sobre código existente. |
 | **financial-transaction-processing** | [`skills/general/financial-transaction-processing`](skills/general/domains/financial-transaction-processing/SKILL.md) | Atua como especialista em processamento de transações financeiras e sistemas de pagamentos no Brasil (Pix, SPI, DICT, SPB, Boleto, CIP/Núclea) e no exterior (ISO 20022, SWIFT, FedNow, SEPA, Adquirencia, Gateways, Antifraude, Conciliacao e Idempotencia). |
 | **frontend-developer** | [`skills/general/frontend-developer`](skills/general/roles/frontend-developer/SKILL.md) | Atua como Desenvolvedor Frontend sênior, criando interfaces ricas, componentização avançada, gerenciamento de estado global eficiente, otimização de Core Web Vitals e conformidade com acessibilidade (WCAG). |
+| **fullstack-developer** | [`skills/general/fullstack-developer`](skills/general/roles/fullstack-developer/SKILL.md) | Atua como Desenvolvedor Full Stack especialista em criar aplicações web fim a fim, integrando lógica de backend (REST, gRPC), frontend (React, Vue), bancos de dados (DBA) e garantindo código limpo e seguro. |
+| **general** | [`skills/general/general`](skills/general/roles/general/SKILL.md) | Atua como agente de propósito geral para pesquisa complexa e execução de tarefas multi-etapas, integrando múltiplas skills conforme necessário. |
 | **product-owner** | [`skills/general/product-owner`](skills/general/roles/product-owner/SKILL.md) | Atua como Product Owner (PO), refinando histórias de usuários com critérios de aceitação BDD (Cucumber), gerenciando o Product Backlog e priorizando entregas com foco em valor de negócio (ROI). |
 | **project-reviewer** | [`skills/general/project-reviewer`](skills/general/roles/project-reviewer/SKILL.md) | Atua como Revisor de Projetos especialista, auditando e padronizando regras de negócio, definindo a distribuição de responsabilidades entre Banco, Backend e Frontend, e garantindo boas práticas de arquitetura e segurança. |
-| **qa-engineer** | [`skills/general/qa-engineer`](skills/general/roles/qa-engineer/SKILL.md) | Atua como Engenheiro de QA (Quality Assurance), elaborando estratégias de testes de software, automatizando testes E2E e de APIs, validando regressões e gerando relatórios de defeitos. |
+| **qa-engineer** | [`skills/general/qa-engineer`](skills/general/roles/qa-engineer/SKILL.md) | Atua como Engenheiro de QA (Quality Assurance) e Automação de Testes Multi-Framework, elaborando estratégias de testes (unitários, integração, E2E), validando regressões e gerando relatórios de defeitos. |
 | **scrum-master** | [`skills/general/scrum-master`](skills/general/roles/scrum-master/SKILL.md) | Atua como Scrum Master e Agile Coach, facilitando cerimônias ágeis (Planning, Review, Retrospective, Dailies), eliminando impedimentos, gerenciando conflitos e monitorando métricas de produtividade (Velocity, Burndown). |
 | **software-architect** | [`skills/general/software-architect`](skills/general/roles/software-architect/SKILL.md) | Atua como Arquiteto de Software aplicando engenharia de baixo nível, princípios SOLID, DDD, decisões de topologia de sistemas, testabilidade e orquestração de Padrões de Projeto. |
 | **telecom-voice-engineering** | [`skills/general/telecom-voice-engineering`](skills/general/domains/telecom-voice-engineering/SKILL.md) | Atua como Especialista em Engenharia de Voz, Telefonia e Comunicações em Tempo Real (VoIP, SIP, SBC, PSTN, WebRTC, Codecs G.711/G.729/Opus, Kamailio/FreeSWITCH, QoS e STIR/SHAKEN). |
@@ -115,6 +120,7 @@ Abaixo está a listagem detalhada de todas as skills disponíveis no ecossistema
 | :--- | :--- | :--- |
 | **ai-computer-vision-security** | [`skills/security/ai-computer-vision-security`](skills/security/ai-security/ai-computer-vision-security/SKILL.md) | Atua como Especialista em Segurança de Visão Computacional (CV), cobrindo mitigação de ataques adversariais (FGSM, PGD, Patch Attacks), envenenamento de dados de imagem, backdoors visuais, invasão de sensores, detecção de deepfakes e alinhamento com OWASP ML Top 10 e OWASP MLSVS. |
 | **ai-llm-slm-security** | [`skills/security/ai-llm-slm-security`](skills/security/ai-security/ai-llm-slm-security/SKILL.md) | Atua como Especialista em Segurança, Governança e Red Teaming de Modelos de Linguagem (LLMs e SLMs), cobrindo mitigação de Prompt Injection, Jailbreaking, envenenamento de dados, segurança de RAG e conformidade total com o OWASP Top 10 for LLM e OWASP AI Exchange. |
+| **ai-model-security-analysis** | [`skills/security/ai-model-security-analysis`](skills/security/ai-security/ai-model-security-analysis/SKILL.md) | Auditoria e análise de segurança de artefatos de IA/ML, cobrindo verificação de formatos (.safetensors vs .pkl), scanning de exploits (picklescan), inspeção de código remoto e avaliação comportamental/alinhamento. |
 | **ai-voice-stt-tts-security** | [`skills/security/ai-voice-stt-tts-security`](skills/security/ai-security/ai-voice-stt-tts-security/SKILL.md) | Atua como Especialista em Segurança de Processamento de Voz, Fala (STT/ASR) e Síntese Vocal (TTS), cobrindo o modelo HAVOC para dispositivos controlados por voz, ataques ultrassônicos inaudíveis, deepfake de voz, defesa em biometria vocal e alinhamento com OWASP ML Top 10 e OWASP API Security. |
 | **appsec-owasp-asvs** | [`skills/security/appsec-owasp-asvs`](skills/security/appsec/appsec-owasp-asvs/SKILL.md) | Atua como Especialista em Application Security (AppSec) baseado no OWASP ASVS v5.0.0 integrado ao NIST SSDF, CWE e CERT Secure Coding, aplicando controles de código seguro em design e implementação. |
 | **appsec-owasp-masvs** | [`skills/security/appsec-owasp-masvs`](skills/security/appsec/appsec-owasp-masvs/SKILL.md) | Atua como Especialista em Segurança de Aplicações Móveis (Mobile AppSec) baseado no OWASP MASVS v2.0.0 e MASTG (Android e iOS), cobrindo armazenamento seguro, criptografia móvel, proteção de rede, segurança de plataforma/WebViews, engenharia reversa e resiliência. |
@@ -202,6 +208,8 @@ Abaixo está a listagem detalhada de todas as skills disponíveis no ecossistema
 ### 🖥️ Programas e Softwares (Programs)
 | Habilidade | Caminho da Skill | Descrição / Caso de Uso |
 | :--- | :--- | :--- |
+| **agy-customizations** | [`skills/programs/agy-customizations`](skills/programs/agy-customizations/SKILL.md) | Guia completo e referência oficial do Sistema de Customização do Antigravity, cobrindo Skills, Rules, Plugins, Hooks, servidores MCP, precedência de carregamento e governança. |
+| **antigravity-guide** | [`skills/programs/antigravity-guide`](skills/programs/antigravity-guide/SKILL.md) | Guia abrangente, referência rápida e mapa do ecossistema Google Antigravity (AGY CLI, IDE, Antigravity 2.0, Python SDK, slash commands, atalhos de teclado e customizações). |
 | **gemini-enterprise** | [`skills/programs/gemini-enterprise`](skills/programs/gemini-enterprise/SKILL.md) | Atua como especialista em Google Gemini Enterprise, cobrindo integração com Google Workspace, Gemini Code Assist Enterprise, Vertex AI Search & Agents, governança de dados, privacidade corporativa, extensões e customização. |
 | **power-automate** | [`skills/programs/power-automate`](skills/programs/power-automate/SKILL.md) | Atua como especialista em Microsoft Power Automate, cobrindo Cloud Flows (Automated, Instant, Scheduled), Desktop Flows (RPA), Process Mining, AI Builder, conectores personalizados e arquitetura de governança/DLP. |
 | **power-bi** | [`skills/programs/power-bi`](skills/programs/power-bi/SKILL.md) | Atua como especialista em Microsoft Power BI e Microsoft Fabric, cobrindo modelagem dimensional (Star Schema), linguagem DAX avançada, Power Query (M), RLS/OLS, Dataflows/Datamarts e otimização de performance. |
