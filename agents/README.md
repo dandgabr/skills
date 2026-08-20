@@ -121,7 +121,7 @@ Este diretório contém as definições declarativas dos agentes do projeto util
 ### 14. [reverse-engineer-agent](reverse-engineer-agent/agent.yaml)
 - **Modelo Base**: `google/gemini-2.5-pro`
 - **Função**: Depuração, análise dinâmica de binários, manipulação direta de RAM (Cheat Engine) e validação de segurança de código de baixo nível.
-- **Skills Associadas**: [program-cheat-engine](../skills/programs/program-cheat-engine/SKILL.md), [memory-manipulation](../skills/security/appsec/memory-manipulation/SKILL.md), [sast-code-review](../skills/security/appsec/sast-code-review/SKILL.md) e [appsec-owasp-asvs](../skills/security/appsec/appsec-owasp-asvs/SKILL.md)
+- **Skills Associadas**: [program-cheat-engine](../skills/programs/program-cheat-engine/SKILL.md), [program-windbg](../skills/programs/program-windbg/SKILL.md), [memory-manipulation](../skills/security/appsec/memory-manipulation/SKILL.md), [sast-code-review](../skills/security/appsec/sast-code-review/SKILL.md) e [appsec-owasp-asvs](../skills/security/appsec/appsec-owasp-asvs/SKILL.md)
 
 ### 15. [moodle-specialist](moodle-specialist/agent.yaml)
 - **Modelo Base**: `google/gemini-2.5-pro`
