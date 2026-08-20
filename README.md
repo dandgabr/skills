@@ -49,7 +49,10 @@ A estrutura foi projetada para ser modular, extensível e compatível com as esp
     ├── moodle-specialist/
     ├── skill-creator/
     ├── antigravity-agent/
-    └── researcher/
+    ├── researcher/
+    ├── self/
+    ├── explore/
+    └── general/
 ```
 
 ## 🛠️ Como Utilizar
@@ -222,7 +225,6 @@ Abaixo está a listagem detalhada de todas as skills disponíveis no ecossistema
 | **program-moodle-design** | [`skills/programs/moodle-design`](skills/programs/moodle-design/SKILL.md) | Atua como especialista em design de interfaces (UI), desenvolvimento de temas, templates Mustache, estilização SCSS, customização de formatos de curso e otimização de UX/acessibilidade no Moodle LMS. |
 | **program-moodle-infra** | [`skills/programs/moodle-infra`](skills/programs/moodle-infra/SKILL.md) | Atua como especialista em infraestrutura, dimensionamento, alta disponibilidade, performance tuning (OPcache, PHP, MySQL/Postgres), MUC (Redis/Memcached), cron em lote e armazenamento distribuído no Moodle LMS. |
 | **program-moodle-plugins** | [`skills/programs/moodle-plugins`](skills/programs/moodle-plugins/SKILL.md) | Atua como especialista no ciclo de vida, anatomia, configurações administrativas (settings.php), rotinas de backup/restauração, testes e publicação de plugins para o Moodle LMS. |
-| **program-windbg** | [`skills/programs/program-windbg`](skills/programs/program-windbg/SKILL.md) | Permite automatizar e interagir com o depurador WinDbg (Windows Debugger) e com o motor de depuração do Windows através de `cdb.exe` e APIs nativas (`dbgeng.dll`). |
 
 
 ### 🧩 Padrões de Projeto (Design Patterns - GoF)

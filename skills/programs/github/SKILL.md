@@ -845,32 +845,73 @@ exclude:
 
 ---
 
-## 🛡️ Protocolo de Permissões Estruturadas em Ambiente de Agente
+## 🛡️ Protocolo Autoritativo de Permissões em Ambiente de Agente (permissioned-github)
 
-Quando o agente opera em ambiente restrito/sandbox e necessita solicitar autorizações explícitas do usuário para operações do GitHub:
+Esta seção documenta o protocolo autoritativo de controle de permissões e segurança ao interagir com o GitHub em ambientes de agentes de IA restritos (Sandboxes) do Antigravity. Por padrão, o agente possui acesso restrito e deve solicitar autorizações incrementais e granulares sob demanda.
 
-### Regras de Interação
-- Utilize **`gh`** CLI (sempre especificando `-R ORG/REPO`). Nunca utilize `curl` direto contra a API ou scripts avulsos.
-- Para operações de branch (push, pull, fetch, checkout), utilize **`git`** sobre HTTPS.
+### 1. Regras de Interação com GitHub
+* Use exclusivamente a CLI **`gh`**. Sempre especifique o argumento `-R ORG/REPO`.
+* Não utilize comandos alternativos como `curl` para interagir diretamente com a API do GitHub.
+* Não escreva scripts avulsos para comunicação direta com os servidores de API do GitHub.
+* Para operações de ramificação e transporte de código (`push`, `pull`, `fetch`, `checkout`), utilize o comando **`git`** sobre HTTPS. O protocolo SSH não é suportado no ambiente restrito.
+* **Atenção:** Nunca tente redirecionar ou encadear pipes (`|`, `>`) na saída do comando `gh`, pois isso não funcionará no ambiente de execução do agente.
 
-### Formato de Solicitação de Permissões
+### 2. Formato Canônico de Permissão
+
+Toda solicitação de permissão deve ser estruturada na seguinte sintaxe:
+
 ```shell
 <command-binary>.<action>(<resource_json>)
 ```
 
-Campos do `resource_json`:
-- `org`: Organização mandatória (`*` para todas).
-- `repo`: Repositório mandatório (`*` para todos).
-- `pr`: Número do PR opcional (`*` para todos). Ações: `read`, `create`, `update`, `approve`, `merge`.
-- `issue`: Número da Issue opcional (`*` para todas). Ações: `read`, `create`, `update`.
-- `contents`: Conteúdo do repositório (`*`). Ações: `read`.
-- `branch`: Nome do branch (`*` para todos). Ações: `create` (novo branch), `update` (push em existente/force push), `delete`.
+#### Campos do Objeto `resource_json`:
+* `org` *(obrigatório)*: Organização do GitHub. Use `"*"` para indicar todas as organizações.
+* `repo` *(obrigatório)*: Repositório do GitHub. Use `"*"` para indicar todos os repositórios.
+* `pr` *(opcional)*: Número do Pull Request. Use `"*"` para todos os PRs.
+  * **Ações suportadas:** `read` (para visualizar detalhes de PR e executar `gh search prs`), `create`, `update` (comentar, revisar, editar, fechar, reabrir), `approve`, `merge`.
+* `issue` *(opcional)*: Número da Issue. Use `"*"` para todas as issues.
+  * **Ações suportadas:** `read`, `create`, `update` (comentar, revisar, editar, fechar, reabrir).
+* `contents` *(opcional)*: Conteúdo do repositório (código, histórico de commits, branches, tags, arquivos).
+  * Use `"*"` (único valor válido; leitura autoriza o repositório completo).
+  * **Ações suportadas:** `read` (para clonar, pull, fetch, checkout e executar `gh search commits` ou `gh search code`).
+* `branch` *(opcional)*: Nome da branch. Use `"*"` para todas as branches.
+  * **Ações suportadas:** `create` (para push de nova branch), `update` (para push em branch existente ou force-push), `delete` (para exclusão de branch remota).
 
-#### Exemplos:
-- **Criar Issue**: `gh.create({"org": "myorg", "repo": "myrepo", "issue": "*"})`
-- **Comentar em PR**: `gh.update({"org": "myorg", "repo": "myrepo", "pr": "123"})`
-- **Aprovar PR**: `gh.approve({"org": "myorg", "repo": "myrepo", "pr": "123"})`
-- **Push para Branch Existente**: `git.update({"org": "myorg", "repo": "myrepo", "branch": "feature/my-feature"})`
+> [!WARNING]
+> Outras operações não são suportadas e a permissão correspondente não será concedida. Se uma operação não suportada for necessária, pare imediatamente e explique o motivo ao usuário.
+
+### 3. Catálogo Completo de Exemplos de Permissões
+
+| # | Operação Desejada | Comando Executado | Formato da Permissão Concedida |
+| :--- | :--- | :--- | :--- |
+| **1** | **Criar Issue** | `gh issue create --title "Bug report" --body "Desc" -R myorg/myrepo` | `gh.create({"org": "myorg", "repo": "myrepo", "issue": "*"})` |
+| **2** | **Comentar em PR** | `gh pr comment 123 --body "LGTM" -R myorg/myrepo` | `gh.update({"org": "myorg", "repo": "myrepo", "pr": "123"})` |
+| **3** | **Fechar Issue** | `gh issue close 123 --comment "Resolvido" -R myorg/myrepo` | `gh.update({"org": "myorg", "repo": "myrepo", "issue": "123"})` |
+| **4** | **Aprovar PR** | `gh pr review 123 --approve --body "Aprovado" -R myorg/myrepo` | `gh.approve({"org": "myorg", "repo": "myrepo", "pr": "123"})` |
+| **5** | **Push em Branch Existente** | `git push origin feature/my-feature` | `git.update({"org": "myorg", "repo": "myrepo", "branch": "feature/my-feature"})` |
+| **6** | **Criar Nova Branch Remota** | `git push origin feature/my-feature` (1º push) | `git.create({"org": "myorg", "repo": "myrepo", "branch": "feature/my-feature"})` |
+| **7** | **Buscar Atualizações (Fetch)** | `git fetch --all` | `git.read({"org": "myorg", "repo": "myrepo", "contents": "*"})` |
+| **8** | **Clonar Repositório** | `git clone https://github.com/myorg/myrepo.git` | `git.read({"org": "myorg", "repo": "myrepo", "contents": "*"})` |
+| **9** | **Deletar Branch Remota** | `git push origin --delete feature/my-feature` | `git.delete({"org": "myorg", "repo": "myrepo", "branch": "feature/my-feature"})` |
+| **10** | **Pesquisar Pull Requests** | `gh search prs -R myorg/myrepo --author alice` | `gh.read({"org": "myorg", "repo": "myrepo", "pr": "*"})` |
+| **11** | **Pesquisar Commits** | `gh search commits -R myorg/myrepo --author alice` | `git.read({"org": "myorg", "repo": "myrepo", "contents": "*"})` |
+| **12** | **Pesquisar Código** | `gh search code -R myorg/myrepo "func main"` | `git.read({"org": "myorg", "repo": "myrepo", "contents": "*"})` |
+| **13** | **Pesquisar Issues** | `gh search issues -R myorg/myrepo --author alice` | `gh.read({"org": "myorg", "repo": "myrepo", "issue": "*"})` |
+
+*Notas de escopo:*
+- Mantenha as permissões enxutas: não preencha campos vazios.
+- Buscas de commits (`gh search commits`) e código (`gh search code`) utilizam permissão de leitura de repositório `git.read({"contents": "*"})` e não `gh.*`.
+- Para buscas em nível de organização (`--owner myorg`), defina `"repo": "*"`.
+
+### 4. Fluxo de Solicitação com `ask_custom_permission`
+
+> [!IMPORTANT]
+> **Você só deve solicitar permissões se o comando falhou.** Cada solicitação exibe um prompt para o usuário. Solicitar apenas quando estritamente necessário preserva a experiência de uso (*human-in-the-loop UX*).
+
+Quando identificar a necessidade de permissão após uma negação:
+1. Construa a string canônica `<permission-string>` conforme as regras acima.
+2. Invoque a ferramenta `ask_custom_permission` com o argumento `Grant=<permission-string>`.
+3. Reexecute o comando original que havia sido negado.
 
 ---
 
