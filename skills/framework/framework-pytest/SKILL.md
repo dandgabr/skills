@@ -1,29 +1,80 @@
 ---
 name: "framework-pytest"
-description: "Atua como Especialista em testes automatizados com Pytest em Python, cobrindo fixtures, parametrização, mocks, plugins (pytest-cov, pytest-asyncio, pytest-xdist), conftest.py e estratégias de TDD."
+description: "Atua como Especialista em testes automatizados com Pytest em Python, cobrindo fixtures, parametrização formal (BVA/Partições), Property-Based Testing (Hypothesis), Mocks (pytest-mock), Testes de Mutação (mutmut), async e cobertura com pytest-cov."
 ---
 
 # Habilidade de IA: Especialista em Testes com Pytest (Pytest Specialist)
 
-Esta skill orienta a inteligência artificial a agir como **Engenheiro de QA e Automação de Testes especializado em Pytest**. O objetivo é guiar a criação de suítes de testes limpas, expressivas e performáticas para aplicações Python, cobrindo desde testes unitários a testes de integração com banco de dados e APIs assíncronas.
+Esta skill orienta a inteligência artificial a agir como **Engenheiro de QA e Automação de Testes especializado em Pytest**, aplicando rigor metodológico de engenharia de software baseado em **Paul C. Jorgensen** (*Software Testing: A Craftsman's Approach*), **Ali Mili** e diretrizes ISTQB.
+
+O objetivo é guiar a criação de suítes de testes limpas, expressivas, parametrizadas formalmente e testadas contra mutantes para garantir zero regressões.
 
 ---
 
 ## 🧭 Princípios e Arquitetura do Pytest
 
-Ao escrever testes com Pytest, siga os princípios fundamentais do framework:
-- **Assertions Simples e Nativas**: Utilize o `assert` nativo do Python. O Pytest reescreve a AST para fornecer diffs detalhados automaticamente sem a necessidade de métodos de asserção verbosos.
-- **Injeção de Dependências por Fixtures**: Substitua estruturas rígidas de `setUp`/`tearDown` por fixtures reutilizáveis via injeção de parâmetros nas funções de teste.
-- **Descobrimento Automático**: Mantenha arquivos nomeados como `test_*.py` ou `*_test.py` e funções de teste prefixadas com `test_*`.
-- **Modularização via `conftest.py`**: Compartilhe fixtures, hooks e configurações entre múltiplos diretórios sem necessidade de imports explícitos.
+- **Assertions Simples e Nativas**: Utilize o `assert` nativo do Python. O Pytest reescreve a AST para fornecer diffs detalhados automaticamente sem necessidade de asserts verbosos.
+- **Injeção de Dependências por Fixtures**: Substitua estruturas rígidas de `setUp`/`tearDown` por fixtures modulares e reutilizáveis.
+- **Descobrimento Automático**: Nomenclatura padronizada `test_*.py` / `*_test.py` e funções `test_*`.
+- **Modularização via `conftest.py`**: Compartilhe fixtures e hooks por diretórios sem imports manuais cíclicos.
 
 ---
 
 ## 🛠️ Diretrizes Práticas de Engenharia e Padrões de Código
 
-### 1. Fixtures e Gestão de Recursos (`@pytest.fixture`)
-- **Escopos**: Utilize o escopo adequado (`function`, `class`, `module`, `package`, `session`) para evitar recriação desnecessária de recursos caros (como conexões de banco de dados ou contêineres).
-- **Teardown com `yield`**: Forneça o recurso após o `yield` e execute o código de limpeza logo em seguida.
+### 1. Parametrização Formal de BVA e Tabelas de Decisão (`@pytest.mark.parametrize`)
+Aplique amostragem de valor limite canônica ($min-, min, min+, nom, max-, max, max+$) diretamente na parametrização do Pytest:
+
+```python
+import pytest
+from my_app.services import validate_withdrawal
+
+# Domínio válido de saque: [10.0, 5000.0]
+@pytest.mark.parametrize("amount, balance, is_blocked, expected_status, raises_exc", [
+    # BVA: Limites da variável amount
+    (9.99, 1000.0, False, None, True),          # min- (Robusto inválido)
+    (10.0, 1000.0, False, "APPROVED", False),    # min
+    (10.01, 1000.0, False, "APPROVED", False),   # min+
+    (500.0, 1000.0, False, "APPROVED", False),   # nom
+    (4999.99, 6000.0, False, "APPROVED", False), # max-
+    (5000.0, 6000.0, False, "APPROVED", False),  # max
+    (5000.01, 6000.0, False, None, True),        # max+ (Robusto inválido)
+    # Tabela de Decisão: Condições de Saldo e Bloqueio
+    (100.0, 50.0, False, "INSUFFICIENT_FUNDS", False),
+    (100.0, 1000.0, True, "CARD_BLOCKED", False),
+])
+def test_withdrawal_bva_and_decision_rules(amount, balance, is_blocked, expected_status, raises_exc):
+    if raises_exc:
+        with pytest.raises(ValueError):
+            validate_withdrawal(amount=amount, balance=balance, is_blocked=is_blocked)
+    else:
+        status = validate_withdrawal(amount=amount, balance=balance, is_blocked=is_blocked)
+        assert status == expected_status
+```
+
+### 2. Property-Based Testing com `hypothesis` (Oráculos Metamórficos)
+Quando testar entradas exaustivas ou quando o oráculo direto for complexo, utilize propriedades invariantes:
+
+```python
+from hypothesis import given, strategies as st
+from my_app.algorithms import sort_items, compress, decompress
+
+# Invariante 1: O tamanho do array ordenado é idempotente e preserva elementos
+@given(st.lists(st.integers()))
+def test_sort_invariants(numbers):
+    result = sort_items(numbers)
+    assert len(result) == len(numbers)
+    assert sorted(numbers) == result
+
+# Invariante 2 (Metamórfica): Compressão -> Descompressão restaura o dado original
+@given(st.text(min_size=1))
+def test_compression_roundtrip(payload):
+    compressed = compress(payload)
+    decompressed = decompress(compressed)
+    assert decompressed == payload
+```
+
+### 3. Fixtures e Gestão de Recursos (`@pytest.fixture`)
 
 ```python
 import pytest
@@ -31,7 +82,7 @@ from my_app.db import DatabaseConnection
 
 @pytest.fixture(scope="session")
 def db_engine():
-    """Fixture de sessão para inicializar o banco de dados em memória."""
+    """Fixture de sessão para inicializar banco em memória."""
     engine = DatabaseConnection.create_in_memory()
     engine.setup_tables()
     yield engine
@@ -39,7 +90,7 @@ def db_engine():
 
 @pytest.fixture
 def db_session(db_engine):
-    """Fixture por função de teste com rollback automático para isolamento total."""
+    """Isolamento por função com rollback automático em transação."""
     connection = db_engine.connect()
     transaction = connection.begin()
     yield connection
@@ -47,79 +98,56 @@ def db_session(db_engine):
     connection.close()
 ```
 
-### 2. Parametrização de Testes (`@pytest.mark.parametrize`)
-- Reduza duplicação de código testando múltiplos cenários de entrada e saída com uma única função de teste.
+### 4. Mocks e Spies com `pytest-mock` (`mocker`)
 
 ```python
-import pytest
-from my_app.validators import validate_email
-
-@pytest.mark.parametrize("email, expected", [
-    ("user@domain.com", True),
-    ("admin.sub@domain.co.uk", True),
-    ("invalid-email", False),
-    ("@domain.com", False),
-    ("user@.com", False),
-])
-def test_email_validation_cases(email: str, expected: bool):
-    assert validate_email(email) is expected
-```
-
-### 3. Mocks e Substituição de Dependências (`pytest-mock` / `mocker`)
-- Prefira a fixture `mocker` fornecida pelo `pytest-mock` em vez do decorador nativo `@patch`, garantindo limpeza automática do mock ao final do teste.
-
-```python
-import pytest
-from my_app.services import PaymentProcessor
-
 def test_process_payment_success(mocker):
-    # Mock do serviço de gateway externo de pagamento
-    mock_gateway = mocker.patch("my_app.services.ExternalPaymentGateway.charge")
-    mock_gateway.return_value = {"status": "SUCCESS", "transaction_id": "tx_999"}
+    mock_gateway = mocker.patch("my_app.services.ExternalGateway.charge")
+    mock_gateway.return_value = {"status": "SUCCESS", "tx_id": "tx_999"}
 
     processor = PaymentProcessor()
-    result = processor.execute_order(order_id="123", amount=150.00)
+    result = processor.execute(order_id="123", amount=150.00)
 
     assert result["success"] is True
     assert result["tx_id"] == "tx_999"
     mock_gateway.assert_called_once_with(amount=150.00)
 ```
 
-### 4. Testes Assíncronos (`pytest-asyncio`)
-- Marque testes `async def` com o decorador `@pytest.mark.asyncio` para testar funções corrotinas nativas.
+---
 
-```python
-import pytest
-import httpx
+## 🧬 Testes de Mutação em Python (`mutmut`)
 
-@pytest.mark.asyncio
-async def test_async_fetch_user():
-    async with httpx.AsyncClient() as client:
-        response = await client.get("https://httpbin.org/get")
-        assert response.status_code == 200
+Para mensurar o Escore de Mutação ($MS$) e garantir que a suíte mata mutantes de operadores aritméticos e relacionais:
+
+```bash
+# Execução da análise de mutação
+mutmut run --paths-to-mutate=src/
+
+# Verificação do relatório de mutantes sobreviventes
+mutmut results
+mutmut show <mutant_id>
 ```
 
 ---
 
-## ⚙️ Configuração Recomendada (`pytest.ini` / `pyproject.toml`)
+## ⚙️ Configuração Recomendada (`pyproject.toml`)
 
 ```toml
 [tool.pytest.ini_options]
 minversion = "7.0"
-addopts = "-ra -q --cov=src --cov-report=term-missing"
+addopts = "-ra -q --cov=src --cov-report=term-missing --cov-fail-under=85"
 testpaths = ["tests"]
 python_files = ["test_*.py"]
 python_functions = ["test_*"]
 markers = [
-    "slow: marca testes lentos que requerem rede ou DB",
-    "integration: testes de integração de sistema",
+    "slow: marca testes que demandam I/O ou contêineres",
+    "integration: testes de integração inter-módulos",
 ]
 ```
 
 ---
 
 ## 🔗 Integração com Outras Skills
-
-- [qa-engineer](../../general/roles/qa-engineer/SKILL.md): Guia o planejamento de casos de teste e matrizes de cobertura.
-- [lang-python](../../languages/lang-python/SKILL.md): Garante conformidade com PEP 8, tipagem e estilo de código Python.
-- [framework-testing](../framework-testing/SKILL.md): Fornece os conceitos teóricos de TDD, mocks e pirâmide de testes.
+- [qa-engineer](../../general/roles/qa-engineer/SKILL.md): Matriz de RBT e critérios de aceite.
+- [framework-testing](../framework-testing/SKILL.md): Fundamentos de caixa-preta, caixa-branca e mutação.
+- [lang-python](../../languages/lang-python/SKILL.md): Tipagem com mypy e conformidade PEP 8.
