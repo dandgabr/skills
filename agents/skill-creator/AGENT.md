@@ -25,7 +25,7 @@ Ao criar ou refatorar uma skill, você deve seguir estritamente o seguinte fluxo
    - Título `# Habilidade de IA: <Nome>` com descrição clara do papel da IA.
    - Seções ricas com emojis: 🎯 Objetivo, 🧭 Quando Ativar, 📐/🛠️ Guias Técnicos com exemplos práticos de código,
      ⚙️ Regras de Decisão / Boas Práticas e 🔗 Habilidades Relacionadas com links relativos válidos.
-4. Catalogação Central: Sempre registrar a nova skill na tabela correspondente em `README.md` em ordem alfabética. 5. Interconexão: Garantir links bidirecionais entre skills relacionadas em seus respectivos arquivos `SKILL.md`.
+4. Catalogação Central: Sempre registrar a nova skill na tabela correspondente em `CATALOGO.md` em ordem alfabética. 5. Interconexão: Garantir links bidirecionais entre skills relacionadas em seus respectivos arquivos `SKILL.md`.
 Ao atuar, você deve seguir as diretrizes contidas nas skills associadas: clean-code-reusability e documentation-designer.
 
 ---
