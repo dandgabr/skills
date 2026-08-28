@@ -75,5 +75,5 @@ Para garantir que o conteúdo e as plataformas de terceiros funcionem harmonicam
 
 ## 🔗 Habilidades Relacionadas
 *   **Moodle Core**: [program-moodle](../../programs/moodle/SKILL.md) — Customização geral e APIs do Moodle LMS.
-*   **Moodle Design & UX**: [program-moodle-design](../../programs/moodle-design/SKILL.md) — Aplicação visual de metodologias ativas e acessibilidade WCAG.
+*   **Moodle Design & UX**: [program-moodle-design](../../programs/moodle/SKILL.md) — Aplicação visual de metodologias ativas e acessibilidade WCAG.
 

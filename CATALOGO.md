@@ -1,6 +1,6 @@
 # 📚 Catálogo Geral de Habilidades (Skills) e Agentes
 
-Este documento é a fonte canônica e completa de todas as **203 Habilidades (Skills)** e **42 Agentes Especializados Universais** catalogados no repositório.
+Este documento é a fonte canônica e completa de todas as **196 Habilidades (Skills)** e **42 Agentes Especializados Universais** catalogados no repositório.
 
 ---
 
@@ -9,7 +9,7 @@ Este documento é a fonte canônica e completa de todas as **203 Habilidades (Sk
 | Dimensão | Quantidade | Descrição |
 | :--- | :---: | :--- |
 | **Total de Agentes Especializados** | **42** | Personas técnicas universais (Multi-Harness: Markdown, YAML e JSON) |
-| **Total de Habilidades (Skills)** | **203** | Habilidades modulares de engenharia, ciências exatas, computação e segurança |
+| **Total de Habilidades (Skills)** | **196** | Habilidades modulares de engenharia, ciências exatas, computação e segurança |
 | **Categorias Principais** | **11** | Domínios estruturados cobrindo todas as áreas técnicas |
 | **Subcategorias Especializadas** | **9** | Organização fina para Design Patterns (3) e Segurança (6) |
 
@@ -21,13 +21,13 @@ Este documento é a fonte canônica e completa de todas as **203 Habilidades (Sk
 | **🗄️ Bancos de Dados & Streaming** | Relacionais, NoSQL, Data Mesh, Streaming em Tempo Real | **6** |
 | **🔬 Domínios, Exatas & Engenharias** | Matemática, Física, Computação Teórica, Circuitos, Robótica, Telecom, Biomédica, Química, Civil | **39** |
 | **📐 Práticas de Engenharia** | Clean Code, C4 Model, System Design, Documentação | **5** |
-| **🧪 Frameworks, Web & Testes** | Testes Unitários/Mutação, React, Vue, APIs REST/gRPC/GraphQL, HTTP | **16** |
+| **🧪 Frameworks, Web & Testes** | Testes Unitários/Mutação, React, Vue, APIs REST/gRPC/GraphQL, HTTP | **14** |
 | **💻 Linguagens de Programação** | Python, TypeScript, Go, Rust, C, C++, Assembly x64, Verilog/VHDL, Bash, etc. | **15** |
 | **🗺️ Mapeamento & Topologia** | AST, Call Graphs, Rede, eBPF, CMDB, Engenharia Reversa de Esquemas/Binários | **13** |
 | **🧩 Padrões de Projeto (GoF)** | `creational` (5), `structural` (8), `behavioral` (9) | **22** |
-| **🛠️ Softwares & Ferramentas** | Containers, GitHub Actions, Markmap, Moodle, WinDbg, Power Platform | **16** |
+| **🛠️ Softwares & Ferramentas** | Containers, GitHub Actions, Markmap, Moodle Integral, WinDbg, Power Platform | **12** |
 | **🎭 Papéis de Engenharia** | Software Architect, Backend, Frontend, DevOps, DBA, QA, PO, UX, Mapping | **15** |
-| **🛡️ Segurança da Informação & DevSecOps** | `ai-security` (4), `appsec` (19), `cloud-iam` (7), `crypto-pki` (2), `grc-compliance` (11), `ops-architecture` (6) | **49** |
+| **🛡️ Segurança da Informação & DevSecOps** | `ai-security` (4), `appsec` (18), `cloud-iam` (7), `crypto-pki` (2), `grc-compliance` (11), `ops-architecture` (6) | **48** |
 
 ---
 
@@ -63,12 +63,12 @@ Os agentes são personas especializadas configuradas para orquestrar conjuntos c
 | 24 | **mathematician** | [`AGENT.md`](agents/mathematician/AGENT.md) | [`agent.yaml`](agents/mathematician/agent.yaml) | [`agent.json`](agents/mathematician/agent.json) | Agente especialista sênior em Matemática Pura e Aplicada, cobrindo Cálculo Avançado (I a IV), Análise Real e Complexa, Álgebra Abstrata, Álgebra Linear Avançada, Equações Diferenciais Ordinárias e Parciais (EDO/EDP), Métodos Numéricos, Geometria Diferencial e Probabilidade Axiomática. |
 | 25 | **mechanical-engineer** | [`AGENT.md`](agents/mechanical-engineer/AGENT.md) | [`agent.yaml`](agents/mechanical-engineer/agent.yaml) | [`agent.json`](agents/mechanical-engineer/agent.json) | Agente especialista sênior em Engenharia Mecânica, cobrindo mecânica dos sólidos, resistência dos materiais (Von Mises, Mohr), mecânica dos fluidos e CFD (Navier-Stokes), transferência de calor e dinâmica de sistemas mecânicos. |
 | 26 | **mechatronics-engineer** | [`AGENT.md`](agents/mechatronics-engineer/AGENT.md) | [`agent.yaml`](agents/mechatronics-engineer/agent.yaml) | [`agent.json`](agents/mechatronics-engineer/agent.json) | Agente especialista sênior em Engenharia Mecatrônica, Robótica Industrial/Móvel (ROS 2), Teoria de Controle Clássico e Moderno (Espaço de Estados, PID, LQR, Kalman), Controladores Lógicos Programáveis (CLPs IEC 61131-3) e Sistemas SCADA. |
-| 27 | **moodle-specialist** | [`AGENT.md`](agents/moodle-specialist/AGENT.md) | [`agent.yaml`](agents/moodle-specialist/agent.yaml) | [`agent.json`](agents/moodle-specialist/agent.json) | Agente especialista sênior em Moodle LMS e EdTech. Atua desde a arquitetura de servidores e modelagem de banco de dados (DBA), até o design de temas (UI/UX), desenvolvimento de plugins, integrações (LTI, SCORM, xAPI) e aplicação de metodologias de Andragogia. |
-| 28 | **pentester-agent** | [`AGENT.md`](agents/pentester-agent/AGENT.md) | [`agent.yaml`](agents/pentester-agent/agent.yaml) | [`agent.json`](agents/pentester-agent/agent.json) | Agente Pentester Ético especializado em auditorias ofensivas (OWASP WSTG, API Security, Cloud e Red Team Scripting) usando utilitários CLI e scripts customizados. |
+| 27 | **moodle-specialist** | [`AGENT.md`](agents/moodle-specialist/AGENT.md) | [`agent.yaml`](agents/moodle-specialist/agent.yaml) | [`agent.json`](agents/moodle-specialist/agent.json) | Agente especialista sênior em Moodle LMS e EdTech. Atua desde a arquitetura de servidores e modelagem de banco de dados (DBA), até o design de temas (UI/UX), desenvolvimento de plugins, infraestrutura de caching (MUC), integrações (LTI, SCORM, xAPI) e aplicação de metodologias de Andragogia. |
+| 28 | **pentester-agent** | [`AGENT.md`](agents/pentester-agent/AGENT.md) | [`agent.yaml`](agents/pentester-agent/agent.yaml) | [`agent.json`](agents/pentester-agent/agent.json) | Agente Pentester Ético especializado em auditorias ofensivas (OWASP WSTG, API Security, Cloud, LLMs e Red Team Scripting) usando utilitários CLI e scripts customizados. |
 | 29 | **physical-engineer** | [`AGENT.md`](agents/physical-engineer/AGENT.md) | [`agent.yaml`](agents/physical-engineer/agent.yaml) | [`agent.json`](agents/physical-engineer/agent.json) | Agente especialista sênior em Engenharia Física e Nanotecnologia, cobrindo física do estado sólido, semicondutores, processos de microfabricação em sala limpa, síntese de nanomateriais de carbono (grafeno, nanotubos), pontos quânticos e sensores quânticos. |
 | 30 | **physicist** | [`AGENT.md`](agents/physicist/AGENT.md) | [`agent.yaml`](agents/physicist/agent.yaml) | [`agent.json`](agents/physicist/agent.json) | Agente especialista sênior em Física Teórica e Aplicada, cobrindo Mecânica Clássica Avançada (Lagrangeana e Hamiltoniana), Eletromagnetismo de Maxwell, Termodinâmica e Mecânica Estatística, Relatividade Especial e Geral, e Mecânica Quântica da Matéria Condensada. |
 | 31 | **project-reviewer** | [`AGENT.md`](agents/project-reviewer/AGENT.md) | [`agent.yaml`](agents/project-reviewer/agent.yaml) | [`agent.json`](agents/project-reviewer/agent.json) | Agente de Revisão de Projetos especializado na auditoria de regras de negócio, distribuição técnica (Banco, Backend, Frontend) e boas práticas de arquitetura e segurança. |
-| 32 | **qa-testing-specialist** | [`AGENT.md`](agents/qa-testing-specialist/AGENT.md) | [`agent.yaml`](agents/qa-testing-specialist/agent.yaml) | [`agent.json`](agents/qa-testing-specialist/agent.json) | Agente Especialista em Garantia de Qualidade (QA) e Automação de Testes Multi-Framework (Pytest, Unittest, Nose2, Ward, Jest, Mocha, Criterion, Playwright). |
+| 32 | **qa-testing-specialist** | [`AGENT.md`](agents/qa-testing-specialist/AGENT.md) | [`agent.yaml`](agents/qa-testing-specialist/agent.yaml) | [`agent.json`](agents/qa-testing-specialist/agent.json) | Agente Especialista em Garantia de Qualidade (QA) e Automação de Testes Multi-Framework (Pytest, Unittest, Jest, Mocha, Criterion, Playwright). |
 | 33 | **quantum-computing-specialist** | [`AGENT.md`](agents/quantum-computing-specialist/AGENT.md) | [`agent.yaml`](agents/quantum-computing-specialist/agent.yaml) | [`agent.json`](agents/quantum-computing-specialist/agent.json) | Especialista em Computação Quântica, Desenvolvimento de Circuitos Quânticos (Qiskit, Cirq), Algoritmos Quânticos (Shor, Grover, VQE) e Criptografia Pós-Quântica (PQC). |
 | 34 | **researcher** | [`AGENT.md`](agents/researcher/AGENT.md) | [`agent.yaml`](agents/researcher/agent.yaml) | [`agent.json`](agents/researcher/agent.json) | Subagente Especialista em Pesquisa, Varredura de Codebase, Análise de Documentação e Busca Externa com ferramentas de leitura estrita. Ideal para investigações abrangentes sem sobrecarregar a janela de contexto principal. |
 | 35 | **reverse-engineer-agent** | [`AGENT.md`](agents/reverse-engineer-agent/AGENT.md) | [`agent.yaml`](agents/reverse-engineer-agent/agent.yaml) | [`agent.json`](agents/reverse-engineer-agent/agent.json) | Agente de Engenharia Reversa e Análise de Baixo Nível, especializado na depuração de processos, análise de binários, manipulação de memória (Cheat Engine) e segurança de código contra exploração. |
@@ -175,7 +175,7 @@ Os agentes são personas especializadas configuradas para orquestrar conjuntos c
 
 ### 🧪 Frameworks de Testes, Web, APIs & Protocolos
 
-> Total de habilidades nesta categoria: **16 skills**
+> Total de habilidades nesta categoria: **14 skills**
 
 | Skill | Descrição e Escopo Técnico |
 | :--- | :--- |
@@ -185,7 +185,6 @@ Os agentes são personas especializadas configuradas para orquestrar conjuntos c
 | [`framework-grpc`](skills/framework/framework-grpc/SKILL.md) | Fornece padrões de engenharia para gRPC e Protocol Buffers (proto3). Cobre RPCs unários e de streaming (Server, Client, Bidirectional), definição de arquivos .proto, transporte HTTP/2, interceptores (middlewares), tratamento rico de erros google.rpc.Status e gRPC-Web. |
 | [`framework-jest`](skills/framework/framework-jest/SKILL.md) | Atua como Especialista em testes automatizados com Jest no ecossistema JavaScript e TypeScript, cobrindo Mocks, Spies, Snapshots, testes assíncronos, fake timers e suporte ao Node.js e React. |
 | [`framework-mocha`](skills/framework/framework-mocha/SKILL.md) | Atua como Especialista em testes automatizados com Mocha em JavaScript e Node.js, cobrindo interfaces BDD/TDD, integração com Chai (expect/assert) e Sinon.js (Spies, Stubs, Mocks) e testes assíncronos. |
-| [`framework-nose2`](skills/framework/framework-nose2/SKILL.md) | Atua como Especialista em testes automatizados com Nose2 em Python, cobrindo configuração via unittest.cfg, plugins de cobertura e multiprocessamento, parametrização com @params e suítes dinâmicas. |
 | [`framework-pytest`](skills/framework/framework-pytest/SKILL.md) | Atua como Especialista em testes automatizados com Pytest em Python, cobrindo fixtures, parametrização formal (BVA/Partições), Property-Based Testing (Hypothesis), Mocks (pytest-mock), Testes de Mutação (mutmut), async e cobertura com pytest-cov. |
 | [`framework-react`](skills/framework/framework-react/SKILL.md) | Fornece padrões de engenharia e arquitetura para a biblioteca React (React 18+ / React 19) e seu ecossistema. Cobre componentes funcionais, Hooks avançados, Server Components (RSC), gerenciamento de estado (Context, Zustand, TanStack Query), roteamento, otimização de performance e testes. |
 | [`framework-rest-api`](skills/framework/framework-rest-api/SKILL.md) | Fornece padrões de engenharia e design para APIs RESTful baseados na especificação OpenAPI 3.1 e RFCs do IETF. Cobre semântica de verbos HTTP, status codes, padronização de erros RFC 7807, paginação, HATEOAS, versionamento, rate limiting e segurança OAuth2/JWT. |
@@ -193,7 +192,6 @@ Os agentes são personas especializadas configuradas para orquestrar conjuntos c
 | [`framework-testing`](skills/framework/framework-testing/SKILL.md) | Especialista em Engenharia de Testes de Software. Domínio abrangente de técnicas de Caixa-Preta (BVA, Partições de Equivalência, Tabelas de Decisão, FSM, Pairwise), Caixa-Branca (CFG, McCabe, MC/DC, Fluxo de Dados/du-paths, Program Slicing), Teste de Mutação, Integração (Call Graph, MM-Paths), TDD e Gestão de Testes ISTQB. |
 | [`framework-unittest`](skills/framework/framework-unittest/SKILL.md) | Atua como Especialista em testes automatizados com a biblioteca nativa unittest do Python, cobrindo TestCase, asserções, métodos de ciclo de vida (setUp/tearDown), subtests, unittest.mock (@patch, MagicMock) e test discovery. |
 | [`framework-vue`](skills/framework/framework-vue/SKILL.md) | Fornece padrões de desenvolvimento modular e de alta performance usando o ecossistema Vue 3, cobrindo Composition API, TypeScript, Pinia, Vue Router e otimizações de reatividade. |
-| [`framework-ward`](skills/framework/framework-ward/SKILL.md) | Atua como Especialista em testes automatizados com o framework Ward em Python, cobrindo testes declarativos com @test, injeção de dependências por @fixture, asserções com expect() e testes assíncronos. |
 | [`protocol-http`](skills/framework/protocol-http/SKILL.md) | Fornece padrões de arquitetura e engenharia do protocolo HTTP (HTTP/1.1, HTTP/2, HTTP/3, RFC 9110/9112/9113/9114 e RFC 10008). Cobre semântica completa de verbos incluindo QUERY, códigos de status, negociação de conteúdo, cabeçalhos de segurança, CORS, estratégias de caching e suporte de proxies/CDNs. |
 
 
@@ -283,7 +281,7 @@ Os agentes são personas especializadas configuradas para orquestrar conjuntos c
 
 ### 🛠️ Softwares, Plataformas & Ferramentas
 
-> Total de habilidades nesta categoria: **16 skills**
+> Total de habilidades nesta categoria: **12 skills**
 
 | Skill | Descrição e Escopo Técnico |
 | :--- | :--- |
@@ -297,11 +295,7 @@ Os agentes são personas especializadas configuradas para orquestrar conjuntos c
 | [`program-github`](skills/programs/github/SKILL.md) | Especialista na plataforma GitHub. Abrange governança de repositórios, estratégias de branching, code review e pull requests, automação com GitHub Projects v2 e Issues, gerenciamento de pacotes com GitHub Packages e ghcr.io, ambientes de desenvolvimento em nuvem com GitHub Codespaces, segurança avançada com GHAS (Dependabot, CodeQL, Secret Scanning), automação via GitHub CLI (gh), integração com REST e GraphQL APIs, webhooks e publicação de sites via GitHub Pages. |
 | [`program-github-actions`](skills/programs/github-actions/SKILL.md) | Atua como especialista em GitHub Actions e CI/CD, dominando workflows YAML, reusable workflows, composite actions, matrix strategies, environments com proteção, autenticação OIDC, caching, container jobs e padrões avançados de automação. |
 | [`program-markmap`](skills/programs/markmap/SKILL.md) | Especialista em visualização de mapas mentais interativos a partir de Markdown utilizando Markmap (markmap-cli, markmap-lib, markmap-view, KaTeX, autoloader e exportação SVG/HTML). |
-| [`program-moodle`](skills/programs/moodle/SKILL.md) | Atua como especialista sênior em desenvolvimento e customização do Moodle LMS, cobrindo arquitetura de plugins (Frankenstyle), APIs principais (DB, Form, Page, Output), controle de acessos, Web Services, Hooks modernos e API de privacidade. |
-| [`program-moodle-dba`](skills/programs/moodle-dba/SKILL.md) | Atua como Administrador de Banco de Dados (DBA) sênior especialista em Moodle LMS, cobrindo modelagem XMLDB, otimização de consultas (EXPLAIN), indexação segura, transações delegadas, particionamento de logs e tuning de MySQL e PostgreSQL. |
-| [`program-moodle-design`](skills/programs/moodle-design/SKILL.md) | Atua como especialista em design de interfaces (UI), desenvolvimento de temas, templates Mustache, estilização SCSS, customização de formatos de curso e otimização de UX/acessibilidade no Moodle LMS. |
-| [`program-moodle-infra`](skills/programs/moodle-infra/SKILL.md) | Atua como especialista em infraestrutura, dimensionamento, alta disponibilidade, performance tuning (OPcache, PHP, MySQL/Postgres), MUC (Redis/Memcached), cron em lote e armazenamento distribuído no Moodle LMS. |
-| [`program-moodle-plugins`](skills/programs/moodle-plugins/SKILL.md) | Atua como especialista no ciclo de vida, anatomia, configurações administrativas (settings.php), rotinas de backup/restauração, testes e publicação de plugins para o Moodle LMS. |
+| [`program-moodle`](skills/programs/moodle/SKILL.md) | Atua como especialista sênior em Moodle LMS, cobrindo desenvolvimento e ciclo de vida de plugins (Frankenstyle), APIs principais (DB, Form, Page, Output), modelagem XMLDB e tuning de banco de dados, design de temas (Mustache/SCSS), infraestrutura em larga escala (OPcache, MUC Redis/Memcached) e segurança. |
 | [`program-windbg`](skills/programs/program-windbg/SKILL.md) | Especialista em depuração de baixo nível no Windows usando WinDbg, CDB e a dbgeng.dll. Cobre análise de dumps de memória, inspeção de call stacks, avaliação de falhas (!analyze -v) e automação de scripts de depuração. |
 
 
@@ -335,11 +329,11 @@ Os agentes são personas especializadas configuradas para orquestrar conjuntos c
 | Skill | Descrição e Escopo Técnico |
 | :--- | :--- |
 | [`ai-computer-vision-security`](skills/security/ai-security/ai-computer-vision-security/SKILL.md) | Atua como Especialista em Segurança de Visão Computacional (CV), cobrindo mitigação de ataques adversariais (FGSM, PGD, Patch Attacks), envenenamento de dados de imagem, backdoors visuais, invasão de sensores, detecção de deepfakes e alinhamento com o OWASP Machine Learning Security Top 10. |
-| [`ai-llm-slm-security`](skills/security/ai-security/ai-llm-slm-security/SKILL.md) | Atua como Especialista em Segurança, Governança e Red Teaming de Modelos de Linguagem (LLMs e SLMs), cobrindo mitigação de Prompt Injection, Jailbreaking, envenenamento de dados, segurança de RAG e conformidade total com o OWASP Top 10 for LLM e OWASP AI Exchange. |
+| [`ai-llm-slm-security`](skills/security/ai-security/ai-llm-slm-security/SKILL.md) | Atua como Especialista em Segurança, Governança, Red Teaming e Pentest de Modelos de Linguagem (LLMs e SLMs), cobrindo mitigação e exploração de Prompt Injection, Jailbreaking, envenenamento de dados (Data Poisoning), vazamento de modelo (Model Inversion), segurança de RAG e conformidade total com o OWASP Top 10 for LLM e OWASP AI Exchange. |
 | [`ai-model-security-analysis`](skills/security/ai-security/ai-model-security-analysis/SKILL.md) | Use this skill when evaluating, auditing, or scanning the security of AI models. This includes checking for digital security vulnerabilities (e.g., pickle exploits, malicious code execution) as well as behavioral safety and alignment (e.g., toxicity, bias, jailbreak susceptibility). |
 | [`ai-voice-stt-tts-security`](skills/security/ai-security/ai-voice-stt-tts-security/SKILL.md) | Atua como Especialista em Segurança de Processamento de Voz, Fala (STT/ASR) e Síntese Vocal (TTS), cobrindo o modelo HAVOC para dispositivos controlados por voz, ataques ultrassônicos inaudíveis, deepfake de voz, defesa em biometria vocal e alinhamento com OWASP ML Top 10 e OWASP API Security. |
 
-#### Segurança de Aplicações e Baixo Nível (AppSec) *(19 skills)*
+#### Segurança de Aplicações e Baixo Nível (AppSec) *(18 skills)*
 
 | Skill | Descrição e Escopo Técnico |
 | :--- | :--- |
@@ -352,7 +346,6 @@ Os agentes são personas especializadas configuradas para orquestrar conjuntos c
 | [`game-security-unreal`](skills/security/appsec/game-security-unreal/SKILL.md) | Especialista em segurança para o motor de jogo Unreal Engine, cobrindo segurança em replicação de rede (RPCs), proteção de arquivos .pak, desativação de comandos de console, hardening C++ e anti-cheats. |
 | [`malware-analysis-multios`](skills/security/appsec/malware-analysis-multios/SKILL.md) | Especialista em Análise Estática e Dinâmica de Malware Multiplataforma para Windows (PE), Linux (ELF), Android (APK/DEX/ARM) e macOS (Mach-O) baseado nas obras The Android Malware Handbook (Qian Han) e The Art of Mac Malware (Patrick Wardle). Cobre desobfuscação, descompilação, análise comportamental em sandbox, extração de IoCs, Yara rules e assinatura de detecção. |
 | [`memory-manipulation`](skills/security/appsec/memory-manipulation/SKILL.md) | Atua como especialista em manipulação de memória e segurança de baixo nível, cobrindo alocação dinâmica, gerenciamento de ponteiros, vulnerabilidades (buffer overflows, UAF, double free), técnicas ofensivas (heap grooming, ROP) e mitigações modernas (MTE, CFI, ASan). |
-| [`pentest-ai-generative-llm`](skills/security/appsec/pentest-ai-generative-llm/SKILL.md) | Atua como Pentester e Auditor de Segurança especializado em Sistemas de Inteligência Artificial Generativa e LLMs, cobrindo engenharia de prompt adversária, envenenamento de dados de treino (Data Poisoning), vazamento de modelo/dados de treinamento (Model Inversion), extração de sistema e testes de robustez empírica. |
 | [`pentest-cloud-aws-azure-gcp`](skills/security/appsec/pentest-cloud-aws-azure-gcp/SKILL.md) | Atua como Pentester e Red Teamer especializado em Ambientes de Nuvem (AWS, Azure e GCP), cobrindo reconhecimento de ativos expostos, movimentação lateral em contêineres/K8s, exploração de IAM/políticas, ataques a serviços gerenciados (S3, Blob, Key Vault, Metadata Service v1/v2) e simulação de adversários. |
 | [`pentest-scripter-python-bash-go`](skills/security/appsec/pentest-scripter-python-bash-go/SKILL.md) | Atua como Desenvolvedor e Scripter Ofensivo (Red Team Scripter), utilizando Python, Bash, Go e PowerShell para automação de testes de segurança, sem incluir snippets diretos no código, mas referenciando as habilidades de linguagem correspondentes. |
 | [`pentest-web-application-modern`](skills/security/appsec/pentest-web-application-modern/SKILL.md) | Atua como Pentester Ético especializado em Aplicações Web Modernas (REST/GraphQL APIs, SPAs, WebSockets, HTTP/2 e Serverless), cobrindo exploração de Host Header Injection, HTTP Response Splitting, Deserialização Insegura, bypass de WAF, Web Shells e escalação de privilégios. |
