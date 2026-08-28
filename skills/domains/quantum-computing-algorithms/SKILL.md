@@ -11,12 +11,12 @@ Esta skill estabelece os fundamentos de programação quântica, circuitos lógi
 
 ## ⚛️ 1. Fundamentos do Qubit e Esfera de Bloch
 
-- **Qubit**: O estado de um qubit $|\psiangle$ é uma combinação linear de estados de base $|0angle$ e $|1angle$:
-  $$|\psiangle = lpha|0angle + eta|1angle \quad 	ext{onde } |lpha|^2 + |eta|^2 = 1$$
-- **Superposição**: Criada aplicando a porta **Hadamard (H)** sobre o estado base $|0angle$:
-  $$H|0angle = rac{|0angle + |1angle}{\sqrt{2}} = |+angle$$
+- **Qubit**: O estado de um qubit $|\psi\rangle$ é uma combinação linear de estados de base $|0\rangle$ e $|1\rangle$:
+  $$|\psi\rangle = \alpha|0\rangle + \beta|1\rangle \quad \text{onde } |\alpha|^2 + |\beta|^2 = 1$$
+- **Superposição**: Criada aplicando a porta **Hadamard (H)** sobre o estado base $|0\rangle$:
+  $$H|0\rangle = \frac{|0\rangle + |1\rangle}{\sqrt{2}} = |+\rangle$$
 - **Entrelaçamento (Entanglement)**: Criado combinando uma porta **Hadamard** com uma porta **CNOT (Controlled-NOT)** para gerar o estado de Bell:
-  $$|\Phi^+angle = rac{|00angle + |11angle}{\sqrt{2}}$$
+  $$|\Phi^+\rangle = \frac{|00\rangle + |11\rangle}{\sqrt{2}}$$
 
 ---
 

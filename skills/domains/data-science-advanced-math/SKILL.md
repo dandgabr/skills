@@ -12,7 +12,7 @@ Esta skill estabelece os fundamentos matemáticos e estatísticos rigorosos nece
 ## 📊 1. Álgebra Linear Aplicada a Dados
 
 ### Decomposição em Valores Singulares (SVD) e PCA
-- **SVD**: Fatora qualquer matriz $A_{m 	imes n}$ em $U_{m 	imes m} \Sigma_{m 	imes n} V^T_{n 	imes n}$.
+- **SVD**: Fatora qualquer matriz $A_{m \times n}$ em $U_{m \times m} \Sigma_{m \times n} V^T_{n \times n}$.
 - **PCA (Principal Component Analysis)**: Projeta dados de alta dimensionalidade nos autovetores correspondentes aos maiores autovalores da matriz de covariância, maximizando a variância explicada com menor custo computacional.
 
 ---
@@ -20,10 +20,9 @@ Esta skill estabelece os fundamentos matemáticos e estatísticos rigorosos nece
 ## 📈 2. Cálculo e Otimização Numérica
 
 ### Gradiente Descendente e Otimizadores Modernos
-- **Vetor Gradiente**: $
-abla f(x) = \left[ rac{\partial f}{\partial x_1}, rac{\partial f}{\partial x_2}, \dots, rac{\partial f}{\partial x_n} ight]^T$
+- **Vetor Gradiente**:
+  $$\nabla f(x) = \left[ \frac{\partial f}{\partial x_1}, \frac{\partial f}{\partial x_2}, \dots, \frac{\partial f}{\partial x_n} \right]^T$$
 - **Regra de Atualização**:
-  $$x_{t+1} = x_t - \eta 
-abla f(x_t)$$
+  $$x_{t+1} = x_t - \eta \nabla f(x_t)$$
   onde $\eta$ é a taxa de aprendizado (*learning rate*).
 - **Otimizadores Avançados**: Momentum, RMSprop e Adam (Adaptive Moment Estimation).

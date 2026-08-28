@@ -12,7 +12,9 @@ Esta skill estabelece os princípios da física e engenharia de comunicações s
 ## 📡 1. Equação de Transmissão de Friis e Link Budget
 
 A potência recebida $P_r$ em um enlace de rádio em espaço livre é calculada pela fórmula de Friis:
-$$P_r = P_t + G_t + G_r - 20 \log_{10}\left(rac{4\pi d}{\lambda}ight) - L_{losses}$$
+
+$$P_r = P_t + G_t + G_r - 20 \log_{10}\left(\frac{4\pi d}{\lambda}\right) - L_{\text{losses}}$$
+
 onde:
 - $P_t$: Potência transmitida (dBm).
 - $G_t, G_r$: Ganhos das antenas transmissora e receptora (dBi).
