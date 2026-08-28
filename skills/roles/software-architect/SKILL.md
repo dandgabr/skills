@@ -34,12 +34,15 @@ Ao atuar nesta skill, você deve estruturar suas decisões em torno de 5 domíni
 - **Padrões Táticos**: Isole persistências cruas (DAOs e SQL) usando Repositórios que simulam coleções em memória na camada de domínio.
 - **Arquitetura e Persistência de Dados**: Para definir estratégias de isolamento de transações, particionamento e réplicas em bancos SQL/NoSQL, consulte a skill [dba-database-administrator](../dba-database-administrator/SKILL.md) e as subskills [db-postgresql](../../databases/db-postgresql/SKILL.md), [db-mariadb](../../databases/db-mariadb/SKILL.md), [db-sqlite](../../databases/db-sqlite/SKILL.md) e [db-mongodb](../../databases/db-mongodb/SKILL.md).
 
-### 4. Decisões Macroarquiteturais e Topologia de Sistemas
-- **Tiers vs. Layers**: Separe lógicas (*layers*) de separações físicas (*tiers*). Distribua componentes pela rede (RPC, REST) apenas sob estrita necessidade, gerenciando os trade-offs de latência de rede com DTOs e caches inteligentes.
-- **Integração Corporativa**: Adote arquiteturas orientadas a recursos (REST) flexíveis e processamento de mensagens assíncronas assinaladas para tratar falhas transacionais distribuídas com resiliência.
+### 4. Decisões Macroarquiteturais, Topologia e Escalabilidade
+- **Modelagem e Visualização C4**: Documente e comunique a arquitetura do sistema em múltiplos níveis de abstração (Contexto, Contêineres, Componentes e Código) utilizando a skill [c4-model-architecture](../../engineering-practices/c4-model-architecture/SKILL.md).
+- **Engenharia de Larga Escala e Resiliência**: Para dimensionar sistemas de alto throughput, balanceamento de carga, sharding, caching distribuído, particionamento e tolerância a falhas (CAP/PACELC), consulte a skill [system-design-scalability](../../engineering-practices/system-design-scalability/SKILL.md).
+- **Contratos e Padrões de APIs**: Para padronização de APIs (operações LRO, mutações em lote, chaves de idempotência, cursor pagination), siga a skill [framework-api-design-patterns](../../framework/framework-api-design-patterns/SKILL.md).
+- **Equilíbrio de Acoplamento e Decomposição**: Aplique os princípios universais de acoplamento (Vlad Khononov) e estratégias de evolução de Monólitos para Microsserviços (Vaughn Vernon & Tomasz Jaskuła), avaliando trade-offs de latência de rede com DTOs e eventos assíncronos.
+- **Tiers vs. Layers**: Separe lógicas (*layers*) de separações físicas (*tiers*). Distribua componentes pela rede (RPC, REST, gRPC) apenas sob estrita necessidade.
 
 ### 5. Automação, Qualidade e Testabilidade
-- **TDD (Test-Driven Development)**: Utilize testes unitários não apenas para verificação de bugs, mas como indicador ativo de design. Dificuldade severa em testar sinaliza alta acoplamento ou baixa coesão, exigindo refatoração imediata.
+- **TDD (Test-Driven Development)**: Utilize testes unitários não apenas para verificação de bugs, mas como indicador ativo de design. Dificuldade severa em testar sinaliza alto acoplamento ou baixa coesão, exigindo refatoração imediata.
 
 ---
 

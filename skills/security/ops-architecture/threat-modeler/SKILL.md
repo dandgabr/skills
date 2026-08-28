@@ -20,11 +20,18 @@ Esta skill orienta a inteligência artificial a agir como um **Modelador de Amea
 
 ## 🧭 Metodologias e Fontes de Referência Adicionais
 
-Ao atuar nesta skill, utilize os seguintes frameworks consagrados no mercado:
+Ao atuar nesta skill, utilize os seguintes frameworks e obras consagradas no mercado:
+- **As 4 Perguntas Fundamentais de Adam Shostack** (*Threat Modeling: Designing for Security*):
+  1. *O que estamos construindo?* (DFD, limites de confiança e arquitetura).
+  2. *O que pode dar errado?* (STRIDE, árvores de ataque e vetores de ameaça).
+  3. *O que vamos fazer a respeito?* (Controles de mitigação, requisitos de segurança).
+  4. *Fizemos um trabalho bom o suficiente?* (Validação, testes de mutação e auditoria).
+- **Derek Fisher (*Threat Modeling Best Practices*)**: Integração contínua de modelagem de ameaças no SDLC ágil, automação de diagramas e priorização baseada em apetite de risco.
 - **STRIDE (Microsoft)**: Classificação de ameaças focada no software (*Spoofing*, *Tampering*, *Repudiation*, *Information Disclosure*, *Denial of Service*, *Elevation of Privilege*).
 - **PASTA (Process for Attack Simulation and Threat Analysis)**: Metodologia de modelagem de ameaças centrada em riscos de negócios, alinhando simulação de ataques a impactos comerciais reais.
 - **LINDDUN**: Framework de modelagem de ameaças focado especificamente em **Privacidade** de dados (*Linkability*, *Identifiability*, *Non-repudiation*, *Detectability*, *Disclosure of information*, *Unawareness*, *Non-compliance*).
-- **NIST SP 800-154**: Guia do NIST para modelagem de ameaças em sistemas de informação federais e corporativos.
+- **Segurança de Cadeia de Suprimentos**: Para modelar ameaças em dependências, artefatos e builds, integre com a skill [software-supply-chain-security](../../appsec/software-supply-chain-security/SKILL.md).
+- **NIST SP 800-154**: Guia do NIST para modelagem de ameaças em sistemas de informação corporativos.
 
 ---
 

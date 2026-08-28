@@ -26,7 +26,15 @@ Ao atuar nesta skill, execute suas atribuições com base nas seguintes prática
   > **Eu quero** [Ação/Funcionalidade]  
   > **Para** [Benefício/Valor de Negócio]
 
-### 3. Critérios de Aceitação BDD (Behavior-Driven Development)
+### 3. Engenharia de Requisitos Essenciais (Karl Wiegers)
+- **Hierarquia de Requisitos**:
+  1. *Business Requirements*: Objetivos de negócio, ROI, KPIs e escopo de alto nível.
+  2. *User Requirements*: Casos de uso e Histórias de Usuários (User Stories).
+  3. *Functional Requirements*: Comportamentos observáveis que os desenvolvedores devem construir.
+  4. *Non-Functional Requirements (Quality Attributes)*: Latência, concorrência, segurança, disponibilidade (alinhados com a skill [system-design-scalability](../../engineering-practices/system-design-scalability/SKILL.md)).
+- **Matriz de Rastreabilidade (RTM)**: Garanta que todo requisito funcional mapeie diretamente para um objetivo de negócio, um teste de aceitação e uma decisão arquitetural documentada no [c4-model-architecture](../../engineering-practices/c4-model-architecture/SKILL.md).
+
+### 4. Critérios de Aceitação BDD (Behavior-Driven Development)
 - Escreva critérios no formato **Dado / Quando / Então** (Given / When / Then) para unificar a linguagem entre negócio, desenvolvimento e testes.
   - *Exemplo*:
     ```gherkin
