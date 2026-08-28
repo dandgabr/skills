@@ -1,0 +1,6 @@
+{
+  "name": "information-systems-specialist",
+  "version": "1.0.0",
+  "description": "Agente especialista sênior em Sistemas de Informação Corporativos, cobrindo modelagem de processos BPMN 2.0, sistemas ERP/CRM, governança de serviços de TI (ITIL 4, COBIT 2019), Business Intelligence e auditoria de sistemas.",
+  "entrypoint": "AGENT.md"
+}

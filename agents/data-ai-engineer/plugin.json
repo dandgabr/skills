@@ -1,0 +1,6 @@
+{
+  "name": "data-ai-engineer",
+  "version": "1.0.0",
+  "description": "Agente especialista sênior em Engenharia de Dados, Big Data e Inteligência Artificial, cobrindo pipelines distribuídos (Spark, Airflow), streaming em tempo real (Kafka, Flink, Pinot), arquiteturas Data Mesh, Deep Learning, MLOps e Engenharia de LLMs/RAG.",
+  "entrypoint": "AGENT.md"
+}

@@ -7,7 +7,7 @@ Este repositório serve como uma central modular e extensível para carregamento
 ## 🧭 Navegação Rápida
 
 > 📚 **[Acesse o Catálogo Completo de Habilidades e Agentes (CATALOGO.md)](CATALOGO.md)**  
-> Consulte a lista detalhada das **174 Skills** e **27 Agentes**, com métricas por categoria, subcategorias e descrições técnicas completas.
+> Consulte a lista detalhada das **203 Skills** e **42 Agentes**, com métricas por categoria, subcategorias e descrições técnicas completas.
 
 - 🤖 **[Guia de Agentes Especializados Universais](agents/README.md)**: Personas, manifestos (`AGENT.md`, `agent.yaml`, `agent.json`) e instruções de execução para qualquer harness.
 - 📜 **[Regras Globais do Projeto (AGENTS.md)](AGENTS.md)**: Diretrizes de comportamento, Clean Code, padrões de skills e criação de agentes.
@@ -25,7 +25,7 @@ Este repositório serve como uma central modular e extensível para carregamento
 ├── skills/
 │   ├── cloud-infra/        # AWS, Azure, GCP, OCI, Linux Kernel, HPC, Zero Trust (7 skills)
 │   ├── databases/          # PostgreSQL, MariaDB, MongoDB, SQLite, Data Mesh, Streaming (6 skills)
-│   ├── domains/            # Quantum, Hardware Hacking, RTOS, Satélites/RF, Telecom, Fintech (10 skills)
+│   ├── domains/            # Matemática, Física, Computação Teórica, Circuitos, Robótica, Telecom, Química, Civil (39 skills)
 │   ├── engineering-practices/ # Clean Code, C4 Model, System Design, Documentation (5 skills)
 │   ├── framework/          # Testes unitários/mutação, React, Vue, APIs REST, GraphQL, gRPC (16 skills)
 │   ├── languages/          # Python, TypeScript, Go, Rust, C, C++, Assembly, Verilog/VHDL, etc. (15 skills)
@@ -34,7 +34,7 @@ Este repositório serve como uma central modular e extensível para carregamento
 │   ├── programs/           # Containers, GitHub Actions, Markmap, Moodle, WinDbg, etc. (16 skills)
 │   ├── roles/              # Architect, Backend, Frontend, DevOps, DBA, QA, PO, UX, Mapping (15 skills)
 │   └── security/           # AppSec, AI Security, Cloud IAM, Crypto PKI, GRC, SecOps (49 skills)
-└── agents/                 # 27 Agentes Multi-Harness (AGENT.md, agent.yaml, agent.json)
+└── agents/                 # 42 Agentes Multi-Harness (AGENT.md, agent.yaml, agent.json)
 ```
 
 ---

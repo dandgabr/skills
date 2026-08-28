@@ -1,0 +1,6 @@
+{
+  "name": "software-engineer",
+  "version": "1.0.0",
+  "description": "Agente especialista sênior em Engenharia de Software, cobrindo engenharia de requisitos formais, arquiteturas modulares e distribuídas (Clean Architecture, Microsserviços, Hexagonal), DevSecOps, testes automatizados e métricas de qualidade.",
+  "entrypoint": "AGENT.md"
+}

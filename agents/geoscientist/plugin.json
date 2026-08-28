@@ -1,0 +1,6 @@
+{
+  "name": "geoscientist",
+  "version": "1.0.0",
+  "description": "Agente especialista sênior em Geociências e Sensoriamento Remoto, cobrindo geologia estrutural, geofísica, cartografia digital, geoprocessamento com GIS/QGIS e espectrometria de imagens de satélite multiespectral.",
+  "entrypoint": "AGENT.md"
+}

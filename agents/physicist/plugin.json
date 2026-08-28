@@ -1,0 +1,6 @@
+{
+  "name": "physicist",
+  "version": "1.0.0",
+  "description": "Agente especialista sênior em Física Teórica e Aplicada, cobrindo Mecânica Clássica Avançada (Lagrangeana e Hamiltoniana), Eletromagnetismo de Maxwell, Termodinâmica e Mecânica Estatística, Relatividade Especial e Geral, e Mecânica Quântica da Matéria Condensada.",
+  "entrypoint": "AGENT.md"
+}

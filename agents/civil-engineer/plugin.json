@@ -1,0 +1,6 @@
+{
+  "name": "civil-engineer",
+  "version": "1.0.0",
+  "description": "Agente especialista sênior em Engenharia Civil e Estrutural, cobrindo cálculo estrutural, resistência dos materiais, mecânica dos solos e geotecnia (Terzaghi, Mohr-Coulomb), fundações e dimensionamento de elementos estruturais.",
+  "entrypoint": "AGENT.md"
+}

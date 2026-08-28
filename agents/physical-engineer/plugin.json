@@ -1,0 +1,6 @@
+{
+  "name": "physical-engineer",
+  "version": "1.0.0",
+  "description": "Agente especialista sênior em Engenharia Física e Nanotecnologia, cobrindo física do estado sólido, semicondutores, processos de microfabricação em sala limpa, síntese de nanomateriais de carbono (grafeno, nanotubos), pontos quânticos e sensores quânticos.",
+  "entrypoint": "AGENT.md"
+}

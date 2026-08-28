@@ -1,0 +1,6 @@
+{
+  "name": "computer-engineer",
+  "version": "1.0.0",
+  "description": "Agente especialista sênior em Engenharia de Computação, cobrindo arquitetura de microprocessadores (ARM/RISC-V), projeto de circuitos integrados VLSI/CMOS, síntese lógica em VHDL/Verilog, Linux Embarcado, RTOS e análise de circuitos eletrônicos.",
+  "entrypoint": "AGENT.md"
+}

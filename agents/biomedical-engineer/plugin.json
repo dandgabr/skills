@@ -1,0 +1,6 @@
+{
+  "name": "biomedical-engineer",
+  "version": "1.0.0",
+  "description": "Agente especialista sênior em Engenharia Biomédica, cobrindo processamento de biossinais (ECG, EEG, EMG), instrumentação médica com amplificadores de isolamento (INA), física de imagens médicas (CT, MRI, Ultrassom) e interoperabilidade com DICOM e HL7/FHIR.",
+  "entrypoint": "AGENT.md"
+}

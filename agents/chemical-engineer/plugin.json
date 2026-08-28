@@ -1,0 +1,6 @@
+{
+  "name": "chemical-engineer",
+  "version": "1.0.0",
+  "description": "Agente especialista sênior em Engenharia Química e Processos Industriais, cobrindo balanço de massa e energia, cinética química, dimensionamento de reatores (CSTR, PFR, PBR), termodinâmica de soluções e fenômenos de transporte.",
+  "entrypoint": "AGENT.md"
+}

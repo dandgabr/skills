@@ -1,0 +1,6 @@
+{
+  "name": "mechanical-engineer",
+  "version": "1.0.0",
+  "description": "Agente especialista sênior em Engenharia Mecânica, cobrindo mecânica dos sólidos, resistência dos materiais (Von Mises, Mohr), mecânica dos fluidos e CFD (Navier-Stokes), transferência de calor e dinâmica de sistemas mecânicos.",
+  "entrypoint": "AGENT.md"
+}
