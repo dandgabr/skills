@@ -1,6 +1,6 @@
 # Repositório de Habilidades (Skills) e Customizações
 
-Este repositório serve como uma central modular e extensível para carregamento de **Habilidades (Skills)**, **Agentes Especializados (ADK 2.0)** e regras de engenharia de software para assistentes de programação de inteligência artificial em CLI e IDEs.
+Este repositório serve como uma central modular e extensível para carregamento de **Habilidades (Skills)**, **Agentes Especializados Universais (Multi-Harness Architecture)** e regras de engenharia de software para assistentes de programação de inteligência artificial em CLI e IDEs (Claude Code, OpenCode, OpenAI Codex, Google Antigravity, Cursor, Windsurf, Z.ai e frameworks multi-agente).
 
 ---
 
@@ -9,8 +9,8 @@ Este repositório serve como uma central modular e extensível para carregamento
 > 📚 **[Acesse o Catálogo Completo de Habilidades e Agentes (CATALOGO.md)](CATALOGO.md)**  
 > Consulte a lista detalhada das **174 Skills** e **27 Agentes**, com métricas por categoria, subcategorias e descrições técnicas completas.
 
-- 🤖 **[Guia de Agentes Especializados](agents/README.md)**: Personas, manifestos e instruções de execução.
-- 📜 **[Regras Globais do Projeto (AGENTS.md)](AGENTS.md)**: Diretrizes de comportamento, Clean Code e convenções de estilo.
+- 🤖 **[Guia de Agentes Especializados Universais](agents/README.md)**: Personas, manifestos (`AGENT.md`, `agent.yaml`, `agent.json`) e instruções de execução para qualquer harness.
+- 📜 **[Regras Globais do Projeto (AGENTS.md)](AGENTS.md)**: Diretrizes de comportamento, Clean Code, padrões de skills e criação de agentes.
 - ⚙️ **[Manifesto de Skills (skills.json)](skills.json)**: Configuração e importação modular de habilidades.
 
 ---
@@ -20,7 +20,7 @@ Este repositório serve como uma central modular e extensível para carregamento
 ```text
 ├── CATALOGO.md             # Catálogo mestre com inventário de todas as skills e agentes
 ├── README.md               # Visão geral e documentação do repositório
-├── AGENTS.md               # Regras gerais de comportamento e clean code
+├── AGENTS.md               # Regras gerais de comportamento, clean code e workflows
 ├── skills.json             # Manifesto de carregamento e herança de skills
 ├── skills/
 │   ├── cloud-infra/        # AWS, Azure, GCP, OCI, Linux Kernel, HPC, Zero Trust (7 skills)
@@ -34,7 +34,7 @@ Este repositório serve como uma central modular e extensível para carregamento
 │   ├── programs/           # Containers, GitHub Actions, Markmap, Moodle, WinDbg, etc. (16 skills)
 │   ├── roles/              # Architect, Backend, Frontend, DevOps, DBA, QA, PO, UX, Mapping (15 skills)
 │   └── security/           # AppSec, AI Security, Cloud IAM, Crypto PKI, GRC, SecOps (49 skills)
-└── agents/                 # 27 Agentes Especializados com manifestos agent.yaml e plugin.json
+└── agents/                 # 27 Agentes Multi-Harness (AGENT.md, agent.yaml, agent.json)
 ```
 
 ---

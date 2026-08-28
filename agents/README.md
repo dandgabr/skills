@@ -1,51 +1,118 @@
 # 🤖 Agentes Especializados Universais (Multi-Harness Architecture)
 
-Este diretório contém as definições de **Agentes Especializados** projetados em formato universal e agnóstico de plataforma.
-
-Os agentes podem ser executados nativamente em qualquer ferramenta de IA moderna, incluindo:
-- **Claude Code / Claude CLI**
-- **Google Antigravity (ADK 2.0)**
-- **OpenCode / Goose / Aider**
-- **OpenAI Codex / GPT-4o CLI**
-- **Cursor / Windsurf / Copilot Workspace**
-- **Z.ai / LangChain / AutoGen / CrewAI**
+Este repositório adota a **Arquitetura Multi-Harness**, garantindo que todos os **27 Agentes Especializados** sejam utilizáveis de forma nativa e interoperável em qualquer ambiente de desenvolvimento assistido por IA, sem dependência de plataformas proprietárias.
 
 ---
 
-## 📁 Estrutura Canônica de cada Agente
+## 🌐 Suporte Oficial a Múltiplos Harnesses
 
-Cada pasta de agente em `agents/<nome>/` possui três representações sincronizadas:
+Os agentes deste ecossistema são compaginados para interoperar nativamente com:
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│                                ECOSSISTEMA DE HARNESSES SUPORTADOS                      │
+├───────────────────────────────┬─────────────────────────────────┬───────────────────────┤
+│ 🖥️ CLI Coding Assistants      │ 💻 IDEs & Editores              │ 🐍 Frameworks de IA   │
+├───────────────────────────────┼─────────────────────────────────┼───────────────────────┤
+│ • Claude Code (Anthropic)     │ • Cursor IDE (.cursorrules)     │ • LangChain           │
+│ • OpenCode                    │ • Windsurf / Codeium            │ • AutoGen (Microsoft) │
+│ • OpenAI Codex / GPT-4o CLI   │ • VS Code (GitHub Copilot)      │ • CrewAI              │
+│ • Google Antigravity (ADK 2.0)│ • JetBrains AI Assistant        │ • Z.ai Orchestrator   │
+│ • Aider / Goose CLI           │ • Zed Editor                    │ • LangGraph           │
+└───────────────────────────────┴─────────────────────────────────┴───────────────────────┘
+```
+
+---
+
+## 📁 Anatomia da Especificação de cada Agente
+
+Cada agente sob `agents/<nome>/` possui três representações sincronizadas para máxima compatibilidade:
 
 ```text
-agents/<nome>/
-├── AGENT.md        # 📄 Especificação canônica em Markdown + YAML Frontmatter (Claude, OpenCode, Cursor, Aider)
-├── agent.yaml      # ⚙️ Especificação declarativa YAML (Google Antigravity / ADK 2.0, YAML runners)
-├── agent.json      # 📦 Manifesto JSON estruturado (APIs REST, Z.ai, LangChain, AutoGen, CrewAI)
-└── plugin.json     # 🔌 Metadados de plugin e ponto de entrada
+agents/<nome-do-agente>/
+├── AGENT.md        # 📄 Canônico Markdown + YAML Frontmatter (Claude Code, OpenCode, Codex, Cursor)
+├── agent.yaml      # ⚙️ Declaração estruturada YAML com model: inherit (Antigravity / ADK 2.0)
+├── agent.json      # 📦 Manifesto JSON estruturado (APIs REST, LangChain, AutoGen, CrewAI, Z.ai)
+└── plugin.json     # 🔌 Metadados de plugin com entrypoint padronizado
 ```
 
 ---
 
-## 🚀 Como Executar os Agentes em Qualquer Harness
+## 🚀 Guia de Utilização por Harness
 
-### 1. Claude Code / OpenCode / Codex / Aider
-Passe o arquivo `AGENT.md` diretamente como prompt de sistema:
+### 1. 🟣 Claude Code / Claude CLI
+Carregue o agente passando o `AGENT.md` diretamente como o prompt de sistema ou referenciando no prompt:
 ```bash
-# OpenCode / Claude Code / Codex
-opencode run --system-prompt agents/<nome-do-agente>/AGENT.md
+# Execução direta com prompt de sistema do agente
+claude --system-prompt agents/software-architect/AGENT.md
+
+# Ou mencione diretamente durante a sessão interativa:
+# "Adote as diretrizes e instruções de @agents/devops-engineer/AGENT.md para criar o pipeline."
 ```
 
-### 2. Google Antigravity / ADK 2.0
-O agente é detectado e carregado nativamente via `agents/<nome-do-agente>/agent.yaml`.
+### 2. 🟢 OpenCode / Goose / Aider
+Passe a instrução do agente via flag de contexto ou registre no `.opencode/config.json`:
+```bash
+# OpenCode CLI
+opencode run --system-prompt agents/pentester-agent/AGENT.md
 
-### 3. Frameworks Multi-Agentes (LangChain, AutoGen, CrewAI, Z.ai)
-Importe a definição via `agents/<nome-do-agente>/agent.json` ou carregue as skills listadas no frontmatter.
+# Aider CLI
+aider --read agents/fullstack-developer/AGENT.md
+```
+
+### 3. 🔵 OpenAI Codex / GPT-4o / REST APIs
+Utilize o `agent.json` ou extraia as instruções do `AGENT.md` via script/API:
+```python
+import json
+from openai import OpenAI
+
+client = OpenAI()
+with open("agents/software-architect/agent.json") as f:
+    agent_spec = json.load(f)
+
+response = client.chat.completions.create(
+    model="gpt-4o",
+    messages=[
+        {"role": "system", "content": agent_spec["instruction"]},
+        {"role": "user", "content": "Projete a arquitetura do novo microsserviço de pagamentos."}
+    ]
+)
+```
+
+### 4. 🟡 Google Antigravity / ADK 2.0
+O agente é detectado automaticamente pelo sistema de customização ao ler a pasta `agents/`:
+- Configurado via `agent.yaml` com `model: inherit` para respeitar a preferência do usuário ou subagente.
+
+### 5. 🟠 Cursor / Windsurf / Copilot Workspace
+Adicione o conteúdo do `AGENT.md` às instruções da workspace (`.cursorrules` ou regras customizadas de contexto):
+```text
+# No .cursorrules ou workspace prompt:
+Consulte e siga as diretrizes do agente em agents/software-architect/AGENT.md.
+```
+
+### 6. 🔴 Frameworks Multi-Agentes (LangChain, AutoGen, CrewAI, Z.ai)
+Instancie o agente dinamicamente lendo o `agent.json`:
+```python
+from crewai import Agent
+import json
+
+with open("agents/qa-testing-specialist/agent.json") as f:
+    spec = json.load(f)
+
+qa_agent = Agent(
+    role=spec["name"],
+    goal=spec["description"],
+    backstory=spec["instruction"],
+    verbose=True
+)
+```
 
 ---
 
-## 📋 Tabela de Agentes Disponíveis
+## 📋 Catálogo Completo dos 27 Agentes Disponíveis
 
-| # | Agente | Especificação Markdown | YAML (ADK 2.0) | JSON (APIs) | Descrição e Especialidade |
+
+| # | Agente | Markdown (Universal) | YAML (ADK 2.0) | JSON (APIs) | Descrição e Especialidade |
 | :-: | :--- | :--- | :--- | :--- | :--- |
 | 1 | **ai-security-specialist** | [`AGENT.md`](ai-security-specialist/AGENT.md) | [`agent.yaml`](ai-security-specialist/agent.yaml) | [`agent.json`](ai-security-specialist/agent.json) | Agente Especialista em Segurança de Inteligência Artificial, LLMs, Visão Computacional e Voz, cobrindo Red Teaming de IA, Prompt Injection, envenenamento de dados e conformidade OWASP Top 10 for LLM. |
 | 2 | **antigravity-agent** | [`AGENT.md`](antigravity-agent/AGENT.md) | [`agent.yaml`](antigravity-agent/agent.yaml) | [`agent.json`](antigravity-agent/agent.json) | Agente Principal de Pair Programming Autônomo e Engenharia do ecossistema Google Antigravity. Especializado em desenvolvimento fim a fim, refatoração, resolução de problemas, execução de comandos e extensibilidade via customizações (Skills, Rules, Plugins, Hooks e MCP). |
@@ -74,5 +141,3 @@ Importe a definição via `agents/<nome-do-agente>/agent.json` ou carregue as sk
 | 25 | **skill-creator** | [`AGENT.md`](skill-creator/AGENT.md) | [`agent.yaml`](skill-creator/agent.yaml) | [`agent.json`](skill-creator/agent.json) | Agente especialista sênior em Arquitetura, Criação, Aprimoramento e Catalogação de Skills para assistentes de IA. Domina a conversão de livros/documentos PDF em Markdown estruturado, elaboração de SKILL.md de padrão de produção, interconexão de habilidades e governança do repositório. |
 | 26 | **software-architect** | [`AGENT.md`](software-architect/AGENT.md) | [`agent.yaml`](software-architect/agent.yaml) | [`agent.json`](software-architect/agent.json) | Agente de Arquitetura de Software que aplica DDD, SOLID e orquestração de Design Patterns para guiar o design de projetos. |
 | 27 | **telecom-voice-specialist** | [`AGENT.md`](telecom-voice-specialist/AGENT.md) | [`agent.yaml`](telecom-voice-specialist/agent.yaml) | [`agent.json`](telecom-voice-specialist/agent.json) | Agente Especialista em Engenharia de Voz, Telefonia e Comunicações em Tempo Real (VoIP, SIP, SBC, PSTN, WebRTC, Codecs G.711/G.729/Opus, Kamailio/FreeSWITCH, QoS e STIR/SHAKEN). |
-
----

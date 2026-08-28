@@ -33,5 +33,14 @@ Este arquivo define as diretrizes gerais de comportamento, padrões de projeto e
 Quando for solicitada a criação ou aprimoramento de uma skill baseada em referências em PDF:
 1. **Extração / Conversão de PDF para Markdown**: Execute o script embutido `python scripts/pdf_to_markdown.py <caminho_do_pdf>` para converter o livro ou documento em um arquivo `.md` estruturado (ou utilize a opção `--toc-only` para extrair primeiro a tabela de conteúdos/capítulos).
 2. **Análise de Conteúdo**: Inspecione o arquivo Markdown gerado para extrair definições técnicas, formulários, frameworks e exemplos de código relevantes.
-3. **Elaboração da Skill**: Construa ou aprimore a skill em `skills/<categoria>/<subcategoria>/<nome-skill>/SKILL.md` e registre a nova skill na tabela de catálogo em `README.md`.
+3. **Elaboração da Skill**: Construa ou aprimore a skill em `skills/<categoria>/[<subcategoria>/]<nome-skill>/SKILL.md` e registre a nova skill no catálogo em [CATALOGO.md](CATALOGO.md).
+
+## 🤖 Padrão Multi-Harness para Criação de Agentes
+
+Ao criar ou atualizar agentes especializados neste repositório, garanta a compatibilidade universal mantendo a estrutura tríplice sincronizada em `agents/<nome-do-agente>/`:
+1. **`AGENT.md`**: Especificação canônica em Markdown com YAML frontmatter (`name`, `description`, `model: inherit`, `skills`), instruções completas e lista de skills clicáveis (suporte nativo para Claude Code, OpenCode, Codex, Cursor, Aider, Z.ai).
+2. **`agent.yaml`**: Declaração estruturada YAML com `model: inherit` e ferramentas apontando para caminhos relativos em `../../skills/...` (compatível com Google Antigravity / ADK 2.0 e runners YAML).
+3. **`agent.json` / `plugin.json`**: Manifesto em JSON para consumo por APIs REST, OpenAI Assistants e frameworks como LangChain, AutoGen e CrewAI.
+4. **Registro Central**: Registre o novo agente nas tabelas de catálogo de [agents/README.md](agents/README.md) e [CATALOGO.md](CATALOGO.md).
+
 
