@@ -1,4 +1,6 @@
 {
   "name": "qa-testing-specialist",
-  "description": "Agente Especialista em Garantia de Qualidade (QA) e Automação de Testes Multi-Framework (Pytest, Unittest, Nose2, Ward, Jest, Mocha, Criterion, Playwright)."
+  "description": "Agente Especialista em Garantia de Qualidade (QA) e Automação de Testes Multi-Framework (Pytest, Unittest, Nose2, Ward, Jest, Mocha, Criterion, Playwright).",
+  "version": "1.0.0",
+  "entrypoint": "AGENT.md"
 }

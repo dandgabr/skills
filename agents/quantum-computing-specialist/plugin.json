@@ -1,5 +1,6 @@
 {
   "name": "quantum-computing-specialist",
-  "description": "Especialista em Computa\u00e7\u00e3o Qu\u00e2ntica e Algoritmos Qu\u00e2nticos",
-  "version": "1.0.0"
+  "description": "Especialista em Computação Quântica, Desenvolvimento de Circuitos Quânticos (Qiskit, Cirq), Algoritmos Quânticos (Shor, Grover, VQE) e Criptografia Pós-Quântica (PQC).",
+  "version": "1.0.0",
+  "entrypoint": "AGENT.md"
 }

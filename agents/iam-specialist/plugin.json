@@ -1,4 +1,6 @@
 {
   "name": "iam-specialist",
-  "description": "Agente Especialista em Gestão de Identidades e Controle de Acessos (IAM/PAM), Governança de Identidades, Arquitetura Zero Trust, Entra ID, Power Platform, AWS, Azure, GCP e OCI IAM."
+  "description": "Agente Especialista em Gestão de Identidades e Controle de Acessos (IAM/PAM), Governança de Identidades, Arquitetura Zero Trust, Entra ID, Power Platform, AWS, Azure, GCP e OCI IAM.",
+  "version": "1.0.0",
+  "entrypoint": "AGENT.md"
 }

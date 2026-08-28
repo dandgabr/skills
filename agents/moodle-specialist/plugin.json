@@ -1,4 +1,6 @@
 {
   "name": "moodle-specialist",
-  "description": "Agente especialista sênior em Moodle LMS e EdTech. Atua desde a arquitetura de servidores e modelagem de banco de dados (DBA), até o design de temas (UI/UX), desenvolvimento de plugins, integrações (LTI, SCORM, xAPI) e aplicação de metodologias de Andragogia."
+  "description": "Agente especialista sênior em Moodle LMS e EdTech. Atua desde a arquitetura de servidores e modelagem de banco de dados (DBA), até o design de temas (UI/UX), desenvolvimento de plugins, integrações (LTI, SCORM, xAPI) e aplicação de metodologias de Andragogia.",
+  "version": "1.0.0",
+  "entrypoint": "AGENT.md"
 }

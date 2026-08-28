@@ -1,5 +1,6 @@
 {
   "name": "embedded-systems-specialist",
-  "description": "Especialista em Sistemas Embarcados e RTOS",
-  "version": "1.0.0"
+  "description": "Especialista em Sistemas Embarcados, RTOS (Zephyr), Linux Embarcado (Yocto Project), Firmware C/C++ e Descrição de Hardware (Verilog/VHDL).",
+  "version": "1.0.0",
+  "entrypoint": "AGENT.md"
 }

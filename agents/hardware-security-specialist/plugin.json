@@ -1,5 +1,6 @@
 {
   "name": "hardware-security-specialist",
-  "description": "Especialista em Seguran\u00e7a e Auditoria de Hardware/IoT",
-  "version": "1.0.0"
+  "description": "Especialista em Auditoria Física de Hardware, Segurança de Dispositivos IoT, Extração de Firmware, Glitching e Side-Channel Attacks.",
+  "version": "1.0.0",
+  "entrypoint": "AGENT.md"
 }

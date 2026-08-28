@@ -1,5 +1,6 @@
 {
   "name": "data-engineer-specialist",
-  "description": "Especialista em Engenharia de Dados, Data Mesh e Streaming em Tempo Real",
-  "version": "1.0.0"
+  "description": "Especialista em Engenharia de Dados, Data Mesh, Streaming em Tempo Real (Kafka, Pinot, Flink), Governança Federada e Pipelines de Anonimização de Dados.",
+  "version": "1.0.0",
+  "entrypoint": "AGENT.md"
 }

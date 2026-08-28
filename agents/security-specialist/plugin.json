@@ -1,4 +1,6 @@
 {
   "name": "security-specialist",
-  "description": "Agente Especialista em Segurança da Informação, cobrindo práticas de AppSec (SAST), DevSecOps (SCA com Snyk CLI e Snyk MCP), conformidade regulatória de privacidade (LGPD/GDPR) e modelagem de ameaças."
+  "description": "Agente Especialista em Segurança da Informação, cobrindo práticas de AppSec (SAST), DevSecOps (SCA com Snyk CLI e Snyk MCP), conformidade regulatória de privacidade (LGPD/GDPR) e modelagem de ameaças.",
+  "version": "1.0.0",
+  "entrypoint": "AGENT.md"
 }

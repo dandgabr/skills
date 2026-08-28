@@ -1,4 +1,6 @@
 {
   "name": "code-mapping-specialist",
-  "description": "Agente Especialista em Mapeamento de Código, Aplicações, Fluxos de Execução, Infraestrutura, Kubernetes, Nuvem e Grafos de Dependência Ponta a Ponta."
+  "description": "Agente Especialista em Mapeamento de Código, Aplicações, Fluxos de Execução, Infraestrutura, Kubernetes, Nuvem e Grafos de Dependência Ponta a Ponta.",
+  "version": "1.0.0",
+  "entrypoint": "AGENT.md"
 }

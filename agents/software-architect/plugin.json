@@ -1,4 +1,6 @@
 {
   "name": "software-architect",
-  "description": "Agente de Arquitetura de Software que aplica DDD, SOLID e orquestração de Design Patterns para guiar o design de projetos."
+  "description": "Agente de Arquitetura de Software que aplica DDD, SOLID e orquestração de Design Patterns para guiar o design de projetos.",
+  "version": "1.0.0",
+  "entrypoint": "AGENT.md"
 }

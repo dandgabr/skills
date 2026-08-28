@@ -1,0 +1,6 @@
+{
+  "name": "general",
+  "description": "Agente Generalista Multi-Etapas, especializado em orquestração, decomposição de problemas complexos em subtarefas, coordenação de fluxos e integração dinâmica de múltiplas habilidades do repositório.",
+  "version": "1.0.0",
+  "entrypoint": "AGENT.md"
+}

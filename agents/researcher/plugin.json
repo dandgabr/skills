@@ -1,0 +1,6 @@
+{
+  "name": "researcher",
+  "description": "Subagente Especialista em Pesquisa, Varredura de Codebase, Análise de Documentação e Busca Externa com ferramentas de leitura estrita. Ideal para investigações abrangentes sem sobrecarregar a janela de contexto principal.",
+  "version": "1.0.0",
+  "entrypoint": "AGENT.md"
+}

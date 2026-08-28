@@ -1,192 +1,78 @@
-# Repositório de Definição de Agentes (ADK 2.0)
+# 🤖 Agentes Especializados Universais (Multi-Harness Architecture)
 
-Este diretório contém as definições declarativas dos agentes do projeto utilizando a estrutura compatível com a especificação de **Agent Config do Agent Development Kit (ADK 2.0)** da Google.
+Este diretório contém as definições de **Agentes Especializados** projetados em formato universal e agnóstico de plataforma.
 
-## 📁 Estrutura de Agentes
+Os agentes podem ser executados nativamente em qualquer ferramenta de IA moderna, incluindo:
+- **Claude Code / Claude CLI**
+- **Google Antigravity (ADK 2.0)**
+- **OpenCode / Goose / Aider**
+- **OpenAI Codex / GPT-4o CLI**
+- **Cursor / Windsurf / Copilot Workspace**
+- **Z.ai / LangChain / AutoGen / CrewAI**
+
+---
+
+## 📁 Estrutura Canônica de cada Agente
+
+Cada pasta de agente em `agents/<nome>/` possui três representações sincronizadas:
 
 ```text
-.\
-├── README.md                           # Este guia explicativo
-├── documenter\
-│   └── agent.yaml                      # Agente Documentador e Designer (Mermaid)
-├── software-architect\
-│   └── agent.yaml                      # Agente Arquiteto de Software
-├── fullstack-developer\
-│   └── agent.yaml                      # Agente Desenvolvedor Full Stack
-├── moodle-specialist\
-│   └── agent.yaml                      # Agente Especialista em Moodle LMS e EdTech
-├── devops-engineer\
-│   └── agent.yaml                      # Agente Engenheiro de DevOps e DevSecOps
-├── dba-specialist\
-│   └── agent.yaml                      # Agente Administrador de Banco de Dados (DBA)
-├── telecom-voice-specialist\
-│   └── agent.yaml                      # Agente Engenheiro de Voz e Telefonia (VoIP/SBC/PSTN)
-├── cloud-infrastructure-architect\
-│   └── agent.yaml                      # Agente Arquiteto de Infraestrutura Multi-Cloud & FinOps
-├── qa-testing-specialist\
-│   └── agent.yaml                      # Agente Especialista em QA e Automação de Testes
-├── ai-security-specialist\
-│   └── agent.yaml                      # Agente Especialista em Segurança de IA (LLM/CV/Voice)
-├── security-specialist\
-│   └── agent.yaml                      # Agente Especialista em Segurança e DevSecOps
-├── pentester-agent\
-│   └── agent.yaml                      # Agente de Pentest Ético e Red Teaming
-├── iam-specialist\
-│   └── agent.yaml                      # Agente Especialista em IAM, Entra ID, Power Platform e Cloud Access
-├── project-reviewer\
-│   └── agent.yaml                      # Agente Revisor de Projetos Especialista
-├── reverse-engineer-agent\
-│   └── agent.yaml                      # Agente de Engenharia Reversa e Baixo Nível
-├── skill-creator\
-│   └── agent.yaml                      # Agente Especialista em Criação e Governança de Skills
-├── antigravity-agent\
-│   └── agent.yaml                      # Agente Principal Antigravity (Pair Programmer & Autônomo)
-├── researcher\
-│   └── agent.yaml                      # Subagente Especialista em Pesquisa e Varredura de Codebase
-├── self\
-│   └── agent.yaml                      # Subagente de Clonagem e Isolamento de Contexto (Self Subagent)
-├── explore\
-│   └── agent.yaml                      # Subagente Especialista em Exploração Rápida de Codebases
-├── code-mapping-specialist\
-│   └── agent.yaml                      # Agente Especialista em Mapeamento de Código e Sistemas
-└── general\
-    └── agent.yaml                      # Agente Generalista Multi-Etapas e Orquestrador
+agents/<nome>/
+├── AGENT.md        # 📄 Especificação canônica em Markdown + YAML Frontmatter (Claude, OpenCode, Cursor, Aider)
+├── agent.yaml      # ⚙️ Especificação declarativa YAML (Google Antigravity / ADK 2.0, YAML runners)
+├── agent.json      # 📦 Manifesto JSON estruturado (APIs REST, Z.ai, LangChain, AutoGen, CrewAI)
+└── plugin.json     # 🔌 Metadados de plugin e ponto de entrada
 ```
 
-## 🤖 Agentes Disponíveis
+---
 
-### 1. [documenter](documenter/agent.yaml)
-- **Modelo Base**: `google/gemini-2.5-pro`
-- **Função**: Especializado em desenhar diagramas estruturais, de dados, estratégicos e técnicos utilizando toda a sintaxe do Mermaid.js.
-- **Skill Associada**: [documentation-designer](../skills/engineering-practices/documentation-designer/SKILL.md)
+## 🚀 Como Executar os Agentes em Qualquer Harness
 
-### 2. [software-architect](software-architect/agent.yaml)
-- **Modelo Base**: `google/gemini-2.5-pro`
-- **Função**: Especializado na aplicação de DDD, SOLID, gerenciamento de JVM/plataforma interna e orquestração de Padrões de Projeto (Design Patterns).
-- **Skill Associada**: [software-architect](../skills/roles/software-architect/SKILL.md)
-
-### 3. [fullstack-developer](fullstack-developer/agent.yaml)
-- **Modelo Base**: `google/gemini-2.5-pro`
-- **Função**: Projetar e implementar soluções web fim a fim (Backend, Frontend e Banco de Dados), garantindo legibilidade, integridade de código e segurança.
-- **Skills Associadas**: [backend-developer](../skills/roles/backend-developer/SKILL.md), [frontend-developer](../skills/roles/frontend-developer/SKILL.md), [dba-database-administrator](../skills/roles/dba-database-administrator/SKILL.md), [appsec-owasp-asvs](../skills/security/appsec/appsec-owasp-asvs/SKILL.md) e [clean-code-reusability](../skills/engineering-practices/clean-code-reusability/SKILL.md)
-
-### 4. [devops-engineer](devops-engineer/agent.yaml)
-- **Modelo Base**: `google/gemini-2.5-pro`
-- **Função**: Provisionamento de infraestrutura como código (IaC), plataformas internas (Backstage), orquestração de containers (Docker, Podman, CRI-O, K8s), governança GitHub e pipelines CI/CD (GitHub Actions) com segurança integrada (DevSecOps).
-- **Skills Associadas**: [devops-engineer](../skills/roles/devops-engineer/SKILL.md), [program-github](../skills/programs/github/SKILL.md), [github-actions](../skills/programs/github-actions/SKILL.md), [containers](../skills/programs/containers/SKILL.md), [devsecops-engineer](../skills/security/ops-architecture/devsecops-engineer/SKILL.md) e [cis-controls](../skills/security/grc-compliance/cis-controls/SKILL.md)
-
-### 5. [dba-specialist](dba-specialist/agent.yaml)
-- **Modelo Base**: `google/gemini-2.5-pro`
-- **Função**: Administração de bancos de dados SQL e NoSQL, modelagem de esquemas, tunagem de planos de execução (EXPLAIN), replicação, backups (PITR) e segurança.
-- **Skills Associadas**: [dba-database-administrator](../skills/roles/dba-database-administrator/SKILL.md), [db-postgresql](../skills/databases/db-postgresql/SKILL.md), [db-mariadb](../skills/databases/db-mariadb/SKILL.md), [db-sqlite](../skills/databases/db-sqlite/SKILL.md) e [db-mongodb](../skills/databases/db-mongodb/SKILL.md)
-
-### 6. [telecom-voice-specialist](telecom-voice-specialist/agent.yaml)
-- **Modelo Base**: `google/gemini-2.5-pro`
-- **Função**: Engenharia de voz, telefonia IP (VoIP), interconexão PSTN, Session Border Controllers (SBC), WebRTC, QoS (DSCP EF), STIR/SHAKEN e combate a fraudes.
-- **Skills Associadas**: [telecom-voice-engineering](../skills/domains/telecom-voice-engineering/SKILL.md), [ai-voice-stt-tts-security](../skills/security/ai-security/ai-voice-stt-tts-security/SKILL.md) e [auth-protocols-mfa](../skills/security/ops-architecture/auth-protocols-mfa/SKILL.md)
-
-### 7. [cloud-infrastructure-architect](cloud-infrastructure-architect/agent.yaml)
-- **Modelo Base**: `google/gemini-2.5-pro`
-- **Função**: Arquitetura e operação Multi-Cloud (AWS, Azure, GCP, OCI), Well-Architected Framework, governança de custos (FinOps) e auditorias de segurança em nuvem.
-- **Skills Associadas**: [cloud-aws](../skills/cloud-infra/cloud-aws/SKILL.md), [cloud-azure](../skills/cloud-infra/cloud-azure/SKILL.md), [cloud-gcp](../skills/cloud-infra/cloud-gcp/SKILL.md), [cloud-oci](../skills/cloud-infra/cloud-oci/SKILL.md), [csa-cloud-security](../skills/security/cloud-iam/csa-cloud-security/SKILL.md) e [iam-access-management](../skills/security/cloud-iam/iam-access-management/SKILL.md)
-
-### 8. [qa-testing-specialist](qa-testing-specialist/agent.yaml)
-- **Modelo Base**: `google/gemini-2.5-pro`
-- **Função**: Automação de testes de software multi-framework (Pytest, Unittest, Jest, Mocha, Criterion), estratégias de cobertura e relatórios de defeitos.
-- **Skills Associadas**: [qa-engineer](../skills/roles/qa-engineer/SKILL.md), [framework-testing](../skills/framework/framework-testing/SKILL.md), [framework-pytest](../skills/framework/framework-pytest/SKILL.md), [framework-unittest](../skills/framework/framework-unittest/SKILL.md), [framework-jest](../skills/framework/framework-jest/SKILL.md), [framework-mocha](../skills/framework/framework-mocha/SKILL.md) e [framework-criterion](../skills/framework/framework-criterion/SKILL.md)
-
-### 9. [ai-security-specialist](ai-security-specialist/agent.yaml)
-- **Modelo Base**: `google/gemini-2.5-pro`
-- **Função**: Segurança e Red Teaming de Inteligência Artificial Generativa (LLM/SLM), Visão Computacional e Voz, mitigando Prompt Injection e envenenamento de dados.
-- **Skills Associadas**: [ai-llm-slm-security](../skills/security/ai-security/ai-llm-slm-security/SKILL.md), [ai-computer-vision-security](../skills/security/ai-security/ai-computer-vision-security/SKILL.md), [ai-voice-stt-tts-security](../skills/security/ai-security/ai-voice-stt-tts-security/SKILL.md) e [pentest-ai-generative-llm](../skills/security/appsec/pentest-ai-generative-llm/SKILL.md)
-
-### 10. [security-specialist](security-specialist/agent.yaml)
-- **Modelo Base**: `google/gemini-2.5-pro`
-- **Função**: Modelagem de ameaças, controles de código seguro baseados em OWASP ASVS, auditorias, DevSecOps e conformidade regulatória de privacidade.
-- **Skills Associadas**: [appsec-owasp-asvs](../skills/security/appsec/appsec-owasp-asvs/SKILL.md), [devsecops-engineer](../skills/security/ops-architecture/devsecops-engineer/SKILL.md), [security-grc-compliance](../skills/security/grc-compliance/security-grc-compliance/SKILL.md), [security-privacy](../skills/security/grc-compliance/security-privacy/SKILL.md) e [threat-modeler](../skills/security/ops-architecture/threat-modeler/SKILL.md)
-
-### 11. [iam-specialist](iam-specialist/agent.yaml)
-- **Modelo Base**: `google/gemini-2.5-pro`
-- **Função**: Projetar, auditar e gerenciar arquiteturas de controle de acesso (RBAC/ABAC/PBAC), governança de identidades (PIM/PAM), federação SSO (SAML/OIDC), provisionamento SCIM e politicas de acesso em nuvem e plataformas corporativas (Power Platform, Dataverse, Entra ID, AWS, Azure, GCP, OCI).
-- **Skills Associadas**: [iam-access-management](../skills/security/cloud-iam/iam-access-management/SKILL.md), [iam-access-power-platform](../skills/security/cloud-iam/iam-access-power-platform/SKILL.md), [iam-access-azure](../skills/security/cloud-iam/iam-access-azure/SKILL.md), [iam-access-aws](../skills/security/cloud-iam/iam-access-aws/SKILL.md), [iam-access-gcp](../skills/security/cloud-iam/iam-access-gcp/SKILL.md), [iam-access-oci](../skills/security/cloud-iam/iam-access-oci/SKILL.md) e [csa-cloud-security](../skills/security/cloud-iam/csa-cloud-security/SKILL.md)
-
-### 12. [pentester-agent](pentester-agent/agent.yaml)
-- **Modelo Base**: `google/gemini-2.5-pro`
-- **Função**: Executar análises ofensivas estruturadas baseadas em OWASP WSTG, API Security, Cloud e Red Team Scripting usando utilitários CLI (nmap, curl, zap-cli, tshark).
-- **Skills Associadas**: [pentester-owasp-wstg](../skills/security/appsec/pentester-owasp-wstg/SKILL.md), [pentester-owasp-api-security-2023](../skills/security/appsec/pentester-owasp-api-security-2023/SKILL.md), [pentest-cloud-aws-azure-gcp](../skills/security/appsec/pentest-cloud-aws-azure-gcp/SKILL.md), [pentest-web-application-modern](../skills/security/appsec/pentest-web-application-modern/SKILL.md) e [pentest-scripter-python-bash-go](../skills/security/appsec/pentest-scripter-python-bash-go/SKILL.md)
-
-### 13. [project-reviewer](project-reviewer/agent.yaml)
-- **Modelo Base**: `google/gemini-2.5-pro`
-- **Função**: Revisar, padronizar e distribuir requisitos de negócio entre Banco de Dados, Backend e Frontend, garantindo a aplicação de boas práticas de arquitetura e segurança.
-- **Skills Associadas**: [project-reviewer](../skills/roles/project-reviewer/SKILL.md), [clean-code-reusability](../skills/engineering-practices/clean-code-reusability/SKILL.md), [appsec-owasp-asvs](../skills/security/appsec/appsec-owasp-asvs/SKILL.md) e [security-privacy](../skills/security/grc-compliance/security-privacy/SKILL.md)
-
-### 14. [reverse-engineer-agent](reverse-engineer-agent/agent.yaml)
-- **Modelo Base**: `google/gemini-2.5-pro`
-- **Função**: Depuração, análise dinâmica de binários, manipulação direta de RAM (Cheat Engine) e validação de segurança de código de baixo nível.
-- **Skills Associadas**: [program-cheat-engine](../skills/programs/program-cheat-engine/SKILL.md), [program-windbg](../skills/programs/program-windbg/SKILL.md), [memory-manipulation](../skills/security/appsec/memory-manipulation/SKILL.md), [sast-code-review](../skills/security/appsec/sast-code-review/SKILL.md) e [appsec-owasp-asvs](../skills/security/appsec/appsec-owasp-asvs/SKILL.md)
-
-### 15. [moodle-specialist](moodle-specialist/agent.yaml)
-- **Modelo Base**: `google/gemini-2.5-pro`
-- **Função**: Especialista em ciclo completo de desenvolvimento, infraestrutura física, banco de dados (DBA), temas de design/UX e metodologias de Andragogia e EdTech para o Moodle LMS.
-- **Skills Associadas**: [program-moodle](../skills/programs/moodle/SKILL.md), [program-moodle-dba](../skills/programs/moodle-dba/SKILL.md), [program-moodle-design](../skills/programs/moodle-design/SKILL.md), [program-moodle-infra](../skills/programs/moodle-infra/SKILL.md), [program-moodle-plugins](../skills/programs/moodle-plugins/SKILL.md) e [edtech-andragogy](../skills/domains/edtech-andragogy/SKILL.md)
-
-### 16. [skill-creator](skill-creator/agent.yaml)
-- **Modelo Base**: `google/gemini-2.5-pro`
-- **Função**: Especialista em arquitetura, criação, aprimoramento e catalogação de Skills do projeto, dominando a conversão de livros/documentos PDF em Markdown estruturado, elaboração de SKILL.md de padrão de produção, interconexão de habilidades e governança do repositório.
-- **Skills Associadas**: [clean-code-reusability](../skills/engineering-practices/clean-code-reusability/SKILL.md) e [documentation-designer](../skills/engineering-practices/documentation-designer/SKILL.md)
-
-### 17. [antigravity-agent](antigravity-agent/agent.yaml)
-- **Modelo Base**: `google/gemini-2.5-pro`
-- **Função**: Agente Principal de Pair Programming Autônomo e Engenharia do ecossistema Google Antigravity. Especializado em desenvolvimento fim a fim, refatoração, resolução de problemas, execução de comandos e extensibilidade via customizações (Skills, Rules, Plugins, Hooks e MCP).
-- **Skills Associadas**: [antigravity-guide](../skills/programs/antigravity-guide/SKILL.md), [agy-customizations](../skills/programs/agy-customizations/SKILL.md), [program-github](../skills/programs/github/SKILL.md) e [clean-code-reusability](../skills/engineering-practices/clean-code-reusability/SKILL.md)
-
-### 18. [researcher](researcher/agent.yaml)
-- **Modelo Base**: `google/gemini-2.5-pro`
-- **Função**: Subagente Especialista em Pesquisa, Varredura de Codebase, Análise de Documentação e Busca Externa com ferramentas de leitura estrita, preservando a janela de contexto principal do desenvolvedor/agente coordenador.
-- **Skills Associadas**: [antigravity-guide](../skills/programs/antigravity-guide/SKILL.md), [explore](../skills/roles/explore/SKILL.md) e [clean-code-reusability](../skills/engineering-practices/clean-code-reusability/SKILL.md)
-
-### 19. [self](self/agent.yaml)
-- **Modelo Base**: `google/gemini-2.5-pro`
-- **Função**: Subagente de Clonagem e Continuidade de Contexto (Self Subagent). Herda integralmente as configurações, ferramentas e modelo do agente principal para isolar subtarefas complexas e permitir execução paralela sem poluir a sessão primária.
-- **Skills Associadas**: [antigravity-guide](../skills/programs/antigravity-guide/SKILL.md), [agy-customizations](../skills/programs/agy-customizations/SKILL.md), [general](../skills/roles/general/SKILL.md) e [clean-code-reusability](../skills/engineering-practices/clean-code-reusability/SKILL.md)
-
-### 20. [explore](explore/agent.yaml)
-- **Modelo Base**: `google/gemini-2.5-pro`
-- **Função**: Subagente Especialista em Exploração Rápida de Codebases, busca de padrões, mapeamento de arquitetura de diretórios, identificação de contratos e diagnóstico de débitos técnicos.
-- **Skills Associadas**: [explore](../skills/roles/explore/SKILL.md), [software-architect](../skills/roles/software-architect/SKILL.md) e [clean-code-reusability](../skills/engineering-practices/clean-code-reusability/SKILL.md)
-
-### 21. [general](general/agent.yaml)
-- **Modelo Base**: `google/gemini-2.5-pro`
-- **Função**: Agente Generalista Multi-Etapas, especializado em planejamento e orquestração de tarefas complexas, decomposição em etapas atômicas e coordenação dinâmica de múltiplas habilidades.
-- **Skills Associadas**: [general](../skills/roles/general/SKILL.md), [software-architect](../skills/roles/software-architect/SKILL.md), [agy-customizations](../skills/programs/agy-customizations/SKILL.md) e [clean-code-reusability](../skills/engineering-practices/clean-code-reusability/SKILL.md)
-
-### 22. [code-mapping-specialist](code-mapping-specialist/agent.yaml)
-- **Modelo Base**: `google/gemini-2.5-pro`
-- **Função**: Especialista em Mapeamento de Código, Aplicações, Fluxos de Execução, Infraestrutura, Kubernetes, Nuvem e Grafos de Dependência Ponta a Ponta, correlacionando AST, Call Graphs, Service Meshes, eBPF, Tracing Distribuído e Grafos de Conhecimento (Neo4j).
-- **Skills Associadas**: [code-mapping-specialist](../skills/roles/code-mapping-specialist/SKILL.md), [app-dependency-discovery](../skills/mapping/app-dependency-discovery/SKILL.md), [network-flow-discovery](../skills/mapping/network-flow-discovery/SKILL.md), [k8s-container-mapping](../skills/mapping/k8s-container-mapping/SKILL.md), [infra-inventory-cmdb](../skills/mapping/infra-inventory-cmdb/SKILL.md), [cloud-topology-mapping](../skills/mapping/cloud-topology-mapping/SKILL.md), [observability-correlation](../skills/mapping/observability-correlation/SKILL.md), [code-architecture-mapping](../skills/mapping/code-architecture-mapping/SKILL.md), [uml-diagram-generation](../skills/mapping/uml-diagram-generation/SKILL.md), [execution-flow-callgraph](../skills/mapping/execution-flow-callgraph/SKILL.md), [api-service-mesh-mapping](../skills/mapping/api-service-mesh-mapping/SKILL.md), [db-schema-reverse-mapping](../skills/mapping/db-schema-reverse-mapping/SKILL.md), [binary-app-reverse-mapping](../skills/mapping/binary-app-reverse-mapping/SKILL.md), [graph-relationship-mapping](../skills/mapping/graph-relationship-mapping/SKILL.md), [clean-code-reusability](../skills/engineering-practices/clean-code-reusability/SKILL.md) e [documentation-designer](../skills/engineering-practices/documentation-designer/SKILL.md)
-
-## 🚀 Como Invocá-los via ADK 2.0
-
-Para instanciar e rodar esses agentes em seus scripts ou fluxos colaborativos baseados em grafo do ADK 2.0, você pode carregá-los declarativamente usando o runtime do ADK:
-
-```python
-import asyncio
-from google.adk.agents import config_agent_utils
-from google.adk.runners import Runner
-
-async def main():
-    # Carregar os agentes declarativamente do YAML usando utilitário do ADK 2.0
-    architect_agent = config_agent_utils.from_config("software-architect/agent.yaml")
-    dba_agent = config_agent_utils.from_config("dba-specialist/agent.yaml")
-
-    # Executar o agente de banco de dados em runtime usando o Runner do ADK 2.0
-    runner = Runner()
-    response = await runner.run(
-        agent=dba_agent,
-        prompt="Analise o plano de execução EXPLAIN ANALYZE da consulta e proponha um índice GIN ou B-Tree"
-    )
-    print(response.output)
-
-if __name__ == "__main__":
-    asyncio.run(main())
+### 1. Claude Code / OpenCode / Codex / Aider
+Passe o arquivo `AGENT.md` diretamente como prompt de sistema:
+```bash
+# OpenCode / Claude Code / Codex
+opencode run --system-prompt agents/<nome-do-agente>/AGENT.md
 ```
+
+### 2. Google Antigravity / ADK 2.0
+O agente é detectado e carregado nativamente via `agents/<nome-do-agente>/agent.yaml`.
+
+### 3. Frameworks Multi-Agentes (LangChain, AutoGen, CrewAI, Z.ai)
+Importe a definição via `agents/<nome-do-agente>/agent.json` ou carregue as skills listadas no frontmatter.
+
+---
+
+## 📋 Tabela de Agentes Disponíveis
+
+| # | Agente | Especificação Markdown | YAML (ADK 2.0) | JSON (APIs) | Descrição e Especialidade |
+| :-: | :--- | :--- | :--- | :--- | :--- |
+| 1 | **ai-security-specialist** | [`AGENT.md`](ai-security-specialist/AGENT.md) | [`agent.yaml`](ai-security-specialist/agent.yaml) | [`agent.json`](ai-security-specialist/agent.json) | Agente Especialista em Segurança de Inteligência Artificial, LLMs, Visão Computacional e Voz, cobrindo Red Teaming de IA, Prompt Injection, envenenamento de dados e conformidade OWASP Top 10 for LLM. |
+| 2 | **antigravity-agent** | [`AGENT.md`](antigravity-agent/AGENT.md) | [`agent.yaml`](antigravity-agent/agent.yaml) | [`agent.json`](antigravity-agent/agent.json) | Agente Principal de Pair Programming Autônomo e Engenharia do ecossistema Google Antigravity. Especializado em desenvolvimento fim a fim, refatoração, resolução de problemas, execução de comandos e extensibilidade via customizações (Skills, Rules, Plugins, Hooks e MCP). |
+| 3 | **cloud-infrastructure-architect** | [`AGENT.md`](cloud-infrastructure-architect/AGENT.md) | [`agent.yaml`](cloud-infrastructure-architect/agent.yaml) | [`agent.json`](cloud-infrastructure-architect/agent.json) | Agente Especialista em Arquitetura e Engenharia Multi-Cloud (AWS, Azure, GCP, OCI), Well-Architected Framework, FinOps e automação IaC segura. |
+| 4 | **code-mapping-specialist** | [`AGENT.md`](code-mapping-specialist/AGENT.md) | [`agent.yaml`](code-mapping-specialist/agent.yaml) | [`agent.json`](code-mapping-specialist/agent.json) | Agente Especialista em Mapeamento de Código, Aplicações, Fluxos de Execução, Infraestrutura, Kubernetes, Nuvem e Grafos de Dependência Ponta a Ponta. |
+| 5 | **data-engineer-specialist** | [`AGENT.md`](data-engineer-specialist/AGENT.md) | [`agent.yaml`](data-engineer-specialist/agent.yaml) | [`agent.json`](data-engineer-specialist/agent.json) | Especialista em Engenharia de Dados, Data Mesh, Streaming em Tempo Real (Kafka, Pinot, Flink), Governança Federada e Pipelines de Anonimização de Dados. |
+| 6 | **dba-specialist** | [`AGENT.md`](dba-specialist/AGENT.md) | [`agent.yaml`](dba-specialist/agent.yaml) | [`agent.json`](dba-specialist/agent.json) | Agente Especialista em Administração de Bancos de Dados (DBA) para SQL e NoSQL, cobrindo modelagem, tunagem de performance (EXPLAIN), alta disponibilidade, replicação e segurança em PostgreSQL, MariaDB, SQLite e MongoDB. |
+| 7 | **devops-engineer** | [`AGENT.md`](devops-engineer/AGENT.md) | [`agent.yaml`](devops-engineer/agent.yaml) | [`agent.json`](devops-engineer/agent.json) | Agente de DevOps, Platform Engineering e DevSecOps focado em automação de infraestrutura como código (Terraform, Ansible, Vagrant, Backstage), orquestração de containers (Docker, Podman, CRI-O, Kubernetes), governança do GitHub e pipelines de CI/CD (GitHub Actions) com segurança integrada. |
+| 8 | **documenter** | [`AGENT.md`](documenter/AGENT.md) | [`agent.yaml`](documenter/agent.yaml) | [`agent.json`](documenter/agent.json) | Agente especializado em documentação de software e desenhos visuais usando diagramas Mermaid.js. |
+| 9 | **embedded-systems-specialist** | [`AGENT.md`](embedded-systems-specialist/AGENT.md) | [`agent.yaml`](embedded-systems-specialist/agent.yaml) | [`agent.json`](embedded-systems-specialist/agent.json) | Especialista em Sistemas Embarcados, RTOS (Zephyr), Linux Embarcado (Yocto Project), Firmware C/C++ e Descrição de Hardware (Verilog/VHDL). |
+| 10 | **explore** | [`AGENT.md`](explore/AGENT.md) | [`agent.yaml`](explore/agent.yaml) | [`agent.json`](explore/agent.json) | Subagente Especialista em Exploração Rápida de Codebases, busca de padrões, análise de arquitetura, mapeamento de dependências e entendimento de estruturas de projetos existentes. |
+| 11 | **fullstack-developer** | [`AGENT.md`](fullstack-developer/AGENT.md) | [`agent.yaml`](fullstack-developer/agent.yaml) | [`agent.json`](fullstack-developer/agent.json) | Agente de Desenvolvimento Full Stack especialista em criar aplicações web fim a fim, integrando lógica de backend (REST, gRPC), frontend (React, Vue), bancos de dados (DBA) e garantindo código limpo e seguro. |
+| 12 | **general** | [`AGENT.md`](general/AGENT.md) | [`agent.yaml`](general/agent.yaml) | [`agent.json`](general/agent.json) | Agente Generalista Multi-Etapas, especializado em orquestração, decomposição de problemas complexos em subtarefas, coordenação de fluxos e integração dinâmica de múltiplas habilidades do repositório. |
+| 13 | **hardware-security-specialist** | [`AGENT.md`](hardware-security-specialist/AGENT.md) | [`agent.yaml`](hardware-security-specialist/agent.yaml) | [`agent.json`](hardware-security-specialist/agent.json) | Especialista em Auditoria Física de Hardware, Segurança de Dispositivos IoT, Extração de Firmware, Glitching e Side-Channel Attacks. |
+| 14 | **iam-specialist** | [`AGENT.md`](iam-specialist/AGENT.md) | [`agent.yaml`](iam-specialist/agent.yaml) | [`agent.json`](iam-specialist/agent.json) | Agente Especialista em Gestão de Identidades e Controle de Acessos (IAM/PAM), Governança de Identidades, Arquitetura Zero Trust, Entra ID, Power Platform, AWS, Azure, GCP e OCI IAM. |
+| 15 | **malware-analyst** | [`AGENT.md`](malware-analyst/AGENT.md) | [`agent.yaml`](malware-analyst/agent.yaml) | [`agent.json`](malware-analyst/agent.json) | Especialista em Análise de Malware, Engenharia Reversa de Binários, Evasão de EDR e Análise Forense de Código Executável em Windows, Linux, Android e macOS. |
+| 16 | **moodle-specialist** | [`AGENT.md`](moodle-specialist/AGENT.md) | [`agent.yaml`](moodle-specialist/agent.yaml) | [`agent.json`](moodle-specialist/agent.json) | Agente especialista sênior em Moodle LMS e EdTech. Atua desde a arquitetura de servidores e modelagem de banco de dados (DBA), até o design de temas (UI/UX), desenvolvimento de plugins, integrações (LTI, SCORM, xAPI) e aplicação de metodologias de Andragogia. |
+| 17 | **pentester-agent** | [`AGENT.md`](pentester-agent/AGENT.md) | [`agent.yaml`](pentester-agent/agent.yaml) | [`agent.json`](pentester-agent/agent.json) | Agente Pentester Ético especializado em auditorias ofensivas (OWASP WSTG, API Security, Cloud e Red Team Scripting) usando utilitários CLI e scripts customizados. |
+| 18 | **project-reviewer** | [`AGENT.md`](project-reviewer/AGENT.md) | [`agent.yaml`](project-reviewer/agent.yaml) | [`agent.json`](project-reviewer/agent.json) | Agente de Revisão de Projetos especializado na auditoria de regras de negócio, distribuição técnica (Banco, Backend, Frontend) e boas práticas de arquitetura e segurança. |
+| 19 | **qa-testing-specialist** | [`AGENT.md`](qa-testing-specialist/AGENT.md) | [`agent.yaml`](qa-testing-specialist/agent.yaml) | [`agent.json`](qa-testing-specialist/agent.json) | Agente Especialista em Garantia de Qualidade (QA) e Automação de Testes Multi-Framework (Pytest, Unittest, Nose2, Ward, Jest, Mocha, Criterion, Playwright). |
+| 20 | **quantum-computing-specialist** | [`AGENT.md`](quantum-computing-specialist/AGENT.md) | [`agent.yaml`](quantum-computing-specialist/agent.yaml) | [`agent.json`](quantum-computing-specialist/agent.json) | Especialista em Computação Quântica, Desenvolvimento de Circuitos Quânticos (Qiskit, Cirq), Algoritmos Quânticos (Shor, Grover, VQE) e Criptografia Pós-Quântica (PQC). |
+| 21 | **researcher** | [`AGENT.md`](researcher/AGENT.md) | [`agent.yaml`](researcher/agent.yaml) | [`agent.json`](researcher/agent.json) | Subagente Especialista em Pesquisa, Varredura de Codebase, Análise de Documentação e Busca Externa com ferramentas de leitura estrita. Ideal para investigações abrangentes sem sobrecarregar a janela de contexto principal. |
+| 22 | **reverse-engineer-agent** | [`AGENT.md`](reverse-engineer-agent/AGENT.md) | [`agent.yaml`](reverse-engineer-agent/agent.yaml) | [`agent.json`](reverse-engineer-agent/agent.json) | Agente de Engenharia Reversa e Análise de Baixo Nível, especializado na depuração de processos, análise de binários, manipulação de memória (Cheat Engine) e segurança de código contra exploração. |
+| 23 | **security-specialist** | [`AGENT.md`](security-specialist/AGENT.md) | [`agent.yaml`](security-specialist/agent.yaml) | [`agent.json`](security-specialist/agent.json) | Agente Especialista em Segurança da Informação, cobrindo práticas de AppSec (SAST), DevSecOps (SCA com Snyk CLI e Snyk MCP), conformidade regulatória de privacidade (LGPD/GDPR) e modelagem de ameaças. |
+| 24 | **self** | [`AGENT.md`](self/AGENT.md) | [`agent.yaml`](self/agent.yaml) | [`agent.json`](self/agent.json) | Subagente de Clonagem e Execução Paralela / Isolamento de Contexto (Self Subagent). Herda integralmente a configuração, ferramentas (leitura, escrita, execução de comandos e orquestração) e modelo do agente principal para executar subtarefas complexas em conversas independentes. |
+| 25 | **skill-creator** | [`AGENT.md`](skill-creator/AGENT.md) | [`agent.yaml`](skill-creator/agent.yaml) | [`agent.json`](skill-creator/agent.json) | Agente especialista sênior em Arquitetura, Criação, Aprimoramento e Catalogação de Skills para assistentes de IA. Domina a conversão de livros/documentos PDF em Markdown estruturado, elaboração de SKILL.md de padrão de produção, interconexão de habilidades e governança do repositório. |
+| 26 | **software-architect** | [`AGENT.md`](software-architect/AGENT.md) | [`agent.yaml`](software-architect/agent.yaml) | [`agent.json`](software-architect/agent.json) | Agente de Arquitetura de Software que aplica DDD, SOLID e orquestração de Design Patterns para guiar o design de projetos. |
+| 27 | **telecom-voice-specialist** | [`AGENT.md`](telecom-voice-specialist/AGENT.md) | [`agent.yaml`](telecom-voice-specialist/agent.yaml) | [`agent.json`](telecom-voice-specialist/agent.json) | Agente Especialista em Engenharia de Voz, Telefonia e Comunicações em Tempo Real (VoIP, SIP, SBC, PSTN, WebRTC, Codecs G.711/G.729/Opus, Kamailio/FreeSWITCH, QoS e STIR/SHAKEN). |
+
+---
