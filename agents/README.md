@@ -47,6 +47,8 @@ Este diretório contém as definições declarativas dos agentes do projeto util
 │   └── agent.yaml                      # Subagente de Clonagem e Isolamento de Contexto (Self Subagent)
 ├── explore\
 │   └── agent.yaml                      # Subagente Especialista em Exploração Rápida de Codebases
+├── code-mapping-specialist\
+│   └── agent.yaml                      # Agente Especialista em Mapeamento de Código e Sistemas
 └── general\
     └── agent.yaml                      # Agente Generalista Multi-Etapas e Orquestrador
 ```
@@ -56,42 +58,42 @@ Este diretório contém as definições declarativas dos agentes do projeto util
 ### 1. [documenter](documenter/agent.yaml)
 - **Modelo Base**: `google/gemini-2.5-pro`
 - **Função**: Especializado em desenhar diagramas estruturais, de dados, estratégicos e técnicos utilizando toda a sintaxe do Mermaid.js.
-- **Skill Associada**: [documentation-designer](../skills/general/engineering-practices/documentation-designer/SKILL.md)
+- **Skill Associada**: [documentation-designer](../skills/engineering-practices/documentation-designer/SKILL.md)
 
 ### 2. [software-architect](software-architect/agent.yaml)
 - **Modelo Base**: `google/gemini-2.5-pro`
 - **Função**: Especializado na aplicação de DDD, SOLID, gerenciamento de JVM/plataforma interna e orquestração de Padrões de Projeto (Design Patterns).
-- **Skill Associada**: [software-architect](../skills/general/roles/software-architect/SKILL.md)
+- **Skill Associada**: [software-architect](../skills/roles/software-architect/SKILL.md)
 
 ### 3. [fullstack-developer](fullstack-developer/agent.yaml)
 - **Modelo Base**: `google/gemini-2.5-pro`
 - **Função**: Projetar e implementar soluções web fim a fim (Backend, Frontend e Banco de Dados), garantindo legibilidade, integridade de código e segurança.
-- **Skills Associadas**: [backend-developer](../skills/general/roles/backend-developer/SKILL.md), [frontend-developer](../skills/general/roles/frontend-developer/SKILL.md), [dba-database-administrator](../skills/general/roles/dba-database-administrator/SKILL.md), [appsec-owasp-asvs](../skills/security/appsec/appsec-owasp-asvs/SKILL.md) e [clean-code-reusability](../skills/general/engineering-practices/clean-code-reusability/SKILL.md)
+- **Skills Associadas**: [backend-developer](../skills/roles/backend-developer/SKILL.md), [frontend-developer](../skills/roles/frontend-developer/SKILL.md), [dba-database-administrator](../skills/roles/dba-database-administrator/SKILL.md), [appsec-owasp-asvs](../skills/security/appsec/appsec-owasp-asvs/SKILL.md) e [clean-code-reusability](../skills/engineering-practices/clean-code-reusability/SKILL.md)
 
 ### 4. [devops-engineer](devops-engineer/agent.yaml)
 - **Modelo Base**: `google/gemini-2.5-pro`
 - **Função**: Provisionamento de infraestrutura como código (IaC), plataformas internas (Backstage), orquestração de containers (Docker, Podman, CRI-O, K8s), governança GitHub e pipelines CI/CD (GitHub Actions) com segurança integrada (DevSecOps).
-- **Skills Associadas**: [devops-engineer](../skills/general/roles/devops-engineer/SKILL.md), [program-github](../skills/programs/github/SKILL.md), [github-actions](../skills/programs/github-actions/SKILL.md), [containers](../skills/programs/containers/SKILL.md), [devsecops-engineer](../skills/security/ops-architecture/devsecops-engineer/SKILL.md) e [cis-controls](../skills/security/grc-compliance/cis-controls/SKILL.md)
+- **Skills Associadas**: [devops-engineer](../skills/roles/devops-engineer/SKILL.md), [program-github](../skills/programs/github/SKILL.md), [github-actions](../skills/programs/github-actions/SKILL.md), [containers](../skills/programs/containers/SKILL.md), [devsecops-engineer](../skills/security/ops-architecture/devsecops-engineer/SKILL.md) e [cis-controls](../skills/security/grc-compliance/cis-controls/SKILL.md)
 
 ### 5. [dba-specialist](dba-specialist/agent.yaml)
 - **Modelo Base**: `google/gemini-2.5-pro`
 - **Função**: Administração de bancos de dados SQL e NoSQL, modelagem de esquemas, tunagem de planos de execução (EXPLAIN), replicação, backups (PITR) e segurança.
-- **Skills Associadas**: [dba-database-administrator](../skills/general/roles/dba-database-administrator/SKILL.md), [db-postgresql](../skills/general/databases/db-postgresql/SKILL.md), [db-mariadb](../skills/general/databases/db-mariadb/SKILL.md), [db-sqlite](../skills/general/databases/db-sqlite/SKILL.md) e [db-mongodb](../skills/general/databases/db-mongodb/SKILL.md)
+- **Skills Associadas**: [dba-database-administrator](../skills/roles/dba-database-administrator/SKILL.md), [db-postgresql](../skills/databases/db-postgresql/SKILL.md), [db-mariadb](../skills/databases/db-mariadb/SKILL.md), [db-sqlite](../skills/databases/db-sqlite/SKILL.md) e [db-mongodb](../skills/databases/db-mongodb/SKILL.md)
 
 ### 6. [telecom-voice-specialist](telecom-voice-specialist/agent.yaml)
 - **Modelo Base**: `google/gemini-2.5-pro`
 - **Função**: Engenharia de voz, telefonia IP (VoIP), interconexão PSTN, Session Border Controllers (SBC), WebRTC, QoS (DSCP EF), STIR/SHAKEN e combate a fraudes.
-- **Skills Associadas**: [telecom-voice-engineering](../skills/general/domains/telecom-voice-engineering/SKILL.md), [ai-voice-stt-tts-security](../skills/security/ai-security/ai-voice-stt-tts-security/SKILL.md) e [auth-protocols-mfa](../skills/security/ops-architecture/auth-protocols-mfa/SKILL.md)
+- **Skills Associadas**: [telecom-voice-engineering](../skills/domains/telecom-voice-engineering/SKILL.md), [ai-voice-stt-tts-security](../skills/security/ai-security/ai-voice-stt-tts-security/SKILL.md) e [auth-protocols-mfa](../skills/security/ops-architecture/auth-protocols-mfa/SKILL.md)
 
 ### 7. [cloud-infrastructure-architect](cloud-infrastructure-architect/agent.yaml)
 - **Modelo Base**: `google/gemini-2.5-pro`
 - **Função**: Arquitetura e operação Multi-Cloud (AWS, Azure, GCP, OCI), Well-Architected Framework, governança de custos (FinOps) e auditorias de segurança em nuvem.
-- **Skills Associadas**: [cloud-aws](../skills/general/cloud-infra/cloud-aws/SKILL.md), [cloud-azure](../skills/general/cloud-infra/cloud-azure/SKILL.md), [cloud-gcp](../skills/general/cloud-infra/cloud-gcp/SKILL.md), [cloud-oci](../skills/general/cloud-infra/cloud-oci/SKILL.md), [csa-cloud-security](../skills/security/cloud-iam/csa-cloud-security/SKILL.md) e [iam-access-management](../skills/security/cloud-iam/iam-access-management/SKILL.md)
+- **Skills Associadas**: [cloud-aws](../skills/cloud-infra/cloud-aws/SKILL.md), [cloud-azure](../skills/cloud-infra/cloud-azure/SKILL.md), [cloud-gcp](../skills/cloud-infra/cloud-gcp/SKILL.md), [cloud-oci](../skills/cloud-infra/cloud-oci/SKILL.md), [csa-cloud-security](../skills/security/cloud-iam/csa-cloud-security/SKILL.md) e [iam-access-management](../skills/security/cloud-iam/iam-access-management/SKILL.md)
 
 ### 8. [qa-testing-specialist](qa-testing-specialist/agent.yaml)
 - **Modelo Base**: `google/gemini-2.5-pro`
 - **Função**: Automação de testes de software multi-framework (Pytest, Unittest, Jest, Mocha, Criterion), estratégias de cobertura e relatórios de defeitos.
-- **Skills Associadas**: [qa-engineer](../skills/general/roles/qa-engineer/SKILL.md), [framework-testing](../skills/framework/framework-testing/SKILL.md), [framework-pytest](../skills/framework/framework-pytest/SKILL.md), [framework-unittest](../skills/framework/framework-unittest/SKILL.md), [framework-jest](../skills/framework/framework-jest/SKILL.md), [framework-mocha](../skills/framework/framework-mocha/SKILL.md) e [framework-criterion](../skills/framework/framework-criterion/SKILL.md)
+- **Skills Associadas**: [qa-engineer](../skills/roles/qa-engineer/SKILL.md), [framework-testing](../skills/framework/framework-testing/SKILL.md), [framework-pytest](../skills/framework/framework-pytest/SKILL.md), [framework-unittest](../skills/framework/framework-unittest/SKILL.md), [framework-jest](../skills/framework/framework-jest/SKILL.md), [framework-mocha](../skills/framework/framework-mocha/SKILL.md) e [framework-criterion](../skills/framework/framework-criterion/SKILL.md)
 
 ### 9. [ai-security-specialist](ai-security-specialist/agent.yaml)
 - **Modelo Base**: `google/gemini-2.5-pro`
@@ -116,7 +118,7 @@ Este diretório contém as definições declarativas dos agentes do projeto util
 ### 13. [project-reviewer](project-reviewer/agent.yaml)
 - **Modelo Base**: `google/gemini-2.5-pro`
 - **Função**: Revisar, padronizar e distribuir requisitos de negócio entre Banco de Dados, Backend e Frontend, garantindo a aplicação de boas práticas de arquitetura e segurança.
-- **Skills Associadas**: [project-reviewer](../skills/general/roles/project-reviewer/SKILL.md), [clean-code-reusability](../skills/general/engineering-practices/clean-code-reusability/SKILL.md), [appsec-owasp-asvs](../skills/security/appsec/appsec-owasp-asvs/SKILL.md) e [security-privacy](../skills/security/grc-compliance/security-privacy/SKILL.md)
+- **Skills Associadas**: [project-reviewer](../skills/roles/project-reviewer/SKILL.md), [clean-code-reusability](../skills/engineering-practices/clean-code-reusability/SKILL.md), [appsec-owasp-asvs](../skills/security/appsec/appsec-owasp-asvs/SKILL.md) e [security-privacy](../skills/security/grc-compliance/security-privacy/SKILL.md)
 
 ### 14. [reverse-engineer-agent](reverse-engineer-agent/agent.yaml)
 - **Modelo Base**: `google/gemini-2.5-pro`
@@ -126,37 +128,42 @@ Este diretório contém as definições declarativas dos agentes do projeto util
 ### 15. [moodle-specialist](moodle-specialist/agent.yaml)
 - **Modelo Base**: `google/gemini-2.5-pro`
 - **Função**: Especialista em ciclo completo de desenvolvimento, infraestrutura física, banco de dados (DBA), temas de design/UX e metodologias de Andragogia e EdTech para o Moodle LMS.
-- **Skills Associadas**: [program-moodle](../skills/programs/moodle/SKILL.md), [program-moodle-dba](../skills/programs/moodle-dba/SKILL.md), [program-moodle-design](../skills/programs/moodle-design/SKILL.md), [program-moodle-infra](../skills/programs/moodle-infra/SKILL.md), [program-moodle-plugins](../skills/programs/moodle-plugins/SKILL.md) e [edtech-andragogy](../skills/general/domains/edtech-andragogy/SKILL.md)
+- **Skills Associadas**: [program-moodle](../skills/programs/moodle/SKILL.md), [program-moodle-dba](../skills/programs/moodle-dba/SKILL.md), [program-moodle-design](../skills/programs/moodle-design/SKILL.md), [program-moodle-infra](../skills/programs/moodle-infra/SKILL.md), [program-moodle-plugins](../skills/programs/moodle-plugins/SKILL.md) e [edtech-andragogy](../skills/domains/edtech-andragogy/SKILL.md)
 
 ### 16. [skill-creator](skill-creator/agent.yaml)
 - **Modelo Base**: `google/gemini-2.5-pro`
 - **Função**: Especialista em arquitetura, criação, aprimoramento e catalogação de Skills do projeto, dominando a conversão de livros/documentos PDF em Markdown estruturado, elaboração de SKILL.md de padrão de produção, interconexão de habilidades e governança do repositório.
-- **Skills Associadas**: [clean-code-reusability](../skills/general/engineering-practices/clean-code-reusability/SKILL.md) e [documentation-designer](../skills/general/engineering-practices/documentation-designer/SKILL.md)
+- **Skills Associadas**: [clean-code-reusability](../skills/engineering-practices/clean-code-reusability/SKILL.md) e [documentation-designer](../skills/engineering-practices/documentation-designer/SKILL.md)
 
 ### 17. [antigravity-agent](antigravity-agent/agent.yaml)
 - **Modelo Base**: `google/gemini-2.5-pro`
 - **Função**: Agente Principal de Pair Programming Autônomo e Engenharia do ecossistema Google Antigravity. Especializado em desenvolvimento fim a fim, refatoração, resolução de problemas, execução de comandos e extensibilidade via customizações (Skills, Rules, Plugins, Hooks e MCP).
-- **Skills Associadas**: [antigravity-guide](../skills/programs/antigravity-guide/SKILL.md), [agy-customizations](../skills/programs/agy-customizations/SKILL.md), [program-github](../skills/programs/github/SKILL.md) e [clean-code-reusability](../skills/general/engineering-practices/clean-code-reusability/SKILL.md)
+- **Skills Associadas**: [antigravity-guide](../skills/programs/antigravity-guide/SKILL.md), [agy-customizations](../skills/programs/agy-customizations/SKILL.md), [program-github](../skills/programs/github/SKILL.md) e [clean-code-reusability](../skills/engineering-practices/clean-code-reusability/SKILL.md)
 
 ### 18. [researcher](researcher/agent.yaml)
 - **Modelo Base**: `google/gemini-2.5-pro`
 - **Função**: Subagente Especialista em Pesquisa, Varredura de Codebase, Análise de Documentação e Busca Externa com ferramentas de leitura estrita, preservando a janela de contexto principal do desenvolvedor/agente coordenador.
-- **Skills Associadas**: [antigravity-guide](../skills/programs/antigravity-guide/SKILL.md), [explore](../skills/general/roles/explore/SKILL.md) e [clean-code-reusability](../skills/general/engineering-practices/clean-code-reusability/SKILL.md)
+- **Skills Associadas**: [antigravity-guide](../skills/programs/antigravity-guide/SKILL.md), [explore](../skills/roles/explore/SKILL.md) e [clean-code-reusability](../skills/engineering-practices/clean-code-reusability/SKILL.md)
 
 ### 19. [self](self/agent.yaml)
 - **Modelo Base**: `google/gemini-2.5-pro`
 - **Função**: Subagente de Clonagem e Continuidade de Contexto (Self Subagent). Herda integralmente as configurações, ferramentas e modelo do agente principal para isolar subtarefas complexas e permitir execução paralela sem poluir a sessão primária.
-- **Skills Associadas**: [antigravity-guide](../skills/programs/antigravity-guide/SKILL.md), [agy-customizations](../skills/programs/agy-customizations/SKILL.md), [general](../skills/general/roles/general/SKILL.md) e [clean-code-reusability](../skills/general/engineering-practices/clean-code-reusability/SKILL.md)
+- **Skills Associadas**: [antigravity-guide](../skills/programs/antigravity-guide/SKILL.md), [agy-customizations](../skills/programs/agy-customizations/SKILL.md), [general](../skills/roles/general/SKILL.md) e [clean-code-reusability](../skills/engineering-practices/clean-code-reusability/SKILL.md)
 
 ### 20. [explore](explore/agent.yaml)
 - **Modelo Base**: `google/gemini-2.5-pro`
 - **Função**: Subagente Especialista em Exploração Rápida de Codebases, busca de padrões, mapeamento de arquitetura de diretórios, identificação de contratos e diagnóstico de débitos técnicos.
-- **Skills Associadas**: [explore](../skills/general/roles/explore/SKILL.md), [software-architect](../skills/general/roles/software-architect/SKILL.md) e [clean-code-reusability](../skills/general/engineering-practices/clean-code-reusability/SKILL.md)
+- **Skills Associadas**: [explore](../skills/roles/explore/SKILL.md), [software-architect](../skills/roles/software-architect/SKILL.md) e [clean-code-reusability](../skills/engineering-practices/clean-code-reusability/SKILL.md)
 
 ### 21. [general](general/agent.yaml)
 - **Modelo Base**: `google/gemini-2.5-pro`
 - **Função**: Agente Generalista Multi-Etapas, especializado em planejamento e orquestração de tarefas complexas, decomposição em etapas atômicas e coordenação dinâmica de múltiplas habilidades.
-- **Skills Associadas**: [general](../skills/general/roles/general/SKILL.md), [software-architect](../skills/general/roles/software-architect/SKILL.md), [agy-customizations](../skills/programs/agy-customizations/SKILL.md) e [clean-code-reusability](../skills/general/engineering-practices/clean-code-reusability/SKILL.md)
+- **Skills Associadas**: [general](../skills/roles/general/SKILL.md), [software-architect](../skills/roles/software-architect/SKILL.md), [agy-customizations](../skills/programs/agy-customizations/SKILL.md) e [clean-code-reusability](../skills/engineering-practices/clean-code-reusability/SKILL.md)
+
+### 22. [code-mapping-specialist](code-mapping-specialist/agent.yaml)
+- **Modelo Base**: `google/gemini-2.5-pro`
+- **Função**: Especialista em Mapeamento de Código, Aplicações, Fluxos de Execução, Infraestrutura, Kubernetes, Nuvem e Grafos de Dependência Ponta a Ponta, correlacionando AST, Call Graphs, Service Meshes, eBPF, Tracing Distribuído e Grafos de Conhecimento (Neo4j).
+- **Skills Associadas**: [code-mapping-specialist](../skills/roles/code-mapping-specialist/SKILL.md), [app-dependency-discovery](../skills/mapping/app-dependency-discovery/SKILL.md), [network-flow-discovery](../skills/mapping/network-flow-discovery/SKILL.md), [k8s-container-mapping](../skills/mapping/k8s-container-mapping/SKILL.md), [infra-inventory-cmdb](../skills/mapping/infra-inventory-cmdb/SKILL.md), [cloud-topology-mapping](../skills/mapping/cloud-topology-mapping/SKILL.md), [observability-correlation](../skills/mapping/observability-correlation/SKILL.md), [code-architecture-mapping](../skills/mapping/code-architecture-mapping/SKILL.md), [uml-diagram-generation](../skills/mapping/uml-diagram-generation/SKILL.md), [execution-flow-callgraph](../skills/mapping/execution-flow-callgraph/SKILL.md), [api-service-mesh-mapping](../skills/mapping/api-service-mesh-mapping/SKILL.md), [db-schema-reverse-mapping](../skills/mapping/db-schema-reverse-mapping/SKILL.md), [binary-app-reverse-mapping](../skills/mapping/binary-app-reverse-mapping/SKILL.md), [graph-relationship-mapping](../skills/mapping/graph-relationship-mapping/SKILL.md), [clean-code-reusability](../skills/engineering-practices/clean-code-reusability/SKILL.md) e [documentation-designer](../skills/engineering-practices/documentation-designer/SKILL.md)
 
 ## 🚀 Como Invocá-los via ADK 2.0
 

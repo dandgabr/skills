@@ -164,6 +164,6 @@ impl ServerConfigBuilder {
 ## 🔗 Integração com Outras Skills
 
 - Para aplicação de análise estática e revisão de segurança em código Rust, consulte [sast-code-review](../../security/appsec/sast-code-review/SKILL.md) e [appsec-owasp-asvs](../../security/appsec/appsec-owasp-asvs/SKILL.md).
-- Para integrar acesso a banco de dados com tipos verificados em tempo de compilação em Rust (`sqlx`, `diesel`, `tokio-postgres`, `mongodb`), consulte [dba-database-administrator](../../general/roles/dba-database-administrator/SKILL.md), [db-postgresql](../../general/databases/db-postgresql/SKILL.md), [db-sqlite](../../general/databases/db-sqlite/SKILL.md), [db-mariadb](../../general/databases/db-mariadb/SKILL.md) e [db-mongodb](../../general/databases/db-mongodb/SKILL.md).
+- Para integrar acesso a banco de dados com tipos verificados em tempo de compilação em Rust (`sqlx`, `diesel`, `tokio-postgres`, `mongodb`), consulte [dba-database-administrator](../../roles/dba-database-administrator/SKILL.md), [db-postgresql](../../databases/db-postgresql/SKILL.md), [db-sqlite](../../databases/db-sqlite/SKILL.md), [db-mariadb](../../databases/db-mariadb/SKILL.md) e [db-mongodb](../../databases/db-mongodb/SKILL.md).
 - Para desenvolvimento de ferramentas ofensivas, agentes de segurança ou parsers de alta performance em Rust, consulte [pentest-scripter-python-bash-go](../../security/appsec/pentest-scripter-python-bash-go/SKILL.md).
-- Para modelar a arquitetura e comunicação entre componentes de software usando Rust, consulte [software-architect](../../general/roles/software-architect/SKILL.md).
+- Para modelar a arquitetura e comunicação entre componentes de software usando Rust, consulte [software-architect](../../roles/software-architect/SKILL.md).

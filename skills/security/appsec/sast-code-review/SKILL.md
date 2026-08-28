@@ -151,7 +151,7 @@ Quando acionado para realizar um Code Review de Segurança ou triar descobertas 
    - Calcule o risco com base no impacto na confidencialidade, integridade e disponibilidade (CIA Triad), bem como na facilidade de exploração.
 5. **Prescrição de Remediação Limpa e Defensiva**:
    - Forneça o snippet de código corrigido aplicando o princípio *Secure by Default*.
-   - Garanta que a solução respeite as diretrizes de código limpo da skill [clean-code-reusability](../../../general/engineering-practices/clean-code-reusability/SKILL.md).
+   - Garanta que a solução respeite as diretrizes de código limpo da skill [clean-code-reusability](../../../engineering-practices/clean-code-reusability/SKILL.md).
 
 ---
 
@@ -159,5 +159,5 @@ Quando acionado para realizar um Code Review de Segurança ou triar descobertas 
 
 - **[appsec-owasp-asvs](../appsec-owasp-asvs/SKILL.md)**: Mapeia os requisitos formais de verificação (níveis 1, 2 e 3) aplicados às vulnerabilidades descobertas via SAST.
 - **[devsecops-engineer](../../ops-architecture/devsecops-engineer/SKILL.md)**: Configura a execução automatizada de ferramentas SAST no pipeline de CI/CD e estabelece Quality Gates.
-- **[clean-code-reusability](../../../general/engineering-practices/clean-code-reusability/SKILL.md)**: Garante que as correções de segurança propostas mantenham a legibilidade, evitem redundâncias e reutilizem lógicas existentes.
+- **[clean-code-reusability](../../../engineering-practices/clean-code-reusability/SKILL.md)**: Garante que as correções de segurança propostas mantenham a legibilidade, evitem redundâncias e reutilizem lógicas existentes.
 - **[sca-dependency-analysis](../sca-dependency-analysis/SKILL.md)**: Complementa o SAST auditando vulnerabilidades em código de terceiros e bibliotecas importadas.

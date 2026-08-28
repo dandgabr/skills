@@ -11,11 +11,11 @@ instruction: >
   framework-grpc, appsec-owasp-asvs e clean-code-reusability.
 tools:
   - type: skill_integration
-    path: ../../skills/general/roles/backend-developer/SKILL.md
+    path: ../../skills/roles/backend-developer/SKILL.md
   - type: skill_integration
-    path: ../../skills/general/roles/frontend-developer/SKILL.md
+    path: ../../skills/roles/frontend-developer/SKILL.md
   - type: skill_integration
-    path: ../../skills/general/roles/dba-database-administrator/SKILL.md
+    path: ../../skills/roles/dba-database-administrator/SKILL.md
   - type: skill_integration
     path: ../../skills/framework/framework-react/SKILL.md
   - type: skill_integration
@@ -25,4 +25,4 @@ tools:
   - type: skill_integration
     path: ../../skills/security/appsec/appsec-owasp-asvs/SKILL.md
   - type: skill_integration
-    path: ../../skills/general/engineering-practices/clean-code-reusability/SKILL.md
+    path: ../../skills/engineering-practices/clean-code-reusability/SKILL.md

@@ -18,6 +18,6 @@ tools:
   - type: skill_integration
     path: ../../skills/programs/agy-customizations/SKILL.md
   - type: skill_integration
-    path: ../../skills/general/roles/general/SKILL.md
+    path: ../../skills/roles/general/SKILL.md
   - type: skill_integration
-    path: ../../skills/general/engineering-practices/clean-code-reusability/SKILL.md
+    path: ../../skills/engineering-practices/clean-code-reusability/SKILL.md

@@ -247,5 +247,5 @@ Para implantar soluções sem interrupções e sem depender de contas humanas:
 - Para compartimentos e políticas de IAM na Oracle Cloud Infrastructure, consulte a skill [iam-access-oci](../iam-access-oci/SKILL.md).
 - Para matriz de controles de segurança em nuvem (CCM v4), consulte a skill [csa-cloud-security](../csa-cloud-security/SKILL.md).
 - Para automação de fluxos com conectores e governança no Power Automate, consulte a skill [power-automate](../../../programs/power-automate/SKILL.md).
-- Para desenvolvimento e componentização frontend em Power Apps, consulte a skill [frontend-developer](../../../general/roles/frontend-developer/SKILL.md).
-- Para boas práticas de reutilização e código limpo, consulte a skill [clean-code-reusability](../../../general/engineering-practices/clean-code-reusability/SKILL.md).
+- Para desenvolvimento e componentização frontend em Power Apps, consulte a skill [frontend-developer](../../../roles/frontend-developer/SKILL.md).
+- Para boas práticas de reutilização e código limpo, consulte a skill [clean-code-reusability](../../../engineering-practices/clean-code-reusability/SKILL.md).

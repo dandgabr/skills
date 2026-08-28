@@ -226,5 +226,5 @@ Isso garante que:
 *   **Plugins & Ciclo de Vida**: [program-moodle-plugins](../moodle-plugins/SKILL.md) — Anatomia e empacotamento de extensões.
 *   **Infraestrutura & Performance**: [program-moodle-infra](../moodle-infra/SKILL.md) — Arquitetura de servidores, MUC e Redis.
 *   **Banco de Dados (DBA)**: [program-moodle-dba](../moodle-dba/SKILL.md) — Modelagem XMLDB e performance SQL.
-*   **Metodologias & Tecnologia**: [edtech-andragogy](../../general/domains/edtech-andragogy/SKILL.md) — Andragogia, ADDIE/SAM e padrões SCORM/LTI/xAPI.
+*   **Metodologias & Tecnologia**: [edtech-andragogy](../../domains/edtech-andragogy/SKILL.md) — Andragogia, ADDIE/SAM e padrões SCORM/LTI/xAPI.
 

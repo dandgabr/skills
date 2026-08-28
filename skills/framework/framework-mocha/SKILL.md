@@ -143,5 +143,5 @@ describe('Testes Assíncronos no Mocha', () => {
 ## 🔗 Integração com Outras Skills
 
 - [lang-typescript](../../languages/lang-typescript/SKILL.md): Guia o uso do `ts-node/register` com Mocha.
-- [backend-developer](../../general/roles/backend-developer/SKILL.md): Orienta a criação de suítes de testes de APIs REST em Node.js com Mocha e Supertest.
+- [backend-developer](../../roles/backend-developer/SKILL.md): Orienta a criação de suítes de testes de APIs REST em Node.js com Mocha e Supertest.
 - [framework-testing](../framework-testing/SKILL.md): Apresenta a teoria de testes BDD, TDD e isolamento.

@@ -10,10 +10,10 @@ instruction: >
   general, software-architect, agy-customizations e clean-code-reusability.
 tools:
   - type: skill_integration
-    path: ../../skills/general/roles/general/SKILL.md
+    path: ../../skills/roles/general/SKILL.md
   - type: skill_integration
-    path: ../../skills/general/roles/software-architect/SKILL.md
+    path: ../../skills/roles/software-architect/SKILL.md
   - type: skill_integration
     path: ../../skills/programs/agy-customizations/SKILL.md
   - type: skill_integration
-    path: ../../skills/general/engineering-practices/clean-code-reusability/SKILL.md
+    path: ../../skills/engineering-practices/clean-code-reusability/SKILL.md

@@ -91,6 +91,6 @@ X-RateLimit-Reset: 1770460000
 ## 🔗 Integração com Outras Skills
 
 - Para especificações completas do protocolo HTTP, cabeçalhos, negociação e regras de transportes (HTTP/1.1, HTTP/2, HTTP/3), consulte [protocol-http](../protocol-http/SKILL.md).
-- Para projetar a arquitetura completa e integração com backend, consulte [backend-developer](../../general/roles/backend-developer/SKILL.md) e [software-architect](../../general/roles/software-architect/SKILL.md).
+- Para projetar a arquitetura completa e integração com backend, consulte [backend-developer](../../roles/backend-developer/SKILL.md) e [software-architect](../../roles/software-architect/SKILL.md).
 - Para auditoria de vulnerabilidades em APIs REST segundo o OWASP API Security Top 10 2023, consulte [pentester-owasp-api-security-2023](../../security/appsec/pentester-owasp-api-security-2023/SKILL.md) e [appsec-owasp-asvs](../../security/appsec/appsec-owasp-asvs/SKILL.md).
 - Para implementar APIs RESTful em TypeScript ou Python, consulte [lang-typescript](../../languages/lang-typescript/SKILL.md) e [lang-python](../../languages/lang-python/SKILL.md).

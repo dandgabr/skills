@@ -148,6 +148,6 @@ markers = [
 ---
 
 ## 🔗 Integração com Outras Skills
-- [qa-engineer](../../general/roles/qa-engineer/SKILL.md): Matriz de RBT e critérios de aceite.
+- [qa-engineer](../../roles/qa-engineer/SKILL.md): Matriz de RBT e critérios de aceite.
 - [framework-testing](../framework-testing/SKILL.md): Fundamentos de caixa-preta, caixa-branca e mutação.
 - [lang-python](../../languages/lang-python/SKILL.md): Tipagem com mypy e conformidade PEP 8.

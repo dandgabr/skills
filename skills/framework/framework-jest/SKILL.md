@@ -149,6 +149,6 @@ export default config;
 ## 🔗 Integração com Outras Skills
 
 - [lang-typescript](../../languages/lang-typescript/SKILL.md): Garante tipagem estrita e conformidade TS em testes.
-- [frontend-developer](../../general/roles/frontend-developer/SKILL.md): Orienta a criação de testes de componentes UI em React/Vue.
-- [backend-developer](../../general/roles/backend-developer/SKILL.md): Guia a criação de testes unitários e de integração de serviços backend em Node.js.
+- [frontend-developer](../../roles/frontend-developer/SKILL.md): Orienta a criação de testes de componentes UI em React/Vue.
+- [backend-developer](../../roles/backend-developer/SKILL.md): Guia a criação de testes unitários e de integração de serviços backend em Node.js.
 - [framework-testing](../framework-testing/SKILL.md): Apresenta a pirâmide de testes e padrões TDD.

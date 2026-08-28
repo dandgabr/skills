@@ -38,7 +38,7 @@ Provide clear, step-by-step instructions for the agent here.
 ## Steps
 
 1.  Run the preparation script:
-    [prepare.sh](./scripts/prepare.sh)
+    `./scripts/prepare.sh`
 2.  Execute the test command:
     `npm test`
 3.  Analyze the results in the log file.

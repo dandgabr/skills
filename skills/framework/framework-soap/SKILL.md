@@ -75,5 +75,5 @@ Erros durante o processamento devem retornar a estrutura padronizada `<soapenv:F
 
 ## 🔗 Integração com Outras Skills
 
-- Para arquitetura de integração corporativa (ESB, sistemas legados e bancários), consulte [backend-developer](../../general/roles/backend-developer/SKILL.md), [financial-transaction-processing](../../general/domains/financial-transaction-processing/SKILL.md) e [software-architect](../../general/roles/software-architect/SKILL.md).
+- Para arquitetura de integração corporativa (ESB, sistemas legados e bancários), consulte [backend-developer](../../roles/backend-developer/SKILL.md), [financial-transaction-processing](../../domains/financial-transaction-processing/SKILL.md) e [software-architect](../../roles/software-architect/SKILL.md).
 - Para auditoria de vulnerabilidades em serviços SOAP e XML (XXE, XML Bomb, WS-Security bypass), consulte [pentester-owasp-wstg](../../security/appsec/pentester-owasp-wstg/SKILL.md) e [appsec-owasp-asvs](../../security/appsec/appsec-owasp-asvs/SKILL.md).

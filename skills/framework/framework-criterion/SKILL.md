@@ -140,5 +140,5 @@ add_test(NAME criterion_tests COMMAND run_tests)
 ## 🔗 Integração com Outras Skills
 
 - [lang-c](../../languages/lang-c/SKILL.md): Garante conformidade de padrões C (C11/C17), prevenção de comportamentos indefinidos (UB) e gestão de memória.
-- [qa-engineer](../../general/roles/qa-engineer/SKILL.md): Orienta o desenho de suítes de testes unitários para software embarcado e sistemas de baixo nível.
+- [qa-engineer](../../roles/qa-engineer/SKILL.md): Orienta o desenho de suítes de testes unitários para software embarcado e sistemas de baixo nível.
 - [framework-testing](../framework-testing/SKILL.md): Fornece os conceitos teóricos de TDD e pirâmide de testes.

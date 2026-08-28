@@ -7,7 +7,7 @@ environment.
 > [!NOTE] Antigravity IDE coexists with **Antigravity 2.0**. While the IDE
 > provides an in-editor integrated experience, Antigravity 2.0 offers a parallel
 > desktop application. Both are fully supported and share the same underlying
-> agentic capabilities. See [references/app.md](references/app.md) for details
+> agentic capabilities. See [app.md](app.md) for details
 > on Antigravity 2.0.
 
 ## 1. Core AI Modalities

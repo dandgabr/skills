@@ -180,4 +180,4 @@ O Arquiteto SABSA atua como maestro da segurança da informação no ecossistema
 - **[pentester-owasp-wstg](../../appsec/pentester-owasp-wstg/SKILL.md)**: Executa auditorias ofensivas para testar a resistência dos domínios de confiança.
 - **[secops-incident-responder](../secops-incident-responder/SKILL.md)**: Monitora a operação contínua e responde a incidentes em produção.
 - **[security-manager-samm](../../grc-compliance/security-manager-samm/SKILL.md)**: Governa a evolução da maturidade de segurança da equipe de software.
-- **[clean-code-reusability](../../../general/engineering-practices/clean-code-reusability/SKILL.md)**: Garante que os diagramas, políticas e especificações de segurança sejam escritos sem duplicação e reutilizando definições existentes.
+- **[clean-code-reusability](../../../engineering-practices/clean-code-reusability/SKILL.md)**: Garante que os diagramas, políticas e especificações de segurança sejam escritos sem duplicação e reutilizando definições existentes.

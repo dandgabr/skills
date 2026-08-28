@@ -12,7 +12,7 @@ instruction: >
   devops-engineer, program-github, program-github-actions, program-containers, devsecops-engineer e cis-controls.
 tools:
   - type: skill_integration
-    path: ../../skills/general/roles/devops-engineer/SKILL.md
+    path: ../../skills/roles/devops-engineer/SKILL.md
   - type: skill_integration
     path: ../../skills/programs/github/SKILL.md
   - type: skill_integration

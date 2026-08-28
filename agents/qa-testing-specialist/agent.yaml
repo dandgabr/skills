@@ -10,7 +10,7 @@ instruction: >
   qa-engineer, framework-testing, framework-pytest, framework-unittest, framework-jest, framework-mocha e framework-criterion.
 tools:
   - type: skill_integration
-    path: ../../skills/general/roles/qa-engineer/SKILL.md
+    path: ../../skills/roles/qa-engineer/SKILL.md
   - type: skill_integration
     path: ../../skills/framework/framework-testing/SKILL.md
   - type: skill_integration

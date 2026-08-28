@@ -11,7 +11,7 @@ instruction: >
   telecom-voice-engineering, ai-voice-stt-tts-security e auth-protocols-mfa.
 tools:
   - type: skill_integration
-    path: ../../skills/general/domains/telecom-voice-engineering/SKILL.md
+    path: ../../skills/domains/telecom-voice-engineering/SKILL.md
   - type: skill_integration
     path: ../../skills/security/ai-security/ai-voice-stt-tts-security/SKILL.md
   - type: skill_integration

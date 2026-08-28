@@ -782,5 +782,5 @@ jobs:
 
 - [program-github](../github/SKILL.md): use para dominar a plataforma GitHub como um todo — repositórios, PRs, Issues, Packages, Codespaces, segurança e API.
 - [containers](../containers/SKILL.md): use quando o pipeline envolver build, scan, sign ou push de imagens OCI (Docker, Podman, Buildah).
-- [devops-engineer](../../general/roles/devops-engineer/SKILL.md): use quando o contexto envolver Terraform, Ansible, Kubernetes, Backstage ou estratégias de deploy.
+- [devops-engineer](../../roles/devops-engineer/SKILL.md): use quando o contexto envolver Terraform, Ansible, Kubernetes, Backstage ou estratégias de deploy.
 - [devsecops-engineer](../../security/ops-architecture/devsecops-engineer/SKILL.md): use quando o pipeline precisar incluir SAST, SCA, secret scanning ou hardening de segurança.

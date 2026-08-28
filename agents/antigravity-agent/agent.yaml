@@ -16,4 +16,4 @@ tools:
   - type: skill_integration
     path: ../../skills/programs/github/SKILL.md
   - type: skill_integration
-    path: ../../skills/general/engineering-practices/clean-code-reusability/SKILL.md
+    path: ../../skills/engineering-practices/clean-code-reusability/SKILL.md

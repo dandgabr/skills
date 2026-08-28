@@ -173,4 +173,4 @@ Ao auditarmos um pipeline ou modelo de visão computacional:
 
 - Para integrar pipelines de Visão Computacional em nós de borda e IoT de forma segura, consulte [network-security-onprem-cloud](../../grc-compliance/network-security-onprem-cloud/SKILL.md).
 - Para alinhar o uso de dados biométricos faciais com leis de proteção de dados (LGPD/GDPR), consulte [security-privacy](../../grc-compliance/security-privacy/SKILL.md).
-- Para implementar inferências de imagem/vídeo em tempo real no backend, consulte [backend-developer](../../../general/roles/backend-developer/SKILL.md).
+- Para implementar inferências de imagem/vídeo em tempo real no backend, consulte [backend-developer](../../../roles/backend-developer/SKILL.md).

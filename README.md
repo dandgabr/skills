@@ -11,26 +11,17 @@ A estrutura foi projetada para ser modular, extensível e compatível com as esp
 ├── AGENTS.md
 ├── skills.json
 ├── skills/
-│   ├── general/
-│   │   ├── cloud-infra/            # AWS, Azure, GCP, OCI
-│   │   ├── domains/                # Blockchain, Financial Processing
-│   │   ├── engineering-practices/  # Clean Code, Documentation, Templates
-│   │   └── roles/                  # Architect, Backend, Frontend, DevOps, QA, PO, UX, Scrum
-│   ├── security/
-│   │   ├── ai-security/            # LLM/SLM, Vision, Voice Security
-│   │   ├── appsec/                 # OWASP ASVS, MASVS, WSTG, API, SAST, SCA
-│   │   ├── cloud-iam/              # AWS, Azure, GCP, OCI IAM, CSA Cloud
-│   │   ├── crypto-pki/             # Cryptography PQC, PKI Digital Signatures
-│   │   ├── grc-compliance/         # ISO 27000, NIST CSF, PCI-DSS, Privacy, SAMM, GRC
-│   │   └── ops-architecture/       # DevSecOps, Threat Modeler, SABSA, MFA, SecOps
-│   ├── languages/                  # Bash, C, C++, Go, Rust, Python, TypeScript, Lua, LaTeX, etc.
-│   ├── databases/                  # MariaDB, MongoDB, PostgreSQL, SQLite
-│   ├── framework/                  # Pytest, Unittest, Nose2, Ward, Jest, Mocha, Criterion, Vue, etc.
-│   ├── programs/                   # Gemini Enterprise, Power BI, Power Automate, etc.
-│   └── patterns/
-│       ├── behavioral/             # Chain of Resp., Strategy, Observer, State, etc.
-│       ├── creational/             # Factory Method, Singleton, Builder, etc.
-│       └── structural/             # Adapter, Facade, Decorator, Proxy, etc.
+│   ├── roles/                  # Architect, Backend, Frontend, DevOps, DBA, QA, PO, UX, Mapping, etc.
+│   ├── cloud-infra/            # AWS, Azure, GCP, OCI
+│   ├── databases/              # MariaDB, MongoDB, PostgreSQL, SQLite
+│   ├── domains/                # Blockchain, EdTech, Financial Processing, Telecom
+│   ├── engineering-practices/  # Clean Code, Documentation Designer, Templates
+│   ├── framework/              # Pytest, Jest, Mocha, React, Vue, GraphQL, gRPC, REST, etc.
+│   ├── languages/              # Python, TypeScript, Go, Rust, C, C++, Bash, Lua, Markdown, etc.
+│   ├── mapping/                # App, Network, K8s, CMDB, Cloud, AST, CallGraph, DB, Reverse, Graph
+│   ├── patterns/               # Behavioral, Creational, Structural (GoF Design Patterns)
+│   ├── programs/               # Containers, GitHub, GitHub Actions, Markmap, Moodle, WinDbg, etc.
+│   └── security/               # AI Security, AppSec, Cloud IAM, Crypto PKI, GRC, SecOps
 └── agents/
     ├── documenter/
     ├── software-architect/
@@ -52,6 +43,7 @@ A estrutura foi projetada para ser modular, extensível e compatível com as esp
     ├── researcher/
     ├── self/
     ├── explore/
+    ├── code-mapping-specialist/
     └── general/
 ```
 
@@ -62,16 +54,16 @@ Escreva no arquivo [AGENTS.md](AGENTS.md) as regras de comportamento gerais que 
 
 ### 2. O Ecossistema de Engenharia, Segurança, Design Patterns e Documentação
 Neste repositório, as decisões de engenharia, segurança e práticas de desenvolvimento estão modularizadas e integradas:
-- **[software-architect](skills/general/roles/software-architect/SKILL.md)**: Atua como a skill coordenadora. Quando o agente precisa propor decisões de arquitetura de alto nível, aplicar DDD ou realizar modelagem lógica, ele carrega essa skill.
-- **[clean-code-reusability](skills/general/engineering-practices/clean-code-reusability/SKILL.md)**: Garante a escrita de código limpo, manutenível, sem redundâncias e estruturado segundo boas práticas de documentação em qualquer stack.
+- **[software-architect](skills/roles/software-architect/SKILL.md)**: Atua como a skill coordenadora. Quando o agente precisa propor decisões de arquitetura de alto nível, aplicar DDD ou realizar modelagem lógica, ele carrega essa skill.
+- **[clean-code-reusability](skills/engineering-practices/clean-code-reusability/SKILL.md)**: Garante a escrita de código limpo, manutenível, sem redundâncias e estruturado segundo boas práticas de documentação em qualquer stack.
 - **Segurança da Informação, DevSecOps e Privacidade**: Skills como **[appsec-owasp-asvs](skills/security/appsec/appsec-owasp-asvs/SKILL.md)**, **[devsecops-engineer](skills/security/ops-architecture/devsecops-engineer/SKILL.md)**, **[security-champions](skills/security/ops-architecture/security-champions/SKILL.md)** e **[security-privacy](skills/security/grc-compliance/security-privacy/SKILL.md)** são empregadas para garantir o design seguro, conformidade regulatória (LGPD/GDPR/ISO 27701) e proteção à privacidade por design e por padrão.
 - **Pentest de APIs**: A skill **[pentester-owasp-api-security-2023](skills/security/appsec/pentester-owasp-api-security-2023/SKILL.md)** complementa o ecossistema para auditorias seguras em APIs REST, GraphQL, SOAP e microsserviços com base no OWASP API Security Top 10 2023.
-- **Desenvolvimento por Papéis**: Skills especializadas por domínio (**[backend-developer](skills/general/roles/backend-developer/SKILL.md)**, **[frontend-developer](skills/general/roles/frontend-developer/SKILL.md)**, **[dba-database-administrator](skills/general/roles/dba-database-administrator/SKILL.md)**, **[qa-engineer](skills/general/roles/qa-engineer/SKILL.md)**, **[ui-ux-designer](skills/general/roles/ui-ux-designer/SKILL.md)**) definem os padrões esperados para cada disciplina da equipe.
+- **Desenvolvimento por Papéis**: Skills especializadas por domínio (**[backend-developer](skills/roles/backend-developer/SKILL.md)**, **[frontend-developer](skills/roles/frontend-developer/SKILL.md)**, **[dba-database-administrator](skills/roles/dba-database-administrator/SKILL.md)**, **[qa-engineer](skills/roles/qa-engineer/SKILL.md)**, **[ui-ux-designer](skills/roles/ui-ux-designer/SKILL.md)**) definem os padrões esperados para cada disciplina da equipe.
 - **[Design Patterns (dp-*)](skills/patterns/creational/dp-factory-method/SKILL.md)**: Habilidades de apoio específicas para cada um dos 22 padrões clássicos de projeto (Gang of Four). A skill de arquiteto direciona a invocação dessas de forma condicional dependendo do cenário.
-- **[documentation-designer](skills/general/engineering-practices/documentation-designer/SKILL.md)**: Skill auxiliar especializada em documentar sistemas e desenhar diagramas estruturais, de dados, estratégicos e técnicos utilizando toda a sintaxe moderna do Mermaid.js.
+- **[documentation-designer](skills/engineering-practices/documentation-designer/SKILL.md)**: Skill auxiliar especializada em documentar sistemas e desenhar diagramas estruturais, de dados, estratégicos e técnicos utilizando toda a sintaxe moderna do Mermaid.js.
 
 ### 3. Criando uma Nova Habilidade (Skill)
-Para criar uma nova skill, adicione uma pasta sob `skills/` seguindo a estrutura do [template-skill](skills/general/engineering-practices/template-skill/SKILL.md).
+Para criar uma nova skill, adicione uma pasta sob `skills/` seguindo a estrutura do [template-skill](skills/engineering-practices/template-skill/SKILL.md).
 O arquivo principal é o `SKILL.md`, que precisa iniciar com um cabeçalho frontmatter em YAML:
 
 ```yaml
@@ -92,31 +84,55 @@ O arquivo [skills.json](skills.json) permite registrar caminhos para outras past
 
 Abaixo está a listagem detalhada de todas as skills disponíveis no ecossistema deste repositório, agrupadas por área de especialidade:
 
-### 🛠️ Engenharia, Papéis e Desenvolvimento de Software
+### 🛠️ Papéis e Funções de Desenvolvimento (Roles)
 | Habilidade | Caminho da Skill | Descrição / Caso de Uso |
 | :--- | :--- | :--- |
-| **backend-developer** | [`skills/general/backend-developer`](skills/general/roles/backend-developer/SKILL.md) | Atua como Desenvolvedor Backend sênior, projetando APIs robustas, integrando bancos de dados eficientes, aplicando concorrência segura, otimizando performance e criando testes de integração robustos. |
-| **blockchain-cryptocurrency** | [`skills/general/blockchain-cryptocurrency`](skills/general/domains/blockchain-cryptocurrency/SKILL.md) | Atua como especialista em Blockchain, Criptomoedas, Smart Contracts (Solidity, Rust, EVM, Solana), DeFi, Tokenização (ERC-20, ERC-721, ERC-1155), Arquitetura UTXO/Account, Layer 2 (ZK/Optimistic Rollups) e Segurança/Auditoria Web3. |
-| **clean-code-reusability** | [`skills/general/clean-code-reusability`](skills/general/engineering-practices/clean-code-reusability/SKILL.md) | Garante a escrita de código limpo, legível, livre de redundâncias através da reutilização ativa de componentes existentes, e documentado de acordo com as melhores práticas da tecnologia. |
-| **cloud-aws** | [`skills/general/cloud-aws`](skills/general/cloud-infra/cloud-aws/SKILL.md) | Atua como especialista em arquitetura, engenharia e operação na nuvem Amazon Web Services (AWS), cobrindo Well-Architected Framework, Compute (EC2, EKS, Lambda), Storage (S3, EBS, EFS), Databases (Aurora, DynamoDB), Networking (VPC, Transit Gateway, CloudFront), IaC (Terraform, CDK) e FinOps. |
-| **cloud-azure** | [`skills/general/cloud-azure`](skills/general/cloud-infra/cloud-azure/SKILL.md) | Atua como especialista em arquitetura, engenharia e operação na nuvem Microsoft Azure, cobrindo Cloud Adoption Framework, Well-Architected Framework, Compute (VMs, AKS, App Services, Azure Functions), Storage (Blob, Files, Disks), Databases (Azure SQL, Cosmos DB), Networking (VNet, ExpressRoute, Front Door), IaC (Terraform, Bicep) e FinOps. |
-| **cloud-gcp** | [`skills/general/cloud-gcp`](skills/general/cloud-infra/cloud-gcp/SKILL.md) | Atua como especialista em arquitetura, engenharia e operação na nuvem Google Cloud Platform (GCP), cobrindo Google Cloud Architecture Framework, Compute (Compute Engine, GKE, Cloud Run), Storage (GCS, Persistent Disk), Databases (Cloud SQL, Spanner, BigQuery), Networking (Global VPC, Cloud Armor), IaC (Terraform) e FinOps. |
-| **cloud-oci** | [`skills/general/cloud-oci`](skills/general/cloud-infra/cloud-oci/SKILL.md) | Atua como especialista em arquitetura, engenharia e operação na nuvem Oracle Cloud Infrastructure (OCI), cobrindo OCI Architecture Center, Compute (Bare Metal, VMs, OKE), Storage (Block Volumes, Object Storage), Databases (Autonomous Database, Exadata, MySQL HeatWave), Networking (VCN, DRG, FastConnect), IaC (Terraform, Resource Manager) e FinOps. |
-| **dba-database-administrator** | [`skills/general/dba-database-administrator`](skills/general/roles/dba-database-administrator/SKILL.md) | Atua como Administrador de Banco de Dados (DBA) sênior para sistemas SQL e NoSQL, cobrindo modelagem de dados, estratégias de indexação, otimização de consultas (EXPLAIN), concorrência (ACID/BASE), alta disponibilidade, backups (PITR) e segurança. |
-| **devops-engineer** | [`skills/general/devops-engineer`](skills/general/roles/devops-engineer/SKILL.md) | Atua como Engenheiro de DevOps e Platform Engineering sênior, cobrindo Terraform (IaC), Ansible, Vagrant, Kubernetes (GitOps/ArgoCD), containers (Docker/Podman), Backstage (IDP), CI/CD, Packer (Golden Images), observabilidade (Prometheus/Grafana/OpenTelemetry) e estratégias de deploy (Blue-Green, Canary). |
-| **edtech-andragogy** | [`skills/general/domains/edtech-andragogy`](skills/general/domains/edtech-andragogy/SKILL.md) | Atua como especialista em Tecnologia Educacional (EdTech) e metodologias de ensino para adultos (Andragogia), dominando design instrucional, gamificação e padrões de interoperabilidade (SCORM, LTI, xAPI). |
-| **explore** | [`skills/general/explore`](skills/general/roles/explore/SKILL.md) | Atua como agente especializado em exploração rápida de codebases, busca de padrões, entendimento de estrutura e resposta a perguntas sobre código existente. |
-| **financial-transaction-processing** | [`skills/general/financial-transaction-processing`](skills/general/domains/financial-transaction-processing/SKILL.md) | Atua como especialista em processamento de transações financeiras e sistemas de pagamentos no Brasil (Pix, SPI, DICT, SPB, Boleto, CIP/Núclea) e no exterior (ISO 20022, SWIFT, FedNow, SEPA, Adquirencia, Gateways, Antifraude, Conciliacao e Idempotencia). |
-| **frontend-developer** | [`skills/general/frontend-developer`](skills/general/roles/frontend-developer/SKILL.md) | Atua como Desenvolvedor Frontend sênior, criando interfaces ricas, componentização avançada, gerenciamento de estado global eficiente, otimização de Core Web Vitals e conformidade com acessibilidade (WCAG). |
-| **fullstack-developer** | [`skills/general/fullstack-developer`](skills/general/roles/fullstack-developer/SKILL.md) | Atua como Desenvolvedor Full Stack especialista em criar aplicações web fim a fim, integrando lógica de backend (REST, gRPC), frontend (React, Vue), bancos de dados (DBA) e garantindo código limpo e seguro. |
-| **general** | [`skills/general/general`](skills/general/roles/general/SKILL.md) | Atua como agente de propósito geral para pesquisa complexa e execução de tarefas multi-etapas, integrando múltiplas skills conforme necessário. |
-| **product-owner** | [`skills/general/product-owner`](skills/general/roles/product-owner/SKILL.md) | Atua como Product Owner (PO), refinando histórias de usuários com critérios de aceitação BDD (Cucumber), gerenciando o Product Backlog e priorizando entregas com foco em valor de negócio (ROI). |
-| **project-reviewer** | [`skills/general/project-reviewer`](skills/general/roles/project-reviewer/SKILL.md) | Atua como Revisor de Projetos especialista, auditando e padronizando regras de negócio, definindo a distribuição de responsabilidades entre Banco, Backend e Frontend, e garantindo boas práticas de arquitetura e segurança. |
-| **qa-engineer** | [`skills/general/qa-engineer`](skills/general/roles/qa-engineer/SKILL.md) | Atua como Engenheiro de QA (Quality Assurance) e Automação de Testes Multi-Framework, elaborando estratégias de testes (unitários, integração, E2E), validando regressões e gerando relatórios de defeitos. |
-| **scrum-master** | [`skills/general/scrum-master`](skills/general/roles/scrum-master/SKILL.md) | Atua como Scrum Master e Agile Coach, facilitando cerimônias ágeis (Planning, Review, Retrospective, Dailies), eliminando impedimentos, gerenciando conflitos e monitorando métricas de produtividade (Velocity, Burndown). |
-| **software-architect** | [`skills/general/software-architect`](skills/general/roles/software-architect/SKILL.md) | Atua como Arquiteto de Software aplicando engenharia de baixo nível, princípios SOLID, DDD, decisões de topologia de sistemas, testabilidade e orquestração de Padrões de Projeto. |
-| **telecom-voice-engineering** | [`skills/general/telecom-voice-engineering`](skills/general/domains/telecom-voice-engineering/SKILL.md) | Atua como Especialista em Engenharia de Voz, Telefonia e Comunicações em Tempo Real (VoIP, SIP, SBC, PSTN, WebRTC, Codecs G.711/G.729/Opus, Kamailio/FreeSWITCH, QoS e STIR/SHAKEN). |
-| **ui-ux-designer** | [`skills/general/ui-ux-designer`](skills/general/roles/ui-ux-designer/SKILL.md) | Atua como Designer UI/UX, executando pesquisas com usuários, fluxos lógicos, wireframes, protótipos de alta fidelidade baseados em Design Systems e processos consistentes de Design Handover. |
+| **backend-developer** | [`skills/roles/backend-developer`](skills/roles/backend-developer/SKILL.md) | Atua como Desenvolvedor Backend sênior, projetando APIs robustas, integrando bancos de dados eficientes, aplicando concorrência segura, otimizando performance e criando testes de integração robustos. |
+| **cloud-infrastructure-architect** | [`skills/roles/cloud-infrastructure-architect`](skills/roles/cloud-infrastructure-architect/SKILL.md) | Atua como Especialista em Arquitetura e Engenharia Multi-Cloud (AWS, Azure, GCP, OCI), Well-Architected Framework, FinOps e automação IaC segura. |
+| **code-mapping-specialist** | [`skills/roles/code-mapping-specialist`](skills/roles/code-mapping-specialist/SKILL.md) | Atua como Especialista Sênior em Mapeamento de Aplicações, Código, Fluxos, Infraestrutura, Kubernetes, Nuvem e Grafos de Dependência Ponta a Ponta. |
+| **dba-database-administrator** | [`skills/roles/dba-database-administrator`](skills/roles/dba-database-administrator/SKILL.md) | Atua como Administrador de Banco de Dados (DBA) sênior para sistemas SQL e NoSQL, cobrindo modelagem de dados, estratégias de indexação, otimização de consultas (EXPLAIN), concorrência (ACID/BASE), alta disponibilidade, backups (PITR) e segurança. |
+| **devops-engineer** | [`skills/roles/devops-engineer`](skills/roles/devops-engineer/SKILL.md) | Atua como Engenheiro de DevOps e Platform Engineering sênior, cobrindo Terraform (IaC), Ansible, Vagrant, Kubernetes (GitOps/ArgoCD), containers (Docker/Podman), Backstage (IDP), CI/CD, Packer (Golden Images), observabilidade (Prometheus/Grafana/OpenTelemetry) e estratégias de deploy (Blue-Green, Canary). |
+| **explore** | [`skills/roles/explore`](skills/roles/explore/SKILL.md) | Atua como agente especializado em exploração rápida de codebases, busca de padrões, entendimento de estrutura e resposta a perguntas sobre código existente. |
+| **frontend-developer** | [`skills/roles/frontend-developer`](skills/roles/frontend-developer/SKILL.md) | Atua como Desenvolvedor Frontend sênior, criando interfaces ricas, componentização avançada, gerenciamento de estado global eficiente, otimização de Core Web Vitals e conformidade com acessibilidade (WCAG). |
+| **fullstack-developer** | [`skills/roles/fullstack-developer`](skills/roles/fullstack-developer/SKILL.md) | Atua como Desenvolvedor Full Stack especialista em criar aplicações web fim a fim, integrando lógica de backend (REST, gRPC), frontend (React, Vue), bancos de dados (DBA) e garantindo código limpo e seguro. |
+| **general** | [`skills/roles/general`](skills/roles/general/SKILL.md) | Atua como agente de propósito geral para pesquisa complexa e execução de tarefas multi-etapas, integrando múltiplas skills conforme necessário. |
+| **product-owner** | [`skills/roles/product-owner`](skills/roles/product-owner/SKILL.md) | Atua como Product Owner (PO), refinando histórias de usuários com critérios de aceitação BDD (Cucumber), gerenciando o Product Backlog e priorizando entregas com foco em valor de negócio (ROI). |
+| **project-reviewer** | [`skills/roles/project-reviewer`](skills/roles/project-reviewer/SKILL.md) | Atua como Revisor de Projetos especialista, auditando e padronizando regras de negócio, definindo a distribuição de responsabilidades entre Banco, Backend e Frontend, e garantindo boas práticas de arquitetura e segurança. |
+| **qa-engineer** | [`skills/roles/qa-engineer`](skills/roles/qa-engineer/SKILL.md) | Atua como Engenheiro de QA (Quality Assurance) e Automação de Testes Multi-Framework, elaborando estratégias de testes (unitários, integração, E2E), validando regressões e gerando relatórios de defeitos. |
+| **scrum-master** | [`skills/roles/scrum-master`](skills/roles/scrum-master/SKILL.md) | Atua como Scrum Master e Agile Coach, facilitando cerimônias ágeis (Planning, Review, Retrospective, Dailies), eliminando impedimentos, gerenciando conflitos e monitorando métricas de produtividade (Velocity, Burndown). |
+| **software-architect** | [`skills/roles/software-architect`](skills/roles/software-architect/SKILL.md) | Atua como Arquiteto de Software aplicando engenharia de baixo nível, princípios SOLID, DDD, decisões de topologia de sistemas, testabilidade e orquestração de Padrões de Projeto. |
+| **ui-ux-designer** | [`skills/roles/ui-ux-designer`](skills/roles/ui-ux-designer/SKILL.md) | Atua como Designer UI/UX, executando pesquisas com usuários, fluxos lógicos, wireframes, protótipos de alta fidelidade baseados em Design Systems e processos consistentes de Design Handover. |
+
+### ☁️ Infraestrutura Cloud e FinOps (Cloud Infra)
+| Habilidade | Caminho da Skill | Descrição / Caso de Uso |
+| :--- | :--- | :--- |
+| **cloud-aws** | [`skills/cloud-infra/cloud-aws`](skills/cloud-infra/cloud-aws/SKILL.md) | Atua como especialista em arquitetura, engenharia e operação na nuvem Amazon Web Services (AWS), cobrindo Well-Architected Framework, Compute (EC2, EKS, Lambda), Storage (S3, EBS, EFS), Databases (Aurora, DynamoDB), Networking (VPC, Transit Gateway, CloudFront), IaC (Terraform, CDK) e FinOps. |
+| **cloud-azure** | [`skills/cloud-infra/cloud-azure`](skills/cloud-infra/cloud-azure/SKILL.md) | Atua como especialista em arquitetura, engenharia e operação na nuvem Microsoft Azure, cobrindo Cloud Adoption Framework, Well-Architected Framework, Compute (VMs, AKS, App Services, Azure Functions), Storage (Blob, Files, Disks), Databases (Azure SQL, Cosmos DB), Networking (VNet, ExpressRoute, Front Door), IaC (Terraform, Bicep) e FinOps. |
+| **cloud-gcp** | [`skills/cloud-infra/cloud-gcp`](skills/cloud-infra/cloud-gcp/SKILL.md) | Atua como especialista em arquitetura, engenharia e operação na nuvem Google Cloud Platform (GCP), cobrindo Google Cloud Architecture Framework, Compute (Compute Engine, GKE, Cloud Run), Storage (GCS, Persistent Disk), Databases (Cloud SQL, Spanner, BigQuery), Networking (Global VPC, Cloud Armor), IaC (Terraform) e FinOps. |
+| **cloud-oci** | [`skills/cloud-infra/cloud-oci`](skills/cloud-infra/cloud-oci/SKILL.md) | Atua como especialista em arquitetura, engenharia e operação na nuvem Oracle Cloud Infrastructure (OCI), cobrindo OCI Architecture Center, Compute (Bare Metal, VMs, OKE), Storage (Block Volumes, Object Storage), Databases (Autonomous Database, Exadata, MySQL HeatWave), Networking (VCN, DRG, FastConnect), IaC (Terraform, Resource Manager) e FinOps. |
+
+### 🗄️ Bancos de Dados e Persistência (Databases)
+| Habilidade | Caminho da Skill | Descrição / Caso de Uso |
+| :--- | :--- | :--- |
+| **db-mariadb** | [`skills/databases/db-mariadb`](skills/databases/db-mariadb/SKILL.md) | Fornece padrões de administração e engenharia para MariaDB baseados na documentação oficial (mariadb.com/docs). Cobre motores de armazenamento (InnoDB, Aria, ColumnStore, MyRocks), tunagem do InnoDB Buffer Pool, Galera Cluster, MariaDB MaxScale, Mariabackup e otimização EXPLAIN FORMAT=JSON. |
+| **db-mongodb** | [`skills/databases/db-mongodb`](skills/databases/db-mongodb/SKILL.md) | Fornece padrões de administração e engenharia para MongoDB baseados na documentação oficial em português (mongodb.com/pt-br/docs). Cobre modelagem de documentos (Embedding vs Referencing), motor WiredTiger, Read/Write Concern, índices (Compound, Multikey, Text, TTL, 2dsphere), Aggregation Framework e Sharded Clusters. |
+| **db-postgresql** | [`skills/databases/db-postgresql`](skills/databases/db-postgresql/SKILL.md) | Fornece padrões de administração e engenharia para PostgreSQL baseados na documentação oficial (postgresql.org/docs). Cobre arquitetura MVCC, tunagem de Autovacuum, tipos avançados (JSONB, PostGIS), estratégia de índices (B-Tree, GIN, GiST, BRIN), análise EXPLAIN ANALYZE BUFFERS, replicação e PgBouncer. |
+| **db-sqlite** | [`skills/databases/db-sqlite`](skills/databases/db-sqlite/SKILL.md) | Fornece padrões de engenharia e otimização para SQLite baseados na documentação oficial (sqlite.org/docs.html). Cobre arquitetura Serverless, modo WAL (Write-Ahead Logging), pragmas de desempenho, índices cobridores e parciais, FTS5, JSON1 e extensão WITHOUT ROWID. |
+
+### 🌐 Domínios de Negócio e Setoriais (Domains)
+| Habilidade | Caminho da Skill | Descrição / Caso de Uso |
+| :--- | :--- | :--- |
+| **blockchain-cryptocurrency** | [`skills/domains/blockchain-cryptocurrency`](skills/domains/blockchain-cryptocurrency/SKILL.md) | Atua como especialista em Blockchain, Criptomoedas, Smart Contracts (Solidity, Rust, EVM, Solana), DeFi, Tokenização (ERC-20, ERC-721, ERC-1155), Arquitetura UTXO/Account, Layer 2 (ZK/Optimistic Rollups) e Segurança/Auditoria Web3. |
+| **edtech-andragogy** | [`skills/domains/edtech-andragogy`](skills/domains/edtech-andragogy/SKILL.md) | Atua como especialista em Tecnologia Educacional (EdTech) e metodologias de ensino para adultos (Andragogia), dominando design instrucional, gamificação e padrões de interoperabilidade (SCORM, LTI, xAPI). |
+| **financial-transaction-processing** | [`skills/domains/financial-transaction-processing`](skills/domains/financial-transaction-processing/SKILL.md) | Atua como especialista em processamento de transações financeiras e sistemas de pagamentos no Brasil (Pix, SPI, DICT, SPB, Boleto, CIP/Núclea) e no exterior (ISO 20022, SWIFT, FedNow, SEPA, Adquirencia, Gateways, Antifraude, Conciliacao e Idempotencia). |
+| **telecom-voice-engineering** | [`skills/domains/telecom-voice-engineering`](skills/domains/telecom-voice-engineering/SKILL.md) | Atua como Especialista em Engenharia de Voz, Telefonia e Comunicações em Tempo Real (VoIP, SIP, SBC, PSTN, WebRTC, Codecs G.711/G.729/Opus, Kamailio/FreeSWITCH, QoS e STIR/SHAKEN). |
+
+### 📐 Práticas de Engenharia e Padrões de Código (Engineering Practices)
+| Habilidade | Caminho da Skill | Descrição / Caso de Uso |
+| :--- | :--- | :--- |
+| **clean-code-reusability** | [`skills/engineering-practices/clean-code-reusability`](skills/engineering-practices/clean-code-reusability/SKILL.md) | Garante a escrita de código limpo, legível, livre de redundâncias através da reutilização ativa de componentes existentes, e documentado de acordo com as melhores práticas da tecnologia. |
+| **documentation-designer** | [`skills/engineering-practices/documentation-designer`](skills/engineering-practices/documentation-designer/SKILL.md) | Auxilia na elaboração de documentação técnica rica e no desenho de diagramas estruturais, de dados, estratégicos e técnicos utilizando toda a sintaxe do Mermaid.js. |
+| **template-skill** | [`skills/engineering-practices/template-skill`](skills/engineering-practices/template-skill/SKILL.md) | Um template básico que demonstra como estruturar uma habilidade (skill) personalizada para agentes de IA. |
 
 ### 🛡️ Segurança, DevSecOps e Conformidade
 | Habilidade | Caminho da Skill | Descrição / Caso de Uso |
@@ -184,10 +200,10 @@ Abaixo está a listagem detalhada de todas as skills disponíveis no ecossistema
 ### 🗄️ Bancos de Dados e Persistência (Databases)
 | Habilidade | Caminho da Skill | Descrição / Caso de Uso |
 | :--- | :--- | :--- |
-| **db-mariadb** | [`skills/general/databases/db-mariadb`](skills/general/databases/db-mariadb/SKILL.md) | Fornece padrões de administração e engenharia para MariaDB baseados na documentação oficial (mariadb.com/docs). Cobre motores de armazenamento (InnoDB, Aria, ColumnStore, MyRocks), tunagem do InnoDB Buffer Pool, Galera Cluster, MariaDB MaxScale, Mariabackup e otimização EXPLAIN FORMAT=JSON. |
-| **db-mongodb** | [`skills/general/databases/db-mongodb`](skills/general/databases/db-mongodb/SKILL.md) | Fornece padrões de administração e engenharia para MongoDB baseados na documentação oficial em português (mongodb.com/pt-br/docs). Cobre modelagem de documentos (Embedding vs Referencing), motor WiredTiger, Read/Write Concern, índices (Compound, Multikey, Text, TTL, 2dsphere), Aggregation Framework e Sharded Clusters. |
-| **db-postgresql** | [`skills/general/databases/db-postgresql`](skills/general/databases/db-postgresql/SKILL.md) | Fornece padrões de administração e engenharia para PostgreSQL baseados na documentação oficial (postgresql.org/docs). Cobre arquitetura MVCC, tunagem de Autovacuum, tipos avançados (JSONB, PostGIS), estratégia de índices (B-Tree, GIN, GiST, BRIN), análise EXPLAIN ANALYZE BUFFERS, replicação e PgBouncer. |
-| **db-sqlite** | [`skills/general/databases/db-sqlite`](skills/general/databases/db-sqlite/SKILL.md) | Fornece padrões de engenharia e otimização para SQLite baseados na documentação oficial (sqlite.org/docs.html). Cobre arquitetura Serverless, modo WAL (Write-Ahead Logging), pragmas de desempenho, índices cobridores e parciais, FTS5, JSON1 e extensão WITHOUT ROWID. |
+| **db-mariadb** | [`skills/databases/db-mariadb`](skills/databases/db-mariadb/SKILL.md) | Fornece padrões de administração e engenharia para MariaDB baseados na documentação oficial (mariadb.com/docs). Cobre motores de armazenamento (InnoDB, Aria, ColumnStore, MyRocks), tunagem do InnoDB Buffer Pool, Galera Cluster, MariaDB MaxScale, Mariabackup e otimização EXPLAIN FORMAT=JSON. |
+| **db-mongodb** | [`skills/databases/db-mongodb`](skills/databases/db-mongodb/SKILL.md) | Fornece padrões de administração e engenharia para MongoDB baseados na documentação oficial em português (mongodb.com/pt-br/docs). Cobre modelagem de documentos (Embedding vs Referencing), motor WiredTiger, Read/Write Concern, índices (Compound, Multikey, Text, TTL, 2dsphere), Aggregation Framework e Sharded Clusters. |
+| **db-postgresql** | [`skills/databases/db-postgresql`](skills/databases/db-postgresql/SKILL.md) | Fornece padrões de administração e engenharia para PostgreSQL baseados na documentação oficial (postgresql.org/docs). Cobre arquitetura MVCC, tunagem de Autovacuum, tipos avançados (JSONB, PostGIS), estratégia de índices (B-Tree, GIN, GiST, BRIN), análise EXPLAIN ANALYZE BUFFERS, replicação e PgBouncer. |
+| **db-sqlite** | [`skills/databases/db-sqlite`](skills/databases/db-sqlite/SKILL.md) | Fornece padrões de engenharia e otimização para SQLite baseados na documentação oficial (sqlite.org/docs.html). Cobre arquitetura Serverless, modo WAL (Write-Ahead Logging), pragmas de desempenho, índices cobridores e parciais, FTS5, JSON1 e extensão WITHOUT ROWID. |
 
 ### 🧱 Frameworks e Ferramentas (Framework)
 | Habilidade | Caminho da Skill | Descrição / Caso de Uso |
@@ -225,8 +241,25 @@ Abaixo está a listagem detalhada de todas as skills disponíveis no ecossistema
 | **program-moodle-design** | [`skills/programs/moodle-design`](skills/programs/moodle-design/SKILL.md) | Atua como especialista em design de interfaces (UI), desenvolvimento de temas, templates Mustache, estilização SCSS, customização de formatos de curso e otimização de UX/acessibilidade no Moodle LMS. |
 | **program-moodle-infra** | [`skills/programs/moodle-infra`](skills/programs/moodle-infra/SKILL.md) | Atua como especialista em infraestrutura, dimensionamento, alta disponibilidade, performance tuning (OPcache, PHP, MySQL/Postgres), MUC (Redis/Memcached), cron em lote e armazenamento distribuído no Moodle LMS. |
 | **program-moodle-plugins** | [`skills/programs/moodle-plugins`](skills/programs/moodle-plugins/SKILL.md) | Atua como especialista no ciclo de vida, anatomia, configurações administrativas (settings.php), rotinas de backup/restauração, testes e publicação de plugins para o Moodle LMS. |
+| **program-markmap** | [`skills/programs/markmap`](skills/programs/markmap/SKILL.md) | Especialista em visualização de mapas mentais interativos a partir de Markdown utilizando Markmap (markmap-cli, markmap-lib, KaTeX, SVG/HTML). |
 | **program-windbg** | [`skills/programs/program-windbg`](skills/programs/program-windbg/SKILL.md) | Especialista em depuração de baixo nível no Windows usando WinDbg, CDB e a dbgeng.dll. Cobre análise de dumps de memória, inspeção de call stacks, avaliação de falhas (!analyze -v) e automação de scripts de depuração. |
 
+### 🗺️ Mapeamento de Aplicações, Infraestrutura e Código (Mapping)
+| Habilidade | Caminho da Skill | Descrição / Caso de Uso |
+| :--- | :--- | :--- |
+| **app-dependency-discovery** | [`skills/mapping/app-dependency-discovery`](skills/mapping/app-dependency-discovery/SKILL.md) | Especialista em Descoberta de Aplicações, Tracing Distribuído, Service Maps e Telemetria Kernel/eBPF (OpenTelemetry OBI, Caretta, Jaeger, Zipkin, SkyWalking, SigNoz, Grafana Tempo). |
+| **network-flow-discovery** | [`skills/mapping/network-flow-discovery`](skills/mapping/network-flow-discovery/SKILL.md) | Especialista em Análise de Fluxo de Rede, DPI e Reconhecimento Ativo/Passivo (Zeek, ntopng, Arkime, Wireshark, tcpdump, pmacct, ElastiFlow, NetworkMiner, p0f, RITA, Malcolm, Nmap, RustScan, Masscan, Naabu, Amass). |
+| **k8s-container-mapping** | [`skills/mapping/k8s-container-mapping`](skills/mapping/k8s-container-mapping/SKILL.md) | Especialista em Mapeamento de Topologia, Fluxo Pod-a-Pod e Segurança em Kubernetes via eBPF (Cilium, Hubble, Kiali, Kubeshark, Pixie, Inspektor Gadget, Parca, Tetragon, Falco, Tracee). |
+| **infra-inventory-cmdb** | [`skills/mapping/infra-inventory-cmdb`](skills/mapping/infra-inventory-cmdb/SKILL.md) | Especialista em Inventário de Infraestrutura, IPAM, DCIM e CMDB (NetBox, OpenNMS, Netdisco, Ralph, GLPI, iTop, Device42, RackTables). |
+| **cloud-topology-mapping** | [`skills/mapping/cloud-topology-mapping`](skills/mapping/cloud-topology-mapping/SKILL.md) | Especialista em Mapeamento de Recursos Cloud, Ambientes Híbridos e Grafos de Ativos (Cartography, CloudMapper, Resoto, Steampipe, Azure Resource Graph, AWS SSM, GCP Asset Inventory). |
+| **observability-correlation** | [`skills/mapping/observability-correlation`](skills/mapping/observability-correlation/SKILL.md) | Especialista em Observabilidade, Correlação de Métricas, Logs, Traces e Dashboards (Grafana, Prometheus, Loki, OpenSearch, Elastic Stack ELK, VictoriaMetrics). |
+| **code-architecture-mapping** | [`skills/mapping/code-architecture-mapping`](skills/mapping/code-architecture-mapping/SKILL.md) | Especialista em Mapeamento de Código, AST, Métricas e Dependência entre Classes (Structure101, Sonargraph, ArchUnit, jQAssistant, NDepend, Roslyn, Pyreverse, Dependency Cruiser, Madge, Nx Graph, Go Callvis, CodeScene, SonarQube, Sourcetrail, Understand). |
+| **uml-diagram-generation** | [`skills/mapping/uml-diagram-generation`](skills/mapping/uml-diagram-generation/SKILL.md) | Especialista em Geração de Diagramas UML, Mapas Mentais e Modelagem Visual a partir de Código (PlantUML, Doxygen, Graphviz, Markmap, UMLGraph, ObjectAid, Visual Paradigm, StarUML, Mermaid). |
+| **execution-flow-callgraph** | [`skills/mapping/execution-flow-callgraph`](skills/mapping/execution-flow-callgraph/SKILL.md) | Especialista em Análise de Fluxo de Execução, Caminhos de Controle e Geração de Call Graphs Estáticos e Dinâmicos (Go Callvis, Pyan3, Code2Flow, Doxygen, CodeScene, NDepend, Sourcetrail, Understand). |
+| **api-service-mesh-mapping** | [`skills/mapping/api-service-mesh-mapping`](skills/mapping/api-service-mesh-mapping/SKILL.md) | Especialista em Descoberta, Inventário e Mapeamento de APIs e Service Mesh (OpenAPI/Swagger, Redoc, Backstage, Kong, APISIX, Gravitee, WSO2, Service Weaver, Kiali). |
+| **db-schema-reverse-mapping** | [`skills/mapping/db-schema-reverse-mapping`](skills/mapping/db-schema-reverse-mapping/SKILL.md) | Especialista em Mapeamento de Bancos de Dados, Engenharia Reversa de Esquemas (ERD), Análise de Dependências de I/O e Query Profiling (SchemaSpy, DbSchema, DBeaver, pgModeler, ERBuilder, SQL Power Architect, pgBadger, Percona PMM, SSDT). |
+| **binary-app-reverse-mapping** | [`skills/mapping/binary-app-reverse-mapping`](skills/mapping/binary-app-reverse-mapping/SKILL.md) | Especialista em Engenharia Reversa de Binários, Descompilação e Mapeamento de Controle de Baixo Nível (Ghidra, Radare2, Cutter, JADX, ILSpy, dnSpyEx, Doxygen, Understand). |
+| **graph-relationship-mapping** | [`skills/mapping/graph-relationship-mapping`](skills/mapping/graph-relationship-mapping/SKILL.md) | Especialista em Modelagem de Grafos de Conhecimento, Relacionamentos de Dependência e Superfície de Ataque/Segurança (Neo4j, Cartography, jQAssistant, BloodHound, ArangoDB, JanusGraph, Attack Flow, OpenCTI). |
 
 ### 🧩 Padrões de Projeto (Design Patterns - GoF)
 | Habilidade | Caminho da Skill | Descrição / Caso de Uso |
@@ -257,8 +290,8 @@ Abaixo está a listagem detalhada de todas as skills disponíveis no ecossistema
 ### ⚙️ Auxiliares e Templates
 | Habilidade | Caminho da Skill | Descrição / Caso de Uso |
 | :--- | :--- | :--- |
-| **documentation-designer** | [`skills/general/documentation-designer`](skills/general/engineering-practices/documentation-designer/SKILL.md) | Auxilia na elaboração de documentação técnica rica e no desenho de diagramas estruturais, de dados, estratégicos e técnicos utilizando toda a sintaxe do Mermaid.js. |
-| **template-skill** | [`skills/general/template-skill`](skills/general/engineering-practices/template-skill/SKILL.md) | Um template básico que demonstra como estruturar uma habilidade (skill) personalizada para agentes de IA. |
+| **documentation-designer** | [`skills/documentation-designer`](skills/engineering-practices/documentation-designer/SKILL.md) | Auxilia na elaboração de documentação técnica rica e no desenho de diagramas estruturais, de dados, estratégicos e técnicos utilizando toda a sintaxe do Mermaid.js. |
+| **template-skill** | [`skills/template-skill`](skills/engineering-practices/template-skill/SKILL.md) | Um template básico que demonstra como estruturar uma habilidade (skill) personalizada para agentes de IA. |
 
 ### 🛠️ Scripts Utilitários
 - **`scripts/pdf_to_markdown.py`**: Converte livros e documentos PDF de referência para arquivos Markdown (`.md`) estruturados, preservando sumários (TOC), marcadores de páginas e blocos de código para auxiliar a IA na criação de novas skills.

@@ -920,5 +920,5 @@ Quando identificar a necessidade de permissão após uma negação:
 - [github-actions](../github-actions/SKILL.md)
 - [containers](../containers/SKILL.md)
 - [agy-customizations](../agy-customizations/SKILL.md)
-- [devops-engineer](../../general/roles/devops-engineer/SKILL.md)
+- [devops-engineer](../../roles/devops-engineer/SKILL.md)
 - [devsecops-engineer](../../security/ops-architecture/devsecops-engineer/SKILL.md)

@@ -96,4 +96,4 @@ convertTimeZone(triggerOutputs()?['body/created'], 'UTC', 'E. South America Stan
 
 - Para integrar automações com dashboards e análise de dados, consulte a skill [power-bi](../power-bi/SKILL.md).
 - Para configurar permissões de Service Principals no Entra ID para conectores do Power Automate, consulte a skill [iam-access-azure](../../security/cloud-iam/iam-access-azure/SKILL.md).
-- Para padrões de API REST e contratos OpenAPI em Custom Connectors, consulte a skill [backend-developer](../../general/roles/backend-developer/SKILL.md).
+- Para padrões de API REST e contratos OpenAPI em Custom Connectors, consulte a skill [backend-developer](../../roles/backend-developer/SKILL.md).

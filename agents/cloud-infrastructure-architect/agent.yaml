@@ -11,13 +11,13 @@ instruction: >
   cloud-aws, cloud-azure, cloud-gcp, cloud-oci, csa-cloud-security, iam-access-management e iam-access-power-platform.
 tools:
   - type: skill_integration
-    path: ../../skills/general/cloud-infra/cloud-aws/SKILL.md
+    path: ../../skills/cloud-infra/cloud-aws/SKILL.md
   - type: skill_integration
-    path: ../../skills/general/cloud-infra/cloud-azure/SKILL.md
+    path: ../../skills/cloud-infra/cloud-azure/SKILL.md
   - type: skill_integration
-    path: ../../skills/general/cloud-infra/cloud-gcp/SKILL.md
+    path: ../../skills/cloud-infra/cloud-gcp/SKILL.md
   - type: skill_integration
-    path: ../../skills/general/cloud-infra/cloud-oci/SKILL.md
+    path: ../../skills/cloud-infra/cloud-oci/SKILL.md
   - type: skill_integration
     path: ../../skills/security/cloud-iam/csa-cloud-security/SKILL.md
   - type: skill_integration

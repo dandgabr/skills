@@ -11,12 +11,12 @@ instruction: >
   dba-database-administrator, db-postgresql, db-mariadb, db-sqlite e db-mongodb.
 tools:
   - type: skill_integration
-    path: ../../skills/general/roles/dba-database-administrator/SKILL.md
+    path: ../../skills/roles/dba-database-administrator/SKILL.md
   - type: skill_integration
-    path: ../../skills/general/databases/db-postgresql/SKILL.md
+    path: ../../skills/databases/db-postgresql/SKILL.md
   - type: skill_integration
-    path: ../../skills/general/databases/db-mariadb/SKILL.md
+    path: ../../skills/databases/db-mariadb/SKILL.md
   - type: skill_integration
-    path: ../../skills/general/databases/db-sqlite/SKILL.md
+    path: ../../skills/databases/db-sqlite/SKILL.md
   - type: skill_integration
-    path: ../../skills/general/databases/db-mongodb/SKILL.md
+    path: ../../skills/databases/db-mongodb/SKILL.md

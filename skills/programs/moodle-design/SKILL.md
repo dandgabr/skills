@@ -151,5 +151,5 @@ $CFG->themedesignermode = true;
 ## 🔗 Habilidades Relacionadas
 *   **Moodle Core**: [program-moodle](../moodle/SKILL.md) — APIs do core, controle de acesso e Frankenstyle.
 *   **Plugins & Ciclo de Vida**: [program-moodle-plugins](../moodle-plugins/SKILL.md) — Criação de extensões e configurações administrativas.
-*   **Metodologias & Tecnologia**: [edtech-andragogy](../../general/domains/edtech-andragogy/SKILL.md) — Design instrucional, Andragogia e experiência do usuário (UX).
+*   **Metodologias & Tecnologia**: [edtech-andragogy](../../domains/edtech-andragogy/SKILL.md) — Design instrucional, Andragogia e experiência do usuário (UX).
 

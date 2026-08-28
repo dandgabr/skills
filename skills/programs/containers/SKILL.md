@@ -553,7 +553,7 @@ Ao planejar, construir ou revisar soluções baseadas em containers, valide:
 
 ## 🔗 Habilidades Relacionadas
 
-- [devops-engineer](../../general/roles/devops-engineer/SKILL.md)
+- [devops-engineer](../../roles/devops-engineer/SKILL.md)
 - [program-github](../github/SKILL.md)
 - [github-actions](../github-actions/SKILL.md)
 - [devsecops-engineer](../../security/ops-architecture/devsecops-engineer/SKILL.md)

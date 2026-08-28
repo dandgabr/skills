@@ -123,5 +123,5 @@ python -m unittest tests.test_user.TestUserRegistry.test_register_user_success
 ## 🔗 Integração com Outras Skills
 
 - [lang-python](../../languages/lang-python/SKILL.md): Garante conformidade com estilo de código estrito e tipagem.
-- [qa-engineer](../../general/roles/qa-engineer/SKILL.md): Orienta a estruturação de planos de teste unitários em projetos sem dependências de terceiros.
+- [qa-engineer](../../roles/qa-engineer/SKILL.md): Orienta a estruturação de planos de teste unitários em projetos sem dependências de terceiros.
 - [framework-testing](../framework-testing/SKILL.md): Apresenta os conceitos de isolamento, stubs e mocks.

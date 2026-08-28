@@ -118,4 +118,4 @@ nose2 --with-coverage
 
 - [framework-unittest](../framework-unittest/SKILL.md): Fornece a base estrutural de `unittest.TestCase` estendida pelo Nose2.
 - [lang-python](../../languages/lang-python/SKILL.md): Garante conformidade de sintaxe e padrões Python.
-- [qa-engineer](../../general/roles/qa-engineer/SKILL.md): Auxilia na categorização de testes rápidos vs lentos.
+- [qa-engineer](../../roles/qa-engineer/SKILL.md): Auxilia na categorização de testes rápidos vs lentos.

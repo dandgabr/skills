@@ -252,7 +252,7 @@ A especificação GraphQL determina um formato de resposta JSON estrito composto
 
 ## 🔗 Integração com Outras Skills
 
-- Para projetar a arquitetura completa de backend e integração com banco de dados, consulte [backend-developer](../../general/roles/backend-developer/SKILL.md) e [software-architect](../../general/roles/software-architect/SKILL.md).
+- Para projetar a arquitetura completa de backend e integração com banco de dados, consulte [backend-developer](../../roles/backend-developer/SKILL.md) e [software-architect](../../roles/software-architect/SKILL.md).
 - Para integração de clientes GraphQL no Frontend com React ou Vue, consulte [framework-react](../framework-react/SKILL.md) e [framework-vue](../framework-vue/SKILL.md).
 - Para auditoria de segurança em APIs GraphQL segundo a OWASP API Security Top 10, consulte [pentester-owasp-api-security-2023](../../security/appsec/pentester-owasp-api-security-2023/SKILL.md) e [appsec-owasp-asvs](../../security/appsec/appsec-owasp-asvs/SKILL.md).
 - Para comparar ou integrar com outros estilos de API, consulte [framework-rest-api](../framework-rest-api/SKILL.md), [framework-grpc](../framework-grpc/SKILL.md) e [framework-soap](../framework-soap/SKILL.md).

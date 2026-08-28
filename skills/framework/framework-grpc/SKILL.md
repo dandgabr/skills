@@ -107,6 +107,6 @@ Evite utilizar apenas códigos gRPC brutos (`codes.Internal`, `codes.InvalidArgu
 
 ## 🔗 Integração com Outras Skills
 
-- Para arquitetura de comunicação entre microsserviços de alta performance, consulte [backend-developer](../../general/roles/backend-developer/SKILL.md) e [software-architect](../../general/roles/software-architect/SKILL.md).
+- Para arquitetura de comunicação entre microsserviços de alta performance, consulte [backend-developer](../../roles/backend-developer/SKILL.md) e [software-architect](../../roles/software-architect/SKILL.md).
 - Para implementar clientes/servidores gRPC em Go, Rust ou Python, consulte [lang-go](../../languages/lang-go/SKILL.md), [lang-rust](../../languages/lang-rust/SKILL.md) e [lang-python](../../languages/lang-python/SKILL.md).
 - Para segurança da camada de transporte e autenticação mTLS em gRPC, consulte [network-security-onprem-cloud](../../security/grc-compliance/network-security-onprem-cloud/SKILL.md) e [auth-protocols-mfa](../../security/ops-architecture/auth-protocols-mfa/SKILL.md).

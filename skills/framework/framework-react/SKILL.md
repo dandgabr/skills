@@ -88,6 +88,6 @@ export const SearchBox: React.FC<SearchBoxProps> = ({ onSearch }) => {
 
 ## 🔗 Integração com Outras Skills
 
-- Para desenvolvimento completo de interfaces com TypeScript e acessibilidade (WCAG), consulte [frontend-developer](../../general/roles/frontend-developer/SKILL.md) e [lang-typescript](../../languages/lang-typescript/SKILL.md).
-- Para automação de suítes de testes em componentes e aplicações web, consulte [framework-jest](../framework-jest/SKILL.md) e [qa-engineer](../../general/roles/qa-engineer/SKILL.md).
+- Para desenvolvimento completo de interfaces com TypeScript e acessibilidade (WCAG), consulte [frontend-developer](../../roles/frontend-developer/SKILL.md) e [lang-typescript](../../languages/lang-typescript/SKILL.md).
+- Para automação de suítes de testes em componentes e aplicações web, consulte [framework-jest](../framework-jest/SKILL.md) e [qa-engineer](../../roles/qa-engineer/SKILL.md).
 - Para proteção contra vulnerabilidades web (XSS, CSRF, Secure Headers), consulte [appsec-owasp-asvs](../../security/appsec/appsec-owasp-asvs/SKILL.md).

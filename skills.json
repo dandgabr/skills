@@ -4,12 +4,7 @@
       "path": "skills"
     },
     {
-      "path": "~/Code/skills/skills"
-    },
-    {
-      "path": "~/Code/skills"
+      "path": "."
     }
-  ],
-  "inherits": [],
-  "exclude": []
+  ]
 }

@@ -14,6 +14,6 @@ tools:
   - type: skill_integration
     path: ../../skills/programs/antigravity-guide/SKILL.md
   - type: skill_integration
-    path: ../../skills/general/roles/explore/SKILL.md
+    path: ../../skills/roles/explore/SKILL.md
   - type: skill_integration
-    path: ../../skills/general/engineering-practices/clean-code-reusability/SKILL.md
+    path: ../../skills/engineering-practices/clean-code-reusability/SKILL.md

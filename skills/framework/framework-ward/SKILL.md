@@ -132,5 +132,5 @@ ward --tags "!slow"
 ## 🔗 Integração com Outras Skills
 
 - [lang-python](../../languages/lang-python/SKILL.md): Garante conformidade de estilo e tipagem em Python moderno.
-- [qa-engineer](../../general/roles/qa-engineer/SKILL.md): Orienta a escrita de testes com descrições voltadas a critérios de aceite BDD.
+- [qa-engineer](../../roles/qa-engineer/SKILL.md): Orienta a escrita de testes com descrições voltadas a critérios de aceite BDD.
 - [framework-testing](../framework-testing/SKILL.md): Fornece os conceitos teóricos de TDD e pirâmide de testes.
