@@ -1,6 +1,6 @@
 {
   "name": "self",
-  "description": "Subagente de Clonagem e Execução Paralela / Isolamento de Contexto (Self Subagent). Herda integralmente a configuração, ferramentas (leitura, escrita, execução de comandos e orquestração) e modelo do agente principal para executar subtarefas complexas em conversas independentes.",
+  "description": "Subagente de Auto-Clonagem, Delegação e Execução Concorrente / Isolamento de Contexto (Self Subagent / Fork Delegate). Herda e replica integralmente o modelo, ferramentas de workspace (leitura, edição, terminal, busca) e diretrizes do agente principal/chamador para executar subtarefas complexas em conversas ou subprocessos independentes em qualquer harness ou framework de IA.",
   "version": "1.0.0",
   "entrypoint": "AGENT.md"
 }
