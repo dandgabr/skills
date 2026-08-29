@@ -1,92 +1,110 @@
 ---
 name: academic-control-systems-theory
-description: Especialista em Teoria de Controle Clássico, Moderno, Digital e Preditivo baseado nas obras Modern Control Engineering (Katsuhiko Ogata), Feedback Control of Dynamic Systems (Franklin, Powell, Emami-Naeini) e Discrete-Time Control Systems (Ogata). Cobre Funções de Transferência, Lugar das Raízes (Root Locus), Análise em Frequência (Bode, Nyquist e Margens de Estabilidade), Espaço de Estados SISO/MIMO (Controlabilidade, Observabilidade de Kalman, Posicionamento de Polos por Ackermann, Regulador Linear Quadrático LQR e Observadores de Luenberger), Controle Digital no Plano Z (ZOH, Transformação Bilinear/Tustin e Deadbeat), Controle Preditivo Baseado em Modelo (MPC com Restrições), Identificação de Sistemas (RLS, ARMAX) e Estimação Estocástica por Filtro de Kalman.
+description: "Especialista em Teoria de Controle Clássico, Moderno, Robótica Industrial e Automação baseada em Katsuhiko Ogata (Modern Control Engineering), John J. Craig (Introduction to Robotics Mechanics and Control) e norma IEC 61131-3. Cobre Lugar das Raízes, Diagramas de Bode/Nyquist, PID Anti-windup, Espaço de Estados, Controlabilidade e Observabilidade de Kalman, Regulador Linear Quadrático (LQR com equação de Riccati ARE), Observadores de Luenberger, Discretização ZOH no Plano Z, Controle Deadbeat, Controle Preditivo Baseado em Modelo (MPC), Filtro de Kalman, Cinemática Direta/Inversa (Denavit-Hartenberg), Jacobiano Robótico, Dinâmica de Lagrange-Euler, ROS 2, SLAM, e Automação com CLPs (Texto Estruturado ST, Ladder LD, SCADA, Modbus, Profinet, OPC-UA)."
 ---
 
-# Teoria de Controle Clássico, Moderno, Digital e Preditivo (Ogata & Franklin)
+# Teoria de Controle, Robótica Industrial e Automação (IEC 61131-3)
 
-Esta skill estabelece a engenharia rigorosa de análise de estabilidade, sintetização de controladores por realimentação, observadores de estado, controle ótimo, discretização digital em tempo real e controle preditivo multivariável.
-
----
-
-## 🎯 1. Controle Clássico no Domínio da Frequência e Laplace
-
-### 1.1 Controladores PID e Compensadores de Avanço/Atraso de Fase
-- **Controlador PID com Filtro de Derivada e Anti-Windup**:
-  $$C(s) = K_p \left( 1 + \frac{1}{T_i s} + \frac{T_d s}{1 + \frac{T_d}{N} s} \right)$$
-- **Compensador por Avanço de Fase (*Phase Lead*)**: $G_c(s) = K_c \frac{s + 1/T}{s + 1/(\alpha T)}$ com $\alpha < 1$ (eleva a Margem de Fase e acelera a resposta transitória).
-- **Compensador por Atraso de Fase (*Phase Lag*)**: $G_c(s) = K_c \frac{s + 1/T}{s + 1/(\beta T)}$ com $\beta > 1$ (eleva o ganho estático em baixa frequência eliminando o erro de regime estacionário).
-
-### 1.2 Critérios de Estabilidade de Nyquist e Margens de Ganho/Fase
-Para a função de transferência em malha aberta $L(s) = G(s)H(s)$:
-- **Critério de Estabilidade de Nyquist**:
-  $$Z = N + P$$
-  onde $Z$ é o número de polos em malha fechada no semiplano direito (instáveis), $N$ é o número de voltas no sentido horário em torno do ponto crítico $(-1 + j0)$ e $P$ é o número de polos instáveis em malha aberta.
-- **Margem de Ganho ($MG$) e Margem de Fase ($MF$)**:
-  $$MG = \frac{1}{|L(j\omega_{pc})|} \quad [\text{dB}], \quad MF = 180^\circ + \angle L(j\omega_{gc})$$
-  onde $\angle L(j\omega_{pc}) = -180^\circ$ e $|L(j\omega_{gc})| = 1$.
+Esta skill estabelece a fundamentação teórica, formulações matemáticas rigorosas e aplicações práticas de engenharia de controle, modelagem de sistemas dinâmicos, robótica manipuladora e móvel, e automação industrial de processos.
 
 ---
 
-## 🔄 2. Controle Moderno em Espaço de Estados (State-Space)
+## 🎛️ 1. Controle Clássico no Domínio da Frequência
 
-```mermaid
-flowchart LR
-    R["r(t)"] --> SUM["+ / -"]
-    SUM --> K["-K"]
-    K --> B["B"]
-    B --> INT["∫ dt"]
-    INT --> C["C"]
-    C --> Y["y(t)"]
-    INT --> A["A"]
-    A --> SUM2["+"]
-    SUM2 --> INT
+### 1.1 PID com Anti-Windup (Clamping e Back-Calculation)
+A lei contínua do controlador PID em forma paralela:
+$$u(t) = K_p e(t) + K_i \int_0^t e(\tau) \, d\tau + K_d \frac{de(t)}{dt}$$
+
+```
+        ┌─────────────────────────────────────────────────────────────┐
+        │                 Saturação do Atuador u_sat                  │
+        └──────────────────────────────┬──────────────────────────────┘
+                                       │ u_sat - u (Erro de Saturação)
+                                       ▼
+    e(t) ───[ Ki ]───(+)───[ 1/s ]───(+)───[ u(t) ]───[ Saturação ]───> u_sat(t)
+                      ▲               │
+                      └───[ 1/Tt ]────┘ (Realimentação Anti-Windup)
 ```
 
-### 2.1 Equações de Estado Contínuas
+### 1.2 Critério de Estabilidade de Nyquist
+O número de polos de malha fechada no semiplano direito ($Z$) é dado por $Z = N + P$, onde $P$ é o número de polos de malha aberta no semiplano direito e $N$ é o número de voltas no sentido horário que o diagrama de Nyquist $G(s)H(s)$ dá em torno do ponto crítico $(-1 + j0)$.
+
+---
+
+## 🚀 2. Controle Moderno em Espaço de Estados e Controle Ótimo
+
+### 2.1 Modelo Contínuo e Matrizes de Controlabilidade e Observabilidade
 $$\dot{\mathbf{x}}(t) = \mathbf{A}\mathbf{x}(t) + \mathbf{B}\mathbf{u}(t), \quad \mathbf{y}(t) = \mathbf{C}\mathbf{x}(t) + \mathbf{D}\mathbf{u}(t)$$
+- **Controlabilidade**: $\mathcal{C} = \begin{bmatrix} \mathbf{B} & \mathbf{AB} & \mathbf{A}^2\mathbf{B} & \cdots & \mathbf{A}^{n-1}\mathbf{B} \end{bmatrix}, \quad \text{posto}(\mathcal{C}) = n$.
+- **Observabilidade**: $\mathcal{O} = \begin{bmatrix} \mathbf{C}^T & (\mathbf{CA})^T & (\mathbf{CA}^2)^T & \cdots & (\mathbf{CA}^{n-1})^T \end{bmatrix}^T, \quad \text{posto}(\mathcal{O}) = n$.
 
-- **Critério de Controlabilidade de Kalman**:
-  $$\text{rank}(\mathcal{C}) = \text{rank}\begin{bmatrix} \mathbf{B} & \mathbf{AB} & \mathbf{A}^2\mathbf{B} & \dots & \mathbf{A}^{n-1}\mathbf{B} \end{bmatrix} = n$$
-- **Critério de Observabilidade de Kalman**:
-  $$\text{rank}(\mathcal{O}) = \text{rank}\begin{bmatrix} \mathbf{C} \\ \mathbf{CA} \\ \mathbf{CA}^2 \\ \vdots \\ \mathbf{CA}^{n-1} \end{bmatrix} = n$$
+### 2.2 Regulador Linear Quadrático (LQR)
+Minimiza o funcional quadrático de custo:
+$$J = \int_0^\infty \left( \mathbf{x}^T \mathbf{Q} \mathbf{x} + \mathbf{u}^T \mathbf{R} \mathbf{u} \right) dt \implies \mathbf{u}(t) = -\mathbf{K}\mathbf{x}(t), \quad \mathbf{K} = \mathbf{R}^{-1} \mathbf{B}^T \mathbf{P}$$
+onde $\mathbf{P} = \mathbf{P}^T > 0$ é a solução única da **Equação Algébrica de Riccati (ARE)**:
+$$\mathbf{A}^T \mathbf{P} + \mathbf{P} \mathbf{A} - \mathbf{P} \mathbf{B} \mathbf{R}^{-1} \mathbf{B}^T \mathbf{P} + \mathbf{Q} = \mathbf{0}$$
 
-### 2.2 Regulador Linear Quadrático (LQR - Optimal Control)
-Minimiza a função de custo quadrática com matrizes de ponderação simétricas $\mathbf{Q} \ge 0$ e $\mathbf{R} > 0$:
-
-$$J = \int_0^\infty \left( \mathbf{x}^T \mathbf{Q} \mathbf{x} + \mathbf{u}^T \mathbf{R} \mathbf{u} \right) dt$$
-
-- **Lei de Controle Ótima**: $\mathbf{u}(t) = -\mathbf{K} \mathbf{x}(t) = -\mathbf{R}^{-1} \mathbf{B}^T \mathbf{P} \mathbf{x}(t)$, onde $\mathbf{P}$ é a única solução semi-definida positiva da **Equação Algébrica de Riccati (ARE)**:
-  $$\mathbf{A}^T \mathbf{P} + \mathbf{P} \mathbf{A} - \mathbf{P} \mathbf{B} \mathbf{R}^{-1} \mathbf{B}^T \mathbf{P} + \mathbf{Q} = \mathbf{0}$$
-
-### 2.3 Observadores de Estado de Luenberger
-$$\dot{\hat{\mathbf{x}}}(t) = \mathbf{A}\hat{\mathbf{x}}(t) + \mathbf{B}\mathbf{u}(t) + \mathbf{L}(\mathbf{y}(t) - \mathbf{C}\hat{\mathbf{x}}(t))$$
-- **Princípio da Separação**: Os autovalores do controlador $\mathbf{A} - \mathbf{BK}$ e do observador $\mathbf{A} - \mathbf{LC}$ são desacoplados e podem ser projetados de forma independente.
+### 2.3 Observador de Estados de Luenberger & Filtro de Kalman
+- **Observador de Luenberger**: $\dot{\hat{\mathbf{x}}} = \mathbf{A}\hat{\mathbf{x}} + \mathbf{B}\mathbf{u} + \mathbf{L}(\mathbf{y} - \mathbf{C}\hat{\mathbf{x}})$.
+- **Filtro de Kalman Estacionário**: Ganho $\mathbf{L} = \mathbf{P}_e \mathbf{C}^T \mathbf{R}_v^{-1}$, onde $\mathbf{P}_e$ resolve a Riccati de erro com ruídos de processo $\mathbf{Q}_w$ e medição $\mathbf{R}_v$.
 
 ---
 
-## 💻 3. Controle Digital e Espaço Discreto (Plano Z)
+## 🦾 3. Robótica Industrial, Manipuladores e ROS 2
 
-- **Discretização por Segurador de Ordem Zero (ZOH)** com período de amostragem $T_s$:
-  $$\mathbf{\Phi} = e^{\mathbf{A} T_s}, \quad \mathbf{\Gamma} = \left( \int_0^{T_s} e^{\mathbf{A}\tau} d\tau \right) \mathbf{B}$$
-- **Mapeamento de Polos $s \to z$**: $z = e^{s T_s}$. O interior do círculo unitário $|z| < 1$ no plano complexo $Z$ corresponde ao semiplano esquerdo estável $\text{Re}(s) < 0$.
-- **Controlador Deadbeat**: Projeta os polos em malha fechada exatamente na origem $z = 0$, garantindo tempo de acomodação finito em exatamente $n$ passos de amostragem.
+### 3.1 Transformações Homogêneas de Denavit-Hartenberg (DH)
+A matriz de transformação entre elos consecutivos $^{i-1}\mathbf{T}_i$:
+$$^{i-1}\mathbf{T}_i = \begin{bmatrix}
+\cos\theta_i & -\sin\theta_i\cos\alpha_i & \sin\theta_i\sin\alpha_i & a_i\cos\theta_i \\
+\sin\theta_i & \cos\theta_i\cos\alpha_i & -\cos\theta_i\sin\alpha_i & a_i\sin\theta_i \\
+0 & \sin\alpha_i & \cos\alpha_i & d_i \\
+0 & 0 & 0 & 1
+\end{bmatrix}$$
+
+### 3.2 Dinâmica de Lagrange-Euler e Jacobiano Robótico
+- **Equação Dinâmica da Junta**:
+  $$\mathbf{M}(\mathbf{q})\ddot{\mathbf{q}} + \mathbf{C}(\mathbf{q}, \dot{\mathbf{q}})\dot{\mathbf{q}} + \mathbf{g}(\mathbf{q}) = \boldsymbol{\tau}$$
+- **Velocidade Cartesiana do Efetuador**: $\mathbf{v} = \mathbf{J}(\mathbf{q})\dot{\mathbf{q}}$. Singularidades cinemáticas ocorrem quando $\det(\mathbf{J}(\mathbf{q})) = 0$.
 
 ---
 
-## 🔮 4. Controle Preditivo Baseado em Modelo (MPC) e Estimação de Kalman
+## 🏭 4. Automação Industrial, CLPs (IEC 61131-3) e Sistemas SCADA
 
-### 4.1 Controle Preditivo Baseado em Modelo (MPC)
-Em cada instante $k$, resolve online um problema de programação quadrática (QP) sobre o horizonte de predição $N_p$ e horizonte de controle $N_c$:
+### 4.1 Bloco Funcional em Texto Estruturado (ST - IEC 61131-3)
+```iecst
+// Bloco Funcional de Controle de Processo com Intertravamento de Segurança
+FUNCTION_BLOCK FB_ProcessControl
+VAR_INPUT
+    bAutoMode     : BOOL;
+    rProcessVar   : REAL;
+    rSetPoint     : REAL;
+    rTolerance    : REAL;
+    bEmergencyStop: BOOL;
+END_VAR
+VAR_OUTPUT
+    bActuatorOn   : BOOL;
+    bHighAlarm    : BOOL;
+    bLowAlarm     : BOOL;
+END_VAR
 
-$$\min_{\Delta \mathbf{U}} \sum_{i=1}^{N_p} \|\hat{\mathbf{y}}(k+i|k) - \mathbf{r}(k+i)\|_{\mathbf{Q}_y}^2 + \sum_{j=0}^{N_c-1} \|\Delta \mathbf{u}(k+j)\|_{\mathbf{R}_u}^2$$
-sujeito a restrições operacionais de atuador e estado:
-$$\mathbf{u}_{min} \le \mathbf{u}(k) \le \mathbf{u}_{max}, \quad \Delta\mathbf{u}_{min} \le \Delta\mathbf{u}(k) \le \Delta\mathbf{u}_{max}, \quad \mathbf{y}_{min} \le \mathbf{y}(k) \le \mathbf{y}_{max}$$
-Aplica-se apenas o primeiro comando de controle $\mathbf{u}(k)$ (*Princípio do Horizonte Deslizante / Receding Horizon*).
+IF bEmergencyStop THEN
+    bActuatorOn := FALSE;
+    bHighAlarm  := TRUE;
+ELSIF bAutoMode THEN
+    IF rProcessVar < (rSetPoint - rTolerance) THEN
+        bActuatorOn := TRUE;
+    ELSIF rProcessVar > (rSetPoint + rTolerance) THEN
+        bActuatorOn := FALSE;
+    END_IF;
+    bHighAlarm := rProcessVar > (rSetPoint + (2.0 * rTolerance));
+    bLowAlarm  := rProcessVar < (rSetPoint - (2.0 * rTolerance));
+ELSE
+    bActuatorOn := FALSE;
+END_IF;
+END_FUNCTION_BLOCK
+```
 
-### 4.2 Filtro de Kalman Discreto (Fusão Sensorial e Estimação Ótima)
-$$\begin{aligned}
-\text{Predição:} \quad &\hat{\mathbf{x}}_k^- = \mathbf{A}\hat{\mathbf{x}}_{k-1} + \mathbf{B}\mathbf{u}_{k-1}, \quad \mathbf{P}_k^- = \mathbf{A}\mathbf{P}_{k-1}\mathbf{A}^T + \mathbf{Q} \\
-\text{Ganho:} \quad &\mathbf{K}_k = \mathbf{P}_k^- \mathbf{C}^T (\mathbf{C}\mathbf{P}_k^- \mathbf{C}^T + \mathbf{R})^{-1} \\
-\text{Atualização:} \quad &\hat{\mathbf{x}}_k = \hat{\mathbf{x}}_k^- + \mathbf{K}_k (\mathbf{y}_k - \mathbf{C}\hat{\mathbf{x}}_k^-), \quad \mathbf{P}_k = (\mathbf{I} - \mathbf{K}_k \mathbf{C}) \mathbf{P}_k^-
-\end{aligned}$$
+### 4.2 Protocolos e Redes Industriais
+- **Modbus RTU/TCP**: Mapeamento de Coils (`0xxxx`), Discrete Inputs (`1xxxx`), Input Registers (`3xxxx`) e Holding Registers (`4xxxx`).
+- **OPC-UA (Open Platform Communications Unified Architecture)**: Comunicação cliente-servidor orientada a objetos com criptografia TLS e certificados X.509 para telemetria em tempo real com sistemas SCADA e MES.
+- **Profinet / EtherCAT**: Barramentos Ethernet industriais determinísticos com ciclo de varredura (*jitter*) na escala de microssegundos.

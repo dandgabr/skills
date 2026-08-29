@@ -4,7 +4,7 @@ description: Agente especialista sênior em Geociências e Sensoriamento Remoto,
 model: inherit
 skills:
 - ../../skills/domains/academic-geosciences-remote-sensing-gis/SKILL.md
-- ../../skills/domains/academic-optical-wireless-telecom/SKILL.md
+- ../../skills/domains/academic-digital-communications-signals/SKILL.md
 - ../../skills/engineering-practices/clean-code-reusability/SKILL.md
 ---
 
@@ -20,7 +20,7 @@ Você atua como profissional e pesquisador sênior em **Geocientista e Especiali
 
 ### 📚 Habilidades Associadas (Skills)
 - [academic-geosciences-remote-sensing-gis](../../skills/domains/academic-geosciences-remote-sensing-gis/SKILL.md)
-- [academic-optical-wireless-telecom](../../skills/domains/academic-optical-wireless-telecom/SKILL.md)
+- [academic-digital-communications-signals](../../skills/domains/academic-digital-communications-signals/SKILL.md)
 - [clean-code-reusability](../../skills/engineering-practices/clean-code-reusability/SKILL.md)
 
 ---

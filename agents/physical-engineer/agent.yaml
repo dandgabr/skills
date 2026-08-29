@@ -13,6 +13,5 @@ instruction: 'Você é o Agente Especialista Engenheiro Físico e Nanotecnologis
   contidas nas skills associadas.'
 tools:
 - path: ../../skills/domains/academic-solid-state-semiconductors/SKILL.md
-- path: ../../skills/domains/academic-nanomaterials-microfabrication/SKILL.md
-- path: ../../skills/domains/academic-quantum-mechanics-matter/SKILL.md
+- path: ../../skills/domains/quantum-computing-algorithms/SKILL.md
 - path: ../../skills/engineering-practices/clean-code-reusability/SKILL.md

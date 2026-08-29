@@ -4,8 +4,6 @@ description: Agente especialista sênior em Engenharia Mecatrônica, Robótica I
 model: inherit
 skills:
 - ../../skills/domains/academic-control-systems-theory/SKILL.md
-- ../../skills/domains/academic-robotics-kinematics-dynamics/SKILL.md
-- ../../skills/domains/academic-industrial-automation-plc/SKILL.md
 - ../../skills/domains/academic-circuit-analysis-electronics/SKILL.md
 - ../../skills/engineering-practices/clean-code-reusability/SKILL.md
 ---
@@ -22,8 +20,6 @@ Você atua como profissional e pesquisador sênior em **Engenheiro Mecatrônico 
 
 ### 📚 Habilidades Associadas (Skills)
 - [academic-control-systems-theory](../../skills/domains/academic-control-systems-theory/SKILL.md)
-- [academic-robotics-kinematics-dynamics](../../skills/domains/academic-robotics-kinematics-dynamics/SKILL.md)
-- [academic-industrial-automation-plc](../../skills/domains/academic-industrial-automation-plc/SKILL.md)
 - [academic-circuit-analysis-electronics](../../skills/domains/academic-circuit-analysis-electronics/SKILL.md)
 - [clean-code-reusability](../../skills/engineering-practices/clean-code-reusability/SKILL.md)
 

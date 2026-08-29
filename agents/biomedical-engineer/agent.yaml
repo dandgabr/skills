@@ -13,6 +13,5 @@ instruction: 'Você é o Agente Especialista Engenheiro Biomédico e Especialist
   contidas nas skills associadas.'
 tools:
 - path: ../../skills/domains/academic-biomedical-instrumentation-signals/SKILL.md
-- path: ../../skills/domains/academic-medical-imaging-dicom/SKILL.md
 - path: ../../skills/security/grc-compliance/healthtech-standards-security/SKILL.md
 - path: ../../skills/engineering-practices/clean-code-reusability/SKILL.md

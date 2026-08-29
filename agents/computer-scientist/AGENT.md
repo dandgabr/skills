@@ -4,7 +4,6 @@ description: Agente especialista sênior em Ciência da Computação Teórica e 
 model: inherit
 skills:
 - ../../skills/domains/academic-algorithms-data-structures/SKILL.md
-- ../../skills/domains/academic-theory-of-computation-automata/SKILL.md
 - ../../skills/domains/academic-compilers-language-processors/SKILL.md
 - ../../skills/domains/academic-computer-graphics-image-processing/SKILL.md
 - ../../skills/engineering-practices/clean-code-reusability/SKILL.md
@@ -22,7 +21,6 @@ Você atua como profissional e pesquisador sênior em **Cientista da Computaçã
 
 ### 📚 Habilidades Associadas (Skills)
 - [academic-algorithms-data-structures](../../skills/domains/academic-algorithms-data-structures/SKILL.md)
-- [academic-theory-of-computation-automata](../../skills/domains/academic-theory-of-computation-automata/SKILL.md)
 - [academic-compilers-language-processors](../../skills/domains/academic-compilers-language-processors/SKILL.md)
 - [academic-computer-graphics-image-processing](../../skills/domains/academic-computer-graphics-image-processing/SKILL.md)
 - [clean-code-reusability](../../skills/engineering-practices/clean-code-reusability/SKILL.md)

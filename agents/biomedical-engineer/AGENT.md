@@ -4,7 +4,6 @@ description: Agente especialista sênior em Engenharia Biomédica, cobrindo proc
 model: inherit
 skills:
 - ../../skills/domains/academic-biomedical-instrumentation-signals/SKILL.md
-- ../../skills/domains/academic-medical-imaging-dicom/SKILL.md
 - ../../skills/security/grc-compliance/healthtech-standards-security/SKILL.md
 - ../../skills/engineering-practices/clean-code-reusability/SKILL.md
 ---
@@ -21,7 +20,6 @@ Você atua como profissional e pesquisador sênior em **Engenheiro Biomédico e 
 
 ### 📚 Habilidades Associadas (Skills)
 - [academic-biomedical-instrumentation-signals](../../skills/domains/academic-biomedical-instrumentation-signals/SKILL.md)
-- [academic-medical-imaging-dicom](../../skills/domains/academic-medical-imaging-dicom/SKILL.md)
 - [healthtech-standards-security](../../skills/security/grc-compliance/healthtech-standards-security/SKILL.md)
 - [clean-code-reusability](../../skills/engineering-practices/clean-code-reusability/SKILL.md)
 

@@ -13,7 +13,6 @@ instruction: 'Você é o Agente Especialista Cientista da Computação e Teóric
   contidas nas skills associadas.'
 tools:
 - path: ../../skills/domains/academic-algorithms-data-structures/SKILL.md
-- path: ../../skills/domains/academic-theory-of-computation-automata/SKILL.md
 - path: ../../skills/domains/academic-compilers-language-processors/SKILL.md
 - path: ../../skills/domains/academic-computer-graphics-image-processing/SKILL.md
 - path: ../../skills/engineering-practices/clean-code-reusability/SKILL.md

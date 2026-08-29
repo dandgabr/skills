@@ -7,7 +7,7 @@ skills:
 - ../../skills/domains/academic-digital-systems-vlsi/SKILL.md
 - ../../skills/domains/academic-circuit-analysis-electronics/SKILL.md
 - ../../skills/domains/academic-microprocessors-embedded-systems/SKILL.md
-- ../../skills/languages/lang-hdl-verilog-vhdl/SKILL.md
+- ../../skills/domains/academic-digital-systems-vlsi/SKILL.md
 - ../../skills/languages/lang-assembly-x64/SKILL.md
 ---
 
@@ -25,7 +25,7 @@ Você atua como profissional e pesquisador sênior em **Engenheiro de Computaç�
 - [academic-microprocessors-embedded-systems](../../skills/domains/academic-microprocessors-embedded-systems/SKILL.md)
 - [academic-digital-systems-vlsi](../../skills/domains/academic-digital-systems-vlsi/SKILL.md)
 - [academic-circuit-analysis-electronics](../../skills/domains/academic-circuit-analysis-electronics/SKILL.md)
-- [lang-hdl-verilog-vhdl](../../skills/languages/lang-hdl-verilog-vhdl/SKILL.md)
+- [academic-digital-systems-vlsi](../../skills/domains/academic-digital-systems-vlsi/SKILL.md)
 - [lang-assembly-x64](../../skills/languages/lang-assembly-x64/SKILL.md)
 
 ---

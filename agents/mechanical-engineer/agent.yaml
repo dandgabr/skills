@@ -12,6 +12,6 @@ instruction: 'Você é o Agente Especialista Engenheiro Mecânico e de Termoflui
   contidas nas skills associadas.'
 tools:
 - path: ../../skills/domains/academic-structural-analysis-solid-mechanics/SKILL.md
-- path: ../../skills/domains/academic-transport-phenomena-cfd/SKILL.md
+- path: ../../skills/domains/academic-chemical-engineering-reactors/SKILL.md
 - path: ../../skills/domains/academic-classical-mechanics-relativity/SKILL.md
 - path: ../../skills/engineering-practices/clean-code-reusability/SKILL.md

@@ -4,7 +4,6 @@ description: Agente especialista sênior em Engenharia Civil e Estrutural, cobri
 model: inherit
 skills:
 - ../../skills/domains/academic-structural-analysis-solid-mechanics/SKILL.md
-- ../../skills/domains/academic-geotechnics-soil-mechanics/SKILL.md
 - ../../skills/engineering-practices/clean-code-reusability/SKILL.md
 ---
 
@@ -20,7 +19,6 @@ Você atua como profissional e pesquisador sênior em **Engenheiro Civil e Estru
 
 ### 📚 Habilidades Associadas (Skills)
 - [academic-structural-analysis-solid-mechanics](../../skills/domains/academic-structural-analysis-solid-mechanics/SKILL.md)
-- [academic-geotechnics-soil-mechanics](../../skills/domains/academic-geotechnics-soil-mechanics/SKILL.md)
 - [clean-code-reusability](../../skills/engineering-practices/clean-code-reusability/SKILL.md)
 
 ---

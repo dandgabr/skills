@@ -13,6 +13,5 @@ instruction: 'Você é o Agente Especialista Engenheiro de Telecomunicações e 
   contidas nas skills associadas.'
 tools:
 - path: ../../skills/domains/academic-digital-communications-signals/SKILL.md
-- path: ../../skills/domains/academic-optical-wireless-telecom/SKILL.md
 - path: ../../skills/domains/telecom-voice-engineering/SKILL.md
 - path: ../../skills/engineering-practices/clean-code-reusability/SKILL.md

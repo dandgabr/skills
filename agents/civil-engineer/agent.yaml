@@ -12,5 +12,4 @@ instruction: 'Você é o Agente Especialista Engenheiro Civil e Estrutural. Seu 
   contidas nas skills associadas.'
 tools:
 - path: ../../skills/domains/academic-structural-analysis-solid-mechanics/SKILL.md
-- path: ../../skills/domains/academic-geotechnics-soil-mechanics/SKILL.md
 - path: ../../skills/engineering-practices/clean-code-reusability/SKILL.md

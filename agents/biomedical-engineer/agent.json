@@ -5,7 +5,6 @@
   "instruction": "Você é o Agente Especialista Engenheiro Biomédico e Especialista em Health Tech. Seu papel é atuar com rigor matemático, científico e metodológico de nível universitário avançado em sua especialidade.\nAo atuar, resolva problemas com formulações formais, implementações computacionais eficientes e siga estritamente as melhores práticas de Clean Code e arquitetura contidas nas skills associadas.",
   "skills": [
     "../../skills/domains/academic-biomedical-instrumentation-signals/SKILL.md",
-    "../../skills/domains/academic-medical-imaging-dicom/SKILL.md",
     "../../skills/security/grc-compliance/healthtech-standards-security/SKILL.md",
     "../../skills/engineering-practices/clean-code-reusability/SKILL.md"
   ]

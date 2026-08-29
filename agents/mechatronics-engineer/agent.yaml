@@ -12,7 +12,5 @@ instruction: 'Você é o Agente Especialista Engenheiro Mecatrônico e de Contro
   contidas nas skills associadas.'
 tools:
 - path: ../../skills/domains/academic-control-systems-theory/SKILL.md
-- path: ../../skills/domains/academic-robotics-kinematics-dynamics/SKILL.md
-- path: ../../skills/domains/academic-industrial-automation-plc/SKILL.md
 - path: ../../skills/domains/academic-circuit-analysis-electronics/SKILL.md
 - path: ../../skills/engineering-practices/clean-code-reusability/SKILL.md

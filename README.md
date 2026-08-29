@@ -7,7 +7,7 @@ Este repositório serve como uma central modular e extensível para carregamento
 ## 🧭 Navegação Rápida
 
 > 📚 **[Acesse o Catálogo Completo de Habilidades e Agentes (CATALOGO.md)](CATALOGO.md)**  
-> Consulte a lista detalhada das **166 Skills** e **44 Agentes Especializados**, com métricas por categoria, subcategorias e descrições técnicas completas.
+> Consulte a lista detalhada das **156 Skills** e **44 Agentes Especializados**, com métricas por categoria, subcategorias e descrições técnicas completas.
 
 - 🤖 **[Guia de Agentes Especializados Universais (agents/README.md)](agents/README.md)**: Personas, manifestos (`AGENT.md`, `agent.yaml`, `agent.json`) e instruções de execução para qualquer harness.
 - 📜 **[Regras Globais do Projeto (AGENTS.md)](AGENTS.md)**: Diretrizes de comportamento, Clean Code, padrões de skills e criação de agentes.
@@ -18,17 +18,17 @@ Este repositório serve como uma central modular e extensível para carregamento
 ## 📁 Estrutura de Pastas
 
 ```text
-├── CATALOGO.md             # Catálogo mestre com inventário de todas as 166 skills e 44 agentes
+├── CATALOGO.md             # Catálogo mestre com inventário de todas as 156 skills e 44 agentes
 ├── README.md               # Visão geral e documentação do repositório
 ├── AGENTS.md               # Regras gerais de comportamento, clean code e workflows
 ├── skills.json             # Manifesto de carregamento e herança de skills
 ├── skills/
 │   ├── cloud-infra/        # AWS, Azure, GCP, OCI, Linux Kernel, HPC, Zero Trust (7 skills)
 │   ├── databases/          # PostgreSQL, MariaDB, MongoDB, SQLite, Data Mesh, Streaming (6 skills)
-│   ├── domains/            # Matemática, Física, Computação Teórica, Circuitos, Robótica, Telecom, Química, SEP, Biotecnologia (40 skills)
+│   ├── domains/            # Matemática, Física, Computação Teórica, Circuitos, Robótica/Controle, Telecom, Química/CFD, SEP, Biotecnologia (31 master skills)
 │   ├── engineering-practices/ # Clean Code, C4 Model, System Design, Documentation (5 skills)
 │   ├── framework/          # Testes unitários/mutação, React, Vue, APIs REST HTTP/3, GraphQL, gRPC, SOAP (10 skills)
-│   ├── languages/          # Python, TypeScript, Go, Rust, C, C++, Assembly, Verilog/VHDL, Typst, etc. (15 skills)
+│   ├── languages/          # Python, TypeScript, Go, Rust, C, C++, Assembly, Typst, LaTeX, Bash, etc. (14 skills)
 │   ├── mapping/            # Código AST, Call Graphs, Rede, eBPF, CMDB, Engenharia Reversa (13 skills)
 │   ├── patterns/           # Design Patterns GoF: Criacionais, Estruturais e Comportamentais (3 master skills)
 │   ├── programs/           # Containers, GitHub Actions, Antigravity Guide, Markmap, Moodle, WinDbg, etc. (10 skills)
@@ -68,4 +68,4 @@ O arquivo [skills.json](skills.json) permite registrar fontes externas de skills
 
 ---
 
-Para consultar o inventário detalhado de todas as 166 skills e 44 agentes, acesse o **[Catálogo Completo (CATALOGO.md)](CATALOGO.md)**.
+Para consultar o inventário detalhado de todas as 156 skills e 44 agentes, acesse o **[Catálogo Completo (CATALOGO.md)](CATALOGO.md)**.

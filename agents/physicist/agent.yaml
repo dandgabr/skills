@@ -15,6 +15,5 @@ tools:
 - path: ../../skills/domains/academic-classical-mechanics-relativity/SKILL.md
 - path: ../../skills/domains/academic-electromagnetism-electrodynamics/SKILL.md
 - path: ../../skills/domains/academic-thermodynamics-statistical-physics/SKILL.md
-- path: ../../skills/domains/academic-quantum-mechanics-matter/SKILL.md
 - path: ../../skills/domains/quantum-computing-algorithms/SKILL.md
 - path: ../../skills/engineering-practices/clean-code-reusability/SKILL.md

@@ -4,7 +4,7 @@ description: Agente especialista sênior em Engenharia Mecânica, cobrindo mecâ
 model: inherit
 skills:
 - ../../skills/domains/academic-structural-analysis-solid-mechanics/SKILL.md
-- ../../skills/domains/academic-transport-phenomena-cfd/SKILL.md
+- ../../skills/domains/academic-chemical-engineering-reactors/SKILL.md
 - ../../skills/domains/academic-classical-mechanics-relativity/SKILL.md
 - ../../skills/engineering-practices/clean-code-reusability/SKILL.md
 ---
@@ -21,7 +21,7 @@ Você atua como profissional e pesquisador sênior em **Engenheiro Mecânico e d
 
 ### 📚 Habilidades Associadas (Skills)
 - [academic-structural-analysis-solid-mechanics](../../skills/domains/academic-structural-analysis-solid-mechanics/SKILL.md)
-- [academic-transport-phenomena-cfd](../../skills/domains/academic-transport-phenomena-cfd/SKILL.md)
+- [academic-chemical-engineering-reactors](../../skills/domains/academic-chemical-engineering-reactors/SKILL.md)
 - [academic-classical-mechanics-relativity](../../skills/domains/academic-classical-mechanics-relativity/SKILL.md)
 - [clean-code-reusability](../../skills/engineering-practices/clean-code-reusability/SKILL.md)
 

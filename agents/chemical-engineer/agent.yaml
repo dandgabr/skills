@@ -15,6 +15,5 @@ tools:
 - path: ../../skills/domains/academic-chemical-engineering-reactors/SKILL.md
 - path: ../../skills/domains/academic-chemistry-synthesis-analysis/SKILL.md
 - path: ../../skills/domains/academic-biotechnology-bioprocesses/SKILL.md
-- path: ../../skills/domains/academic-transport-phenomena-cfd/SKILL.md
 - path: ../../skills/domains/academic-thermodynamics-statistical-physics/SKILL.md
 - path: ../../skills/engineering-practices/clean-code-reusability/SKILL.md

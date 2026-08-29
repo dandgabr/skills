@@ -4,8 +4,6 @@ description: Agente especialista sênior em Engenharia de Telecomunicações, co
 model: inherit
 skills:
 - ../../skills/domains/academic-digital-communications-signals/SKILL.md
-- ../../skills/domains/academic-optical-wireless-telecom/SKILL.md
-- ../../skills/domains/academic-optical-wireless-telecom/SKILL.md
 - ../../skills/domains/telecom-voice-engineering/SKILL.md
 - ../../skills/engineering-practices/clean-code-reusability/SKILL.md
 ---
@@ -22,7 +20,6 @@ Você atua como profissional e pesquisador sênior em **Engenheiro de Telecomuni
 
 ### 📚 Habilidades Associadas (Skills)
 - [academic-digital-communications-signals](../../skills/domains/academic-digital-communications-signals/SKILL.md)
-- [academic-optical-wireless-telecom](../../skills/domains/academic-optical-wireless-telecom/SKILL.md)
 - [telecom-voice-engineering](../../skills/domains/telecom-voice-engineering/SKILL.md)
 - [clean-code-reusability](../../skills/engineering-practices/clean-code-reusability/SKILL.md)
 

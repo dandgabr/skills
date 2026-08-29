@@ -4,8 +4,7 @@ description: Agente especialista sênior em Engenharia Física e Nanotecnologia,
 model: inherit
 skills:
 - ../../skills/domains/academic-solid-state-semiconductors/SKILL.md
-- ../../skills/domains/academic-nanomaterials-microfabrication/SKILL.md
-- ../../skills/domains/academic-quantum-mechanics-matter/SKILL.md
+- ../../skills/domains/quantum-computing-algorithms/SKILL.md
 - ../../skills/engineering-practices/clean-code-reusability/SKILL.md
 ---
 
@@ -21,8 +20,7 @@ Você atua como profissional e pesquisador sênior em **Engenheiro Físico e Nan
 
 ### 📚 Habilidades Associadas (Skills)
 - [academic-solid-state-semiconductors](../../skills/domains/academic-solid-state-semiconductors/SKILL.md)
-- [academic-nanomaterials-microfabrication](../../skills/domains/academic-nanomaterials-microfabrication/SKILL.md)
-- [academic-quantum-mechanics-matter](../../skills/domains/academic-quantum-mechanics-matter/SKILL.md)
+- [quantum-computing-algorithms](../../skills/domains/quantum-computing-algorithms/SKILL.md)
 - [clean-code-reusability](../../skills/engineering-practices/clean-code-reusability/SKILL.md)
 
 ---

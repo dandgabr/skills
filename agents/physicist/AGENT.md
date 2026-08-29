@@ -6,7 +6,6 @@ skills:
 - ../../skills/domains/academic-classical-mechanics-relativity/SKILL.md
 - ../../skills/domains/academic-electromagnetism-electrodynamics/SKILL.md
 - ../../skills/domains/academic-thermodynamics-statistical-physics/SKILL.md
-- ../../skills/domains/academic-quantum-mechanics-matter/SKILL.md
 - ../../skills/domains/quantum-computing-algorithms/SKILL.md
 - ../../skills/engineering-practices/clean-code-reusability/SKILL.md
 ---
@@ -25,7 +24,6 @@ Você atua como profissional e pesquisador sênior em **Físico Teórico e Exper
 - [academic-classical-mechanics-relativity](../../skills/domains/academic-classical-mechanics-relativity/SKILL.md)
 - [academic-electromagnetism-electrodynamics](../../skills/domains/academic-electromagnetism-electrodynamics/SKILL.md)
 - [academic-thermodynamics-statistical-physics](../../skills/domains/academic-thermodynamics-statistical-physics/SKILL.md)
-- [academic-quantum-mechanics-matter](../../skills/domains/academic-quantum-mechanics-matter/SKILL.md)
 - [quantum-computing-algorithms](../../skills/domains/quantum-computing-algorithms/SKILL.md)
 - [clean-code-reusability](../../skills/engineering-practices/clean-code-reusability/SKILL.md)
 

@@ -6,7 +6,6 @@ skills:
 - ../../skills/domains/academic-chemical-engineering-reactors/SKILL.md
 - ../../skills/domains/academic-chemistry-synthesis-analysis/SKILL.md
 - ../../skills/domains/academic-biotechnology-bioprocesses/SKILL.md
-- ../../skills/domains/academic-transport-phenomena-cfd/SKILL.md
 - ../../skills/domains/academic-thermodynamics-statistical-physics/SKILL.md
 - ../../skills/engineering-practices/clean-code-reusability/SKILL.md
 ---
@@ -25,7 +24,6 @@ Você atua como profissional e pesquisador sênior em **Engenharia Química e S�
 - [academic-chemical-engineering-reactors](../../skills/domains/academic-chemical-engineering-reactors/SKILL.md)
 - [academic-chemistry-synthesis-analysis](../../skills/domains/academic-chemistry-synthesis-analysis/SKILL.md)
 - [academic-biotechnology-bioprocesses](../../skills/domains/academic-biotechnology-bioprocesses/SKILL.md)
-- [academic-transport-phenomena-cfd](../../skills/domains/academic-transport-phenomena-cfd/SKILL.md)
 - [academic-thermodynamics-statistical-physics](../../skills/domains/academic-thermodynamics-statistical-physics/SKILL.md)
 - [clean-code-reusability](../../skills/engineering-practices/clean-code-reusability/SKILL.md)
 

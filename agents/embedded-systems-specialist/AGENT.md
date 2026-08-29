@@ -4,7 +4,7 @@ description: "Especialista em Sistemas Embarcados, RTOS (Zephyr), Linux Embarcad
 model: "inherit"
 skills:
 - ../../skills/domains/academic-microprocessors-embedded-systems/SKILL.md
-- ../../skills/languages/lang-hdl-verilog-vhdl/SKILL.md
+- ../../skills/domains/academic-digital-systems-vlsi/SKILL.md
 - ../../skills/languages/lang-c/SKILL.md
 - ../../skills/languages/lang-assembly-x64/SKILL.md
 - ../../skills/engineering-practices/clean-code-reusability/SKILL.md
@@ -30,7 +30,7 @@ Ao projetar código para microcontroladores ou FPGAs:
 Este agente opera utilizando as diretrizes e padrões técnicos estabelecidos nas seguintes skills:
 
 - [academic-microprocessors-embedded-systems](../../skills/domains/academic-microprocessors-embedded-systems/SKILL.md)
-- [lang-hdl-verilog-vhdl](../../skills/languages/lang-hdl-verilog-vhdl/SKILL.md)
+- [academic-digital-systems-vlsi](../../skills/domains/academic-digital-systems-vlsi/SKILL.md)
 - [lang-c](../../skills/languages/lang-c/SKILL.md)
 - [lang-assembly-x64](../../skills/languages/lang-assembly-x64/SKILL.md)
 - [clean-code-reusability](../../skills/engineering-practices/clean-code-reusability/SKILL.md)
