@@ -1,55 +1,73 @@
 ---
-description: Atua como especialista em Análise Estática de Segurança de Aplicações
-  (SAST) e Revisão de Código de Segurança (Security Code Review), identificando vulnerabilidades
-  no código-fonte, aplicando regras de verificação estática, remediando falhas (Injection,
-  XSS, CSRF, Insecure Deserialization, Broken Access Control) e estabelecendo padrões
-  de revisão automatizada e manual.
-metadata:
-  mitre:
-  - T1203
-  phase: recon
-  tools:
-  - semgrep
-  - sonar
-  - coverity
-  - clang-static
-  type: defensive
 name: sast-code-review
+description: Especialista em Análise Estática de Segurança de Aplicações (SAST) e Revisão de Código de Segurança (Security Code Review), identificando vulnerabilidades no código-fonte, aplicando regras de verificação estática, AST, CFG, Taint Analysis interprocedural, remediando falhas (Injection, XSS, CSRF, Insecure Deserialization, Broken Access Control) e estabelecendo padrões de revisão automatizada e manual.
+metadata:
+  type: defensive
+  phase: recon
+  mitre:
+    - T1203
+  tools:
+    - opengrep
+    - semgrep
+    - codeql
+    - sonar
+    - coverity
+    - clang-static
 ---
+
 # Habilidade de IA: Análise Estática de Código e Security Code Review (SAST Specialist)
 
-Esta skill orienta a inteligência artificial a atuar como um **Especialista em SAST (Static Application Security Testing)** e **Revisão de Código de Segurança (Security Code Review)** de nível sênior. O objetivo é identificar, triar e remediar vulnerabilidades de segurança diretamente no código-fonte de forma precoce (Shift Left), aplicando análise de fluxo de dados, AST (Abstract Syntax Tree) e regras de segurança estáticas sem a necessidade de executar a aplicação.
+Esta skill orienta a inteligência artificial a atuar como um **Especialista em SAST (Static Application Security Testing)** e **Revisão de Código de Segurança (Security Code Review)** de nível sênior. O objetivo é identificar, triar e remediar vulnerabilidades de segurança diretamente no código-fonte de forma precoce (*Shift Left*), aplicando análise de fluxo de dados, AST (*Abstract Syntax Tree*), CFG (*Control Flow Graph*), Call Graphs interprocedurais e regras de segurança estáticas sem a necessidade de executar a aplicação.
 
 ---
 
-## 🧭 Frameworks e Fontes de Referência Adicionais
+## 🧭 Frameworks e Fontes de Referência Canônicas
 
-Ao utilizar esta skill, baseie as análises nos seguintes padrões e taxonomias de mercado:
+Ao utilizar esta skill, baseie as análises nos seguintes padrões, taxonomias e obras de referência:
+- **The Art of Software Security Assessment: Identifying and Preventing Software Vulnerabilities** (*Mark Dowd, John McDonald, Justin Schuh*): Fundamentos formais de modelagem de código, corrupção de memória, auditoria estática de tipos, aritmética de ponteiros e falhas lógicas.
+- **Alice and Bob Learn Secure Coding** (*Tanya Janca*): Princípios universais de codificação segura, arquitetura defensiva por design e prevenção sistemática de falhas do OWASP Top 10.
+- **Web Application Security: Exploitation and Countermeasures for Modern Web Applications, 2nd Edition** (*Andrew Hoffman*): Mecanismos de auditoria de código para Single Page Applications (SPAs), APIs modernas e isolamento de contexto no backend.
 - **CWE (Common Weakness Enumeration) Top 25 Most Dangerous Software Weaknesses**: Dicionário padrão para categorização de fraquezas de código.
-- **OWASP Top 10 Web / API Security & OWASP ASVS v5.0**: Requisitos de codificação segura e verificação.
-- **NIST SP 800-218 (SSDF - Software Supply Chain Development Framework)**: Práticas de desenvolvimento seguro, especificamente o domínio *Produce Well-Secured Software (PW)*.
-- **CERT Secure Coding Standards**: Regras rigorosas de codificação segura por linguagem (C, C++, Java, Python, SEI CERT Perl/JS).
-- **Semgrep Rules Registry & CodeQL Query Library**: Padrões de escrita e execução de consultas de análise estática sintática e semântica.
+- **OWASP Top 10 Web / API Security & OWASP ASVS v5.0**: Requisitos de codificação segura e verificação formal.
+- **NIST SP 800-218 (SSDF - Secure Software Development Framework)**: Domínio *Produce Well-Secured Software (PW)*.
+- **CERT Secure Coding Standards**: Regras rigorosas por linguagem (C, C++, Java, Python, SEI CERT Perl/JS).
+- **Opengrep / Semgrep Rules Registry & CodeQL Query Library**: Padrões declarativos de escrita e execução de regras estáticas sintáticas e semânticas.
 
 ---
 
-## 🛡️ Pilares da Análise Estática de Código
+## 🛡️ Teoria e Pilares da Análise Estática de Código
 
-Para realizar um Code Review de Segurança eficaz, a IA deve inspecionar o código sob a perspectiva da **Taint Analysis (Análise de Contaminação)** e **Data Flow Analysis (Análise de Fluxo de Dados)**:
+Para realizar um Code Review de Segurança eficaz, a IA deve inspecionar o código sob três representações formais:
 
 ```
-[ Source ] (Entrada Não Confiável)
+┌────────────────────────────────────────────────────────────────────────┐
+│                   REPRESENTAÇÕES DE CÓDIGO NO SAST                     │
+└────────────────────────────────────────────────────────────────────────┘
+  1. AST (Abstract Syntax Tree)
+     └── Análise da estrutura gramatical e tipos de nós sintáticos.
+  2. CFG (Control Flow Graph)
+     └── Mapeamento dos caminhos de bifurcação (if/else, switch, loops, try/catch).
+  3. DFG & Taint Flow (Data Flow Graph)
+     └── Rastreamento de variáveis desde a entrada até os sumidouros críticos.
+```
+
+### O Modelo Formal de Taint Analysis (Análise de Contaminação):
+```
+[ Source ] (Entrada Não Confiável / Request Body / Params / Headers)
     │
     ▼
-[ Sanitizer / Filter ] (Validação, Escapamento ou Parametrização)
+[ Propagator ] (Concatenação, Cast, Formatação, Atribuição)
     │
     ▼
-[ Sink ] (Execução de Operação Sensível / Vulnerável)
+[ Sanitizer / Guardrail ] (Validação de Lista Branca, Parameter Binding, Escapamento)
+    │
+    ▼
+[ Sink ] (Execução de Operação Sensível: DB, OS Shell, Arquivo, Deserialização)
 ```
 
 1. **Source (Origem)**: Identificar todos os pontos em que dados externos e não confiáveis entram na aplicação (ex: `req.params`, `req.body`, `request.getHeader()`, parâmetros de CLI, cookies, arquivos uploadados).
-2. **Data Flow & Propagation**: Rastrear a propagação dos dados através de variáveis, funções, chamadas de métodos e coleções.
-3. **Sanitizers & Guardrails**: Verificar se existem sanitizadores contextuais, validadores de lista branca (*allow-list*) ou estruturas de conversão seguras no caminho entre a Origem e o Sumidouro.
+2. **Propagators & Interprocedural Flow**: Rastrear a passagem dos dados através de variáveis locais, retornos de funções, injeção de dependências e estruturas de dados complexas.
+3. **Sanitizers & Guardrails**: Verificar se existem sanitizadores contextuais, validadores de lista branca (*allow-list*) ou estruturas seguras (ex: *Prepared Statements*) no caminho.
 4. **Sink (Sumidouro)**: Avaliar a chegada dos dados a funções críticas (ex: `exec()`, `db.query()`, `eval()`, `res.send()`, `fs.readFile()`, `unserialize()`). Se os dados alcançam o Sumidouro sem sanitização adequada, confirma-se uma vulnerabilidade.
 
 ---
@@ -91,47 +109,50 @@ Ao auditar código ou revisar Pull Requests, inspecione minuciosamente as seguin
 
 ---
 
-## ⚙️ Ferramentas SAST e Criação de Regras
+## ⚙️ Escrita de Regras Declarativas de Taint Analysis (Opengrep / Semgrep)
 
-Esta skill orienta a utilização e criação de regras automatizadas de análise estática.
+Para automatizar a detecção de vulnerabilidades complexas interprocedurais, utilize o modo `taint`:
 
-### Escrevendo Regras Personalizadas em Semgrep (Exemplo YAML)
 ```yaml
 rules:
-  - id: detect-exec-command-injection
-    patterns:
-      - pattern: child_process.exec($CMD, ...)
-      - pattern-not: child_process.exec("...", ...)
-    message: "Possível Command Injection detectado: entrada dinâmica enviada para child_process.exec. Utilize execFile ou spawn sem shell."
-    severity: ERROR
+  - id: python-sqli-taint-tracking
+    mode: taint
     languages:
-      - javascript
-      - typescript
+      - python
+    message: "Possível SQL Injection detectado: entrada não confiável flui para cursor.execute sem parametrização."
+    severity: ERROR
     metadata:
-      cwe: "CWE-78"
+      cwe: "CWE-89"
       owasp: "A03:2021 - Injection"
+    pattern-sources:
+      - pattern: flask.request.args.get(...)
+      - pattern: flask.request.form[...]
+      - pattern: flask.request.json[...]
+    pattern-propagators:
+      - pattern: $X = f"...{$Y}..."
+        from: $Y
+        to: $X
+      - pattern: $X = "...".format(..., $Y, ...)
+        from: $Y
+        to: $X
+    pattern-sanitizers:
+      - pattern: int(...)
+      - pattern: uuid.UUID(...)
+    pattern-sinks:
+      - pattern: $CURSOR.execute($QUERY, ...)
 ```
 
-### 🛠️ Execução de SAST com a Ferramenta Snyk (CLI & MCP)
+---
 
-A IA tem à sua disposição a suíte **Snyk** integrada em duas modalidades para execução de análises de código de segurança (Snyk Code):
+## 🛠️ Ecossistema de Ferramentas SAST Recomendadas
 
-1. **Snyk CLI (`snyk code test`)**:
-   - **Varredura Completa de Código**: Execute `snyk code test` no diretório do projeto para varrer código-fonte em busca de falhas de segurança (SAST).
-   - **Filtro de Severidade**: Execute `snyk code test --severity-threshold=high` (opções: `low`, `medium`, `high`, `critical`) para focar em vulnerabilidades de alta prioridade.
-   - **Saída Estruturada**: Utilize `snyk code test --json` para processar e estruturar os resultados da análise em pipelines ou relatórios.
-
-2. **Snyk MCP (Model Context Protocol no Gemini CLI)**:
-   - **Consultas Estruturadas via MCP**: Utilize as ferramentas do servidor MCP do Snyk (`snyk/*`) configuradas no Gemini CLI para consultar a base de regras de segurança, recuperar detalhes de problemas identificados e solicitar recomendações de correção de código diretamente via contexto do agente.
-
-### Principais Ferramentas por Ecossistema
-* **Multilinguagem / Genérico**: Snyk Code (CLI & MCP), Semgrep, SonarQube, CodeQL.
-* **JavaScript / TypeScript**: Snyk Code, ESLint (com `eslint-plugin-security`), Retire.js.
-* **Python**: Snyk Code, Bandit, Semgrep, Flake8-bugbear.
-* **Java / Kotlin**: Snyk Code, SpotBugs com FindSecBugs, PMD Security, Checkstyle.
-* **Go**: Snyk Code, Gosec.
+* **Multilinguagem / Motor Declarativo Principal**: **Opengrep** (consulte [program-opengrep](../../programs/program-opengrep/SKILL.md)), Semgrep OSS, CodeQL, SonarQube.
+* **JavaScript / TypeScript**: Opengrep, ESLint (`eslint-plugin-security`), Retire.js.
+* **Python**: Opengrep, Bandit, Flake8-bugbear.
+* **Java / Kotlin**: Opengrep, SpotBugs com FindSecBugs, PMD Security.
+* **Go**: Opengrep, Gosec.
 * **C / C++**: Clang Static Analyzer, Cppcheck, Flawfinder.
-* **C# / .NET**: Snyk Code, Roslyn Security Guard, Security Code Scan.
+* **C# / .NET**: Opengrep, Roslyn Security Guard, Security Code Scan.
 
 ---
 
@@ -141,7 +162,7 @@ Quando acionado para realizar um Code Review de Segurança ou triar descobertas 
 
 1. **Recepção e Mapeamento da Superfície de Ataque**:
    - Identifique a stack do projeto, frameworks web, controladores de rotas e manipuladores de dados.
-2. **Varredura e Identificação (Static Pattern Matching)**:
+2. **Varredura e Identificação (Static Pattern & Taint Matching)**:
    - Procure por *Sources* e *Sinks* críticos no código.
    - Aplique as regras e checklists especificadas nas seções de vulnerabilidade.
 3. **Triagem de Falsos Positivos (Reachability & Context Analysis)**:
@@ -155,9 +176,12 @@ Quando acionado para realizar um Code Review de Segurança ou triar descobertas 
 
 ---
 
-## 🔗 Integração com Outras Skills
+## 🔗 Integração com Outras Skills do Repositório
 
-- **[appsec-owasp-asvs](../appsec-owasp-asvs/SKILL.md)**: Mapeia os requisitos formais de verificação (níveis 1, 2 e 3) aplicados às vulnerabilidades descobertas via SAST.
-- **[devsecops-engineer](../../ops-architecture/devsecops-engineer/SKILL.md)**: Configura a execução automatizada de ferramentas SAST no pipeline de CI/CD e estabelece Quality Gates.
-- **[clean-code-reusability](../../../engineering-practices/clean-code-reusability/SKILL.md)**: Garante que as correções de segurança propostas mantenham a legibilidade, evitem redundâncias e reutilizem lógicas existentes.
-- **[software-supply-chain-security](../software-supply-chain-security/SKILL.md)**: Complementa o SAST auditando vulnerabilidades em código de terceiros, bibliotecas importadas e integridade de SBOM/SLSA.
+- **[program-opengrep](../../programs/program-opengrep/SKILL.md)**: Guia completo de CLI, sintaxe de regras YAML e execução de análise estática com Opengrep.
+- **[dast-application-testing](../dast-application-testing/SKILL.md)**: Validação dinâmica das vulnerabilidades identificadas estaticamente no código.
+- **[iast-interactive-testing](../iast-interactive-testing/SKILL.md)**: Correlação de fluxo de contaminação em tempo de execução para eliminar falsos positivos.
+- **[rasp-runtime-protection](../rasp-runtime-protection/SKILL.md)**: Defesa ativa no mesmo conjunto de sumidouros (sinks) interceptados pelo SAST.
+- **[software-supply-chain-security](../software-supply-chain-security/SKILL.md)**: Auditoria de composição de software (SCA) e dependências de terceiros.
+- **[appsec-owasp-asvs](../appsec-owasp-asvs/SKILL.md)**: Requisitos formais de verificação (níveis 1, 2 e 3) aplicados às vulnerabilidades descobertas.
+- **[devsecops-engineer](../../ops-architecture/devsecops-engineer/SKILL.md)**: Configuração automatizada de ferramentas SAST no pipeline CI/CD e Quality Gates.
