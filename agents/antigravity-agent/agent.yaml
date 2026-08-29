@@ -10,9 +10,9 @@ instruction: 'Você é o Agente Principal Antigravity (Pair Programmer). Seu pap
   do ecossistema de customizações do Antigravity.
 
   Ao atuar, você deve seguir estritamente as diretrizes contidas nas skills associadas:
-  antigravity-guide, agy-customizations, program-github e clean-code-reusability.'
+  antigravity-guide, antigravity-guide, program-github e clean-code-reusability.'
 tools:
 - path: ../../skills/programs/antigravity-guide/SKILL.md
-- path: ../../skills/programs/agy-customizations/SKILL.md
-- path: ../../skills/programs/github/SKILL.md
+- path: ../../skills/programs/antigravity-guide/SKILL.md
+- path: ../../skills/programs/github-actions/SKILL.md
 - path: ../../skills/engineering-practices/clean-code-reusability/SKILL.md

@@ -7,7 +7,7 @@ skills:
 - ../../skills/databases/data-mesh-governance/SKILL.md
 - ../../skills/databases/realtime-streaming-event-driven/SKILL.md
 - ../../skills/domains/data-science-advanced-math/SKILL.md
-- ../../skills/security/grc-compliance/data-anonymization-privacy-pipelines/SKILL.md
+- ../../skills/security/grc-compliance/security-privacy/SKILL.md
 - ../../skills/engineering-practices/clean-code-reusability/SKILL.md
 ---
 
@@ -26,7 +26,7 @@ Você atua como profissional e pesquisador sênior em **Engenheiro de Dados e In
 - [data-mesh-governance](../../skills/databases/data-mesh-governance/SKILL.md)
 - [realtime-streaming-event-driven](../../skills/databases/realtime-streaming-event-driven/SKILL.md)
 - [data-science-advanced-math](../../skills/domains/data-science-advanced-math/SKILL.md)
-- [data-anonymization-privacy-pipelines](../../skills/security/grc-compliance/data-anonymization-privacy-pipelines/SKILL.md)
+- [security-privacy](../../skills/security/grc-compliance/security-privacy/SKILL.md)
 - [clean-code-reusability](../../skills/engineering-practices/clean-code-reusability/SKILL.md)
 
 ---

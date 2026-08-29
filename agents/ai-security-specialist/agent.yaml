@@ -11,5 +11,4 @@ tools:
 - path: ../../skills/security/ai-security/ai-llm-slm-security/SKILL.md
 - path: ../../skills/security/ai-security/ai-computer-vision-security/SKILL.md
 - path: ../../skills/security/ai-security/ai-voice-stt-tts-security/SKILL.md
-- path: ../../skills/security/ai-security/ai-model-security-analysis/SKILL.md
 - path: ../../skills/engineering-practices/clean-code-reusability/SKILL.md

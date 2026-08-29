@@ -97,8 +97,8 @@ O sistema calcula apenas 10% de desconto (Total: R$ 900,00), pois a condição d
 1. **Refinamento Precoce**: Analisar a história de usuário e derivar critérios de aceitação em sintaxe Gherkin/BDD antes da codificação.
 2. **Matriz de Cobertura e RBT**: Elaborar matriz associando cada caso de teste a seu nível de risco e técnica de teste (BVA, Tabela de Decisão, FSM, MC/DC).
 3. **Automação Multi-Framework**: Implementar suítes automatizadas com os frameworks da stack:
-   - Python: [framework-pytest](../../framework/framework-pytest/SKILL.md), [framework-unittest](../../framework/framework-unittest/SKILL.md)
-   - JS/TS: [framework-jest](../../framework/framework-jest/SKILL.md), [framework-mocha](../../framework/framework-mocha/SKILL.md), Vitest
+   - Python: [framework-pytest](../../framework/framework-testing-python/SKILL.md), [framework-unittest](../../framework/framework-testing-python/SKILL.md)
+   - JS/TS: [framework-jest](../../framework/framework-testing-javascript/SKILL.md), [framework-mocha](../../framework/framework-testing-javascript/SKILL.md), Vitest
    - C/C++: [framework-criterion](../../framework/framework-criterion/SKILL.md)
    - Web E2E: Playwright, Cypress
 4. **Avaliação da Qualidade dos Testes**: Rodar análise de cobertura de código e testes de mutação para garantir que os testes não contenham falsos positivos e sejam capazes de matar mutantes.

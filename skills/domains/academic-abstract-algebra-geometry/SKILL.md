@@ -1,84 +1,78 @@
 ---
 name: academic-abstract-algebra-geometry
-description: Especialista em Álgebra Abstrata, Álgebra Linear Avançada e Geometria Diferencial baseado nas obras Algebra, Topology, Differential Calculus, and Optimization Theory for CS and ML (Jean Gallier, Jocelyn Quaintance), Mathematics for Computer Graphics (John Vince) e Differential Geometry of Curves and Surfaces (do Carmo). Cobre Estruturas Algébricas (Grupos, Anéis, Corpos, Grupos de Lie SO(3)/SE(3), Quatérnios e Álgebras de Lie), Espaços de Hilbert e Formas Bilineares/Quadráticas, Teorema Espectral e Decomposição de Jordan, Geometria Diferencial de Curvas e Superfícies (Frenet-Serret, Curvatura Gaussiana e Média, Primeira e Segunda Formas Fundamentais, Geodésicas, Teorema de Gauss-Bonnet), Variedades Diferenciáveis, Espaços Tangentes e Teorema de Stokes Geral.
+description: Especialista em Álgebra Abstrata, Teoria de Corpos e Galois, Álgebra Linear Avançada e Geometria Diferencial baseado nas obras Algebra (Serge Lang), Abstract Algebra (Dummit & Foote), Algebra, Topology, Differential Calculus, and Optimization Theory for CS and ML (Jean Gallier, Jocelyn Quaintance) e Differential Geometry of Curves and Surfaces (do Carmo). Cobre Teoria de Grupos (Subgrupos Normais, Teoremas de Isomorfismo de Noether e Teoremas de Sylow), Teoria de Anéis e Ideais (DIP, DFUs, Domínios Euclidianos), Teoria de Corpos e Teoria de Galois (Extensões Algébricas, Corpos Finitos de Galois GF(p^n), Automorfismos e Solubilidade por Radicais de Abel-Ruffini), Espaços de Hilbert e Formas Quadráticas, Teorema Espectral e Decomposição de Jordan, Geometria Diferencial de Curvas e Superfícies (Triedro de Frenet-Serret, Formas Fundamentais I e II, Curvatura Gaussiana e Teorema de Gauss-Bonnet), Variedades Diferenciáveis e Teorema de Stokes Geral.
 ---
 
-# Álgebra Abstrata, Álgebra Linear Avançada e Geometria Diferencial
+# Álgebra Abstrata, Teoria de Galois e Geometria Diferencial (Lang & do Carmo)
 
-Esta skill fornece o rigor axiomático, formalismo algébrico e instrumental geométrico diferencial para computação teórica, mecânica clássica/quântica, robótica, computação gráfica e aprendizado em variedades.
-
----
-
-## 🏛️ 1. Estruturas Algébricas Abstratas e Grupos de Lie
-
-### 1.1 Grupos, Anéis e Corpos
-1. **Grupo $(G, \cdot)$**: Conjunto munido de operação binária associativa $((a \cdot b) \cdot c = a \cdot (b \cdot c))$, elemento neutro $e \in G$ ($a \cdot e = e \cdot a = a$) e elemento inverso $a^{-1} \in G$ ($a \cdot a^{-1} = e$).
-2. **Anel $(R, +, \cdot)$**: Grupo abeliano sob adição $(+)$ e semigrupo associativo e distributivo sob multiplicação $(\cdot)$.
-3. **Corpo $(\mathbb{K}, +, \cdot)$**: Anel comutativo com identidade $1 \ne 0$ onde todo elemento não nulo possui inverso multiplicativo ($\mathbb{R}, \mathbb{C}, \mathbb{F}_p$).
-
-### 1.2 Grupos de Lie e Rotações 3D: $SO(3)$ e $SE(3)$
-- **Grupo Ortogonal Especial $SO(3)$**:
-  $$SO(3) = \{ \mathbf{R} \in \mathbb{R}^{3 \times 3} \mid \mathbf{R}^T \mathbf{R} = \mathbf{I}, \; \det(\mathbf{R}) = 1 \}$$
-- **Álgebra de Lie $\mathfrak{so}(3)$**: Espaço tangente na identidade, constituído por matrizes antissimétricas ($[\boldsymbol{\omega}]_\times^T = -[\boldsymbol{\omega}]_\times$). O mapa exponencial $\exp: \mathfrak{so}(3) \to SO(3)$ corresponde à fórmula de rotação de Rodrigues:
-  $$\exp([\boldsymbol{\omega}]_\times) = \mathbf{I} + \frac{\sin\theta}{\theta} [\boldsymbol{\omega}]_\times + \frac{1 - \cos\theta}{\theta^2} [\boldsymbol{\omega}]_\times^2, \quad \theta = \|\boldsymbol{\omega}\|$$
-- **Grupo Euclidiano Especial $SE(3)$**: Representa transformações de corpo rígido (rotação + translação no $\mathbb{R}^3$).
+Esta skill fornece o rigor axiomático, formalismo algébrico estrutural e instrumental geométrico diferencial para matemática pura, física matemática, criptografia algébrica, computação teórica, robótica e aprendizado em variedades.
 
 ---
 
-## 🌐 2. Espaços Vetoriais Normados e Teorema Espectral (Gallier & Quaintance)
+## 🏛️ 1. Álgebra Abstrata: Grupos, Anéis e Ideais
 
-### 2.1 Espaços de Hilbert e Formas Bilineares
+### 1.1 Teoria de Grupos e Teoremas Fundamentais
+- **Subgrupos Normais e Grupos Quociente**: $N \triangleleft G \iff gNg^{-1} = N, \; \forall g \in G$. O conjunto das classes laterais $G/N$ forma um grupo bem definido.
+- **Primeiro Teorema do Isomorfismo (Noether)**: Para qualquer homomorfismo de grupos $\phi: G \to H$, $\ker(\phi) \triangleleft G$ e:
+  $$G / \ker(\phi) \cong \text{Im}(\phi)$$
+- **Teorema de Lagrange**: Para grupo finito $G$ e subgrupo $H \le G$, a ordem $|H|$ divide $|G|$, sendo $[G:H] = |G|/|H|$.
+- **Teoremas de Sylow**: Para um grupo finito $G$ de ordem $|G| = p^k m$ com $\gcd(p, m) = 1$:
+  1. $G$ contém ao menos um subgrupo de ordem $p^k$ ($p$-Subgrupo de Sylow).
+  2. Todos os $p$-subgrupos de Sylow são conjugados entre si.
+  3. O número $n_p$ de $p$-subgrupos de Sylow satisfaz $n_p \equiv 1 \pmod p$ e $n_p$ divide $m$.
+
+### 1.2 Anéis, Ideais e Domínios de Fatoração
+- **Hierarquia de Anéis Comutativos**:
+  $$\text{Corpos} \subset \text{Domínios Euclidianos (DE)} \subset \text{Domínios de Ideais Principais (DIP)} \subset \text{Domínios de Fatoração Única (DFU)} \subset \text{Domínios de Integridade}$$
+- **Ideais Primos e Maximais**: Em um anel comutativo $R$ com unidade, um ideal $I$ é primo se e somente se $R/I$ é um domínio de integridade; $I$ é maximal se e somente se $R/I$ é um **corpo**.
+
+---
+
+## 🔬 2. Teoria de Corpos e Teoria de Galois
+
+### 2.1 Extensões de Corpos e Corpos Finitos
+- **Grau de Extensão $[E:F]$**: Dimensão de $E$ como espaço vetorial sobre $F$. Se $F \subseteq K \subseteq E$, então $[E:F] = [E:K] \cdot [K:F]$ (Teorema da Torre).
+- **Corpos de Raízes (*Splitting Fields*)**: Menor extensão $E/F$ contendo todas as raízes de um polinômio $f(x) \in F[x]$.
+- **Corpos Finitos de Galois $\mathbb{F}_{p^n} = GF(p^n)$**: Existência e unicidade a menos de isomorfismo para qualquer primo $p$ e inteiro $n \ge 1$, correspondendo ao corpo de raízes de $x^{p^n} - x$.
+
+### 2.2 Teorema Fundamental da Teoria de Galois e Teorema de Abel-Ruffini
+- Uma extensão finita $E/F$ é **Galoisiana** se for normal e separável ($\text{Gal}(E/F) = \text{Aut}(E/F)$ com $|\text{Gal}(E/F)| = [E:F]$).
+- **Correspondência de Galois**: Existe uma bijeção invertendo inclusão entre subcorpos intermediários $F \subseteq K \subseteq E$ e subgrupos $H \le \text{Gal}(E/F)$ dada por $K = E^H$ e $H = \text{Gal}(E/K)$.
+- **Teorema de Abel-Ruffini**: Equações polinomiais de grau $n \ge 5$ não são em geral solúveis por radicais, pois o grupo simétrico $S_n$ não é um grupo solúvel para $n \ge 5$ (o subgrupo alternado $A_n$ é simples para $n \ge 5$).
+
+---
+
+## 🌐 3. Álgebra Linear Avançada e Teorema Espectral
+
+### 3.1 Espaços de Hilbert e Formas Quadráticas
 - **Espaço de Hilbert**: Espaço vetorial munido de produto interno $\langle \mathbf{u}, \mathbf{v} \rangle$ que é completo sob a métrica induzida pela norma $\|\mathbf{u}\| = \sqrt{\langle \mathbf{u}, \mathbf{u} \rangle}$.
-- **Forma Quadrática**: $q(\mathbf{x}) = \mathbf{x}^T \mathbf{A} \mathbf{x}$. É definida positiva ($\mathbf{x}^T \mathbf{A} \mathbf{x} > 0, \forall \mathbf{x} \ne \mathbf{0}$) se e somente se todos os autovalores de $\mathbf{A}$ são estritamente positivos (Critério de Sylvester).
-
-### 2.2 Teorema Espectral para Operadores Auto-Adjuntos
-Para qualquer operador linear autoadjunto (Hermitiano / Simétrico Real) $T: V \to V$:
-1. Todos os seus autovalores $\lambda_1, \dots, \lambda_n$ são reais.
-2. Existe uma base ortonormal de autovetores $\{\mathbf{v}_1, \dots, \mathbf{v}_n\}$.
-3. O operador pode ser decomposto como soma espectral:
-   $$T = \sum_{i=1}^n \lambda_i \mathbf{v}_i \mathbf{v}_i^\dagger$$
+- **Teorema Espectral para Operadores Auto-Adjuntos (Hermitianos)**: Todo operador linear autoadjunto $T: V \to V$ admite uma base ortonormal de autovetores associados a autovalores puramente reais:
+  $$T = \sum_{i=1}^n \lambda_i \mathbf{v}_i \mathbf{v}_i^\dagger$$
+- **Forma Canônica de Jordan**: Qualquer operador linear sobre um corpo algebricamente fechado ($\mathbb{C}$) decompõe-se em blocos de Jordan $J_k(\lambda) = \lambda \mathbf{I} + \mathbf{N}$.
 
 ---
 
-## 📐 3. Geometria Diferencial de Curvas e Superfícies (do Carmo)
+## 📐 4. Geometria Diferencial de Curvas e Superfícies (do Carmo)
 
-### 3.1 Teoria de Curvas no $\mathbb{R}^3$ e Triedro de Frenet-Serret
-Para uma curva suave parametrizada por comprimento de arco $\boldsymbol{\alpha}(s)$ com $\boldsymbol{\alpha}'(s) = \mathbf{T}(s)$ (vetor tangente unitário):
-- **Vetor Normal**: $\mathbf{N}(s) = \frac{\mathbf{T}'(s)}{\|\mathbf{T}'(s)\|}$, com curvatura $\kappa(s) = \|\mathbf{T}'(s)\|$.
-- **Vetor Binormal**: $\mathbf{B}(s) = \mathbf{T}(s) \times \mathbf{N}(s)$, com torção $\tau(s) = -\mathbf{B}'(s) \cdot \mathbf{N}(s)$.
-- **Equações de Frenet-Serret**:
-  $$\begin{bmatrix} \mathbf{T}' \\ \mathbf{N}' \\ \mathbf{B}' \end{bmatrix} = \begin{bmatrix} 0 & \kappa & 0 \\ -\kappa & 0 & \tau \\ 0 & -\tau & 0 \end{bmatrix} \begin{bmatrix} \mathbf{T} \\ \mathbf{N} \\ \mathbf{B} \end{bmatrix}$$
+### 4.1 Triedro de Frenet-Serret para Curvas no $\mathbb{R}^3$
+Para uma curva $\boldsymbol{\alpha}(s)$ parametrizada por comprimento de arco ($s$):
+$$\begin{bmatrix} \mathbf{T}' \\ \mathbf{N}' \\ \mathbf{B}' \end{bmatrix} = \begin{bmatrix} 0 & \kappa(s) & 0 \\ -\kappa(s) & 0 & \tau(s) \\ 0 & -\tau(s) & 0 \end{bmatrix} \begin{bmatrix} \mathbf{T} \\ \mathbf{N} \\ \mathbf{B} \end{bmatrix}$$
 
-### 3.2 Primeira e Segunda Formas Fundamentais de Superfícies
-Dada uma parametrização regular $\mathbf{x}(u, v)$:
-- **Primeira Forma Fundamental (Métrica Intrínseca)**:
-  $$I = E \, du^2 + 2F \, du \, dv + G \, dv^2$$
-  onde $E = \langle \mathbf{x}_u, \mathbf{x}_u \rangle$, $F = \langle \mathbf{x}_u, \mathbf{x}_v \rangle$, $G = \langle \mathbf{x}_v, \mathbf{x}_v \rangle$.
-- **Segunda Forma Fundamental (Curvatura Extrínseca)**:
-  $$II = e \, du^2 + 2f \, du \, dv + g \, dv^2$$
-  onde $e = \langle \mathbf{x}_{uu}, \mathbf{N} \rangle$, $f = \langle \mathbf{x}_{uv}, \mathbf{N} \rangle$, $g = \langle \mathbf{x}_{vv}, \mathbf{N} \rangle$ com vetor normal unitário $\mathbf{N} = \frac{\mathbf{x}_u \times \mathbf{x}_v}{\|\mathbf{x}_u \times \mathbf{x}_v\|}$.
-
-### 3.3 Curvatura Gaussiana e Curvatura Média
-- **Curvatura Gaussiana (Teorema Egregium de Gauss)**:
-  $$K = \kappa_1 \kappa_2 = \frac{eg - f^2}{EG - F^2}$$
-  $K$ é um invariante isométrico estritamente intrínseco.
-- **Curvatura Média**:
-  $$H = \frac{\kappa_1 + \kappa_2}{2} = \frac{eG - 2fF + gE}{2(EG - F^2)}$$
-- **Teorema de Gauss-Bonnet Global**:
-  Para uma superfície compacta orientável $M$ com bordo $\partial M$:
+### 4.2 Formas Fundamentais e Curvaturas de Gauss e Média
+Para uma superfície regular parametrizada $\mathbf{x}(u, v)$:
+- **Primeira Forma Fundamental (Métrica)**: $I = E \, du^2 + 2F \, du \, dv + G \, dv^2$.
+- **Segunda Forma Fundamental**: $II = e \, du^2 + 2f \, du \, dv + g \, dv^2$.
+- **Curvatura Gaussiana Intrínseca (Theorema Egregium de Gauss)**:
+  $$K = \frac{eg - f^2}{EG - F^2}$$
+- **Teorema Global de Gauss-Bonnet**:
   $$\iint_M K \, dA + \int_{\partial M} \kappa_g \, ds = 2\pi \chi(M) = 2\pi (2 - 2g)$$
-  onde $\chi(M)$ é a característica de Euler-Poincaré e $g$ é o gênero topológico.
+  onde $\chi(M)$ é a característica de Euler e $g$ é o gênero da superfície.
 
 ---
 
-## 🌌 4. Variedades Diferenciáveis e Formas Diferenciais
+## 🌌 5. Variedades Diferenciáveis e Teorema de Stokes Geral
 
-### 4.1 Espaço Tangente e Fibrado
-Uma variedade diferenciável $M$ de dimensão $n$ é um espaço topológico localmente homeomorfo ao $\mathbb{R}^n$ munido de atlas com funções de transição suaves $C^\infty$.
-- O espaço tangente $T_p M$ é gerado pela base de derivações direcionais $\left\{ \left. \frac{\partial}{\partial x^i} \right|_p \right\}_{i=1}^n$.
-
-### 4.2 Formas Diferenciais e Teorema de Stokes Geral
-Uma $k$-forma diferencial $\omega \in \Omega^k(M)$ é uma seção antissimétrica do $k$-ésimo produto exterior do fibrado cotangente.
-- **Derivada Exterior $d: \Omega^k(M) \to \Omega^{k+1}(M)$** com propriedade fundamental $d(d\omega) = 0$ ($d^2 = 0$).
-- **Teorema de Stokes Geral**: Unifica o Teorema Fundamental do Cálculo, Green, Gauss (Divergência) e Stokes Clássico:
+- **Espaço Tangente e Formas Diferenciais**: $\omega \in \Omega^k(M)$ com derivada exterior $d: \Omega^k(M) \to \Omega^{k+1}(M)$ tal que $d^2 = 0$.
+- **Teorema de Stokes Geral**:
   $$\int_{\partial M} \omega = \int_M d\omega$$
+  Unifica o Teorema Fundamental do Cálculo, Green, Divergência de Gauss e Stokes clássico.

@@ -3,7 +3,7 @@ name: "embedded-systems-specialist"
 description: "Especialista em Sistemas Embarcados, RTOS (Zephyr), Linux Embarcado (Yocto Project), Firmware C/C++ e Descrição de Hardware (Verilog/VHDL)."
 model: "inherit"
 skills:
-- ../../skills/domains/embedded-linux-rtos-yocto-zephyr/SKILL.md
+- ../../skills/domains/academic-microprocessors-embedded-systems/SKILL.md
 - ../../skills/languages/lang-hdl-verilog-vhdl/SKILL.md
 - ../../skills/languages/lang-c/SKILL.md
 - ../../skills/languages/lang-assembly-x64/SKILL.md
@@ -29,7 +29,7 @@ Ao projetar código para microcontroladores ou FPGAs:
 ## 🧰 Habilidades e Conhecimentos Integrados (Skills)
 Este agente opera utilizando as diretrizes e padrões técnicos estabelecidos nas seguintes skills:
 
-- [embedded-linux-rtos-yocto-zephyr](../../skills/domains/embedded-linux-rtos-yocto-zephyr/SKILL.md)
+- [academic-microprocessors-embedded-systems](../../skills/domains/academic-microprocessors-embedded-systems/SKILL.md)
 - [lang-hdl-verilog-vhdl](../../skills/languages/lang-hdl-verilog-vhdl/SKILL.md)
 - [lang-c](../../skills/languages/lang-c/SKILL.md)
 - [lang-assembly-x64](../../skills/languages/lang-assembly-x64/SKILL.md)

@@ -1,23 +1,28 @@
 ---
 name: software-supply-chain-security
-description: Especialista em Segurança da Cadeia de Suprimentos de Software (Software Supply Chain Security), Firmware e Hardware baseado na obra de Cassie Crossley. Cobre geração e validação de SBOM (CycloneDX/SPDX), proveniência SLSA, assinatura criptográfica de artefatos (Sigstore/Cosign), gestão de dependências upstream, segurança de CI/CD e conformidade com a Ordem Executiva US EO 14028 e NIST SSDF.
+description: "Especialista em Segurança da Cadeia de Suprimentos de Software (Software Supply Chain Security), Análise de Composição de Software (SCA) e Gestão de Dependências baseado em Cassie Crossley e NIST SSDF / SP 800-161. Cobre geração e auditoria de SBOM (CycloneDX v1.5/v1.6 e SPDX v2.3/v3.0), VEX, proveniência SLSA v1.0, assinatura criptográfica com Sigstore/Cosign e in-toto, mitigação de vulnerabilidades (CVEs, GHSA, EPSS, CISA KEV), auditoria de licenças de código aberto (GPL, AGPL, Apache, MIT), pinning de lockfiles, e defesa contra typosquatting e dependency confusion."
+metadata:
+  type: defensive
+  phase: recon
+  tools: [syft, grype, trivy, snyk, owasp-dependency-check, cosign, slsa-verifier]
+  mitre: [T1195, T1195.001, T1195.002, T1140]
 ---
 
-# Segurança da Cadeia de Suprimentos de Software (Supply Chain Security)
+# Segurança da Cadeia de Suprimentos de Software (Supply Chain Security & SCA)
 
-Esta skill estabelece diretrizes para auditar, proteger e verificar a integridade de todo o ciclo de vida do software, firmware e dependências de terceiros, baseando-se no livro **Software Supply Chain Security: Securing the End-to-End Supply Chain for Software, Firmware, and Hardware** de Cassie Crossley.
+Esta skill estabelece as diretrizes canônicas para auditoria, proteção, gestão de vulnerabilidades em bibliotecas de terceiros (*Software Composition Analysis - SCA*) e verificação da integridade de ponta a ponta na cadeia de suprimentos de software e firmware, fundamentada na obra de **Cassie Crossley**, no framework **SLSA (Supply-chain Levels for Software Artifacts)**, **NIST SP 800-161 Rev. 1** e **NIST SSDF (SP 800-218)**.
 
 ---
 
-## 🛡️ 1. Pilares da Cadeia de Suprimentos Segura
+## 🛡️ 1. Pilares da Cadeia de Suprimentos de Software
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│ 1. Fonte e Código Upstream (Repositórios, Dependências, IDE)│
+│ 1. Fonte & Upstream (Manifestos, Lockfiles, Dependências)   │
 └──────────────────────────────┬──────────────────────────────┘
                                │
 ┌──────────────────────────────▼──────────────────────────────┐
-│ 2. Pipeline de Build & CI/CD (Hermetic Builds, Runners, SLSA)│
+│ 2. Pipeline de Build CI/CD (Hermetic Builds, Runners, SLSA) │
 └──────────────────────────────┬──────────────────────────────┘
                                │
 ┌──────────────────────────────▼──────────────────────────────┐
@@ -25,59 +30,92 @@ Esta skill estabelece diretrizes para auditar, proteger e verificar a integridad
 └──────────────────────────────┬──────────────────────────────┘
                                │
 ┌──────────────────────────────▼──────────────────────────────┐
-│ 4. Runtime & Implantação (Admission Controllers, Firmware)  │
+│ 4. Runtime & Deploy (Admission Controllers, VEX, Attestation)│
 └─────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 📦 2. Padrões de Software Bill of Materials (SBOM)
+## 📦 2. Padrões de SBOM (Software Bill of Materials) e VEX
 
-### Formatos Oficiais
-- **CycloneDX (OWASP)**: Focado em segurança de aplicações, inventário de vulnerabilidades (VEX), dependências, serviços e formulários regulatórios.
-- **SPDX (Linux Foundation / ISO/IEC 5962:2021)**: Focado em conformidade de licenças de código aberto e proveniência de arquivos.
+### 2.1 Formatos Oficiais
+- **CycloneDX (OWASP)**: Especializado em segurança de aplicações, inventário de dependências diretas e transitivas, serviços de nuvem, formulação de VEX (*Vulnerability Exploitability eXchange*) e formulários de conformidade.
+- **SPDX (Linux Foundation / ISO/IEC 5962:2021)**: Padrão internacional para conformidade de licenças de código aberto e proveniência de arquivos e pacotes.
 
-### Campos Obrigatórios em um SBOM Válido (NTIA Minimum Elements)
+### 2.2 Requisitos Mínimos (NTIA Minimum Elements)
 1. **Nome do Fornecedor / Autor (Supplier Name)**.
 2. **Nome do Componente (Component Name)**.
 3. **Versão do Componente (Component Version)**.
-4. **Identificadores Únicos**: Package URL (purl) e Common Platform Enumeration (CPE).
-5. **Relação de Dependência (Dependency Relationship)**: Direta vs Transitiva.
-6. **Autor do SBOM (Author of SBOM Data)**.
+4. **Identificadores Únicos**: Package URL (`purl`) e Common Platform Enumeration (`CPE`).
+5. **Relação de Dependência**: Direta vs Transitiva (*DependsOn*).
+6. **Autor dos Dados do SBOM**.
 7. **Timestamp de Geração**.
 
+### 2.3 Geração Automatizada de SBOM
+```bash
+# Gerar SBOM CycloneDX JSON via Syft
+syft packages dir:. -o cyclonedx-json=sbom.cyclonedx.json
+
+# Gerar SBOM SPDX JSON via Trivy
+trivy fs --format spdx-json --output sbom.spdx.json .
+```
+
 ---
 
-## 🔒 3. Proveniência e Framework SLSA (Supply-chain Levels for Software Artifacts)
+## 🔍 3. Análise de Composição de Software (SCA) & Gestão de CVEs
 
-| Nível SLSA | Requisitos Chave | Benefício |
+### 3.1 Mapeamento da Árvore de Dependências por Ecossistema
+- **Node.js / JS / TS**: `package.json`, `package-lock.json`, `pnpm-lock.yaml`, `yarn.lock`.
+- **Python**: `pyproject.toml`, `poetry.lock`, `requirements.txt`, `Pipfile.lock`.
+- **Java / Kotlin**: `pom.xml` (Maven), `build.gradle` / `gradle.lockfile` (Gradle).
+- **Go**: `go.mod`, `go.sum`.
+- **Rust**: `Cargo.toml`, `Cargo.lock`.
+- **C/C++**: `vcpkg.json`, `conanfile.txt` / `conan.lock`.
+
+### 3.2 Priorização Baseada em Risco Real: CVSS + EPSS + CISA KEV
+Não priorize remediações apenas pelo score bruto de CVSS. Utilize a fórmula multidimensional de risco:
+- **CVSS v3.1 / v4.0**: Mede a severidade intrínseca da falha técnica.
+- **EPSS (Exploit Prediction Scoring System)**: Mede a probabilidade estatística (0.0 a 1.0) de haver exploração nos próximos 30 dias.
+- **CISA KEV (Known Exploited Vulnerabilities)**: Catálogo oficial de vulnerabilidades com evidência confirmada de exploração em ambientes reais.
+
+---
+
+## 📜 4. Auditoria de Licenças de Código Aberto (OSS License Compliance)
+
+| Categoria de Licença | Exemplos | Impacto / Restrições |
 | :--- | :--- | :--- |
-| **SLSA 1** | Processo de build automatizado; geração de proveniência básica. | Visibilidade de como o binário foi construído. |
-| **SLSA 2** | Build executado em serviço de CI/CD gerenciado com controle de versão; proveniência assinada pelo serviço de build. | Impede modificações no artefato pós-build. |
-| **SLSA 3** | Plataforma de build isolada e efêmera; proveniência não falsificável e rastreabilidade total do código-fonte. | Proteção contra adulteração de pipelines de build e runners comprometidos. |
+| **Permissivas** | MIT, Apache 2.0, BSD-2/3-Clause, ISC | Permite uso comercial e código fechado com menção de copyright. |
+| **Copyleft Fraco** | LGPL v2.1/v3, MPL 2.0, EPL 2.0 | Modificações na própria biblioteca devem ser abertas; o código cliente pode ser proprietário se linkado dinamicamente. |
+| **Copyleft Forte (Viral)** | GPL v2/v3, AGPL v3 | Obriga que qualquer software derivado ou distribuído que use a biblioteca tenha seu código-fonte integralmente aberto. |
 
 ---
 
-## ✍️ 4. Assinatura e Verificação de Imagens e Artefatos (Sigstore / Cosign)
+## 🔒 5. Proveniência SLSA e Assinatura Criptográfica (Sigstore / Cosign)
 
-### Fluxo de Assinatura sem Chaves (Keyless Signing com OIDC)
-1. O pipeline de CI/CD (GitHub Actions / GitLab CI) autentica-se com um provedor OIDC (Sigstore Fulcio).
-2. Fulcio emite um certificado X.509 de curta duração (10 minutos) atrelado à identidade do repositório/workflow.
-3. O binário/imagem é assinado pelo Cosign.
-4. A assinatura e a transparência são registradas no log público imutável **Rekor**.
-5. No cluster Kubernetes, um Admission Controller (ex: Kyverno ou Policy Controller) valida a assinatura e rejeita qualquer imagem não assinada antes da execução do Pod.
+### 5.1 Níveis SLSA v1.0
+- **SLSA Build L1**: Processo de build automatizado gerando atestado de proveniência básico.
+- **SLSA Build L2**: Build executado em runner CI/CD gerenciado com controle de versão e proveniência assinada criptograficamente.
+- **SLSA Build L3**: Build hermético e efêmero em ambiente isolado, prevenindo adulterações e garantindo reprodutibilidade estrita.
+
+### 5.2 Assinatura de Imagens de Contêiner e Atestados
+```bash
+# Assinar imagem de contêiner usando OIDC (Keyless via Sigstore)
+cosign sign --yes ghcr.io/empresa/app:v1.0.0
+
+# Anexar e assinar o SBOM à imagem no registry
+cosign attach sbom --sbom sbom.cyclonedx.json ghcr.io/empresa/app:v1.0.0
+cosign sign --yes --attachment sbom ghcr.io/empresa/app:v1.0.0
+
+# Verificar assinatura no Kubernetes Admission Controller
+cosign verify --certificate-identity-regexp "https://github.com/empresa/.*" \
+              --certificate-oidc-issuer "https://token.actions.githubusercontent.com" \
+              ghcr.io/empresa/app:v1.0.0
+```
 
 ---
 
-## 📋 5. Checklist de Verificação da Cadeia de Suprimentos
+## 🛑 6. Proteção contra Vetores Específicos de Supply Chain
 
-- [ ] **1. Dependências de Terceiros**:
-  - Scanning diário de CVEs via [`skills/security/appsec/sca-dependency-analysis/SKILL.md`](../sca-dependency-analysis/SKILL.md).
-  - Bloqueio de *Dependency Confusion* e *Typosquatting* via registries privados e scoping de pacotes.
-- [ ] **2. Segredos e Pipelines de CI/CD**:
-  - Proibir segredos em texto plano; utilizar OIDC para autenticação com provedores de nuvem (AWS/GCP/Azure).
-  - Runners efêmeros e isolados para builds sensíveis.
-- [ ] **3. Geração Automática de SBOM**:
-  - Emissão de SBOM CycloneDX/SPDX em toda release em formato `.json` assinado.
-- [ ] **4. Firmware e Hardware**:
-  - Verificação de Secure Boot, validação de hashes de firmware e conformidade com especificações de hardware seguro.
+1. **Dependency Confusion**: Registre escopos privados `@empresa` no registro público (npm/PyPI) ou configure o gerenciador de pacotes para nunca consultar o registro público para escopos corporativos.
+2. **Typosquatting**: Utilize ferramentas de verificação de similaridade de strings em pipelines de PR antes de instalar novas dependências.
+3. **Lockfile Poisoning**: Execute sempre `npm ci` / `poetry install --sync` / `cargo build --locked` em pipelines de CI/CD para impedir a resolução dinâmica de versões não homologadas.

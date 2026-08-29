@@ -37,7 +37,7 @@ Ao atuar nesta skill, você deve estruturar suas decisões em torno de 5 domíni
 ### 4. Decisões Macroarquiteturais, Topologia e Escalabilidade
 - **Modelagem e Visualização C4**: Documente e comunique a arquitetura do sistema em múltiplos níveis de abstração (Contexto, Contêineres, Componentes e Código) utilizando a skill [c4-model-architecture](../../engineering-practices/c4-model-architecture/SKILL.md).
 - **Engenharia de Larga Escala e Resiliência**: Para dimensionar sistemas de alto throughput, balanceamento de carga, sharding, caching distribuído, particionamento e tolerância a falhas (CAP/PACELC), consulte a skill [system-design-scalability](../../engineering-practices/system-design-scalability/SKILL.md).
-- **Contratos e Padrões de APIs**: Para padronização de APIs (operações LRO, mutações em lote, chaves de idempotência, cursor pagination), siga a skill [framework-api-design-patterns](../../framework/framework-api-design-patterns/SKILL.md).
+- **Contratos e Padrões de APIs**: Para padronização de APIs (operações LRO, mutações em lote, chaves de idempotência, cursor pagination, HTTP/3, RFC 10008), siga a skill [framework-rest-api](../../framework/framework-rest-api/SKILL.md).
 - **Equilíbrio de Acoplamento e Decomposição**: Aplique os princípios universais de acoplamento (Vlad Khononov) e estratégias de evolução de Monólitos para Microsserviços (Vaughn Vernon & Tomasz Jaskuła), avaliando trade-offs de latência de rede com DTOs e eventos assíncronos.
 - **Tiers vs. Layers**: Separe lógicas (*layers*) de separações físicas (*tiers*). Distribua componentes pela rede (RPC, REST, gRPC) apenas sob estrita necessidade.
 
@@ -52,30 +52,11 @@ Como Arquiteto de Software, ao identificar desafios técnicos ou estruturais esp
 
 Consulte a matriz abaixo para determinar qual skill de padrão de projeto carregar de acordo com o contexto do projeto:
 
-| Cenário de Negócio / Problema Arquitetural | Padrão Recomendado | Skill Clicável para Invocação |
-| :--- | :---: | :--- |
-| Criar uma família de produtos de diferentes variantes de forma compatível. | **Abstract Factory** | [dp-abstract-factory](../../patterns/creational/dp-abstract-factory/SKILL.md) |
-| Construir objetos complexos com fluxos de fabricação passo a passo. | **Builder** | [dp-builder](../../patterns/creational/dp-builder/SKILL.md) |
-| Criação de objetos que dependem da classe criadora em tempo de execução. | **Factory Method** | [dp-factory-method](../../patterns/creational/dp-factory-method/SKILL.md) |
-| Clonar objetos sem depender ou expor a implementação concreta deles. | **Prototype** | [dp-prototype](../../patterns/creational/dp-prototype/SKILL.md) |
-| Garantir uma única instância compartilhada para um recurso global complexo. | **Singleton** | [dp-singleton](../../patterns/creational/dp-singleton/SKILL.md) |
-| Integrar um serviço legado/externo cuja interface é incompatível com a atual. | **Adapter** | [dp-adapter](../../patterns/structural/dp-adapter/SKILL.md) |
-| Desacoplar uma abstração de sua implementação (evitando explosão de subclasses). | **Bridge** | [dp-bridge](../../patterns/structural/dp-bridge/SKILL.md) |
-| Representar estruturas de árvore em que folhas e containers são tratados iguais. | **Composite** | [dp-composite](../../patterns/structural/dp-composite/SKILL.md) |
-| Adicionar responsabilidades a objetos em tempo de execução sem usar herança. | **Decorator** | [dp-decorator](../../patterns/structural/dp-decorator/SKILL.md) |
-| Prover uma interface simples e unificada para um subsistema altamente complexo. | **Facade** | [dp-facade](../../patterns/structural/dp-facade/SKILL.md) |
-| Compartilhar dados comuns (estado intrínseco) de milhares de objetos em memória. | **Flyweight** | [dp-flyweight](../../patterns/structural/dp-flyweight/SKILL.md) |
-| Interceptar acesso a recursos pesados (caching, logging, lazy load, segurança). | **Proxy** | [dp-proxy](../../patterns/structural/dp-proxy/SKILL.md) |
-| Processar requisições em cascata onde múltiplos tratadores dinâmicos existem. | **Chain of Responsibility** | [dp-chain-of-responsibility](../../patterns/behavioral/dp-chain-of-responsibility/SKILL.md) |
-| Encapsular operações em objetos de ação para suporte a filas, logs e Undo. | **Command** | [dp-command](../../patterns/behavioral/dp-command/SKILL.md) |
-| Percorrer elementos de coleções sem expor sua representação interna. | **Iterator** | [dp-iterator](../../patterns/behavioral/dp-iterator/SKILL.md) |
-| Mediar interações caóticas e comunicações diretas entre muitos objetos. | **Mediator** | [dp-mediator](../../patterns/behavioral/dp-mediator/SKILL.md) |
-| Salvar e restaurar backups do estado de um objeto violando zero encapsulamento. | **Memento** | [dp-memento](../../patterns/behavioral/dp-memento/SKILL.md) |
-| Definir dependências onde múltiplos objetos devem ser notificados ao mudar de estado. | **Observer** | [dp-observer](../../patterns/behavioral/dp-observer/SKILL.md) |
-| Alterar o comportamento de um objeto dinamicamente quando seu estado muda. | **State** | [dp-state](../../patterns/behavioral/dp-state/SKILL.md) |
-| Encapsular algoritmos intercambiáveis que resolvem o mesmo problema comercial. | **Strategy** | [dp-strategy](../../patterns/behavioral/dp-strategy/SKILL.md) |
-| Fornecer um esqueleto de algoritmo fixo, mas permitindo redefinir passos chaves. | **Template Method** | [dp-template-method](../../patterns/behavioral/dp-template-method/SKILL.md) |
-| Executar operações em elementos de uma estrutura sem alterar as classes deles. | **Visitor** | [dp-visitor](../../patterns/behavioral/dp-visitor/SKILL.md) |
+| Categoria GoF / Problema Arquitetural | Padrões Cobertos | Skill Clicável para Invocação |
+| :--- | :--- | :--- |
+| **Padrões Criacionais (Creational)** | Factory Method, Abstract Factory, Builder, Prototype e Singleton | [dp-creational-patterns](../../patterns/creational/dp-creational-patterns/SKILL.md) |
+| **Padrões Estruturais (Structural)** | Adapter, Bridge, Composite, Decorator, Facade, Flyweight e Proxy | [dp-structural-patterns](../../patterns/structural/dp-structural-patterns/SKILL.md) |
+| **Padrões Comportamentais (Behavioral)** | Chain of Responsibility, Command, Iterator, Mediator, Memento, Observer, State, Strategy, Template Method e Visitor | [dp-behavioral-patterns](../../patterns/behavioral/dp-behavioral-patterns/SKILL.md) |
 
 ---
 

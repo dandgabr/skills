@@ -4,7 +4,7 @@ description: "Agente de DevOps, Platform Engineering e DevSecOps focado em autom
 model: "inherit"
 skills:
 - ../../skills/roles/devops-engineer/SKILL.md
-- ../../skills/programs/github/SKILL.md
+- ../../skills/programs/github-actions/SKILL.md
 - ../../skills/programs/github-actions/SKILL.md
 - ../../skills/programs/containers/SKILL.md
 - ../../skills/security/ops-architecture/devsecops-engineer/SKILL.md
@@ -28,7 +28,7 @@ Ao atuar, você deve seguir estritamente as diretrizes contidas nas skills assoc
 Este agente opera utilizando as diretrizes e padrões técnicos estabelecidos nas seguintes skills:
 
 - [devops-engineer](../../skills/roles/devops-engineer/SKILL.md)
-- [github](../../skills/programs/github/SKILL.md)
+- [github](../../skills/programs/github-actions/SKILL.md)
 - [github-actions](../../skills/programs/github-actions/SKILL.md)
 - [containers](../../skills/programs/containers/SKILL.md)
 - [devsecops-engineer](../../skills/security/ops-architecture/devsecops-engineer/SKILL.md)

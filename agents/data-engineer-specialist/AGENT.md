@@ -5,7 +5,7 @@ model: "inherit"
 skills:
 - ../../skills/databases/data-mesh-governance/SKILL.md
 - ../../skills/databases/realtime-streaming-event-driven/SKILL.md
-- ../../skills/security/grc-compliance/data-anonymization-privacy-pipelines/SKILL.md
+- ../../skills/security/grc-compliance/security-privacy/SKILL.md
 - ../../skills/roles/dba-database-administrator/SKILL.md
 - ../../skills/databases/db-postgresql/SKILL.md
 - ../../skills/engineering-practices/clean-code-reusability/SKILL.md
@@ -33,7 +33,7 @@ Este agente opera utilizando as diretrizes e padrões técnicos estabelecidos na
 
 - [data-mesh-governance](../../skills/databases/data-mesh-governance/SKILL.md)
 - [realtime-streaming-event-driven](../../skills/databases/realtime-streaming-event-driven/SKILL.md)
-- [data-anonymization-privacy-pipelines](../../skills/security/grc-compliance/data-anonymization-privacy-pipelines/SKILL.md)
+- [security-privacy](../../skills/security/grc-compliance/security-privacy/SKILL.md)
 - [dba-database-administrator](../../skills/roles/dba-database-administrator/SKILL.md)
 - [db-postgresql](../../skills/databases/db-postgresql/SKILL.md)
 - [clean-code-reusability](../../skills/engineering-practices/clean-code-reusability/SKILL.md)

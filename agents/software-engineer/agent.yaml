@@ -14,6 +14,6 @@ tools:
 - path: ../../skills/engineering-practices/c4-model-architecture/SKILL.md
 - path: ../../skills/engineering-practices/system-design-scalability/SKILL.md
 - path: ../../skills/engineering-practices/clean-code-reusability/SKILL.md
-- path: ../../skills/framework/framework-api-design-patterns/SKILL.md
+- path: ../../skills/framework/framework-rest-api/SKILL.md
 - path: ../../skills/framework/framework-testing/SKILL.md
 - path: ../../skills/roles/backend-developer/SKILL.md

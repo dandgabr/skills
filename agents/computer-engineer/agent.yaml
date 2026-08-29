@@ -14,6 +14,5 @@ tools:
 - path: ../../skills/domains/academic-microprocessors-embedded-systems/SKILL.md
 - path: ../../skills/domains/academic-digital-systems-vlsi/SKILL.md
 - path: ../../skills/domains/academic-circuit-analysis-electronics/SKILL.md
-- path: ../../skills/domains/embedded-linux-rtos-yocto-zephyr/SKILL.md
 - path: ../../skills/languages/lang-hdl-verilog-vhdl/SKILL.md
 - path: ../../skills/languages/lang-assembly-x64/SKILL.md

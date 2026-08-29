@@ -129,4 +129,4 @@ Esta skill orienta a inteligência artificial a agir como um **Especialista em E
 
 - Para diretrizes de criptografia em repouso, transporte TLS 1.3 e gestão de chaves em saúde, consulte a skill [cryptography-pqc-standards](../../crypto-pki/cryptography-pqc-standards/SKILL.md).
 - Para controles de conformidade de privacidade (LGPD, GDPR, DPIA), consulte a skill [security-privacy](../security-privacy/SKILL.md).
-- Para infraestrutura de certificados digitais X.509 e mTLS aplicados a nós IHE ATNA, consulte a skill [pki-digital-signatures](../../crypto-pki/pki-digital-signatures/SKILL.md).
+- Para infraestrutura de certificados digitais X.509 e mTLS aplicados a nós IHE ATNA, consulte a skill [cryptography-pqc-standards](../../crypto-pki/cryptography-pqc-standards/SKILL.md).

@@ -7,9 +7,9 @@ Este repositório serve como uma central modular e extensível para carregamento
 ## 🧭 Navegação Rápida
 
 > 📚 **[Acesse o Catálogo Completo de Habilidades e Agentes (CATALOGO.md)](CATALOGO.md)**  
-> Consulte a lista detalhada das **196 Skills** e **42 Agentes**, com métricas por categoria, subcategorias e descrições técnicas completas.
+> Consulte a lista detalhada das **166 Skills** e **44 Agentes Especializados**, com métricas por categoria, subcategorias e descrições técnicas completas.
 
-- 🤖 **[Guia de Agentes Especializados Universais](agents/README.md)**: Personas, manifestos (`AGENT.md`, `agent.yaml`, `agent.json`) e instruções de execução para qualquer harness.
+- 🤖 **[Guia de Agentes Especializados Universais (agents/README.md)](agents/README.md)**: Personas, manifestos (`AGENT.md`, `agent.yaml`, `agent.json`) e instruções de execução para qualquer harness.
 - 📜 **[Regras Globais do Projeto (AGENTS.md)](AGENTS.md)**: Diretrizes de comportamento, Clean Code, padrões de skills e criação de agentes.
 - ⚙️ **[Manifesto de Skills (skills.json)](skills.json)**: Configuração e importação modular de habilidades.
 
@@ -18,23 +18,23 @@ Este repositório serve como uma central modular e extensível para carregamento
 ## 📁 Estrutura de Pastas
 
 ```text
-├── CATALOGO.md             # Catálogo mestre com inventário de todas as skills e agentes
+├── CATALOGO.md             # Catálogo mestre com inventário de todas as 166 skills e 44 agentes
 ├── README.md               # Visão geral e documentação do repositório
 ├── AGENTS.md               # Regras gerais de comportamento, clean code e workflows
 ├── skills.json             # Manifesto de carregamento e herança de skills
 ├── skills/
 │   ├── cloud-infra/        # AWS, Azure, GCP, OCI, Linux Kernel, HPC, Zero Trust (7 skills)
 │   ├── databases/          # PostgreSQL, MariaDB, MongoDB, SQLite, Data Mesh, Streaming (6 skills)
-│   ├── domains/            # Matemática, Física, Computação Teórica, Circuitos, Robótica, Telecom, Química, Civil (39 skills)
+│   ├── domains/            # Matemática, Física, Computação Teórica, Circuitos, Robótica, Telecom, Química, SEP, Biotecnologia (40 skills)
 │   ├── engineering-practices/ # Clean Code, C4 Model, System Design, Documentation (5 skills)
-│   ├── framework/          # Testes unitários/mutação, React, Vue, APIs REST, GraphQL, gRPC (14 skills)
-│   ├── languages/          # Python, TypeScript, Go, Rust, C, C++, Assembly, Verilog/VHDL, etc. (15 skills)
+│   ├── framework/          # Testes unitários/mutação, React, Vue, APIs REST HTTP/3, GraphQL, gRPC, SOAP (10 skills)
+│   ├── languages/          # Python, TypeScript, Go, Rust, C, C++, Assembly, Verilog/VHDL, Typst, etc. (15 skills)
 │   ├── mapping/            # Código AST, Call Graphs, Rede, eBPF, CMDB, Engenharia Reversa (13 skills)
-│   ├── patterns/           # Design Patterns GoF: Criacionais, Estruturais e Comportamentais (22 skills)
-│   ├── programs/           # Containers, GitHub Actions, Markmap, Moodle, WinDbg, etc. (12 skills)
+│   ├── patterns/           # Design Patterns GoF: Criacionais, Estruturais e Comportamentais (3 master skills)
+│   ├── programs/           # Containers, GitHub Actions, Antigravity Guide, Markmap, Moodle, WinDbg, etc. (10 skills)
 │   ├── roles/              # Architect, Backend, Frontend, DevOps, DBA, QA, PO, UX, Mapping (15 skills)
-│   └── security/           # AppSec, AI Security, Cloud IAM, Crypto PKI, GRC, SecOps (48 skills)
-└── agents/                 # 42 Agentes Multi-Harness (AGENT.md, agent.yaml, agent.json)
+│   └── security/           # AppSec, AI Security, Cloud IAM, Crypto PKI, GRC, SecOps (42 skills)
+└── agents/                 # 44 Agentes Multi-Harness (AGENT.md, agent.yaml, agent.json)
 ```
 
 ---
@@ -46,7 +46,7 @@ O arquivo [AGENTS.md](AGENTS.md) define as regras gerais que todos os agentes e 
 
 ### 2. O Ecossistema Modular de Habilidades
 As habilidades estão organizadas de forma coesa para permitir que os agentes invoquem apenas os conhecimentos necessários para cada tarefa:
-- **Arquitetura & Engenharia**: A skill [software-architect](skills/roles/software-architect/SKILL.md) coordena decisões estruturais, orientando a invocação de [c4-model-architecture](skills/engineering-practices/c4-model-architecture/SKILL.md), [system-design-scalability](skills/engineering-practices/system-design-scalability/SKILL.md) e dos 22 [Design Patterns](CATALOGO.md#🧩-padrões-de-projeto-design-patterns---gof).
+- **Arquitetura & Engenharia**: A skill [software-architect](skills/roles/software-architect/SKILL.md) coordena decisões estruturais, orientando a invocação de [c4-model-architecture](skills/engineering-practices/c4-model-architecture/SKILL.md), [system-design-scalability](skills/engineering-practices/system-design-scalability/SKILL.md) e das master skills de [Design Patterns](CATALOGO.md#-padrões-de-projeto--design-patterns-gof-3).
 - **Clean Code & Reuso**: A skill [clean-code-reusability](skills/engineering-practices/clean-code-reusability/SKILL.md) é transversal e garante a não duplicação e alta legibilidade do código.
 - **Segurança da Informação**: Abrange do ciclo de desenvolvimento seguro ([appsec-owasp-asvs](skills/security/appsec/appsec-owasp-asvs/SKILL.md), [threat-modeler](skills/security/ops-architecture/threat-modeler/SKILL.md)) até conformidade normativa ([iso-27000-series](skills/security/grc-compliance/iso-27000-series/SKILL.md), [isc2-cissp-csslp-standards](skills/security/grc-compliance/isc2-cissp-csslp-standards/SKILL.md)).
 
@@ -68,4 +68,4 @@ O arquivo [skills.json](skills.json) permite registrar fontes externas de skills
 
 ---
 
-Para consultar o inventário detalhado de todas as 174 skills e 27 agentes, acesse o **[Catálogo Completo (CATALOGO.md)](CATALOGO.md)**.
+Para consultar o inventário detalhado de todas as 166 skills e 44 agentes, acesse o **[Catálogo Completo (CATALOGO.md)](CATALOGO.md)**.

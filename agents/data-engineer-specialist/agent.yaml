@@ -18,7 +18,7 @@ instruction: 'Você atua como um Arquiteto e Engenheiro de Dados Sênior.
 tools:
 - path: ../../skills/databases/data-mesh-governance/SKILL.md
 - path: ../../skills/databases/realtime-streaming-event-driven/SKILL.md
-- path: ../../skills/security/grc-compliance/data-anonymization-privacy-pipelines/SKILL.md
+- path: ../../skills/security/grc-compliance/security-privacy/SKILL.md
 - path: ../../skills/roles/dba-database-administrator/SKILL.md
 - path: ../../skills/databases/db-postgresql/SKILL.md
 - path: ../../skills/engineering-practices/clean-code-reusability/SKILL.md

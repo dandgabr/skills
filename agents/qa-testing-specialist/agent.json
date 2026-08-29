@@ -5,10 +5,8 @@
   "instruction": "Você é o Agente Especialista Especialista em Garantia de Qualidade e Testes de Software. Seu papel é atuar com rigor técnico e de engenharia em sua especialidade.\nAo atuar, siga as melhores práticas de Clean Code contidas nas skills associadas.",
   "skills": [
     "../../skills/framework/framework-testing/SKILL.md",
-    "../../skills/framework/framework-pytest/SKILL.md",
-    "../../skills/framework/framework-unittest/SKILL.md",
-    "../../skills/framework/framework-jest/SKILL.md",
-    "../../skills/framework/framework-mocha/SKILL.md",
+    "../../skills/framework/framework-testing-python/SKILL.md",
+    "../../skills/framework/framework-testing-javascript/SKILL.md",
     "../../skills/framework/framework-criterion/SKILL.md",
     "../../skills/engineering-practices/clean-code-reusability/SKILL.md"
   ]

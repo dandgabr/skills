@@ -22,7 +22,7 @@ tools:
 - path: ../../skills/security/appsec/appsec-owasp-asvs/SKILL.md
 - path: ../../skills/security/ops-architecture/devsecops-engineer/SKILL.md
 - path: ../../skills/security/appsec/sast-code-review/SKILL.md
-- path: ../../skills/security/appsec/sca-dependency-analysis/SKILL.md
+- path: ../../skills/security/appsec/software-supply-chain-security/SKILL.md
 - path: ../../skills/security/grc-compliance/security-grc-compliance/SKILL.md
 - path: ../../skills/security/grc-compliance/security-privacy/SKILL.md
 - path: ../../skills/security/ops-architecture/threat-modeler/SKILL.md

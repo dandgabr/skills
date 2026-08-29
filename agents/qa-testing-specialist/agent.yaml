@@ -8,9 +8,7 @@ instruction: 'Você é o Agente Especialista Especialista em Garantia de Qualida
   Ao atuar, siga as melhores práticas de Clean Code contidas nas skills associadas.'
 tools:
 - path: ../../skills/framework/framework-testing/SKILL.md
-- path: ../../skills/framework/framework-pytest/SKILL.md
-- path: ../../skills/framework/framework-unittest/SKILL.md
-- path: ../../skills/framework/framework-jest/SKILL.md
-- path: ../../skills/framework/framework-mocha/SKILL.md
+- path: ../../skills/framework/framework-testing-python/SKILL.md
+- path: ../../skills/framework/framework-testing-javascript/SKILL.md
 - path: ../../skills/framework/framework-criterion/SKILL.md
 - path: ../../skills/engineering-practices/clean-code-reusability/SKILL.md

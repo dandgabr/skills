@@ -12,5 +12,5 @@ instruction: 'Você é o Agente Especialista Geocientista e Especialista em Sens
   contidas nas skills associadas.'
 tools:
 - path: ../../skills/domains/academic-geosciences-remote-sensing-gis/SKILL.md
-- path: ../../skills/domains/rf-telecom-satellite-engineering/SKILL.md
+- path: ../../skills/domains/academic-optical-wireless-telecom/SKILL.md
 - path: ../../skills/engineering-practices/clean-code-reusability/SKILL.md

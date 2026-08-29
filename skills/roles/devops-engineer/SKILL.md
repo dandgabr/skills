@@ -974,6 +974,6 @@ A transição de DevOps tradicional para **Platform Engineering** substitui a fi
 
 - [devsecops-engineer](../../security/ops-architecture/devsecops-engineer/SKILL.md)
 - [software-architect](../software-architect/SKILL.md)
-- [program-github](../../programs/github/SKILL.md)
+- [program-github](../../programs/github-actions/SKILL.md)
 - [github-actions](../../programs/github-actions/SKILL.md)
 - [containers](../../programs/containers/SKILL.md)

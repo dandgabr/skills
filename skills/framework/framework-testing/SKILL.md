@@ -172,7 +172,7 @@ describe('calculateDiscount - BVA & Decision Table Tests', () => {
 
 ## 🔗 Integração com Outras Skills
 - [qa-engineer](../../roles/qa-engineer/SKILL.md): Planejamento e orquestração de qualidade e relatórios de defeitos.
-- [framework-pytest](../framework-pytest/SKILL.md): Automação de testes em Python com fixtures e testes parametrizados formais.
-- [framework-unittest](../framework-unittest/SKILL.md): Testes unitários com classes TestCase estruturadas.
-- [framework-jest](../framework-jest/SKILL.md) / [framework-mocha](../framework-mocha/SKILL.md): Automação em ecossistemas JS/TS.
+- [framework-pytest](../framework-testing-python/SKILL.md): Automação de testes em Python com fixtures e testes parametrizados formais.
+- [framework-unittest](../framework-testing-python/SKILL.md): Testes unitários com classes TestCase estruturadas.
+- [framework-jest](../framework-testing-javascript/SKILL.md) / [framework-mocha](../framework-testing-javascript/SKILL.md): Automação em ecossistemas JS/TS.
 - [framework-criterion](../framework-criterion/SKILL.md): Testes em baixo nível para linguagens compiladas C/C++.

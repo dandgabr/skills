@@ -6,7 +6,7 @@ skills:
 - ../../skills/security/ai-security/ai-llm-slm-security/SKILL.md
 - ../../skills/security/ai-security/ai-computer-vision-security/SKILL.md
 - ../../skills/security/ai-security/ai-voice-stt-tts-security/SKILL.md
-- ../../skills/security/ai-security/ai-model-security-analysis/SKILL.md
+- ../../skills/security/ai-security/ai-llm-slm-security/SKILL.md
 - ../../skills/engineering-practices/clean-code-reusability/SKILL.md
 ---
 
@@ -24,7 +24,6 @@ Você atua como especialista sênior em **Especialista em Segurança de IA e Red
 - [ai-llm-slm-security](../../skills/security/ai-security/ai-llm-slm-security/SKILL.md)
 - [ai-computer-vision-security](../../skills/security/ai-security/ai-computer-vision-security/SKILL.md)
 - [ai-voice-stt-tts-security](../../skills/security/ai-security/ai-voice-stt-tts-security/SKILL.md)
-- [ai-model-security-analysis](../../skills/security/ai-security/ai-model-security-analysis/SKILL.md)
 - [clean-code-reusability](../../skills/engineering-practices/clean-code-reusability/SKILL.md)
 
 ---

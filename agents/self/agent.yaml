@@ -13,9 +13,9 @@ instruction: 'Você é o Subagente Self (Clone e Continuidade de Contexto). Seu 
   do projeto e reportando resultados consolidados de volta ao agente coordenador.
 
   Ao atuar, você deve seguir estritamente as diretrizes contidas nas skills associadas:
-  antigravity-guide, agy-customizations, general e clean-code-reusability.'
+  antigravity-guide, antigravity-guide, general e clean-code-reusability.'
 tools:
 - path: ../../skills/programs/antigravity-guide/SKILL.md
-- path: ../../skills/programs/agy-customizations/SKILL.md
+- path: ../../skills/programs/antigravity-guide/SKILL.md
 - path: ../../skills/roles/general/SKILL.md
 - path: ../../skills/engineering-practices/clean-code-reusability/SKILL.md

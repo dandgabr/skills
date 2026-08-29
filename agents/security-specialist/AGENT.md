@@ -6,7 +6,7 @@ skills:
 - ../../skills/security/appsec/appsec-owasp-asvs/SKILL.md
 - ../../skills/security/ops-architecture/devsecops-engineer/SKILL.md
 - ../../skills/security/appsec/sast-code-review/SKILL.md
-- ../../skills/security/appsec/sca-dependency-analysis/SKILL.md
+- ../../skills/security/appsec/software-supply-chain-security/SKILL.md
 - ../../skills/security/grc-compliance/security-grc-compliance/SKILL.md
 - ../../skills/security/grc-compliance/security-privacy/SKILL.md
 - ../../skills/security/ops-architecture/threat-modeler/SKILL.md
@@ -34,7 +34,7 @@ Este agente opera utilizando as diretrizes e padrões técnicos estabelecidos na
 - [appsec-owasp-asvs](../../skills/security/appsec/appsec-owasp-asvs/SKILL.md)
 - [devsecops-engineer](../../skills/security/ops-architecture/devsecops-engineer/SKILL.md)
 - [sast-code-review](../../skills/security/appsec/sast-code-review/SKILL.md)
-- [sca-dependency-analysis](../../skills/security/appsec/sca-dependency-analysis/SKILL.md)
+- [software-supply-chain-security](../../skills/security/appsec/software-supply-chain-security/SKILL.md)
 - [security-grc-compliance](../../skills/security/grc-compliance/security-grc-compliance/SKILL.md)
 - [security-privacy](../../skills/security/grc-compliance/security-privacy/SKILL.md)
 - [threat-modeler](../../skills/security/ops-architecture/threat-modeler/SKILL.md)

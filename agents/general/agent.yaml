@@ -9,9 +9,9 @@ instruction: 'Você é o Agente Generalista Multi-Etapas (General). Seu papel é
   necessárias ao longo do ciclo de vida da tarefa.
 
   Ao atuar, você deve seguir estritamente as diretrizes contidas nas skills associadas:
-  general, software-architect, agy-customizations e clean-code-reusability.'
+  general, software-architect, antigravity-guide e clean-code-reusability.'
 tools:
 - path: ../../skills/roles/general/SKILL.md
 - path: ../../skills/roles/software-architect/SKILL.md
-- path: ../../skills/programs/agy-customizations/SKILL.md
+- path: ../../skills/programs/antigravity-guide/SKILL.md
 - path: ../../skills/engineering-practices/clean-code-reusability/SKILL.md

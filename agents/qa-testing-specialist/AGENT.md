@@ -4,10 +4,8 @@ description: Agente Especialista em Garantia de Qualidade (QA) e Automação de 
 model: inherit
 skills:
 - ../../skills/framework/framework-testing/SKILL.md
-- ../../skills/framework/framework-pytest/SKILL.md
-- ../../skills/framework/framework-unittest/SKILL.md
-- ../../skills/framework/framework-jest/SKILL.md
-- ../../skills/framework/framework-mocha/SKILL.md
+- ../../skills/framework/framework-testing-python/SKILL.md
+- ../../skills/framework/framework-testing-javascript/SKILL.md
 - ../../skills/framework/framework-criterion/SKILL.md
 - ../../skills/engineering-practices/clean-code-reusability/SKILL.md
 ---
@@ -24,10 +22,8 @@ Você atua como especialista sênior em **Especialista em Garantia de Qualidade 
 
 ### 📚 Habilidades Associadas (Skills)
 - [framework-testing](../../skills/framework/framework-testing/SKILL.md)
-- [framework-pytest](../../skills/framework/framework-pytest/SKILL.md)
-- [framework-unittest](../../skills/framework/framework-unittest/SKILL.md)
-- [framework-jest](../../skills/framework/framework-jest/SKILL.md)
-- [framework-mocha](../../skills/framework/framework-mocha/SKILL.md)
+- [framework-testing-python](../../skills/framework/framework-testing-python/SKILL.md)
+- [framework-testing-javascript](../../skills/framework/framework-testing-javascript/SKILL.md)
 - [framework-criterion](../../skills/framework/framework-criterion/SKILL.md)
 - [clean-code-reusability](../../skills/engineering-practices/clean-code-reusability/SKILL.md)
 

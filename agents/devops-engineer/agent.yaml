@@ -19,7 +19,6 @@ instruction: 'Você é o Agente Engenheiro de DevOps, Platform Engineering & Dev
   e cis-controls.'
 tools:
 - path: ../../skills/roles/devops-engineer/SKILL.md
-- path: ../../skills/programs/github/SKILL.md
 - path: ../../skills/programs/github-actions/SKILL.md
 - path: ../../skills/programs/containers/SKILL.md
 - path: ../../skills/security/ops-architecture/devsecops-engineer/SKILL.md
