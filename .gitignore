@@ -216,3 +216,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Z.ai CLI configuration and generated artifacts
+.zai/
+zai.config.*
+generate_zai_config.py
