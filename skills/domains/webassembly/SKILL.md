@@ -116,8 +116,8 @@ WebAssembly.instantiateStreaming(fetch("table.wasm")).then(({ instance }) => {
 - **Supply chain**: confirme procedência de `.wasm` de terceiros (SBOM/assinatura), recompile de fonte auditada quando possível.
 
 ## 🔗 Integração com Outras Skills
-- [lang-c](../languages/lang-c/SKILL.md) / [lang-cpp](../languages/lang-cpp/SKILL.md): código-fonte C/C++ compilado via Emscripten para o alvo wasm.
-- [lang-rust](../languages/lang-rust/SKILL.md): módulos Rust com `wasm-pack`, `wasm-bindgen` e alvo `wasm32-unknown-unknown`.
-- [lang-typescript](../languages/lang-typescript/SKILL.md): glue code tipado (`WebAssembly.Module`, `Memory`, `Instance`, `exports`) e libs como AssemblyScript.
+- [lang-c](../../languages/lang-c/SKILL.md) / [lang-cpp](../../languages/lang-cpp/SKILL.md): código-fonte C/C++ compilado via Emscripten para o alvo wasm.
+- [lang-rust](../../languages/lang-rust/SKILL.md): módulos Rust com `wasm-pack`, `wasm-bindgen` e alvo `wasm32-unknown-unknown`.
+- [lang-typescript](../../languages/lang-typescript/SKILL.md): glue code tipado (`WebAssembly.Module`, `Memory`, `Instance`, `exports`) e libs como AssemblyScript.
 - [frontend-developer](../../roles/frontend-developer/SKILL.md): integração de módulos wasm em aplicações web (fetch, workers, perf budget, Core Web Vitals).
 - [program-containers](../../programs/containers/SKILL.md): Wasm fora do browser (runtimes Wasmtime/Wasmer, WASI) para workloads server-side e edge.
