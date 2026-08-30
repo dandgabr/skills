@@ -1,7 +1,6 @@
 ---
 name: "dba-specialist"
 description: "Agente Especialista em Administração de Bancos de Dados (DBA) para SQL e NoSQL, cobrindo modelagem, tunagem de performance (EXPLAIN), alta disponibilidade, replicação e segurança em PostgreSQL, MariaDB, SQLite e MongoDB."
-model: "inherit"
 skills:
 - ../../skills/roles/dba-database-administrator/SKILL.md
 - ../../skills/databases/db-postgresql/SKILL.md

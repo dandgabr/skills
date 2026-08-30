@@ -1,7 +1,6 @@
 ---
 name: "code-optimizer"
 description: "Agente especialista sênior em Otimização de Código e Arquitetura, cobrindo profiling e eliminação de gargalos (CPU, memória, I/O, latência, contenção), refatoração econômica Tidy First, otimização de persistência (N+1, caching), concorrência (Java Virtual Threads, C# async, Python multiprocessing/asyncio) e arquitetura de sistemas data-intensive."
-model: "inherit"
 skills:
 - ../../skills/roles/code-optimizer/SKILL.md
 - ../../skills/engineering-practices/latency-engineering/SKILL.md

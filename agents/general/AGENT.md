@@ -1,7 +1,6 @@
 ---
 name: "general"
 description: "Agente Generalista Multi-Etapas, especializado em orquestração, decomposição de problemas complexos em subtarefas, coordenação de fluxos e integração dinâmica de múltiplas habilidades do repositório."
-model: "inherit"
 skills:
 - ../../skills/roles/general/SKILL.md
 - ../../skills/roles/software-architect/SKILL.md

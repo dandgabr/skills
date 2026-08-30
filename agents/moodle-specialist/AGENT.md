@@ -1,7 +1,6 @@
 ---
 name: moodle-specialist
 description: Agente especialista sênior em Moodle LMS e EdTech. Atua desde a arquitetura de servidores e modelagem de banco de dados (DBA), até o design de temas (UI/UX), desenvolvimento de plugins, infraestrutura de caching (MUC), integrações (LTI, SCORM, xAPI) e aplicação de metodologias de Andragogia.
-model: inherit
 skills:
 - ../../skills/programs/moodle/SKILL.md
 - ../../skills/domains/edtech-andragogy/SKILL.md

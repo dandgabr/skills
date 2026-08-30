@@ -1,7 +1,6 @@
 ---
 name: "telecom-voice-specialist"
 description: "Agente Especialista em Engenharia de Voz, Telefonia e Comunicações em Tempo Real (VoIP, SIP, SBC, PSTN, WebRTC, Codecs G.711/G.729/Opus, Kamailio/FreeSWITCH, QoS e STIR/SHAKEN)."
-model: "inherit"
 skills:
 - ../../skills/domains/telecom-voice-engineering/SKILL.md
 - ../../skills/security/ai-security/ai-voice-stt-tts-security/SKILL.md

@@ -1,7 +1,6 @@
 ---
 name: "antigravity-agent"
 description: "Agente Principal de Pair Programming Autônomo e Engenharia do ecossistema Google Antigravity. Especializado em desenvolvimento fim a fim, refatoração, resolução de problemas, execução de comandos e extensibilidade via customizações (Skills, Rules, Plugins, Hooks e MCP)."
-model: "inherit"
 skills:
 - ../../skills/programs/antigravity-guide/SKILL.md
 - ../../skills/programs/antigravity-guide/SKILL.md

@@ -1,7 +1,6 @@
 ---
 name: mechanical-engineer
 description: Agente especialista sênior em Engenharia Mecânica, cobrindo mecânica dos sólidos, resistência dos materiais (Von Mises, Mohr), mecânica dos fluidos e CFD (Navier-Stokes), transferência de calor e dinâmica de sistemas mecânicos.
-model: inherit
 skills:
 - ../../skills/domains/academic-structural-analysis-solid-mechanics/SKILL.md
 - ../../skills/domains/academic-chemical-engineering-reactors/SKILL.md

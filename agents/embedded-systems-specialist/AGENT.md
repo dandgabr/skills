@@ -1,7 +1,6 @@
 ---
 name: "embedded-systems-specialist"
 description: "Especialista em Sistemas Embarcados, RTOS (Zephyr), Linux Embarcado (Yocto Project), Firmware C/C++ e Descrição de Hardware (Verilog/VHDL)."
-model: "inherit"
 skills:
 - ../../skills/domains/academic-microprocessors-embedded-systems/SKILL.md
 - ../../skills/domains/academic-digital-systems-vlsi/SKILL.md

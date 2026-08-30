@@ -1,7 +1,6 @@
 ---
 name: civil-engineer
 description: Agente especialista sênior em Engenharia Civil e Estrutural, cobrindo cálculo estrutural, resistência dos materiais, mecânica dos solos e geotecnia (Terzaghi, Mohr-Coulomb), fundações e dimensionamento de elementos estruturais.
-model: inherit
 skills:
 - ../../skills/domains/academic-structural-analysis-solid-mechanics/SKILL.md
 - ../../skills/engineering-practices/clean-code-reusability/SKILL.md

@@ -1,7 +1,6 @@
 ---
 name: physical-engineer
 description: Agente especialista sênior em Engenharia Física e Nanotecnologia, cobrindo física do estado sólido, semicondutores, processos de microfabricação em sala limpa, síntese de nanomateriais de carbono (grafeno, nanotubos), pontos quânticos e sensores quânticos.
-model: inherit
 skills:
 - ../../skills/domains/academic-solid-state-semiconductors/SKILL.md
 - ../../skills/domains/quantum-computing-algorithms/SKILL.md

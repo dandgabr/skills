@@ -1,7 +1,6 @@
 ---
 name: computer-scientist
 description: Agente especialista sênior em Ciência da Computação Teórica e Algoritmos Avançados, cobrindo análise assintótica rigorosa (CLRS), estruturas de dados balanceadas, Teoria da Computação e Autômatos (Sipser), Engenharia de Compiladores (Dragon Book) e Computação Gráfica.
-model: inherit
 skills:
 - ../../skills/domains/academic-algorithms-data-structures/SKILL.md
 - ../../skills/domains/academic-compilers-language-processors/SKILL.md

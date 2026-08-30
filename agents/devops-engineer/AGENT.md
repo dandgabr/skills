@@ -1,7 +1,6 @@
 ---
 name: "devops-engineer"
 description: "Agente de DevOps, Platform Engineering e DevSecOps focado em automação de infraestrutura como código (Terraform, Ansible, Vagrant, Backstage), orquestração de containers (Docker, Podman, CRI-O, Kubernetes), governança do GitHub e pipelines de CI/CD (GitHub Actions) com segurança integrada (Opengrep SAST, OWASP ZAP DAST e OWASP Dependency-Check SCA)."
-model: "inherit"
 skills:
 - ../../skills/roles/devops-engineer/SKILL.md
 - ../../skills/programs/github-actions/SKILL.md

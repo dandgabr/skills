@@ -1,7 +1,6 @@
 ---
 name: "cloud-infrastructure-architect"
 description: "Agente Especialista em Arquitetura e Engenharia Multi-Cloud (AWS, Azure, GCP, OCI), Well-Architected Framework, FinOps e automação IaC segura."
-model: "inherit"
 skills:
 - ../../skills/cloud-infra/cloud-aws/SKILL.md
 - ../../skills/cloud-infra/cloud-azure/SKILL.md

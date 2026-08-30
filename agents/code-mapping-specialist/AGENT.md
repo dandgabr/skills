@@ -1,7 +1,6 @@
 ---
 name: "code-mapping-specialist"
 description: "Agente Especialista em Mapeamento de Código, Aplicações, Fluxos de Execução, Infraestrutura, Kubernetes, Nuvem e Grafos de Dependência Ponta a Ponta."
-model: "inherit"
 skills:
 - ../../skills/roles/code-mapping-specialist/SKILL.md
 - ../../skills/mapping/app-dependency-discovery/SKILL.md

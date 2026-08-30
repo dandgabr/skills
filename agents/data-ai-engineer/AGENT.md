@@ -1,7 +1,6 @@
 ---
 name: data-ai-engineer
 description: Agente especialista sênior em Engenharia de Dados, Big Data e Inteligência Artificial, cobrindo pipelines distribuídos (Spark, Airflow), streaming em tempo real (Kafka, Flink, Pinot), arquiteturas Data Mesh, Deep Learning, MLOps e Engenharia de LLMs/RAG.
-model: inherit
 skills:
 - ../../skills/domains/ai-llm-engineering-rag/SKILL.md
 - ../../skills/databases/data-mesh-governance/SKILL.md

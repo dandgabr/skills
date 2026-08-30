@@ -1,7 +1,6 @@
 ---
 name: "software-architect"
 description: "Agente de Arquitetura de Software que aplica DDD, SOLID e orquestração de Design Patterns para guiar o design de projetos."
-model: "inherit"
 skills:
 - ../../skills/roles/software-architect/SKILL.md
 ---

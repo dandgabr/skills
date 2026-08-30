@@ -1,7 +1,6 @@
 ---
 name: "data-engineer-specialist"
 description: "Especialista em Engenharia de Dados, Data Mesh, Streaming em Tempo Real (Kafka, Pinot, Flink), Governança Federada e Pipelines de Anonimização de Dados."
-model: "inherit"
 skills:
 - ../../skills/databases/data-mesh-governance/SKILL.md
 - ../../skills/databases/realtime-streaming-event-driven/SKILL.md

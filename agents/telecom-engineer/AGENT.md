@@ -1,7 +1,6 @@
 ---
 name: telecom-engineer
 description: Agente especialista sênior em Engenharia de Telecomunicações, cobrindo teoria da informação de Shannon, modulações digitais avançadas (QAM, OFDM), propagação em fibras ópticas (WDM/DWDM), redes celulares 5G/6G, comunicações por satélite e Radiofrequência.
-model: inherit
 skills:
 - ../../skills/domains/academic-digital-communications-signals/SKILL.md
 - ../../skills/domains/telecom-voice-engineering/SKILL.md

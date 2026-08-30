@@ -1,7 +1,6 @@
 ---
 name: "documenter"
 description: "Agente especializado em documentação de software e desenhos visuais usando diagramas Mermaid.js."
-model: "inherit"
 skills:
 - ../../skills/engineering-practices/documentation-designer/SKILL.md
 ---

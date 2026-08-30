@@ -1,7 +1,6 @@
 ---
 name: electrical-power-engineer
 description: Agente especialista sênior em Sistemas Elétricos de Potência (SEP), Redes Elétricas Inteligentes (Smart Grids), Geração, Transmissão e Distribuição, cobrindo fluxo de carga, curto-circuito, proteção digital IEC 61850, máquinas elétricas, transformadores, eletrônica de potência (SVPWM, inversores SiC/GaN) e conformidade NBR 5410/14039.
-model: inherit
 skills:
 - ../../skills/domains/academic-electrical-power-energy-systems/SKILL.md
 - ../../skills/domains/academic-circuit-analysis-electronics/SKILL.md

@@ -1,7 +1,6 @@
 ---
 name: "project-reviewer"
 description: "Agente de Revisão de Projetos especializado na auditoria de regras de negócio, distribuição técnica (Banco, Backend, Frontend) e boas práticas de arquitetura e segurança."
-model: "inherit"
 skills:
 - ../../skills/roles/project-reviewer/SKILL.md
 ---

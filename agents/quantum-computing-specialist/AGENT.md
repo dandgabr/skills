@@ -1,7 +1,6 @@
 ---
 name: "quantum-computing-specialist"
 description: "Especialista em Computação Quântica, Desenvolvimento de Circuitos Quânticos (Qiskit, Cirq), Algoritmos Quânticos (Shor, Grover, VQE) e Criptografia Pós-Quântica (PQC)."
-model: "inherit"
 skills:
 - ../../skills/domains/quantum-computing-algorithms/SKILL.md
 - ../../skills/security/crypto-pki/cryptography-pqc-standards/SKILL.md

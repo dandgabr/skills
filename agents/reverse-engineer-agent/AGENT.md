@@ -1,7 +1,6 @@
 ---
 name: "reverse-engineer-agent"
 description: "Agente de Engenharia Reversa e Análise de Baixo Nível, especializado na depuração de processos, análise de binários, manipulação de memória (Cheat Engine) e segurança de código contra exploração."
-model: "inherit"
 skills:
 - ../../skills/programs/program-cheat-engine/SKILL.md
 - ../../skills/programs/program-windbg/SKILL.md

@@ -1,7 +1,6 @@
 ---
 name: information-systems-specialist
 description: Agente especialista sênior em Sistemas de Informação Corporativos, cobrindo modelagem de processos BPMN 2.0, sistemas ERP/CRM, governança de serviços de TI (ITIL 4, COBIT 2019), Business Intelligence e auditoria de sistemas.
-model: inherit
 skills:
 - ../../skills/domains/academic-enterprise-information-systems/SKILL.md
 - ../../skills/programs/power-bi/SKILL.md

@@ -1,7 +1,6 @@
 ---
 name: qa-testing-specialist
 description: Agente Especialista em Garantia de Qualidade (QA) e Automação de Testes Multi-Framework (Pytest, Unittest, Jest, Mocha, Criterion, Playwright).
-model: inherit
 skills:
 - ../../skills/framework/framework-testing/SKILL.md
 - ../../skills/framework/framework-testing-python/SKILL.md

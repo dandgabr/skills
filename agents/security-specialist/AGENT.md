@@ -1,7 +1,6 @@
 ---
 name: "security-specialist"
 description: "Agente Especialista em Segurança da Informação, cobrindo práticas de AppSec (SAST, DAST, IAST, RASP, SCA), DevSecOps, conformidade regulatória de privacidade (LGPD/GDPR) e modelagem de ameaças."
-model: "inherit"
 skills:
 - ../../skills/security/appsec/appsec-owasp-asvs/SKILL.md
 - ../../skills/security/ops-architecture/devsecops-engineer/SKILL.md

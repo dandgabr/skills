@@ -1,7 +1,6 @@
 ---
 name: "researcher"
 description: "Subagente Especialista em Pesquisa, Varredura de Codebase, Análise de Documentação e Busca Externa com ferramentas de leitura estrita. Ideal para investigações abrangentes sem sobrecarregar a janela de contexto principal."
-model: "inherit"
 skills:
 - ../../skills/programs/antigravity-guide/SKILL.md
 - ../../skills/roles/explore/SKILL.md

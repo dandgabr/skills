@@ -1,7 +1,6 @@
 ---
 name: "fullstack-developer"
 description: "Agente de Desenvolvimento Full Stack especialista em criar aplicações web fim a fim, integrando lógica de backend (REST, gRPC), frontend (React, Vue), bancos de dados (DBA) e garantindo código limpo e seguro."
-model: "inherit"
 skills:
 - ../../skills/roles/backend-developer/SKILL.md
 - ../../skills/roles/frontend-developer/SKILL.md

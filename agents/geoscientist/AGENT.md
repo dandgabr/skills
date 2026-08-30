@@ -1,7 +1,6 @@
 ---
 name: geoscientist
 description: Agente especialista sênior em Geociências e Sensoriamento Remoto, cobrindo geologia estrutural, geofísica, cartografia digital, geoprocessamento com GIS/QGIS e espectrometria de imagens de satélite multiespectral.
-model: inherit
 skills:
 - ../../skills/domains/academic-geosciences-remote-sensing-gis/SKILL.md
 - ../../skills/domains/academic-digital-communications-signals/SKILL.md

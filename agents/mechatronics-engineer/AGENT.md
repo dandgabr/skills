@@ -1,7 +1,6 @@
 ---
 name: mechatronics-engineer
 description: Agente especialista sênior em Engenharia Mecatrônica, Robótica Industrial/Móvel (ROS 2), Teoria de Controle Clássico e Moderno (Espaço de Estados, PID, LQR, Kalman), Controladores Lógicos Programáveis (CLPs IEC 61131-3) e Sistemas SCADA.
-model: inherit
 skills:
 - ../../skills/domains/academic-control-systems-theory/SKILL.md
 - ../../skills/domains/academic-circuit-analysis-electronics/SKILL.md

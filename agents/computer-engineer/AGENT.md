@@ -1,7 +1,6 @@
 ---
 name: computer-engineer
 description: Agente especialista sênior em Engenharia de Computação, cobrindo arquitetura de microprocessadores (ARM/RISC-V), projeto de circuitos integrados VLSI/CMOS, síntese lógica em VHDL/Verilog, Linux Embarcado, RTOS e análise de circuitos eletrônicos.
-model: inherit
 skills:
 - ../../skills/domains/academic-microprocessors-embedded-systems/SKILL.md
 - ../../skills/domains/academic-digital-systems-vlsi/SKILL.md

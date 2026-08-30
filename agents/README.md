@@ -30,9 +30,9 @@ Cada agente sob `agents/<nome>/` possui três representações sincronizadas par
 
 ```text
 agents/<nome-do-agente>/
-├── AGENT.md        # 📄 Canônico Markdown + YAML Frontmatter (Claude Code, OpenCode, Codex, Cursor)
-├── agent.yaml      # ⚙️ Declaração estruturada YAML com model: inherit (Antigravity / ADK 2.0)
-├── agent.json      # 📦 Manifesto JSON estruturado (APIs REST, LangChain, AutoGen, CrewAI, Z.ai)
+├── AGENT.md        # 📄 Canônico Markdown + YAML Frontmatter, sem linha model por padrão (Claude Code, OpenCode, Codex, Cursor)
+├── agent.yaml      # ⚙️ Declaração estruturada YAML (Antigravity / ADK 2.0) — pode usar model: inherit
+├── agent.json      # 📦 Manifesto JSON estruturado, sem campo model por padrão (APIs REST, LangChain, AutoGen, CrewAI, Z.ai)
 └── plugin.json     # 🔌 Metadados de plugin com entrypoint padronizado
 ```
 
@@ -81,7 +81,8 @@ response = client.chat.completions.create(
 
 ### 4. 🟡 Google Antigravity / ADK 2.0
 O agente é detectado automaticamente pelo sistema de customização ao ler a pasta `agents/`:
-- Configurado via `agent.yaml` com `model: inherit` para respeitar a preferência do usuário ou subagente.
+- Configurado via `agent.yaml` com `model: inherit` para respeitar a preferência do usuário ou subagente (suportado apenas neste harness).
+- Em `AGENT.md` e `agent.json`, a linha/campo `model` deve ser omitida — ver [AGENTS.md](../AGENTS.md) para as regras de `model` por harness.
 
 ### 5. 🟠 Cursor / Windsurf / Copilot Workspace
 Adicione o conteúdo do `AGENT.md` às instruções da workspace (`.cursorrules` ou regras customizadas de contexto):
@@ -163,4 +164,4 @@ qa_agent = Agent(
 
 ## ⚙️ Diretrizes de Contribuição e Adição de Novos Agentes
 
-Ao criar um novo agente, garanta a paridade entre `AGENT.md`, `agent.yaml`, `agent.json` e `plugin.json`, utilizando sempre caminhos relativos e `model: inherit`.
+Ao criar um novo agente, garanta a paridade entre `AGENT.md`, `agent.yaml`, `agent.json` e `plugin.json`, utilizando sempre caminhos relativos. Por padrão, **omite o campo `model`** em todos os formatos (o agente herda o modelo da sessão/config do harness). Siga as regras detalhadas de `model` por harness definidas na seção [🧠 Regras de Modelo](../AGENTS.md#-regras-de-modelo-model-por-harness) do [AGENTS.md](../AGENTS.md).

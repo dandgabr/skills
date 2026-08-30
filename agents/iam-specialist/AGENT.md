@@ -1,7 +1,6 @@
 ---
 name: "iam-specialist"
 description: "Agente Especialista em Gestão de Identidades e Controle de Acessos (IAM/PAM), Governança de Identidades, Arquitetura Zero Trust, Entra ID, Power Platform, AWS, Azure, GCP e OCI IAM."
-model: "inherit"
 skills:
 - ../../skills/security/cloud-iam/iam-access-management/SKILL.md
 - ../../skills/security/cloud-iam/iam-access-power-platform/SKILL.md

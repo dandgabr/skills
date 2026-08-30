@@ -1,7 +1,6 @@
 ---
 name: "skill-creator"
 description: "Agente especialista sênior em Arquitetura, Criação, Aprimoramento e Catalogação de Skills para assistentes de IA. Domina a conversão de livros/documentos PDF em Markdown estruturado, elaboração de SKILL.md de padrão de produção, interconexão de habilidades e governança do repositório."
-model: "inherit"
 skills:
 - ../../skills/engineering-practices/clean-code-reusability/SKILL.md
 - ../../skills/engineering-practices/documentation-designer/SKILL.md

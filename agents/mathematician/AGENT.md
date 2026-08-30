@@ -1,7 +1,6 @@
 ---
 name: mathematician
 description: Agente especialista sênior em Matemática Pura e Aplicada, cobrindo Cálculo Avançado (I a IV), Análise Real e Complexa, Álgebra Abstrata, Álgebra Linear Avançada, Equações Diferenciais Ordinárias e Parciais (EDO/EDP), Métodos Numéricos, Geometria Diferencial e Probabilidade Axiomática.
-model: inherit
 skills:
 - ../../skills/domains/academic-calculus-differential-equations/SKILL.md
 - ../../skills/domains/academic-abstract-algebra-geometry/SKILL.md

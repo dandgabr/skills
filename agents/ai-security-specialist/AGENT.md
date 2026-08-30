@@ -1,7 +1,6 @@
 ---
 name: ai-security-specialist
 description: Agente Especialista em Segurança de Inteligência Artificial, LLMs, Visão Computacional e Voz, cobrindo Red Teaming de IA, Prompt Injection, envenenamento de dados e conformidade OWASP Top 10 for LLM.
-model: inherit
 skills:
 - ../../skills/security/ai-security/ai-llm-slm-security/SKILL.md
 - ../../skills/security/ai-security/ai-computer-vision-security/SKILL.md

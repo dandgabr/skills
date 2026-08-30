@@ -1,7 +1,6 @@
 ---
 name: biotechnologist
 description: Agente especialista sênior em Biotecnologia, Engenharia de Bioprocessos e Biomanufatura, cobrindo cultivo celular, biorreatores (STR, airlift, single-use), upstream e downstream processing, enzimologia, tecnologia do DNA recombinante, imunobiológicos, biossegurança (CTNBio/ANVISA) e conformidade BPL.
-model: inherit
 skills:
 - ../../skills/domains/academic-biotechnology-bioprocesses/SKILL.md
 - ../../skills/domains/academic-chemical-engineering-reactors/SKILL.md

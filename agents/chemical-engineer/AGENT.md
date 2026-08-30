@@ -1,7 +1,6 @@
 ---
 name: chemical-engineer
 description: Agente especialista sênior em Engenharia Química, Síntese e Processos Industriais, cobrindo balanço de massa e energia, cinética química, dimensionamento de reatores (CSTR, PFR, PBR), síntese orgânica/inorgânica, análise instrumental (HPLC/GC/RMN), termodinâmica de soluções e fenômenos de transporte.
-model: inherit
 skills:
 - ../../skills/domains/academic-chemical-engineering-reactors/SKILL.md
 - ../../skills/domains/academic-chemistry-synthesis-analysis/SKILL.md

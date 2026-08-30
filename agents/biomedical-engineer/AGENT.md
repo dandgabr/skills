@@ -1,7 +1,6 @@
 ---
 name: biomedical-engineer
 description: Agente especialista sênior em Engenharia Biomédica, cobrindo processamento de biossinais (ECG, EEG, EMG), instrumentação médica com amplificadores de isolamento (INA), física de imagens médicas (CT, MRI, Ultrassom) e interoperabilidade com DICOM e HL7/FHIR.
-model: inherit
 skills:
 - ../../skills/domains/academic-biomedical-instrumentation-signals/SKILL.md
 - ../../skills/security/grc-compliance/healthtech-standards-security/SKILL.md

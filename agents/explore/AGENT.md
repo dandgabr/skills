@@ -1,7 +1,6 @@
 ---
 name: "explore"
 description: "Subagente Especialista em Exploração Rápida de Codebases, busca de padrões, análise de arquitetura, mapeamento de dependências e entendimento de estruturas de projetos existentes."
-model: "inherit"
 skills:
 - ../../skills/roles/explore/SKILL.md
 - ../../skills/roles/software-architect/SKILL.md

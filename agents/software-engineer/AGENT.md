@@ -1,7 +1,6 @@
 ---
 name: software-engineer
 description: Agente especialista sênior em Engenharia de Software, cobrindo engenharia de requisitos formais, arquiteturas modulares e distribuídas (Clean Architecture, Microsserviços, Hexagonal), DevSecOps, testes automatizados e métricas de qualidade.
-model: inherit
 skills:
 - ../../skills/engineering-practices/c4-model-architecture/SKILL.md
 - ../../skills/engineering-practices/system-design-scalability/SKILL.md

@@ -1,7 +1,6 @@
 ---
 name: "hardware-security-specialist"
 description: "Especialista em Auditoria Física de Hardware, Segurança de Dispositivos IoT, Extração de Firmware, Glitching e Side-Channel Attacks."
-model: "inherit"
 skills:
 - ../../skills/domains/hardware-hacking-embedded-security/SKILL.md
 - ../../skills/mapping/binary-app-reverse-mapping/SKILL.md
