@@ -18,5 +18,11 @@ tools:
 - path: ../../skills/framework/framework-react/SKILL.md
 - path: ../../skills/framework/framework-rest-api/SKILL.md
 - path: ../../skills/framework/framework-grpc/SKILL.md
+- path: ../../skills/languages/lang-typescript/SKILL.md
+- path: ../../skills/languages/lang-python/SKILL.md
+- path: ../../skills/languages/lang-go/SKILL.md
+- path: ../../skills/languages/lang-java/SKILL.md
+- path: ../../skills/languages/lang-csharp/SKILL.md
+- path: ../../skills/languages/lang-rust/SKILL.md
 - path: ../../skills/security/appsec/appsec-owasp-asvs/SKILL.md
 - path: ../../skills/engineering-practices/clean-code-reusability/SKILL.md

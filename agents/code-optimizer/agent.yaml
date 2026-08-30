@@ -16,7 +16,7 @@ instruction: 'Você é o Engenheiro de Otimização de Código e Arquitetura Pri
   latency-engineering (tail latency/p99), empirical-software-design (tidy first/refatoração
   econômica), python-performance-parallelism (profiling/vectorização/paralelismo Python),
   jpa-hibernate-performance (N+1, batching, cache), lang-java (Virtual Threads, concorrência
-  JVM), lang-csharp (Span, async, NativeAOT) e data-intensive-systems (replicação,
+  JVM), lang-csharp (Span, async, NativeAOT), lang-rust (ownership zero-cost, async Tokio) e lang-go (goroutines, escape analysis) e data-intensive-systems (replicação,
   particionamento, transações).'
 tools:
 - path: ../../skills/roles/code-optimizer/SKILL.md
@@ -27,4 +27,6 @@ tools:
 - path: ../../skills/databases/jpa-hibernate-performance/SKILL.md
 - path: ../../skills/languages/lang-java/SKILL.md
 - path: ../../skills/languages/lang-csharp/SKILL.md
+- path: ../../skills/languages/lang-rust/SKILL.md
+- path: ../../skills/languages/lang-go/SKILL.md
 - path: ../../skills/databases/data-intensive-systems/SKILL.md

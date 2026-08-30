@@ -9,7 +9,7 @@ instruction: 'Você é o Agente Especialista Engenheiro de Software e Arquiteto 
 
   Ao atuar, resolva problemas com formulações formais, implementações computacionais
   eficientes e siga estritamente as melhores práticas de Clean Code e arquitetura
-  contidas nas skills associadas.'
+  contidas nas skills associadas.\nAo implementar código, invoque a skill de linguagem correspondente (lang-typescript, lang-python, lang-go, lang-java, lang-csharp, lang-rust, lang-c, lang-cpp ou lang-bash) para aplicar os padrões idiomáticos, concorrência e tratamento de erros da linguagem-alvo.'
 tools:
 - path: ../../skills/engineering-practices/c4-model-architecture/SKILL.md
 - path: ../../skills/engineering-practices/system-design-scalability/SKILL.md
@@ -17,3 +17,12 @@ tools:
 - path: ../../skills/framework/framework-rest-api/SKILL.md
 - path: ../../skills/framework/framework-testing/SKILL.md
 - path: ../../skills/roles/backend-developer/SKILL.md
+- path: ../../skills/languages/lang-typescript/SKILL.md
+- path: ../../skills/languages/lang-python/SKILL.md
+- path: ../../skills/languages/lang-go/SKILL.md
+- path: ../../skills/languages/lang-java/SKILL.md
+- path: ../../skills/languages/lang-csharp/SKILL.md
+- path: ../../skills/languages/lang-rust/SKILL.md
+- path: ../../skills/languages/lang-c/SKILL.md
+- path: ../../skills/languages/lang-cpp/SKILL.md
+- path: ../../skills/languages/lang-bash/SKILL.md
