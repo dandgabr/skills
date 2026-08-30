@@ -221,3 +221,89 @@ __marimo__/
 .zai/
 zai.config.*
 generate_zai_config.py
+converted_books/
+
+# =============================================================================
+# Binary documents / books / assets not related to agent, skill or project docs
+# =============================================================================
+# PDFs, e-books and office documents (keep source-control text formats only)
+*.pdf
+*.PDF
+*.epub
+*.mobi
+*.azw
+*.azw3
+*.djvu
+*.doc
+*.docx
+*.docm
+*.odt
+*.rtf
+*.ppt
+*.pptx
+*.pptm
+*.odp
+*.xls
+*.xlsx
+*.xlsm
+*.ods
+*.csv
+*.tsv
+
+# Compressed archives containing the above
+*.zip
+*.7z
+*.rar
+*.tar.gz
+*.tgz
+
+# Images and multimedia (diagrams should be SVG/Mermaid/PlantUML text sources)
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tiff
+*.webp
+*.ico
+*.svgz
+*.mp3
+*.mp4
+*.avi
+*.mkv
+*.wav
+*.flac
+
+# Fonts and vector non-text formats
+*.ttf
+*.otf
+*.woff
+*.woff2
+
+# Text document markup formats beyond Markdown (use .md instead)
+*.tex
+*.aux
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.docbook
+*.adoc
+*.rst
+*.org
+
+# Exceptions: text formats used to build agents, skills and project docs
+!AGENTS.md
+!AGENT.md
+!SKILL.md
+!README.md
+!CATALOGO.md
+!*.md
+!*.markdown
+!*.mdx
+!*.yaml
+!*.yml
+!*.json
+!*.toml
+!*.jsonc
