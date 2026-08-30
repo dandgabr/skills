@@ -197,5 +197,5 @@ fi
 
 - **[iast-interactive-testing](../../security/appsec/iast-interactive-testing/SKILL.md)**: Teoria formal de Interactive Application Security Testing e comparação com SAST/DAST.
 - **[program-opengrep](../program-opengrep/SKILL.md)**: Complementa a análise estática prévia das regras de Taint.
-- **[qa-testing-specialist](../../roles/qa-testing-specialist/SKILL.md)**: Conexão direta com a automação de testes funcionais (Playwright, Cypress, Pytest).
+- **[qa-engineer](../../roles/qa-engineer/SKILL.md)**: Conexão direta com a automação de testes funcionais (Playwright, Cypress, Pytest).
 - **[devsecops-engineer](../../security/ops-architecture/devsecops-engineer/SKILL.md)**: Configuração de Quality Gates automatizados no pipeline CI/CD.

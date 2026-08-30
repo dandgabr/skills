@@ -29,6 +29,6 @@ tools:
 - path: ../../skills/programs/program-owasp-dependency-check/SKILL.md
 - path: ../../skills/security/grc-compliance/security-grc-compliance/SKILL.md
 - path: ../../skills/security/grc-compliance/security-privacy/SKILL.md
-- path: ../../skills/ops-architecture/threat-modeler/SKILL.md
+- path: ../../skills/security/ops-architecture/threat-modeler/SKILL.md
 - path: ../../skills/security/cloud-iam/iam-access-management/SKILL.md
 - path: ../../skills/security/cloud-iam/iam-access-power-platform/SKILL.md

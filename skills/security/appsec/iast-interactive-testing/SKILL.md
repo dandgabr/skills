@@ -147,8 +147,8 @@ Ao estruturar IAST no pipeline de engenharia:
 
 ## 🔗 Integração com Outras Skills do Repositório
 
-- **[program-dongtai-iast](../../programs/program-dongtai-iast/SKILL.md)**: Guia completo de configuração e operação do framework open-source DongTai IAST.
+- **[program-dongtai-iast](../../../programs/program-dongtai-iast/SKILL.md)**: Guia completo de configuração e operação do framework open-source DongTai IAST.
 - **[sast-code-review](../sast-code-review/SKILL.md)**: Complementa a análise estática fornecendo validação dinâmica dos caminhos de contaminação.
 - **[dast-application-testing](../dast-application-testing/SKILL.md)**: Fornece o tráfego de exploração ativa para a modalidade Active IAST.
 - **[rasp-runtime-protection](../rasp-runtime-protection/SKILL.md)**: Aplica os mesmos princípios de instrumentação para bloqueio defensivo em produção.
-- **[qa-testing-specialist](../../roles/qa-testing-specialist/SKILL.md)**: Orquestra a execução das suítes de teste funcionais acopladas ao sensor IAST.
+- **[qa-engineer](../../../roles/qa-engineer/SKILL.md)**: Orquestra a execução das suítes de teste funcionais acopladas ao sensor IAST.

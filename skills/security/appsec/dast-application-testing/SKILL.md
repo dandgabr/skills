@@ -151,7 +151,7 @@ Ao conduzir ou automatizar uma auditoria DAST:
 
 ## 🔗 Integração com Outras Skills do Repositório
 
-- **[program-owasp-zap](../../programs/program-owasp-zap/SKILL.md)**: Guia canônico da ferramenta OWASP ZAP para automação de DAST, planos YAML (Automation Framework) e scans Docker.
+- **[program-owasp-zap](../../../programs/program-owasp-zap/SKILL.md)**: Guia canônico da ferramenta OWASP ZAP para automação de DAST, planos YAML (Automation Framework) e scans Docker.
 - **[appsec-owasp-asvs](../appsec-owasp-asvs/SKILL.md)**: Validação dos requisitos de verificação de segurança em tempo de execução.
 - **[pentester-owasp-wstg](../pentester-owasp-wstg/SKILL.md)**: Metodologia aprofundada de testes de penetração web manual e semiautomatizada.
 - **[sast-code-review](../sast-code-review/SKILL.md)**: Correlação de vulnerabilidades encontradas no DAST com as linhas de código-fonte vulneráveis (Shift Left).

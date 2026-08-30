@@ -146,7 +146,7 @@ rules:
 
 ## 🛠️ Ecossistema de Ferramentas SAST Recomendadas
 
-* **Multilinguagem / Motor Declarativo Principal**: **Opengrep** (consulte [program-opengrep](../../programs/program-opengrep/SKILL.md)), Semgrep OSS, CodeQL, SonarQube.
+* **Multilinguagem / Motor Declarativo Principal**: **Opengrep** (consulte [program-opengrep](../../../programs/program-opengrep/SKILL.md)), Semgrep OSS, CodeQL, SonarQube.
 * **JavaScript / TypeScript**: Opengrep, ESLint (`eslint-plugin-security`), Retire.js.
 * **Python**: Opengrep, Bandit, Flake8-bugbear.
 * **Java / Kotlin**: Opengrep, SpotBugs com FindSecBugs, PMD Security.
@@ -178,7 +178,7 @@ Quando acionado para realizar um Code Review de Segurança ou triar descobertas 
 
 ## 🔗 Integração com Outras Skills do Repositório
 
-- **[program-opengrep](../../programs/program-opengrep/SKILL.md)**: Guia completo de CLI, sintaxe de regras YAML e execução de análise estática com Opengrep.
+- **[program-opengrep](../../../programs/program-opengrep/SKILL.md)**: Guia completo de CLI, sintaxe de regras YAML e execução de análise estática com Opengrep.
 - **[dast-application-testing](../dast-application-testing/SKILL.md)**: Validação dinâmica das vulnerabilidades identificadas estaticamente no código.
 - **[iast-interactive-testing](../iast-interactive-testing/SKILL.md)**: Correlação de fluxo de contaminação em tempo de execução para eliminar falsos positivos.
 - **[rasp-runtime-protection](../rasp-runtime-protection/SKILL.md)**: Defesa ativa no mesmo conjunto de sumidouros (sinks) interceptados pelo SAST.

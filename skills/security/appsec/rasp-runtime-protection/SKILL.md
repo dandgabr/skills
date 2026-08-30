@@ -149,7 +149,7 @@ A IA deve estruturar a governança de RASP em duas fases operacionais:
 
 ## 🔗 Integração com Outras Skills do Repositório
 
-- **[program-openrasp](../../programs/program-openrasp/SKILL.md)**: Guia operacional completo da ferramenta open-source Baidu OpenRASP para Java e PHP.
+- **[program-openrasp](../../../programs/program-openrasp/SKILL.md)**: Guia operacional completo da ferramenta open-source Baidu OpenRASP para Java e PHP.
 - **[sast-code-review](../sast-code-review/SKILL.md)**: Correlação entre as regras estáticas de taint analysis e os pontos de hook do RASP.
 - **[iast-interactive-testing](../iast-interactive-testing/SKILL.md)**: Aplicação dos mesmos princípios de instrumentação em ambiente de testes de QA.
 - **[secops-incident-responder](../../ops-architecture/secops-incident-responder/SKILL.md)**: Consumo e automação de resposta a incidentes gerados por alertas do RASP em produção.

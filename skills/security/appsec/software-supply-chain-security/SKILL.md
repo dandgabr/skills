@@ -128,7 +128,7 @@ cosign verify --certificate-identity-regexp "https://github.com/empresa/.*" \
 
 ## 🔗 Integração com Outras Skills do Repositório
 
-- **[program-owasp-dependency-check](../../programs/program-owasp-dependency-check/SKILL.md)**: Guia operacional completo da ferramenta OWASP Dependency-Check (CLI, Maven, Gradle e NVD API v2).
+- **[program-owasp-dependency-check](../../../programs/program-owasp-dependency-check/SKILL.md)**: Guia operacional completo da ferramenta OWASP Dependency-Check (CLI, Maven, Gradle e NVD API v2).
 - **[sast-code-review](../sast-code-review/SKILL.md)**: Complementa a análise de bibliotecas com a auditoria de vulnerabilidades no código proprietário.
 - **[devsecops-engineer](../../ops-architecture/devsecops-engineer/SKILL.md)**: Orquestração de pipelines de SCA, geração de SBOMs e Quality Gates no CI/CD.
-- **[program-containers](../../programs/containers/SKILL.md)**: Auditoria e assinatura de imagens de contêiner e pacotes base de sistema operacional.
+- **[program-containers](../../../programs/containers/SKILL.md)**: Auditoria e assinatura de imagens de contêiner e pacotes base de sistema operacional.
