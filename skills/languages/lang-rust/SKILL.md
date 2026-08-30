@@ -1,11 +1,13 @@
 ---
 name: "lang-rust"
-description: "Fornece padrões de engenharia de software em Rust baseados na documentação oficial (doc.rust-lang.org), cobrindo Ownership, Borrowing, Lifetimes, Traits, Concorrência, Async (Tokio), tratamento de erros (Result/Option), Unsafe Rust e ecossistema Cargo."
+description: "Fornece padrões de engenharia de software em Rust baseados na documentação oficial (doc.rust-lang.org) e na tradução brasileira 'A Linguagem de Programação Rust' (rust-br.github.io/rust-book-pt-br), cobrindo Ownership, Borrowing, Lifetimes, Structs, Enums e Pattern Matching exaustivo, Módulos e Crates, Coleções (Vec/String/HashMap), tratamento de erros (Result/Option/thiserror), Genéricos e Traits, Closures e Iterators zero-cost, Smart Pointers (Box/Rc/Arc/RefCell/Mutex), Concorrência (threads, channels, Send/Sync), Async (Tokio), Testes (cargo test), Cargo Workspaces e Profiles, Unsafe Rust/Nomicon e FFI."
 ---
 
 # Habilidade de IA: Engenharia de Rust (Rust Specialist)
 
-Esta skill orienta a inteligência artificial a atuar como especialista na linguagem **Rust**, seguindo rigorosamente as diretrizes da documentação oficial ([doc.rust-lang.org](https://doc.rust-lang.org/stable/)), o livro oficial *The Rust Programming Language*, *Rust by Example*, *The Cargo Book* e *The Rustonomicon*. O objetivo é criar código seguro contra corridas de dados (*data races*), livre de vazamentos de memória (sem Garbage Collector), concorrente e de extrema performance.
+Esta skill orienta a inteligência artificial a atuar como especialista na linguagem **Rust**, seguindo rigorosamente as diretrizes da documentação oficial ([rust-lang.org/pt-BR/learn](https://www.rust-lang.org/pt-BR/learn)) — *O Livro* (A Linguagem de Programação Rust, com [tradução pt-BR](https://rust-br.github.io/rust-book-pt-br/title-page.html)), *Rust by Example*, *Rustlings*, *The Cargo Book*, *The Rustonomicon* e a *Referência* — sempre via `rustup doc` para consulta offline. O objetivo é criar código seguro contra corridas de dados (*data races*), livre de vazamentos de memória (sem Garbage Collector), concorrente e de extrema performance.
+
+> 📖 **Referência canônica**: consulte [references/rust-book-guide.md](references/rust-book-guide.md) para o guia consolidado dos capítulos do Livro (conceitos comuns, ownership/borrowing/slices, structs, enums e match, módulos, coleções, erros, genéricos/traits/lifetimes, testes, closures/iterators, Cargo/workspaces, smart pointers, concorrência, padrões avançados e keywords).
 
 ---
 
@@ -14,23 +16,44 @@ Esta skill orienta a inteligência artificial a atuar como especialista na lingu
 Ao atuar nesta skill, aplique rigorosamente os fundamentos de segurança de memória e concorrência destemida (*fearless concurrency*):
 
 ### 1. Sistema de Posse (Ownership), Empréstimo (Borrowing) e Lifetimes
-- **Posse Única (Ownership)**: Cada valor em Rust tem um único proprietário por vez. Quando o proprietário sai de escopo, o valor é desalocado automaticamente via trait `Drop`.
+- **Posse Única (Ownership)**: Cada valor em Rust tem um único proprietário por vez. Quando o proprietário sai de escopo, o valor é desalocado automaticamente via trait `Drop` (RAII).
+- **Movimentação (Move Semantics)**: Atribuições de tipos não-Copy (ex.: `String`) transferem a posse e invalidam a origem ("use of moved value"). Tipos `Copy` (inteiros, floats, bool, char) copiam implicitamente; cópia profunda é explícita com `.clone()`.
 - **Regras de Empréstimo (Borrowing)**:
   - Pode-se ter qualquer número de referências imutáveis (`&T`) **OU** exatamente uma referência mutável (`&mut T`) em um determinado escopo, mas nunca ambas simultaneamente.
   - Referências devem ser sempre válidas (prevenção de ponteiros pendentes / *dangling pointers*).
+- **Slices (`&str`, `&[T]`)**: Prefira views sem posse em assinaturas de API — `fn first_word(s: &str) -> &str` em vez de `&String`, aproveitando deref coercion.
 - **Tempo de Vida (Lifetimes)**:
-  - Utilize anotações explícitas de tempo de vida (`'a`) em estruturas e funções apenas quando o compilador não puder elidir as regras de tempo de vida ( Lifetime Elision Rules).
+  - Utilize anotações explícitas de tempo de vida (`'a`) em estruturas e funções apenas quando o compilador não puder elidir as regras de tempo de vida (Lifetime Elision Rules).
+  - Em estruturas que guardam referências, garanta que a struct não sobreviva ao dado emprestado (`struct Livro<'a> { titulo: &'a str }`).
 
-### 2. Tratamento Idiomático de Erros (`Result` e `Option`)
-- **Sem Exceções em Tempo de Execução**: Rust não utiliza exceções. Erros recuperáveis devem ser representados pelo tipo enum `Result<T, E>` e valores opcionais por `Option<T>`.
+### 2. Modelagem de Dados Idiomática (Structs, Enums e Pattern Matching)
+- **Structs + `impl`**: campos privados por padrão (expostos com `pub`), métodos com `&self`/`&mut self`/`self` e construtores como associated functions (`::new`). Documente com `///`.
+- **Enums com dados**: Modele estados e mensagens como `enum` com payloads (`enum Shape { Circle(f64), Square { side: f64 } }`) — equivalente a discriminated unions.
+- **`match` exaustivo**: O compilador exige cobertura total de casos; use guards (`x if x > 5`), bindings `@`, or-patterns `|` e destructuring. Para um caso único, prefira `if let` / `let else`.
+- **Preferência por `Option<T>`**: A ausência de valor é sempre explícita — nunca existirá `null`/`NullPointerException`; `.unwrap_or`, `.map`, `.and_then`, `.ok_or(err)` compõem com segurança.
+- **Newtypes**: `struct Meters(f64);` para type-safety em unidades e invariáveis de domínio.
+
+### 3. Tratamento Idiomático de Erros (`Result` e `Option`)
+- **Sem Exceções em Tempo de Execução**: Rust não utiliza exceções. Erros recuperáveis devem ser representados pelo tipo enum `Result<T, E>` (`Ok`/`Err`) e valores opcionais por `Option<T>`; falhas de invariante de programador usam `panic!`.
 - **Operador de Propagação `?`**: Prefira propagar erros usando o operador `?` em vez de chamadas repetitivas de `match` ou `.unwrap()`.
 - **Proibição de `.unwrap()` em Produção**: Evite `.unwrap()` e `.expect()` em código de produção, exceto em testes unitários ou invariantes matematicamente comprovadas.
-- **Tratamento Encadeado de Erros**: Utilize crates consolidadas como `thiserror` (para definir erros de bibliotecas) e `anyhow` (para tratamento flexível de erros em aplicações binárias).
+- **Panics como Vetor de DoS**: Prefira métodos não-panicking — `.get(i)` em vez de `v[i]`, `checked_add`/`saturating_add` em vez de operadores aritméticos em inputs não confiáveis.
+- **Tratamento Encadeado de Erros**: Utilize crates consolidadas como `thiserror` (para definir erros de bibliotecas) e `anyhow` (para tratamento flexível de erros em aplicações binárias, com `.context()`).
 
-### 3. Abstração Zero-Cost, Traits e Genéricos
-- **Polimorfismo Baseado em Traits**: Defina comportamentos compartilhados utilizando `trait`. Prefira dispatch estático (*monomorphization*) usando `impl Trait` ou genéricos `<T: Trait>`.
-- **Dynamic Dispatch (`dyn Trait`)**: Use `Box<dyn Trait>` apenas quando for estritamente necessário alocar tipos heterogêneos em tempo de execução.
+### 4. Abstração Zero-Cost, Traits e Genéricos
+- **Polimorfismo Baseado em Traits**: Defina comportamentos compartilhados utilizando `trait` (com default methods). Prefira dispatch estático (*monomorphization*) usando `impl Trait` ou genéricos `<T: Trait>` com bounds em `where`.
+- **Dynamic Dispatch (`dyn Trait`)**: Use `Box<dyn Trait>` apenas quando for estritamente necessário alocar tipos heterogêneos em tempo de execução (dynamic dispatch via vtable).
+- **Closures e Iterators (Cap. 13)**: Preferir o estilo funcional zero-cost — `iter().filter().map().sum()` compila para loop nativo. Compreender os traits de captura de closure: `Fn` (borrow), `FnMut` (mutable borrow), `FnOnce` (consume); use `move` ao transferir dados para threads/tasks.
 - **Derivações Automáticas**: Utilize atributos decoradores como `#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]` em structs e enums sempre que apropriado.
+
+### 5. Organização de Projetos (Módulos, Crates e Cargo)
+- **Estrutura**: Package → crates (lib/binário) → módulos (`mod`/`pub`/`use`/`super::`/`crate::`). Idioma padrão: **library crate com a lógica + binary crate fino** (`main.rs` mínimo).
+- **Cargo.toml**: declare edition (2015/2018/2021), dependências (com features) e **profiles** (`[profile.release] opt-level = 3`); use `cargo check` para iteração rápida, `cargo test` para todos os níveis de teste (unit, integration em `tests/`, doc-tests).
+- **Workspace**: monorepos com múltiplos crates compartilhando `Cargo.lock`/`target` (Cargo Workspaces).
+- **Qualidade de Código e Formatação**:
+  - **`rustfmt`**: Formatação estrita oficial do código (`cargo fmt`).
+  - **`clippy`**: Linter oficial para capturar antipadrões e otimizações (`cargo clippy -- -D warnings`).
+- **Segurança de Dependências**: Execute `cargo audit` periodicamente para verificar vulnerabilidades conhecidas em crates de terceiros.
 
 ### 4. Concorrência e Programação Assíncrona (`Async/Await`)
 - **Segurança Concorrente Estática**: Tipos que podem ser transferidos entre threads com segurança implementam o marker trait `Send`. Tipos que podem ser acessados concorrentemente via referências imutáveis implementam `Sync`.
@@ -157,9 +180,13 @@ impl ServerConfigBuilder {
 
 ## 🔒 Questões de Segurança e Práticas Seguras
 
-- **Blocos Unsafe e Comportamento Indefinido**: Isole blocos `unsafe` ao estrito necessário. Certifique-se de que as premissas de segurança de memória exigidas pelo Rust sejam respeitadas, evitando desalinhamentos de dados ou referências nulas.
+- **Blocos Unsafe e Comportamento Indefinido**: Isole blocos `unsafe` ao estrito necessário (deref de raw pointers, FFI, mutação de estáticos, acesso a fields de union). Certifique-se de que as premissas de segurança de memória exigidas pelo Rust sejam respeitadas, evitando desalinhamentos de dados ou referências nulas. Documente com `// SAFETY: ...`.
+- **Ciclos de Referência vazam memória mesmo em Rust**: `Rc<RefCell<T>>` com ciclo destrói as garantias de liberação — use `Weak<T>` (com `upgrade() -> Option<Rc<T>>`) no lado não-dono do ciclo.
+- **Mutabilidade Interior**: `RefCell<T>` viola regras de borrowing em **runtime** (panic em `borrow_mut` duplicado) — restrinja a single-thread e a superfícies pequenas; entre threads use `Mutex<T>`/`RwLock<T>` e evite deadlock (lock em ordem fixa, solte o guard cedo).
 - **Data Races em Unsafe**: Embora o compilador do Rust garanta a thread-safety do código seguro, o uso incorreto de `Send`/`Sync` e ponteiros crus em blocos `unsafe` pode introduzir condições de corrida complexas.
 - **Panics como Vetor de DoS**: Operações aritméticas estritas ou acessos a índices de vetores podem causar `panic!` em runtime se falharem. Use métodos seguros como `.get()` ou `.checked_add()` para evitar interrupções de serviço repentinas.
+- **Strings UTF-8**: Nunca indexe `String` por byte (pode cortar caractere multibyte/travar) — itere com `chars()`/`bytes()` ou use slices em fronteiras válidas de caracteres.
+- **Overflow aritmético**: em release o overflow faz wrap silencioso — valide entradas antes de operar; para contadores/protocolos use Checked/Saturating APIs.
 
 ## 🔗 Integração com Outras Skills
 

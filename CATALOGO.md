@@ -1,6 +1,6 @@
 # 📚 Catálogo Central de Habilidades e Agentes Especializados
 
-Este documento consolida o inventário canônico de todas as **172 Habilidades Especializadas (Skills)** e **45 Agentes Especializados Universais (Multi-Harness)** disponíveis neste repositório.
+Este documento consolida o inventário canônico de todas as **173 Habilidades Especializadas (Skills)** e **45 Agentes Especializados Universais (Multi-Harness)** disponíveis neste repositório.
 
 ---
 
@@ -11,7 +11,7 @@ Este documento consolida o inventário canônico de todas as **172 Habilidades E
 │                        ESTATÍSTICAS GERAIS DO ECOSSISTEMA                              │
 ├────────────────────────────────────────┬───────────────────────────────────────────────┤
 │ 🤖 Agentes Especializados Universais   │ 45                                            │
-│ 📚 Total de Skills de Produção         │ 172                                           │
+│ 📚 Total de Skills de Produção         │ 173                                           │
 │ 🎓 Domínios Acadêmicos & Engenharia    │ 31                                            │
 │ 🔒 Segurança da Informação & AppSec    │ 45                                            │
 │ 💻 Linguagens & Frameworks             │ 26                                            │
@@ -340,3 +340,4 @@ Este documento consolida o inventário canônico de todas as **172 Habilidades E
 | **hardware-hacking-embedded-security** | [`skills/domains/hardware-hacking-embedded-security/SKILL.md`](skills/domains/hardware-hacking-embedded-security/SKILL.md) | Especialista em Auditoria e Segurança de Hardware, IoT e Sistemas Embarcados baseado nas obras The Hardware Hacking Handbook (Jasper van Woudenberg) e The IoT Hacker's Handbook (Aditya Gupta). Cobre identificação de barramentos físicos (UART, JTAG, SWD, I2C, SPI), extração e dumping de firmware (Flash chips, eMMC, NAND), ataques de injeção de falhas (Fault Injection/Clock & Voltage Glitching), ataques de canal lateral (Side-Channel DPA/CPA) e bypass de Secure Boot. |
 | **quantum-computing-algorithms** | [`skills/domains/quantum-computing-algorithms/SKILL.md`](skills/domains/quantum-computing-algorithms/SKILL.md) | Especialista em Mecânica Quântica Avançada, Física Teórica, Circuitos Quânticos e Algoritmos Quânticos baseado em J. J. Sakurai (Modern Quantum Mechanics), Claude Cohen-Tannoudji (Quantum Mechanics) e Michael A. Nielsen & Isaac L. Chuang (Quantum Computation and Quantum Information). Cobre Formalismo de Dirac no Espaço de Hilbert, Oscilador Harmônico Quântico via Operadores Escada, Momento Angular e Spin 1/2 (Matrizes de Pauli, Coeficientes de Clebsch-Gordan), Teoria de Perturbações e Regra de Ouro de Fermi, Fundamentos do Qubit e Esfera de Bloch, Portas Quânticas Universais (Hadamard, Pauli-X/Y/Z, Phase-S/T, CNOT, Toffoli), Entrelaçamento Quântico (Estados de Bell, GHZ), Transformada Quântica de Fourier (QFT), Algoritmo de Shor (Fatoração Polinomial), Algoritmo de Grover (Busca com Aceleração Quadrática), Variational Quantum Eigensolver (VQE para Química Quântica) e Implementação Prática com Qiskit (IBM) e Cirq (Google). |
 | **telecom-voice-engineering** | [`skills/domains/telecom-voice-engineering/SKILL.md`](skills/domains/telecom-voice-engineering/SKILL.md) | Fornece padrões de arquitetura, engenharia e segurança em telefonia e redes de voz. Cobre protocolos VoIP (SIP, SDP, RTP, SRTP), Session Border Controllers (SBC), rede legada (PSTN, E1/T1, ISDN, SS7), WebRTC, codecs de áudio (G.711, G.729, Opus), Softswitches (Kamailio, OpenSIPS, FreeSWITCH, Asterisk), QoS (DSCP EF), STIR/SHAKEN e prevenção a fraudes de telefonia. |
+| **webassembly** | [`skills/domains/webassembly/SKILL.md`](skills/domains/webassembly/SKILL.md) | Especialista em WebAssembly (Wasm) baseado na documentação oficial do MDN Web Docs (developer.mozilla.org/pt-BR/docs/WebAssembly). Cobre conceitos (Module, Instance, Memory, Table, multiplicidade), API JavaScript WebAssembly (instantiateStreaming, compileStreaming, Global, Tag/Exception, JSPI), compilação a partir de C/C++ (Emscripten), Rust (wasm-pack) e AssemblyScript, formato texto .wat/WABT, SIMD, types (i32/i64/f32/v128/funcref/externref), cache IndexedDB, execução em Workers, memória compartilhada (SharedArrayBuffer/Atomics), vínculo dinâmico e segurança/sandbox. |
