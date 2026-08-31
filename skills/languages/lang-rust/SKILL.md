@@ -1,6 +1,6 @@
 ---
 name: "lang-rust"
-description: "Fornece padrões de engenharia de software em Rust baseados na documentação oficial (doc.rust-lang.org) e na tradução brasileira 'A Linguagem de Programação Rust' (rust-br.github.io/rust-book-pt-br), cobrindo Ownership, Borrowing, Lifetimes, Structs, Enums e Pattern Matching exaustivo, Módulos e Crates, Coleções (Vec/String/HashMap), tratamento de erros (Result/Option/thiserror), Genéricos e Traits, Closures e Iterators zero-cost, Smart Pointers (Box/Rc/Arc/RefCell/Mutex), Concorrência (threads, channels, Send/Sync), Async (Tokio), Testes (cargo test), Cargo Workspaces e Profiles, Unsafe Rust/Nomicon e FFI."
+description: "Fornece padrões de engenharia de software em Rust baseados na documentação oficial (doc.rust-lang.org), na tradução brasileira 'A Linguagem de Programação Rust' (rust-br.github.io/rust-book-pt-br), em 'The Rust Programming Language 3rd Edition' (Klabnik, Nichols, Krycho) e em 'Programming Rust 2nd Edition' (Blandy, Orendorff, Tindall), cobrindo Ownership, Borrowing, Lifetimes, Structs, Enums e Pattern Matching exaustivo, Módulos e Crates, Coleções (Vec/String/HashMap), tratamento de erros (Result/Option/thiserror), Genéricos e Traits, Closures e Iterators zero-cost, Smart Pointers (Box/Rc/Arc/RefCell/Mutex), Concorrência (threads, channels, Send/Sync), Async (Tokio), Testes (cargo test), Cargo Workspaces e Profiles, Unsafe Rust/Nomicon e FFI."
 ---
 
 # Habilidade de IA: Engenharia de Rust (Rust Specialist)
@@ -8,6 +8,7 @@ description: "Fornece padrões de engenharia de software em Rust baseados na doc
 Esta skill orienta a inteligência artificial a atuar como especialista na linguagem **Rust**, seguindo rigorosamente as diretrizes da documentação oficial ([rust-lang.org/pt-BR/learn](https://www.rust-lang.org/pt-BR/learn)) — *O Livro* (A Linguagem de Programação Rust, com [tradução pt-BR](https://rust-br.github.io/rust-book-pt-br/title-page.html)), *Rust by Example*, *Rustlings*, *The Cargo Book*, *The Rustonomicon* e a *Referência* — sempre via `rustup doc` para consulta offline. O objetivo é criar código seguro contra corridas de dados (*data races*), livre de vazamentos de memória (sem Garbage Collector), concorrente e de extrema performance.
 
 > 📖 **Referência canônica**: consulte [references/rust-book-guide.md](references/rust-book-guide.md) para o guia consolidado dos capítulos do Livro (conceitos comuns, ownership/borrowing/slices, structs, enums e match, módulos, coleções, erros, genéricos/traits/lifetimes, testes, closures/iterators, Cargo/workspaces, smart pointers, concorrência, padrões avançados e keywords).
+> 📖 **Referência avançada**: consulte [references/programming-rust-advanced-guide.md](references/programming-rust-advanced-guide.md) para temas profundos (layout de memória/size/align, traits e generics avançados, unsafe/raw pointers/unions/unsafe traits, atomics e memory orderings, macros `macro_rules!` com fragment specifiers, Pin/Unpin e internals de Futures, FFI com `repr(C)` e panic safety).
 
 ---
 
@@ -55,17 +56,42 @@ Ao atuar nesta skill, aplique rigorosamente os fundamentos de segurança de mem�
   - **`clippy`**: Linter oficial para capturar antipadrões e otimizações (`cargo clippy -- -D warnings`).
 - **Segurança de Dependências**: Execute `cargo audit` periodicamente para verificar vulnerabilidades conhecidas em crates de terceiros.
 
-### 4. Concorrência e Programação Assíncrona (`Async/Await`)
+### 6. Concorrência e Programação Assíncrona (`Async/Await`)
 - **Segurança Concorrente Estática**: Tipos que podem ser transferidos entre threads com segurança implementam o marker trait `Send`. Tipos que podem ser acessados concorrentemente via referências imutáveis implementam `Sync`.
 - **Sincronização Primitiva**: Use `Arc<T>` (Atomic Reference Counting) para compartilhamento de posse entre threads e `Mutex<T>` ou `RwLock<T>` para mutabilidade interior concorrente.
 - **Ecossistema Assíncrono (`Future`)**:
   - Utilize o padrão `async/await` com um runtime assíncrono consolidado como **Tokio** ou `async-std`.
   - Evite bloqueios síncronos de I/O em tarefas assíncronas (use `tokio::task::spawn_blocking` quando necessário).
 
-### 5. Unsafe Rust e FFI
+### 7. Unsafe Rust e FFI
 - **Encapsulamento Estrito de `unsafe`**: Isole blocos `unsafe` dentro de abstrações e funções públicas totalmente seguras (*safe wrappers*).
 - **Invariantes de Segurança**: Documente detalhadamente as precondições e invariantes de segurança (`// SAFETY: ...`) em cada bloco `unsafe`.
 - **FFI (Foreign Function Interface)**: Utilize `extern "C"` e C-compatible tipos (`c_char`, `c_int`) para interoperabilidade segura com C/C++.
+
+## 🚀 Rust Moderno (Edition 2024 / TRPL 3ª ed.)
+
+O Livro, em sua 3ª edição (Rust 1.85+), reflete os idiomas da **edition 2024** — declarada com `edition = "2024"` no `Cargo.toml`. Destaques:
+
+- **Async como capítulo canônico**: a 3ª ed. traz um novo Capítulo 17 (Fundamentals of Asynchronous Programming) cobrindo `async`/`await` junto com os traits `Future` e `Stream` — deixou de ser apêndice "avançado".
+- **`let else`**: para padrões refutáveis, `let Some(x) = value else { return; };` trata o caso de não-correspondência com um bloco de saída (divergência) em vez de propagar `Option` (TRPL, Cap. 19). Erros de padrões não-exaustivos em `let` sugerem migar para `let else`.
+- **Trait objects de `Future`**: `dyn Future<Output = ()>` não é `Unpin` — o compilador indicará `Box::pin` quando for necessário fixar futuros heterogêneos coletados em `Box<dyn Future>` (TRPL, Cap. 17, Pin/Unpin).
+- **`Box<dyn Error>` como tipo de erro padrão**: retorno `Result<T, Box<dyn Error>>` em `main` e em testes aceita qualquer tipo de erro via `?` — o padrão idiomático da 3ª ed. para aplicações antes de migrar para `anyhow`.
+
+```rust
+use std::error::Error;
+use std::fs::File;
+
+fn main() -> Result<(), Box<dyn Error>> {
+    let greeting_file = File::open("greeting.txt")?;
+    Ok(())
+}
+```
+
+- **`anyhow` em aplicações**: para binários, `anyhow::Result` + `?` + `.context(...)` fornece relatório de causa raiz com backtrace (Programming Rust, Cap. 7); para bibliotecas, mantenha `thiserror`.
+- **Genéricos sobre arrays via const bounds**: `[T; N]` com `N` constante permite APIs genéricas sobre tamanho de array (Programming Rust, Cap. 5 e Cap. 10).
+- **Closures async**: o corpo de `async fn` compila para um bloco `async move` que retém os parâmetros por posse — prefira `async move` ao transferir capturas para tasks (TRPL, Cap. 17).
+- **Miri para unsafe**: a 3ª ed. introduz o uso de `cargo +nightly miri` como verificador dinâmico de undefined behavior em código `unsafe` (Cap. 20).
+- **Compatibilidade garantida**: edições são retrocompatíveis — código de editions anteriores continua compilando com a `edition` correta no `Cargo.toml` (Apêndice E).
 
 ---
 

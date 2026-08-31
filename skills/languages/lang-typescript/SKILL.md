@@ -1,13 +1,15 @@
 ---
 name: "lang-typescript"
-description: "Fornece padrões de engenharia de software seguro e robusto usando TypeScript baseado na documentação oficial do TypeScript Handbook (typescriptlang.org), cobrindo tipos primitivos e avançados, narrowing e type guards, discriminated unions com exhaustiveness checking, generics com constraints, type manipulation (keyof, conditional, mapped, template literal types), utility types, segurança estrita de compilador e mapeamento defensivo de dados."
+description: "Fornece padrões de engenharia de software seguro e robusto usando TypeScript baseado na documentação oficial do TypeScript Handbook (typescriptlang.org), Effective TypeScript 2nd Edition (Dan Vanderkam) e Total TypeScript Essentials (Matt Pocock), cobrindo tipos primitivos e avançados, narrowing e type guards, discriminated unions com exhaustiveness checking, generics com constraints, type manipulation (keyof, conditional, mapped, template literal types), utility types, segurança estrita de compilador e mapeamento defensivo de dados."
 ---
 
 # Habilidade de IA: Engenharia de TypeScript (TypeScript Specialist)
 
-Esta skill orienta a inteligência artificial a escrever código robusto, seguro e altamente tipado utilizando o superset **TypeScript**, alinhada ao **TypeScript Handbook oficial** (https://www.typescriptlang.org/docs/handbook/intro.html). O objetivo principal é guiar a IA e desenvolvedores a evitar erros em tempo de execução, construir contratos de API autolimpantes e reutilizáveis, e usufruir ao máximo da segurança estrita fornecida pelo compilador.
+Esta skill orienta a inteligência artificial a escrever código robusto, seguro e altamente tipado utilizando o superset **TypeScript**, alinhada ao **TypeScript Handbook oficial** (https://www.typescriptlang.org/docs/handbook/intro.html), a *Effective TypeScript 2nd Edition* (Dan Vanderkam) e a *Total TypeScript Essentials* (Matt Pocock). O objetivo principal é guiar a IA e desenvolvedores a evitar erros em tempo de execução, construir contratos de API autolimpantes e reutilizáveis, e usufruir ao máximo da segurança estrita fornecida pelo compilador.
 
 > 📖 **Referência canônica**: consulte [references/typescript-handbook.md](references/typescript-handbook.md) para o guia consolidado do Handbook (everyday types, narrowing, generics, type manipulation, Utility Types e tabela de códigos de erro TS).
+> 📖 **Effective TypeScript**: consulte [references/effective-typescript-83-items.md](references/effective-typescript-83-items.md) para os 83 items de melhor prática de *Effective TypeScript 2nd Edition* (type design, generics, unsoundness, migrations).
+> 📖 **Total TypeScript**: consulte [references/total-typescript-essentials.md](references/total-typescript-essentials.md) para o resumo dos 16 capítulos de *Total TypeScript Essentials* (narrowing, mutability, classes, deriving types, tsconfig, declaration files).
 
 ---
 
@@ -117,6 +119,74 @@ const fishes: Fish[] = zoo.filter(isFish); // narrowing preservado no filtro
 - **Ataques de ReDoS**: Valide limites de tempo de execução e complexidade em padrões regex aplicados em validação de inputs no servidor Node.js.
 - **Deserialização Insegura de JSON**: Trate o resultado de `JSON.parse` como `unknown` e valide com schema em runtime antes de operar sobre o valor.
 - **Non-null Assertion (`!`) Responsável**: O postfix `!` remove `null`/`undefined` sem checagem — usar apenas com certeza absoluta; preferir narrowing explícito (`if (x !== null)`, `??`, `?.`).
+
+## 🎯 Regras de Ouro de Type Design (Effective TypeScript)
+
+Consolidação dos items de *Effective TypeScript 2nd Edition* (detalhes em [references/effective-typescript-83-items.md](references/effective-typescript-83-items.md)):
+
+- **Item 29 — Estados válidos sempre**: Modele o tipo para que estados inválidos sejam **irrepresentáveis** (`type PageState = { state: "loading" } | { state: "error"; error: string } | { state: "ready"; page: Page }`) em vez de flags booleans soltas e campos opcionais.
+- **Item 30 — Liberal em entradas, estrito em saídas**: Parâmetros aceitam tipos largos (unions); retornos/exports são precisos e fechados.
+- **Item 34 — União de interfaces > interface com uniões**: Cada variante carrega seus campos obrigatórios (`FileLayer | DatabaseLayer`) em vez de campos opcionais misturados.
+- **Item 32/33 — Null na periferia**: Não embuta `null`/`undefined` em aliases reutilizáveis; trate-os cedo, no boundary.
+- **Item 35 — Não use `string` cru para domínios finitos**: Use literal unions, branded types ou template literal types para IDs, status, rotas e eventos.
+- **Item 37 — Limite propriedades opcionais**: `?` gera `| undefined` e estado vago; prefira uniões discriminadas explícitas.
+- **Item 38 — Evite parâmetros posicionais confundíveis**: Agrupe parâmetros repetidos do mesmo tipo num objeto (`{ index: number; count: number }`).
+- **Item 40 — Impreciso > impreciso**: Prefira um tipo "largo mas correto" a um type assertion que mente ao compilador (`as never`), jamais um **tipo impreciso** que não reflete a realidade.
+- **Item 9/45 — Anote, não asserte; isole o inseguro**: Prefira anotações a `as`; se inevitável, esconda a assertion unsafe dentro de uma função bem tipada.
+- **Item 46/43 — `unknown` > `any`**: Use `unknown` para valores desconhecidos; `any`, quando inevitável, com o menor escopo possível.
+- **Item 15/23 — Derive, não duplique**: Use `keyof`, `typeof`, indexed access e generics para evitar repetição e mantenha aliases consistentes em todo o codebase.
+- **Item 67/68 — Exporte tipos e documente com TSDoc**: Todo tipo que aparece em API pública é exportado; semântica extra vai em comentários TSDoc (`@param`, `@returns`).
+- **Item 64 — Brands para nominal typing**: Quando IDs tipados precisam não ser confundíveis (`UserId` ≠ `OrderId`), use branded types via interseção.
+- **Item 72 — Prefira features ECMAScript**: Enums/parameter properties/namespaces são TS-only; prefira `as const` objects e modules ES puros.
+
+## 🔍 Narrowing Eficiente (Total TypeScript)
+
+Formas de narrowing (preferência nesta ordem — detalhes em [references/total-typescript-essentials.md](references/total-typescript-essentials.md)):
+
+```typescript
+type Format = "digital" | "physical";
+type Album =
+  | { format: "digital"; downloadUrl: string }
+  | { format: "physical"; shippingAddress: string };
+
+// 1) Discriminant / disjoint union (melhor desenho possível)
+function refund(album: Album): string {
+  if (album.format === "digital") return album.downloadUrl;  // narrowed: variante digital
+  return album.shippingAddress;                              // narrowed: variante physical
+}
+
+// 2) typeof (primitivos) — cuidado com typeof null === "object"
+function parse(input: string | number) {
+  if (typeof input === "string") return input.trim();
+  return input.toFixed(2);
+}
+
+// 3) Operador in — existência de propriedade
+function hasDownload(album: Album) {
+  return "downloadUrl" in album;
+}
+
+// 4) Truthiness/nullish (atenção aos falsy: 0, "", NaN, null, undefined)
+function name(user: string | null) {
+  return user?.toUpperCase() ?? "anonymous";
+}
+
+// 5) Exhaustiveness com never: o compilador acusa variante faltante
+function label(album: Album): string {
+  switch (album.format) {
+    case "digital":  return "download";
+    case "physical": return "shipping";
+    default: {
+      const _exhaustive: never = album; // erro se entrar novo formato sem case
+      return _exhaustive;
+    }
+  }
+}
+```
+
+Regras de ouro complementares (*Total TypeScript*): use `satisfies` em vez de `as` (valida sem alargar); prefira `@ts-expect-error` a `@ts-ignore` (falha quando o erro desaparece); `const` e `as const` estreitam literais que `let` e objetos mutáveis alargam.
+
+---
 
 ## 🔗 Integração com Outras Skills
 - [frontend-developer](../../roles/frontend-developer/SKILL.md): Utiliza TypeScript para criar aplicações com [framework-react](../../framework/framework-react/SKILL.md) e [framework-vue](../../framework/framework-vue/SKILL.md).

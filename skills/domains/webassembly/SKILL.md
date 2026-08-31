@@ -1,6 +1,6 @@
 ---
 name: "webassembly"
-description: "Especialista em WebAssembly (Wasm) baseado na documentação oficial do MDN Web Docs (developer.mozilla.org/pt-BR/docs/WebAssembly). Cobre conceitos (Module, Instance, Memory, Table, multiplicidade), API JavaScript WebAssembly (instantiateStreaming, compileStreaming, Global, Tag/Exception, JSPI com Suspending/promising), compilação a partir de C/C++ (Emscripten), Rust (wasm-pack) e AssemblyScript, formato texto .wat/WABT, SIMD, types (i32/i64/f32/v128/funcref/externref), cache IndexedDB, execução em Workers, memória compartilhada (SharedArrayBuffer/Atomics), vínculo dinâmico e segurança/sandbox."
+description: "Especialista em WebAssembly (Wasm) baseado na documentação oficial do MDN Web Docs (developer.mozilla.org/pt-BR/docs/WebAssembly), complementado por WebAssembly: The Definitive Guide (Brian Sletten), Programming WebAssembly with Rust (Kevin Hoffman) e Learn WebAssembly (Mike Rourke). Cobre conceitos (Module, Instance, Memory, Table, multiplicidade), API JavaScript WebAssembly (instantiateStreaming, compileStreaming, Global, Tag/Exception, JSPI com Suspending/promising), compilação a partir de C/C++ (Emscripten), Rust (wasm-pack) e AssemblyScript, formato texto .wat/WABT, SIMD, types (i32/i64/f32/v128/funcref/externref), cache IndexedDB, execução em Workers, memória compartilhada (SharedArrayBuffer/Atomics), vínculo dinâmico e segurança/sandbox."
 ---
 
 # Habilidade de IA: WebAssembly (Wasm Specialist)
@@ -8,6 +8,10 @@ description: "Especialista em WebAssembly (Wasm) baseado na documentação ofici
 Esta skill orienta a inteligência artificial a atuar como especialista em **WebAssembly**, alinhada à documentação oficial do **MDN Web Docs** (https://developer.mozilla.org/pt-BR/docs/WebAssembly). Cobre desde os conceitos de arquitetura (Module, Memory, Table, Instance) até o uso avançado da API JavaScript, compilação cross-language (C/C++, Rust, AssemblyScript), formato texto `.wat`, SIMD, exceções e JSPI.
 
 > 📖 **Referência canônica**: consulte [references/wasm-mdn-guide.md](references/wasm-mdn-guide.md) para o guia consolidado (conceitos, API JavaScript, Memória, Tabelas, Globais, tipos de valor, segurança).
+>
+> 📚 **Referências complementares**:
+> - [references/wasm-definitive-guide.md](references/wasm-definitive-guide.md) — *WebAssembly: The Definitive Guide* (Brian Sletten): toolchain WABT, WASI, Emscripten, runtimes fora do browser, padrões host↔guest.
+> - [references/wasm-with-rust.md](references/wasm-with-rust.md) — *Programming WebAssembly with Rust* (Kevin Hoffman): wasm-bindgen, wasm-pack, Yew, hosts em Rust.
 
 ---
 
@@ -114,6 +118,47 @@ WebAssembly.instantiateStreaming(fetch("table.wasm")).then(({ instance }) => {
 - **Memória compartilhada**: exija `SharedArrayBuffer` com COOP/COEP corretos em multi-thread (Atomics para sincronização — data races geram undefined behavior).
 - **DoS via wasm**: módulos com loops infinitos bloqueiam a main thread — execute em Web Worker quando o processamento for longo.
 - **Supply chain**: confirme procedência de `.wasm` de terceiros (SBOM/assinatura), recompile de fonte auditada quando possível.
+
+## 🧰 Toolchain Beyond MDN
+
+Além do guia MDN, o ecossistema wasm de produção (cf. *WebAssembly: The Definitive Guide* — Brian Sletten) gira em torno de:
+
+- **WABT (WebAssembly Binary Toolkit)**: `wat2wasm` (texto→binário), `wasm2wat` (binário→texto), `wasm-objdump -x` (inspeção de seções/símbolos), `wasm-interp` (REPL de execução), `wasm-validate` e `wasm2c`. Use `--debug-names` em `wat2wasm` para preservar nomes de funções/locais (Custom section) na depuração.
+- **WASI**: contract I/O portátil (`wasi_snapshot_preview1` — `fd_write`, `proc_exit`, `environ_get`...). Módulos exportam `memory` + `_start`. Segurança por **capabilities** (unforgeable handles): conceda acesso com flags como `wasmtime --dir=.` (preopened file descriptors). Toolchains: `wasi-sdk` (clang/C), Rust `wasm32-wasi`, `cargo wasi run`.
+- **Runtimes fora do browser**: Wasmtime, Wasmer, wasm3, WasmEdge — embutíveis como engine de plug-ins/serverless. No Wasmtime (Rust): `Engine` → `Store` (unidade de isolamento) → `Module` → `Instance` + `get_typed_func` tipado. Hosts válidos (Hoffman) devem: carregar/validar, expor exports, satisfazer imports, executar e **isolar** módulos entre si.
+- **Emscripten**: além do MDN, flags-chave: `-s INVOKE_RUN=0` + `Module.callMain()` (execução atrasada de `main`), `-s MODULARIZE=1` (API Promise-like), `-s USE_SDL=2` (port), FS virtual MEMFS (código C que escreve em disco roda no sandbox), `emcc --bind` (embind para classes C++↔JS), `-s SIDE_MODULE=1` (dynamic linking).
+- **Threading**: memórias `shared` + `Atomics.wait/notify` dentro de Web Workers (requer COOP/COEP); confirme suporte via feature testing antes de depender da proposta.
+
+Detalhes completos: [references/wasm-definitive-guide.md](references/wasm-definitive-guide.md)
+
+## 🦀 Wasm + Rust no Browser
+
+Padrão idiomático de `wasm-bindgen` (cf. *Programming WebAssembly with Rust* — Kevin Hoffman, cap. 4): a macro `#[wasm_bindgen]` injeta metadados no `.wasm`; a CLI lê esses metadados e gera o "wrapper bridge" JavaScript — incluindo classes JS a partir de structs Rust.
+
+```rust
+use wasm_bindgen::prelude::*;
+
+// Import 'window.alert'
+#[wasm_bindgen]
+extern "C" {
+    fn alert(s: &str);
+}
+
+// Export a 'hello' function
+#[wasm_bindgen]
+pub fn hello(name: &str) {
+    alert(&format!("Hello, {}!", name));
+}
+```
+
+Build manual (livro): `cargo build --target wasm32-unknown-unknown` + `wasm-bindgen target/wasm32-unknown-unknown/debug/bindgenhello.wasm --out-dir .`. Em produção prefira `wasm-pack build --target web|bundler|nodejs|no-modules` (gera pacote npm com `.d.ts`).
+
+Dicas extras do livro:
+- Imports nominais: `#[wasm_bindgen(js_namespace = console)] fn log(s: &str);` e classes JS externas via `pub type Display; #[wasm_bindgen(method, structural, js_namespace = ROT)]`.
+- Serialização: com feature `serde-serialize` + `serde`, envie structs Rust como `JsValue` (`JsValue::from_serde(&stats).unwrap()`) — mais leve que espelhar classes nos dois lados.
+- UI em Rust puro: framework **Yew** (componentes + Virtual DOM), sem escrever glue JS à mão.
+
+Detalhes completos: [references/wasm-with-rust.md](references/wasm-with-rust.md)
 
 ## 🔗 Integração com Outras Skills
 - [lang-c](../../languages/lang-c/SKILL.md) / [lang-cpp](../../languages/lang-cpp/SKILL.md): código-fonte C/C++ compilado via Emscripten para o alvo wasm.
