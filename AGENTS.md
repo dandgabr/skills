@@ -66,4 +66,64 @@ Ao criar ou atualizar agentes especializados neste repositório, garanta a compa
 4. **No `agent.json`/`plugin.json`**: evitar `model: "inherit"` como contrato; preferir omitir e deixar o framework resolver (env var, config ou parâmetro de construção do agente).
 5. **Nunca copiar `model: inherit`** de `agent.yaml`/`agent.json` para o `AGENT.md` para "espelhar" configuração — a tríplice de arquivos **não precisa ter o mesmo valor de modelo**; apenas `name`, `description` e skills devem ficar sincronizados.
 
+## 🤝 Orquestração Multiagente, Descoberta Sob Demanda e Protocolo TOON
 
+Esta seção estabelece o padrão universal para orquestração, delegação e cooperação entre múltiplos agentes de IA. Por ser genérica, esta especificação se aplica a qualquer harness, framework ou ferramenta (OpenCode, Google Antigravity, Claude Code, Cursor, Aider, LangChain, CrewAI, etc.).
+
+### 1. Descoberta Inicial em Memória (Single Scan per Session)
+Como os repositórios de agentes e skills são vivos e dinâmicos:
+- **Execução no 1º turno da sessão**: No primeiro comando de uma nova sessão, o agente orquestrador inspeciona o ambiente e indexa os agentes e skills disponíveis.
+- **Cache de sessão**: Esse inventário é mantido no contexto/memória da sessão ativa.
+- **Proibição de re-scanning repetitivo**: Fica estritamente vedada a execução de novas varreduras em disco (`find`, `ls` recursivo, etc.) para redescobrir agentes/skills a cada novo comando subsequente, a menos que o usuário declare explicitamente que adicionou ou alterou um agente ou skill durante a conversa.
+
+### 2. Priorização: Especialistas Existentes e Ativação de Skills
+- **Delegação a agentes especializados**: Ao receber ou decompor uma demanda, verifique no catálogo indexado se já existe um agente concebido para a área (ex.: DBA, DevOps, QA/Testes, Segurança, Frontend, Backend, etc.). Se existir, delegue preferencialmente a ele em vez de criar um agente novo ou assumir o papel de forma genérica.
+- **Consulta mandatória a Skills**: Antes de executar procedimentos técnicos, arquiteturais ou de codificação, o agente responsável deve obrigatoriamente carregar a skill correspondente (`SKILL.md`) do catálogo e seguir suas prescrições.
+- **Reaproveitamento de instâncias ativas**: Em ferramentas com suporte a instâncias concorrentes/subagentes persistentes, reutilize instâncias em estado ocioso (`idle`) antes de instanciar novas entidades.
+
+### 3. Decomposição e Paralelização Concorrente
+- **Paralelismo ativo**: Sempre que uma tarefa puder ser decomposta em subtarefas independentes (ex.: desenvolvimento simultâneo de módulos desacoplados, implementação de código vs. escrita de suíte de testes, análise estática vs. revisão de infraestrutura), divida a execução e acione os agentes em paralelo para acelerar o ciclo de entrega.
+- **Isolamento de contexto**: Subtarefas paralelas devem ter limites bem definidos de escopo e arquivos para evitar sobreposições e condições de corrida.
+
+### 4. Protocolo Hiper-Eficiente de Troca de Informação: TOON
+Para economizar tokens, diminuir a latência e eliminar o excesso sintático de formatos verbosos de JSON conversacional, a comunicação, handoff e conciliação entre agentes deve adotar o protocolo **TOON (Token-Oriented Object Notation / Compact Pipe-Separated Attributes)**:
+
+#### Formato Canônico do Payload TOON:
+```text
+@FROM: <agente-emissor>
+@TO: <agente-destinatario-ou-orchestrator>
+@STATUS: <OK | CONFLICT | BLOCKED | NEED_INFO>
+@CTX: <identificador-conciso-do-contexto-ou-tarefa>
+@FILES: <arquivo1:linhas>;<arquivo2:linhas>
+@SUMMARY: <resumo-ultra-compacto-das-alteracoes-ou-decisao>
+@ACTION_NEEDED: <proximo-passo-objetivo-ou-requisicao-de-consenso>
+```
+
+#### Regras de Resolução de Conflitos e Handoff:
+1. **Handoff de Conclusão**: Ao concluir sua subtarefa, cada agente transmite o payload TOON reportando os arquivos modificados e seu status.
+2. **Resolução de Conflitos**: Se forem identificadas inconsistências de contratos (ex.: incompatibilidade entre endpoint e cliente, divergência em modelo de dados ou contratos de tipos), os agentes envolvidos devem trocar payloads em TOON focados no desacordo até estabelecerem um consenso alinhado.
+3. **Síntese Final**: O orquestrador consolida as entregas validadas e emite a resposta final compilada para o usuário.
+
+## 🔄 Ciclo de Vida e Evolução Contínua de Agentes e Skills
+
+Para garantir que o ecossistema de conhecimento permaneça atualizado, robusto e em constante evolução, todo agente que atua no repositório deve adotar uma postura proativa de manutenção e expansão:
+
+### 1. Portabilidade Universal e Caminhos Relativos
+- **Proibição de caminhos absolutos**: Todo arquivo, link, documentação ou manifesto criado ou atualizado deve utilizar estritamente **caminhos relativos** a partir da raiz do repositório (ex.: `skills/<categoria>/<nome>/SKILL.md`, `agents/<nome>/`, `CATALOGO.md`).
+- Caminhos absolutos específicos de máquina (ex.: `/home/...`, `/Users/...`, `C:\...`) são proibidos nos arquivos rastreados pelo repositório, garantindo portabilidade em qualquer ambiente, sistema operacional ou contêiner.
+
+### 2. Atualização e Aprimoramento Contínuo (Feedback Loop)
+- **Incorporação de novos conhecimentos**: Sempre que a resolução de uma demanda produzir novos aprendizados técnicos, correções de bugs complexos, runbooks aperfeiçoados ou novos padrões recomendados, atualize a skill correspondente (`SKILL.md` e referências associadas).
+- **Evitar degradação ou obsolescência**: Ao notar que uma skill ou agente possui bibliotecas defasadas, instruções obsoletas ou falta de casos de uso modernos, proponha ou aplique a atualização incremental seguindo o padrão de progressive disclosure.
+
+### 3. Criação de Novos Ativos Especializados
+Quando uma demanda abordar um domínio ou tecnologia ainda não atendida no catálogo:
+- **Criação de Nova Skill**:
+  1. Estruture a pasta em `skills/<categoria>/[<subcategoria>/]<nome-skill>/`.
+  2. Crie o arquivo canônico `SKILL.md` com YAML frontmatter (`name`, `description` em terceira pessoa) e corpo instrucional objetivo.
+  3. Registre a nova skill nas tabelas do catálogo unificado em `CATALOGO.md`.
+- **Criação de Novo Agente**:
+  1. Siga o padrão multi-harness em `agents/<nome-do-agente>/` gerando a tríplice canônica: `AGENT.md`, `agent.yaml` e `agent.json`.
+  2. Registre o novo agente em `CATALOGO.md` e `agents/README.md`.
+- **Validação de Qualidade**:
+  - Antes de finalizar qualquer adição ou modificação, execute os testes ou scripts de validação (`python scripts/validate_skills.py`, se disponível) para certificar a integridade de frontmatter, sintaxe e referências.
