@@ -1,6 +1,6 @@
 # 📚 Catálogo Central de Habilidades e Agentes Especializados
 
-Este documento consolida o inventário canônico de todas as **186 Habilidades Especializadas (Skills)** e **50 Agentes Especializados Universais (Multi-Harness)** disponíveis neste repositório.
+Este documento consolida o inventário canônico de todas as **187 Habilidades Especializadas (Skills)** e **51 Agentes Especializados Universais (Multi-Harness)** disponíveis neste repositório.
 
 ---
 
@@ -10,8 +10,8 @@ Este documento consolida o inventário canônico de todas as **186 Habilidades E
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
 │                        ESTATÍSTICAS GERAIS DO ECOSSISTEMA                              │
 ├────────────────────────────────────────┬───────────────────────────────────────────────┤
-│ 🤖 Agentes Especializados Universais   │ 50                                            │
-│ 📚 Total de Skills de Produção         │ 186                                           │
+│ 🤖 Agentes Especializados Universais   │ 51                                            │
+│ 📚 Total de Skills de Produção         │ 187                                           │
 │ 🎓 Domínios Acadêmicos & Engenharia    │ 34                                            │
 │ 🔒 Segurança da Informação & AppSec    │ 45                                            │
 │ 💻 Linguagens & Frameworks             │ 30                                            │
@@ -21,7 +21,7 @@ Este documento consolida o inventário canônico de todas as **186 Habilidades E
 
 ---
 
-## 🤖 Agentes Especializados Universais (50)
+## 🤖 Agentes Especializados Universais (51)
 
 | # | Categoria | Agente | Markdown (Universal) | YAML (ADK 2.0) | JSON (APIs) | Descrição e Especialidade |
 | :-: | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -70,11 +70,12 @@ Este documento consolida o inventário canônico de todas as **186 Habilidades E
 | 43 | `software-engineering` | **qa-testing-specialist** | [`AGENT.md`](agents/software-engineering/qa-testing-specialist/AGENT.md) | [`agent.yaml`](agents/software-engineering/qa-testing-specialist/agent.yaml) | [`agent.json`](agents/software-engineering/qa-testing-specialist/agent.json) | Agente Especialista em Garantia de Qualidade (QA), Automação de Testes Multi-Framework, Testes de Mutação (Mutation Testing), Fuzzing e Auditoria de Conformidade de Requisitos. Domina a injeção sistemática de falhas, eliminação de test gaps e validação rigorosa de critérios de aceitação. |
 | 44 | `software-engineering` | **software-architect** | [`AGENT.md`](agents/software-engineering/software-architect/AGENT.md) | [`agent.yaml`](agents/software-engineering/software-architect/agent.yaml) | [`agent.json`](agents/software-engineering/software-architect/agent.json) | Agente de Arquitetura de Software que aplica DDD, SOLID e orquestração de Design Patterns para guiar o design de projetos. |
 | 45 | `software-engineering` | **software-engineer** | [`AGENT.md`](agents/software-engineering/software-engineer/AGENT.md) | [`agent.yaml`](agents/software-engineering/software-engineer/agent.yaml) | [`agent.json`](agents/software-engineering/software-engineer/agent.json) | Agente especialista sênior em Engenharia de Software, cobrindo engenharia de requisitos formais, arquiteturas modulares e distribuídas (Clean Architecture, Microsserviços, Hexagonal), DevSecOps, testes automatizados e métricas de qualidade. |
-| 46 | `specialized-domains` | **career-coach-job-hunter** | [`AGENT.md`](agents/specialized-domains/career-coach-job-hunter/AGENT.md) | [`agent.yaml`](agents/specialized-domains/career-coach-job-hunter/agent.yaml) | [`agent.json`](agents/specialized-domains/career-coach-job-hunter/agent.json) | Agente Especialista em Carreira, Mineração de Vagas, Revisão e Otimização de Currículos para ATS e Aprimoramento de Perfis Profissionais (LinkedIn, Upwork, GitHub). Domina algoritmos de parsing de ATS, fórmulas de impacto XYZ, Google Dorks para busca de empregos e estratégias de propostas para freelancers. |
-| 47 | `specialized-domains` | **embedded-systems-specialist** | [`AGENT.md`](agents/specialized-domains/embedded-systems-specialist/AGENT.md) | [`agent.yaml`](agents/specialized-domains/embedded-systems-specialist/agent.yaml) | [`agent.json`](agents/specialized-domains/embedded-systems-specialist/agent.json) | Especialista em Sistemas Embarcados, RTOS (Zephyr), Linux Embarcado (Yocto Project), Firmware C/C++ e Descrição de Hardware (Verilog/VHDL). |
-| 48 | `specialized-domains` | **information-systems-specialist** | [`AGENT.md`](agents/specialized-domains/information-systems-specialist/AGENT.md) | [`agent.yaml`](agents/specialized-domains/information-systems-specialist/agent.yaml) | [`agent.json`](agents/specialized-domains/information-systems-specialist/agent.json) | Agente especialista sênior em Sistemas de Informação Corporativos, cobrindo modelagem de processos BPMN 2.0, sistemas ERP/CRM, governança de serviços de TI (ITIL 4, COBIT 2019), Business Intelligence e auditoria de sistemas. |
-| 49 | `specialized-domains` | **moodle-specialist** | [`AGENT.md`](agents/specialized-domains/moodle-specialist/AGENT.md) | [`agent.yaml`](agents/specialized-domains/moodle-specialist/agent.yaml) | [`agent.json`](agents/specialized-domains/moodle-specialist/agent.json) | Agente especialista sênior em Moodle LMS e EdTech. Atua desde a arquitetura de servidores e modelagem de banco de dados (DBA), até o design de temas (UI/UX), desenvolvimento de plugins, infraestrutura de caching (MUC), integrações (LTI, SCORM, xAPI) e aplicação de metodologias de Andragogia. |
-| 50 | `specialized-domains` | **skill-creator** | [`AGENT.md`](agents/specialized-domains/skill-creator/AGENT.md) | [`agent.yaml`](agents/specialized-domains/skill-creator/agent.yaml) | [`agent.json`](agents/specialized-domains/skill-creator/agent.json) | Agente especialista sênior em Arquitetura, Criação, Aprimoramento e Catalogação de Skills para assistentes de IA. Domina a conversão de livros/documentos PDF em Markdown estruturado, elaboração de SKILL.md de padrão de produção, interconexão de habilidades e governança do repositório. |
+| 46 | `software-engineering` | **vcs-repository-specialist** | [`AGENT.md`](agents/software-engineering/vcs-repository-specialist/AGENT.md) | [`agent.yaml`](agents/software-engineering/vcs-repository-specialist/agent.yaml) | [`agent.json`](agents/software-engineering/vcs-repository-specialist/agent.json) | Agente especialista sênior em Sistemas de Controle de Versão (VCS) e Gestão Avançada de Repositórios, cobrindo Git de baixo nível (DAG, reflog, worktrees, sparse-checkout, LFS, filter-repo), Subversion/SVN (FSFS, trunk/branches/tags, mergeinfo, svnadmin, hooks), Mercurial (Hg), migrações completas de VCS legados e governança de branching. |
+| 47 | `specialized-domains` | **career-coach-job-hunter** | [`AGENT.md`](agents/specialized-domains/career-coach-job-hunter/AGENT.md) | [`agent.yaml`](agents/specialized-domains/career-coach-job-hunter/agent.yaml) | [`agent.json`](agents/specialized-domains/career-coach-job-hunter/agent.json) | Agente Especialista em Carreira, Mineração de Vagas, Revisão e Otimização de Currículos para ATS e Aprimoramento de Perfis Profissionais (LinkedIn, Upwork, GitHub). Domina algoritmos de parsing de ATS, fórmulas de impacto XYZ, Google Dorks para busca de empregos e estratégias de propostas para freelancers. |
+| 48 | `specialized-domains` | **embedded-systems-specialist** | [`AGENT.md`](agents/specialized-domains/embedded-systems-specialist/AGENT.md) | [`agent.yaml`](agents/specialized-domains/embedded-systems-specialist/agent.yaml) | [`agent.json`](agents/specialized-domains/embedded-systems-specialist/agent.json) | Especialista em Sistemas Embarcados, RTOS (Zephyr), Linux Embarcado (Yocto Project), Firmware C/C++ e Descrição de Hardware (Verilog/VHDL). |
+| 49 | `specialized-domains` | **information-systems-specialist** | [`AGENT.md`](agents/specialized-domains/information-systems-specialist/AGENT.md) | [`agent.yaml`](agents/specialized-domains/information-systems-specialist/agent.yaml) | [`agent.json`](agents/specialized-domains/information-systems-specialist/agent.json) | Agente especialista sênior em Sistemas de Informação Corporativos, cobrindo modelagem de processos BPMN 2.0, sistemas ERP/CRM, governança de serviços de TI (ITIL 4, COBIT 2019), Business Intelligence e auditoria de sistemas. |
+| 50 | `specialized-domains` | **moodle-specialist** | [`AGENT.md`](agents/specialized-domains/moodle-specialist/AGENT.md) | [`agent.yaml`](agents/specialized-domains/moodle-specialist/agent.yaml) | [`agent.json`](agents/specialized-domains/moodle-specialist/agent.json) | Agente especialista sênior em Moodle LMS e EdTech. Atua desde a arquitetura de servidores e modelagem de banco de dados (DBA), até o design de temas (UI/UX), desenvolvimento de plugins, infraestrutura de caching (MUC), integrações (LTI, SCORM, xAPI) e aplicação de metodologias de Andragogia. |
+| 51 | `specialized-domains` | **skill-creator** | [`AGENT.md`](agents/specialized-domains/skill-creator/AGENT.md) | [`agent.yaml`](agents/specialized-domains/skill-creator/agent.yaml) | [`agent.json`](agents/specialized-domains/skill-creator/agent.json) | Agente especialista sênior em Arquitetura, Criação, Aprimoramento e Catalogação de Skills para assistentes de IA. Domina a conversão de livros/documentos PDF em Markdown estruturado, elaboração de SKILL.md de padrão de produção, interconexão de habilidades e governança do repositório. |
 
 ---
 
@@ -106,7 +107,7 @@ Este documento consolida o inventário canônico de todas as **186 Habilidades E
 
 ---
 
-## 📐 Práticas de Engenharia e Arquitetura (9)
+## 📐 Práticas de Engenharia e Arquitetura (10)
 
 | Skill | Caminho | Descrição |
 | :--- | :--- | :--- |
@@ -119,6 +120,7 @@ Este documento consolida o inventário canônico de todas as **186 Habilidades E
 | **python-performance-parallelism** | [`skills/engineering-practices/python-performance-parallelism/SKILL.md`](skills/engineering-practices/python-performance-parallelism/SKILL.md) | Especialista em Otimização, Alta Performance e Paralelismo em Python baseado nas obras High Performance Python 2nd Edition (Gorelick & Ozsvald), Fast Python (Tiago Antão) e Parallel and High Performance Programming with Python 2nd Edition (Fabio Nelli). Cobre profiling (cProfile, line_profiler, py-spy, scalene), otimização de CPU e memória, NumPy/pandas vetorizados, multiprocessing vs threads vs asyncio (GIL/free-threading), Cython/Numba, GPUs (CUDA/RAPIDS), Dask/Ray/PySpark e paralelismo distribuído em cloud/serverless. |
 | **system-design-scalability** | [`skills/engineering-practices/system-design-scalability/SKILL.md`](skills/engineering-practices/system-design-scalability/SKILL.md) | Especialista em System Design, Engenharia de Sistemas em Larga Escala e Arquiteturas Distribuídas de Alta Disponibilidade. Cobre sharding, particionamento, replicação, consistência eventual (CAP/PACELC), caching distribuído, balanceamento de carga, rate limiting, circuit breakers e resiliência. |
 | **template-skill** | [`skills/engineering-practices/template-skill/SKILL.md`](skills/engineering-practices/template-skill/SKILL.md) | Um template básico que demonstra como estruturar uma habilidade (skill) personalizada para agentes de IA. |
+| **vcs-repository-management** | [`skills/engineering-practices/vcs-repository-management/SKILL.md`](skills/engineering-practices/vcs-repository-management/SKILL.md) | Especialista em Sistemas de Controle de Versão (VCS) e Gestão Avançada de Repositórios. Domina Git de baixo nível (DAG, objetos, reflog, worktrees, sparse-checkout, LFS, submodules, bisect, filter-repo), Subversion/SVN (arquitetura FSFS, trunk/branches/tags, svn:mergeinfo, svn:externals, svnadmin, hooks), Mercurial (Hg), estratégias de branching (Trunk-based, GitFlow), migração de repositórios legados para Git e escalabilidade de monorepos (Scalar). |
 
 ---
 

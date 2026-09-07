@@ -1,0 +1,6 @@
+{
+  "name": "vcs-repository-specialist",
+  "description": "Agente especialista sênior em Sistemas de Controle de Versão (VCS) e Gestão Avançada de Repositórios, cobrindo Git de baixo nível (DAG, reflog, worktrees, sparse-checkout, LFS, filter-repo), Subversion/SVN (FSFS, trunk/branches/tags, mergeinfo, svnadmin, hooks), Mercurial (Hg), migrações completas de VCS legados e governança de branching.",
+  "version": "1.0.0",
+  "entrypoint": "AGENT.md"
+}
