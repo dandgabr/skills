@@ -25,17 +25,22 @@ def make_table(skill_paths):
     return '\n'.join(lines)
 
 def make_agents_table():
-    agents = sorted([d for d in os.listdir('agents') if os.path.isdir(os.path.join('agents', d))])
-    lines = ['| # | Agente | Markdown (Universal) | YAML (ADK 2.0) | JSON (APIs) | Descrição e Especialidade |',
-             '| :-: | :--- | :--- | :--- | :--- | :--- |']
-    for i, a in enumerate(agents, 1):
-        yaml_p = f'agents/{a}/agent.yaml'
+    yaml_files = sorted(glob.glob('agents/**/agent.yaml', recursive=True))
+    lines = ['| # | Categoria | Agente | Markdown (Universal) | YAML (ADK 2.0) | JSON (APIs) | Descrição e Especialidade |',
+             '| :-: | :--- | :--- | :--- | :--- | :--- | :--- |']
+    for i, yaml_p in enumerate(yaml_files, 1):
+        yaml_p = yaml_p.replace('\\', '/')
+        agent_dir = os.path.dirname(yaml_p)
+        a = os.path.basename(agent_dir)
+        parent_dir = os.path.basename(os.path.dirname(agent_dir))
+        category = parent_dir if parent_dir != 'agents' else 'root'
         desc = ''
         if os.path.exists(yaml_p):
             with open(yaml_p) as f:
                 y = yaml.safe_load(f)
-                desc = str(y.get('description', '')).strip().replace('\n', ' ')
-        lines.append(f'| {i} | **{a}** | [`AGENT.md`](agents/{a}/AGENT.md) | [`agent.yaml`](agents/{a}/agent.yaml) | [`agent.json`](agents/{a}/agent.json) | {desc} |')
+                if isinstance(y, dict):
+                    desc = str(y.get('description', '')).strip().replace('\n', ' ')
+        lines.append(f'| {i} | `{category}` | **{a}** | [`AGENT.md`]({agent_dir}/AGENT.md) | [`agent.yaml`]({agent_dir}/agent.yaml) | [`agent.json`]({agent_dir}/agent.json) | {desc} |')
     return '\n'.join(lines)
 
 skills_roles = glob.glob('skills/roles/**/SKILL.md')
@@ -60,7 +65,7 @@ skills_dom = glob.glob('skills/domains/**/SKILL.md')
 
 all_skills = sorted(glob.glob('skills/**/SKILL.md', recursive=True))
 total_skills = len(all_skills)
-total_agents = len([d for d in os.listdir('agents') if os.path.isdir(os.path.join('agents', d))])
+total_agents = len(glob.glob('agents/**/agent.yaml', recursive=True))
 
 content = f"""# 📚 Catálogo Central de Habilidades e Agentes Especializados
 

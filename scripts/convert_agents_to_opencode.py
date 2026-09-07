@@ -19,6 +19,7 @@ Uso:
 import sys
 import re
 import argparse
+import yaml
 import pathlib
 
 if hasattr(sys.stdout, 'reconfigure'):
@@ -36,24 +37,17 @@ SKILL_PATH_RE = re.compile(r"(?:\.\./)+skills/[^\s]+/SKILL\.md")
 
 
 def parse_agent_yaml(text: str) -> dict:
-    """Extrai name, description e instruction de um agent.yaml simples."""
-    name_match = re.search(r"^name:\s*(.+?)$", text, re.M)
-    if not name_match:
-        raise ValueError("campo 'name' não encontrado")
-    description_match = re.search(r"^description:\s*(.+?)$", text, re.M)
-    if not description_match:
-        raise ValueError("campo 'description' não encontrado")
-    instruction_match = re.search(r"^instruction:\s*>\s*\n((?:.*\n)+?)(?=^tools:)", text, re.M)
-    if not instruction_match:
-        raise ValueError("campo 'instruction' (block scalar) não encontrado")
-
-    raw_lines = instruction_match.group(1).rstrip("\n").split("\n")
-    instruction = "\n".join(re.sub(r"^\s{2}", "", line) for line in raw_lines).strip()
-
+    """Extrai name, description e instruction de um agent.yaml."""
+    data = yaml.safe_load(text)
+    if not isinstance(data, dict):
+        raise ValueError("conteúdo YAML inválido")
+    for req in ("name", "description", "instruction"):
+        if req not in data or not data[req]:
+            raise ValueError(f"campo '{req}' não encontrado")
     return {
-        "name": name_match.group(1).strip(),
-        "description": description_match.group(1).strip(),
-        "instruction": instruction,
+        "name": str(data["name"]).strip(),
+        "description": str(data["description"]).strip(),
+        "instruction": str(data["instruction"]).strip(),
     }
 
 
@@ -82,17 +76,18 @@ def polish_instruction(name: str, instruction: str) -> str:
     return instruction
 
 
-def build_agent_markdown(agent: dict) -> str:
+def build_agent_markdown(agent: dict, rel_path: str = "") -> str:
     """Monta o conteúdo do arquivo .md no formato de agente do opencode."""
     instruction = polish_instruction(
         agent["name"], normalize_skill_paths(agent["instruction"])
     )
+    source_ref = rel_path if rel_path else f"agents/{agent['name']}/agent.yaml"
     body = (
         "---\n"
         f"description: {agent['description']}\n"
         f"mode: {MODE}\n"
         "---\n\n"
-        f"<!-- Generated from agents/{agent['name']}/agent.yaml (ADK 2.0) -->\n\n"
+        f"<!-- Generated from {source_ref} (ADK 2.0) -->\n\n"
         f"{instruction}\n"
     )
     return body
@@ -103,7 +98,7 @@ def convert_agents(target: pathlib.Path, dry_run: bool) -> None:
     if not AGENTS_SRC.is_dir():
         sys.exit(f"ERRO: pasta de agentes não encontrada em {AGENTS_SRC}")
 
-    yaml_files = sorted(AGENTS_SRC.glob("*/agent.yaml"))
+    yaml_files = sorted(AGENTS_SRC.rglob("agent.yaml"))
     if not yaml_files:
         sys.exit(f"ERRO: nenhum agent.yaml encontrado em {AGENTS_SRC}")
 
@@ -118,7 +113,8 @@ def convert_agents(target: pathlib.Path, dry_run: bool) -> None:
     for yaml_path in yaml_files:
         agent = parse_agent_yaml(yaml_path.read_text(encoding="utf-8"))
         out_path = target / f"{agent['name']}.md"
-        content = build_agent_markdown(agent)
+        rel_path = yaml_path.relative_to(BASE_DIR).as_posix()
+        content = build_agent_markdown(agent, rel_path)
 
         if out_path.exists() and out_path.read_text(encoding="utf-8") == content:
             unchanged += 1

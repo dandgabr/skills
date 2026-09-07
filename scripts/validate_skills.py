@@ -107,17 +107,16 @@ def validate():
     if not os.path.exists(agents_dir):
         errors.append("Diretório 'agents' não encontrado.")
     else:
-        agent_folders = [f for f in os.listdir(agents_dir) if os.path.isdir(os.path.join(agents_dir, f))]
-        
-        for folder in agent_folders:
-            folder_path = os.path.join(agents_dir, folder)
-            agent_file = os.path.join(folder_path, "agent.yaml")
-            
-            # Validar arquivo principal do agente
-            if not os.path.exists(agent_file):
-                errors.append(f"Agente '{folder}' não possui o arquivo obrigatório agent.yaml.")
-                continue
-                
+        agent_files = []
+        for root, dirs, files in os.walk(agents_dir):
+            if "agent.yaml" in files:
+                agent_files.append(os.path.join(root, "agent.yaml"))
+
+        agent_files.sort()
+        for agent_file in agent_files:
+            folder_path = os.path.dirname(agent_file)
+            folder = os.path.basename(folder_path)
+
             validated_agents_count += 1
             
             # Ler e analisar agent.yaml

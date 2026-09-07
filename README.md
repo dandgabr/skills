@@ -1,4 +1,4 @@
-# Repositório de Habilidades (Skills) e Customizações
+# Repositório de Habilidades e Agentes
 
 Este repositório serve como uma central modular e extensível para carregamento de **Habilidades (Skills)**, **Agentes Especializados Universais (Multi-Harness Architecture)** e regras de engenharia de software para assistentes de programação de inteligência artificial em CLI e IDEs (Claude Code, OpenCode, OpenAI Codex, Google Antigravity, Cursor, Windsurf, Z.ai e frameworks multi-agente).
 
@@ -33,8 +33,14 @@ Este repositório serve como uma central modular e extensível para carregamento
 │   ├── patterns/           # Design Patterns GoF e Boundary-Control-Entity BCE (4 skills)
 │   ├── programs/           # Containers, GitHub Actions, Antigravity Guide, Markmap, Moodle, WinDbg, DAST, IAST, SAST (15 skills)
 │   ├── roles/              # Architect, Orchestrator, Career Hunter, Web/Code Researcher, DevOps, DBA, QA, PO, UX (21 skills)
-│   └── security/           # AppSec, AI Security, Cloud IAM, Crypto PKI, GRC, SecOps, RASP (50 skills)
-└── agents/                 # 50 Agentes Especializados Universais (AGENT.md, agent.yaml, agent.json, plugin.json)
+└── agents/                 # 50 Agentes Especializados Universais em 7 Categorias
+    ├── core-orchestration/     # Orquestração, supervisão, general e autodelegação (4 agentes)
+    ├── research-discovery/     # Pesquisa de código, web, literatura científica e mapeamento (5 agentes)
+    ├── software-engineering/   # Engenharia de software, arquitetura, QA/mutação, Java e otimização (8 agentes)
+    ├── data-cloud-devops/      # Multi-Cloud, DevOps/CI-CD, DBA, Data Mesh e IA/Big Data (5 agentes)
+    ├── cybersecurity/          # Pentest, AppSec, IAM, IA Red Teaming, Malware e Hardware (7 agentes)
+    ├── academic-sciences/      # Ciências exatas, engenharias de base e computação avançada (16 agentes)
+    └── specialized-domains/    # Carreira/ATS, Moodle LMS, Sistemas Corporativos e Criador de Skills (5 agentes)
 ```
 
 ---

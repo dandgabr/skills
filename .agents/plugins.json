@@ -4,6 +4,27 @@
       "path": "agents"
     },
     {
+      "path": "agents/core-orchestration"
+    },
+    {
+      "path": "agents/research-discovery"
+    },
+    {
+      "path": "agents/software-engineering"
+    },
+    {
+      "path": "agents/data-cloud-devops"
+    },
+    {
+      "path": "agents/cybersecurity"
+    },
+    {
+      "path": "agents/academic-sciences"
+    },
+    {
+      "path": "agents/specialized-domains"
+    },
+    {
       "path": "../agents"
     }
   ]

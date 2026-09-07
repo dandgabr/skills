@@ -37,10 +37,10 @@ Quando for solicitada a criação ou aprimoramento de uma skill baseada em refer
 
 ## 🤖 Padrão Multi-Harness para Criação de Agentes
 
-Ao criar ou atualizar agentes especializados neste repositório, garanta a compatibilidade universal mantendo a estrutura tríplice sincronizada em `agents/<nome-do-agente>/`:
+Ao criar ou atualizar agentes especializados neste repositório, garanta a compatibilidade universal mantendo a estrutura tríplice sincronizada em `agents/<categoria>/<nome-do-agente>/`:
 
 1. **`AGENT.md`**: Especificação canônica em Markdown com YAML frontmatter (`name`, `description`, `skills`, `model` — ver regras abaixo), instruções completas e lista de skills clicáveis.
-2. **`agent.yaml`**: Declaração estruturada YAML com ferramentas apontando para caminhos relativos em `../../skills/...` (compatível com Google Antigravity / ADK 2.0 e runners YAML).
+2. **`agent.yaml`**: Declaração estruturada YAML com ferramentas apontando para caminhos relativos em `../../../skills/...` (compatível com Google Antigravity / ADK 2.0 e runners YAML).
 3. **`agent.json` / `plugin.json`**: Manifesto em JSON para consumo por APIs REST, OpenAI Assistants e frameworks como LangChain, AutoGen e CrewAI.
 4. **Registro Central**: Registre o novo agente nas tabelas de catálogo de [agents/README.md](agents/README.md) e [CATALOGO.md](CATALOGO.md).
 
@@ -109,7 +109,7 @@ Para economizar tokens, diminuir a latência e eliminar o excesso sintático de 
 Para garantir que o ecossistema de conhecimento permaneça atualizado, robusto e em constante evolução, todo agente que atua no repositório deve adotar uma postura proativa de manutenção e expansão:
 
 ### 1. Portabilidade Universal e Caminhos Relativos
-- **Proibição de caminhos absolutos**: Todo arquivo, link, documentação ou manifesto criado ou atualizado deve utilizar estritamente **caminhos relativos** a partir da raiz do repositório (ex.: `skills/<categoria>/<nome>/SKILL.md`, `agents/<nome>/`, `CATALOGO.md`).
+- **Proibição de caminhos absolutos**: Todo arquivo, link, documentação ou manifesto criado ou atualizado deve utilizar estritamente **caminhos relativos** a partir da raiz do repositório (ex.: `skills/<categoria>/<nome>/SKILL.md`, `agents/<categoria>/<nome>/`, `CATALOGO.md`).
 - Caminhos absolutos específicos de máquina (ex.: `/home/...`, `/Users/...`, `C:\...`) são proibidos nos arquivos rastreados pelo repositório, garantindo portabilidade em qualquer ambiente, sistema operacional ou contêiner.
 
 ### 2. Atualização e Aprimoramento Contínuo (Feedback Loop)
@@ -123,7 +123,7 @@ Quando uma demanda abordar um domínio ou tecnologia ainda não atendida no cat�
   2. Crie o arquivo canônico `SKILL.md` com YAML frontmatter (`name`, `description` em terceira pessoa) e corpo instrucional objetivo.
   3. Registre a nova skill nas tabelas do catálogo unificado em `CATALOGO.md`.
 - **Criação de Novo Agente**:
-  1. Siga o padrão multi-harness em `agents/<nome-do-agente>/` gerando a tríplice canônica: `AGENT.md`, `agent.yaml` e `agent.json`.
+  1. Siga o padrão multi-harness em `agents/<categoria>/<nome-do-agente>/` gerando a tríplice canônica: `AGENT.md`, `agent.yaml` e `agent.json`.
   2. Registre o novo agente em `CATALOGO.md` e `agents/README.md`.
 - **Validação de Qualidade**:
   - Antes de finalizar qualquer adição ou modificação, execute os testes ou scripts de validação (`python scripts/validate_skills.py`, se disponível) para certificar a integridade de frontmatter, sintaxe e referências.
