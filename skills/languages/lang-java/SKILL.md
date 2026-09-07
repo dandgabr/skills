@@ -101,6 +101,47 @@ Baseado na documentação oficial (docs.oracle.com/en/java/javase/21/core/virtua
 
 ---
 
+---
+
+## 🧼 6. Java Distiller: Refatoração, Modernização e Código Idiomático (Java 21/25)
+
+Inspirado nos princípios do *Java Distiller* da comunidade SouJava, aplique a simplificação rigorosa e a eliminação de complexidade acidental:
+
+### 6.1 Transformações Canônicas de Modernização
+1. **POJO / JavaBean para Record**:
+   - Substitua classes de transporte de dados verbosas (getters, setters, equals, hashCode manuais) por `record`.
+   - Utilize deconstrução com Record Patterns:
+     ```java
+     if (response instanceof SuccessResponse(var payload, var timestamp)) {
+         process(payload);
+     }
+     ```
+2. **Loops Imperativos para Stream Pipelines & Gatherers**:
+   - Converta loops com acumuladores e mutação de listas para Streams declarativos:
+     ```java
+     // Antes: loop imperativo acumulador
+     // Depois:
+     var activeNames = users.stream()
+         .filter(User::isActive)
+         .map(User::name)
+         .toList();
+     ```
+3. **Switch Expressions & Sealed Hierarchies**:
+   - Elimine árvores de `instanceof` e casts manuais. Use `switch` exaustivo com type pattern matching:
+     ```java
+     return switch (event) {
+         case OrderCreated e -> handleCreated(e);
+         case OrderCancelled e -> handleCancelled(e);
+     };
+     ```
+4. **Legado Date/Calendar para `java.time`**:
+   - Elimine `java.util.Date`, `Calendar` e `SimpleDateFormat` (não thread-safe). Use `Instant`, `LocalDate`, `ZonedDateTime` e `DateTimeFormatter`.
+5. **Eliminação de Código Prolixo ("Distill, don'''t decorate")**:
+   - Remova abstrações intermediárias que apenas delegam chamadas sem agregar valor de domínio.
+   - Preserve comportamento funcional idêntico com menos linhas e maior expressividade.
+
+---
+
 ## 🔗 Integração com Outras Skills
 
 - [jpa-hibernate-performance](../../databases/jpa-hibernate-performance/SKILL.md): persistência eficiente (N+1, batching, cache) em Java.

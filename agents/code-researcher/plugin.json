@@ -1,0 +1,6 @@
+{
+  "name": "code-researcher",
+  "description": "Subagente Especialista em Pesquisa em Base de Código, Varredura de Repositórios, Análise de Árvore Sintática Abstrata (AST), Símbolos, Dependências e Arquitetura de Software com ferramentas de leitura estrita.",
+  "version": "1.0.0",
+  "entrypoint": "AGENT.md"
+}

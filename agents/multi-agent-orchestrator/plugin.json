@@ -1,0 +1,6 @@
+{
+  "name": "multi-agent-orchestrator",
+  "description": "Agente Orquestrador e Supervisor de Sistemas Multi-Agente. Especializado em decomposição de problemas, ancoragem de objetivos iniciais, monitoramento contínuo de subagentes, detecção de desvio de escopo (Agent Drift / Role Drift), correção proativa em tempo real e aplicação de kill-switch/terminação segura.",
+  "version": "1.0.0",
+  "entrypoint": "AGENT.md"
+}

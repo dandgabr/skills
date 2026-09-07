@@ -1,0 +1,6 @@
+{
+  "name": "java-enterprise-architect",
+  "description": "Agente Especialista em Arquitetura e Engenharia Java Corporativa (Java 21/25 LTS, Spring Boot 3.x, Quarkus Cloud-Native, MicroProfile/Jakarta EE, Virtual Threads Project Loom, JPA/Hibernate e Arquitetura BCE).",
+  "version": "1.0.0",
+  "entrypoint": "AGENT.md"
+}

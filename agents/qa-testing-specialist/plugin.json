@@ -1,6 +1,6 @@
 {
   "name": "qa-testing-specialist",
+  "description": "Agente Especialista em Garantia de Qualidade (QA), Automação de Testes Multi-Framework, Testes de Mutação (Mutation Testing), Fuzzing e Auditoria de Conformidade de Requisitos. Domina a injeção sistemática de falhas, eliminação de test gaps e validação rigorosa de critérios de aceitação.",
   "version": "1.0.0",
-  "description": "Agente Especialista em Garantia de Qualidade (QA) e Automação de Testes Multi-Framework (Pytest, Unittest, Jest, Mocha, Criterion, Playwright).",
   "entrypoint": "AGENT.md"
 }

@@ -1,0 +1,6 @@
+{
+  "name": "web-researcher",
+  "description": "Agente Especialista em Pesquisa na Web e Motores de Busca (Google, DuckDuckGo, Bing, SearXNG, Yahoo). Domina operadores booleanos avançados, Google Dorks, filtros de domínio, tipos de arquivos, OSINT defensivo, triangulação de dados e verificação factual de fontes.",
+  "version": "1.0.0",
+  "entrypoint": "AGENT.md"
+}
