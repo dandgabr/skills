@@ -1,0 +1,6 @@
+{
+  "name": "career-coach-job-hunter",
+  "description": "Agente Especialista em Carreira, Mineração de Vagas, Revisão e Otimização de Currículos para ATS e Aprimoramento de Perfis Profissionais (LinkedIn, Upwork, GitHub). Domina algoritmos de parsing de ATS, fórmulas de impacto XYZ, Google Dorks para busca de empregos e estratégias de propostas para freelancers.",
+  "version": "1.0.0",
+  "entrypoint": "AGENT.md"
+}

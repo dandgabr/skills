@@ -1,6 +1,6 @@
 # 🤖 Agentes Especializados Universais (Multi-Harness Architecture)
 
-Este repositório adota a **Arquitetura Multi-Harness**, garantindo que todos os **49 Agentes Especializados** sejam utilizáveis de forma nativa e interoperável em qualquer ambiente de desenvolvimento assistido por IA, sem dependência de plataformas proprietárias.
+Este repositório adota a **Arquitetura Multi-Harness**, garantindo que todos os **50 Agentes Especializados** sejam utilizáveis de forma nativa e interoperável em qualquer ambiente de desenvolvimento assistido por IA, sem dependência de plataformas proprietárias.
 
 ---
 
@@ -110,7 +110,7 @@ qa_agent = Agent(
 
 ---
 
-## 📋 Tabela Mestra dos 49 Agentes Especializados Universais
+## 📋 Tabela Mestra dos 50 Agentes Especializados Universais
 
 | # | Agente | Markdown (Universal) | YAML | JSON (APIs) | Descrição e Especialidade |
 | :-: | :--- | :--- | :--- | :--- | :--- |
@@ -163,6 +163,7 @@ qa_agent = Agent(
 | 47 | **scientific-researcher** | [`AGENT.md`](scientific-researcher/AGENT.md) | [`agent.yaml`](scientific-researcher/agent.yaml) | [`agent.json`](scientific-researcher/agent.json) | Agente Especialista em Pesquisa Científica e Revisão Sistemática de Literatura. Domina os protocolos PRISMA 2020, framework PICO/PECO, diretrizes PRESS, busca em bases indexadas (PubMed, arXiv, IEEE Xplore, Semantic Scholar, Scopus, SciELO) e análise de redes de citação. |
 | 48 | **multi-agent-orchestrator** | [`AGENT.md`](multi-agent-orchestrator/AGENT.md) | [`agent.yaml`](multi-agent-orchestrator/agent.yaml) | [`agent.json`](multi-agent-orchestrator/agent.json) | Agente Orquestrador e Supervisor de Sistemas Multi-Agente. Especializado em decomposição de problemas, ancoragem de objetivos iniciais, monitoramento contínuo de subagentes, detecção de desvio de escopo (Agent Drift / Role Drift), correção proativa em tempo real e aplicação de kill-switch/terminação segura. |
 | 49 | **java-enterprise-architect** | [`AGENT.md`](java-enterprise-architect/AGENT.md) | [`agent.yaml`](java-enterprise-architect/agent.yaml) | [`agent.json`](java-enterprise-architect/agent.json) | Agente Especialista em Arquitetura e Engenharia Java Corporativa (Java 21/25 LTS, Spring Boot 3.x, Quarkus Cloud-Native, MicroProfile/Jakarta EE, Virtual Threads Project Loom, JPA/Hibernate e Arquitetura BCE). |
+| 50 | **career-coach-job-hunter** | [`AGENT.md`](career-coach-job-hunter/AGENT.md) | [`agent.yaml`](career-coach-job-hunter/agent.yaml) | [`agent.json`](career-coach-job-hunter/agent.json) | Agente Especialista em Carreira, Mineração de Vagas, Revisão e Otimização de Currículos para ATS e Aprimoramento de Perfis Profissionais (LinkedIn, Upwork, GitHub). Domina algoritmos de parsing de ATS, fórmulas de impacto XYZ, Google Dorks para busca de empregos e estratégias de propostas para freelancers. |
 
 ---
 
