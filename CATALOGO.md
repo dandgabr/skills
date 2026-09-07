@@ -1,6 +1,6 @@
 # 📚 Catálogo Central de Habilidades e Agentes Especializados
 
-Este documento consolida o inventário canônico de todas as **187 Habilidades Especializadas (Skills)** e **53 Agentes Especializados Universais (Multi-Harness)** disponíveis neste repositório.
+Este documento consolida o inventário canônico de todas as **190 Habilidades Especializadas (Skills)** e **54 Agentes Especializados Universais (Multi-Harness)** disponíveis neste repositório.
 
 ---
 
@@ -10,18 +10,19 @@ Este documento consolida o inventário canônico de todas as **187 Habilidades E
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
 │                        ESTATÍSTICAS GERAIS DO ECOSSISTEMA                              │
 ├────────────────────────────────────────┬───────────────────────────────────────────────┤
-│ 🤖 Agentes Especializados Universais   │ 53                                            │
-│ 📚 Total de Skills de Produção         │ 187                                           │
+│ 🤖 Agentes Especializados Universais   │ 54                                            │
+│ 📚 Total de Skills de Produção         │ 190                                           │
 │ 🎓 Domínios Acadêmicos & Engenharia    │ 34                                            │
 │ 🔒 Segurança da Informação & AppSec    │ 45                                            │
 │ 💻 Linguagens & Frameworks             │ 30                                            │
+│ 🗣️ Linguística & Revisão Editorial      │ 3                                             │
 │ 🗺️ Mapeamento, Cloud & Bancos de Dados │ 28                                            │
 └────────────────────────────────────────┴───────────────────────────────────────────────┘
 ```
 
 ---
 
-## 🤖 Agentes Especializados Universais (53)
+## 🤖 Agentes Especializados Universais (54)
 
 | # | Categoria | Agente | Markdown (Universal) | YAML (ADK 2.0) | JSON (APIs) | Descrição e Especialidade |
 | :-: | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -76,8 +77,9 @@ Este documento consolida o inventário canônico de todas as **187 Habilidades E
 | 49 | `specialized-domains` | **career-coach-job-hunter** | [`AGENT.md`](agents/specialized-domains/career-coach-job-hunter/AGENT.md) | [`agent.yaml`](agents/specialized-domains/career-coach-job-hunter/agent.yaml) | [`agent.json`](agents/specialized-domains/career-coach-job-hunter/agent.json) | Agente Especialista em Carreira, Mineração de Vagas, Revisão e Otimização de Currículos para ATS e Aprimoramento de Perfis Profissionais (LinkedIn, Upwork, GitHub). Domina algoritmos de parsing de ATS, fórmulas de impacto XYZ, Google Dorks para busca de empregos e estratégias de propostas para freelancers. |
 | 50 | `specialized-domains` | **embedded-systems-specialist** | [`AGENT.md`](agents/specialized-domains/embedded-systems-specialist/AGENT.md) | [`agent.yaml`](agents/specialized-domains/embedded-systems-specialist/agent.yaml) | [`agent.json`](agents/specialized-domains/embedded-systems-specialist/agent.json) | Especialista em Sistemas Embarcados, RTOS (Zephyr), Linux Embarcado (Yocto Project), Firmware C/C++ e Descrição de Hardware (Verilog/VHDL). |
 | 51 | `specialized-domains` | **information-systems-specialist** | [`AGENT.md`](agents/specialized-domains/information-systems-specialist/AGENT.md) | [`agent.yaml`](agents/specialized-domains/information-systems-specialist/agent.yaml) | [`agent.json`](agents/specialized-domains/information-systems-specialist/agent.json) | Agente especialista sênior em Sistemas de Informação Corporativos, cobrindo modelagem de processos BPMN 2.0, sistemas ERP/CRM, governança de serviços de TI (ITIL 4, COBIT 2019), Business Intelligence e auditoria de sistemas. |
-| 52 | `specialized-domains` | **moodle-specialist** | [`AGENT.md`](agents/specialized-domains/moodle-specialist/AGENT.md) | [`agent.yaml`](agents/specialized-domains/moodle-specialist/agent.yaml) | [`agent.json`](agents/specialized-domains/moodle-specialist/agent.json) | Agente especialista sênior em Moodle LMS e EdTech. Atua desde a arquitetura de servidores e modelagem de banco de dados (DBA), até o design de temas (UI/UX), desenvolvimento de plugins, infraestrutura de caching (MUC), integrações (LTI, SCORM, xAPI) e aplicação de metodologias de Andragogia. |
-| 53 | `specialized-domains` | **skill-creator** | [`AGENT.md`](agents/specialized-domains/skill-creator/AGENT.md) | [`agent.yaml`](agents/specialized-domains/skill-creator/agent.yaml) | [`agent.json`](agents/specialized-domains/skill-creator/agent.json) | Agente especialista sênior em Arquitetura, Criação, Aprimoramento e Catalogação de Skills para assistentes de IA. Domina a conversão de livros/documentos PDF em Markdown estruturado, elaboração de SKILL.md de padrão de produção, interconexão de habilidades e governança do repositório. |
+| 52 | `specialized-domains` | **linguistic-specialist** | [`AGENT.md`](agents/specialized-domains/linguistic-specialist/AGENT.md) | [`agent.yaml`](agents/specialized-domains/linguistic-specialist/agent.yaml) | [`agent.json`](agents/specialized-domains/linguistic-specialist/agent.json) | Agente especialista em Revisão Linguística, Precisão Semântica e Qualidade Editorial Multilíngue (PT-BR, EN-US, ES-LATAM). Atua eliminando ambiguidades sintáticas, expurgando vícios de inteligência artificial (Anti-AI Prosa) e assegurando comunicação clara, humana e tecnicamente rigorosa. |
+| 53 | `specialized-domains` | **moodle-specialist** | [`AGENT.md`](agents/specialized-domains/moodle-specialist/AGENT.md) | [`agent.yaml`](agents/specialized-domains/moodle-specialist/agent.yaml) | [`agent.json`](agents/specialized-domains/moodle-specialist/agent.json) | Agente especialista sênior em Moodle LMS e EdTech. Atua desde a arquitetura de servidores e modelagem de banco de dados (DBA), até o design de temas (UI/UX), desenvolvimento de plugins, infraestrutura de caching (MUC), integrações (LTI, SCORM, xAPI) e aplicação de metodologias de Andragogia. |
+| 54 | `specialized-domains` | **skill-creator** | [`AGENT.md`](agents/specialized-domains/skill-creator/AGENT.md) | [`agent.yaml`](agents/specialized-domains/skill-creator/agent.yaml) | [`agent.json`](agents/specialized-domains/skill-creator/agent.json) | Agente especialista sênior em Arquitetura, Criação, Aprimoramento e Catalogação de Skills para assistentes de IA. Domina a conversão de livros/documentos PDF em Markdown estruturado, elaboração de SKILL.md de padrão de produção, interconexão de habilidades e governança do repositório. |
 
 ---
 
@@ -178,6 +180,16 @@ Este documento consolida o inventário canônico de todas as **187 Habilidades E
 | **lang-rust** | [`skills/languages/lang-rust/SKILL.md`](skills/languages/lang-rust/SKILL.md) | Fornece padrões de engenharia de software em Rust baseados na documentação oficial (doc.rust-lang.org), na tradução brasileira 'A Linguagem de Programação Rust' (rust-br.github.io/rust-book-pt-br), em 'The Rust Programming Language 3rd Edition' (Klabnik, Nichols, Krycho) e em 'Programming Rust 2nd Edition' (Blandy, Orendorff, Tindall), cobrindo Ownership, Borrowing, Lifetimes, Structs, Enums e Pattern Matching exaustivo, Módulos e Crates, Coleções (Vec/String/HashMap), tratamento de erros (Result/Option/thiserror), Genéricos e Traits, Closures e Iterators zero-cost, Smart Pointers (Box/Rc/Arc/RefCell/Mutex), Concorrência (threads, channels, Send/Sync), Async (Tokio), Testes (cargo test), Cargo Workspaces e Profiles, Unsafe Rust/Nomicon e FFI. |
 | **lang-typescript** | [`skills/languages/lang-typescript/SKILL.md`](skills/languages/lang-typescript/SKILL.md) | Fornece padrões de engenharia de software seguro e robusto usando TypeScript baseado na documentação oficial do TypeScript Handbook (typescriptlang.org), Effective TypeScript 2nd Edition (Dan Vanderkam) e Total TypeScript Essentials (Matt Pocock), cobrindo tipos primitivos e avançados, narrowing e type guards, discriminated unions com exhaustiveness checking, generics com constraints, type manipulation (keyof, conditional, mapped, template literal types), utility types, segurança estrita de compilador e mapeamento defensivo de dados. |
 | **lang-typst** | [`skills/languages/lang-typst/SKILL.md`](skills/languages/lang-typst/SKILL.md) | Fornece padrões de engenharia e tipografia digital moderna usando Typst. Cobre sintaxe de marcação, funções customizadas, criação de templates reutilizáveis, regras de exibição (show/set rules), matemática avançada, tabelas, layout de páginas e bibliografia via Hayagriva/BibTeX. |
+
+---
+
+## 🗣️ Linguística, Revisão Editorial & Idiomas (3)
+
+| Skill | Caminho | Descrição |
+| :--- | :--- | :--- |
+| **linguistic-en-us** | [`skills/linguistics/linguistic-en-us/SKILL.md`](skills/linguistics/linguistic-en-us/SKILL.md) | Specialist in American English (EN-US) linguistic editing and technical copyediting, adhering to the Chicago Manual of Style, eliminating AI idiolect, resolving syntax ambiguities, and ensuring clear human communication. |
+| **linguistic-es-latam** | [`skills/linguistics/linguistic-es-latam/SKILL.md`](skills/linguistics/linguistic-es-latam/SKILL.md) | Especialista en Revisión y Redacción en Español Latinoamericano Neutro (ES-LATAM), enfocado en claridad técnica, normas RAE/ASALE, desambiguación sintáctica, signos de apertura (¿?, ¡!), tildes diacríticas y erradicación de clichés de IA. |
+| **linguistic-pt-br** | [`skills/linguistics/linguistic-pt-br/SKILL.md`](skills/linguistics/linguistic-pt-br/SKILL.md) | Especialista em Revisão e Redação em Português Brasileiro (PT-BR), focado em clareza técnica, precisão semântica, norma culta contemporânea, eliminação de ambiguidades, erradicação de vícios de IA e adaptação ao público humano. |
 
 ---
 

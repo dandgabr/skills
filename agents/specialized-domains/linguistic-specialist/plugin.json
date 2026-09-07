@@ -1,0 +1,6 @@
+{
+  "name": "linguistic-specialist",
+  "description": "Agente especialista em Revisão Linguística, Precisão Semântica e Qualidade Editorial Multilíngue (PT-BR, EN-US, ES-LATAM). Atua eliminando ambiguidades sintáticas, expurgando vícios de inteligência artificial (Anti-AI Prosa) e assegurando comunicação clara, humana e tecnicamente rigorosa.",
+  "version": "1.0.0",
+  "entrypoint": "AGENT.md"
+}

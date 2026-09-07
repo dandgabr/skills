@@ -48,6 +48,7 @@ skills_eng = glob.glob('skills/engineering-practices/**/SKILL.md')
 skills_patterns = glob.glob('skills/patterns/**/SKILL.md', recursive=True)
 skills_framework = glob.glob('skills/framework/**/SKILL.md')
 skills_lang = glob.glob('skills/languages/**/SKILL.md')
+skills_ling = glob.glob('skills/linguistics/**/SKILL.md')
 skills_db = glob.glob('skills/databases/**/SKILL.md')
 skills_cloud = glob.glob('skills/cloud-infra/**/SKILL.md')
 skills_map = glob.glob('skills/mapping/**/SKILL.md')
@@ -84,6 +85,7 @@ Este documento consolida o inventário canônico de todas as **{total_skills} Ha
 │ 🎓 Domínios Acadêmicos & Engenharia    │ {len(skills_dom):<45} │
 │ 🔒 Segurança da Informação & AppSec    │ {total_sec:<45} │
 │ 💻 Linguagens & Frameworks             │ {len(skills_lang) + len(skills_framework):<45} │
+│ 🗣️ Linguística & Revisão Editorial      │ {len(skills_ling):<45} │
 │ 🗺️ Mapeamento, Cloud & Bancos de Dados │ {len(skills_map) + len(skills_cloud) + len(skills_db):<45} │
 └────────────────────────────────────────┴───────────────────────────────────────────────┘
 ```
@@ -123,6 +125,12 @@ Este documento consolida o inventário canônico de todas as **{total_skills} Ha
 ## 💻 Linguagens de Programação e Marcação ({len(skills_lang)})
 
 {make_table(skills_lang)}
+
+---
+
+## 🗣️ Linguística, Revisão Editorial & Idiomas ({len(skills_ling)})
+
+{make_table(skills_ling)}
 
 ---
 
