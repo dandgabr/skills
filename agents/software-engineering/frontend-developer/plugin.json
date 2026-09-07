@@ -1,0 +1,6 @@
+{
+  "name": "frontend-developer",
+  "description": "Agente especialista sênior em Engenharia de Frontend e Design Engineering, dominando des-templatização de Tailwind e shadcn/ui, texturas táteis (SVG noise), física de molas naturais (Framer Motion), otimização de Core Web Vitals e acessibilidade estrita WCAG 2.2.",
+  "version": "1.0.0",
+  "entrypoint": "AGENT.md"
+}

@@ -1,0 +1,6 @@
+{
+  "name": "ui-ux-designer",
+  "description": "Agente especialista sênior em Design de Interface (UI), Experiência do Usuário (UX) e Direção de Arte, dominando 24 estilos de design de páginas, o Anti-AI Slop Manifesto, tipografia de alto contraste, arquitetura de Design Systems e acessibilidade WCAG 2.2.",
+  "version": "1.0.0",
+  "entrypoint": "AGENT.md"
+}
