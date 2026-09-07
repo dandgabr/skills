@@ -1,0 +1,6 @@
+{
+  "name": "cloudflare-specialist",
+  "description": "Agente especialista sênior na Plataforma Cloudflare, Edge Computing, Nova CLI cf, Wrangler v3/v4, Túneis com cloudflared, Armazenamento Serverless (D1, R2, KV, Vectorize, Hyperdrive), WAF e Arquitetura Cloudflare Zero Trust.",
+  "version": "1.0.0",
+  "entrypoint": "AGENT.md"
+}

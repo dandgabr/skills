@@ -7,7 +7,7 @@ Este repositório serve como uma central modular e extensível para carregamento
 ## 🧭 Navegação Rápida
 
 > 📚 **[Acesse o Catálogo Completo de Habilidades e Agentes (CATALOGO.md)](CATALOGO.md)**  
-> Consulte a lista detalhada das **190 Skills** e **54 Agentes Especializados**, com métricas por categoria, subcategorias e descrições técnicas completas.
+> Consulte a lista detalhada das **191 Skills** e **56 Agentes Especializados**, com métricas por categoria, subcategorias e descrições técnicas completas.
 
 - 🤖 **[Guia de Agentes Especializados Universais (agents/README.md)](agents/README.md)**: Personas, manifestos (`AGENT.md`, `agent.yaml`, `agent.json`) e instruções de execução para qualquer harness.
 - 📜 **[Regras Globais do Projeto (AGENTS.md)](AGENTS.md)**: Diretrizes de comportamento, Clean Code, padrões de skills e criação de agentes.
@@ -18,12 +18,12 @@ Este repositório serve como uma central modular e extensível para carregamento
 ## 📁 Estrutura de Pastas
 
 ```text
-├── CATALOGO.md             # Catálogo mestre com inventário de todas as 190 skills e 54 agentes
+├── CATALOGO.md             # Catálogo mestre com inventário de todas as 191 skills e 56 agentes
 ├── README.md               # Visão geral e documentação do repositório
 ├── AGENTS.md               # Regras gerais de comportamento, clean code e workflows
 ├── skills.json             # Manifesto de carregamento e herança de skills
 ├── skills/
-│   ├── cloud-infra/        # AWS, Azure, GCP, OCI, Linux Kernel, HPC, Zero Trust (7 skills)
+│   ├── cloud-infra/        # AWS, Azure, Cloudflare, GCP, OCI, Linux Kernel, HPC, Zero Trust (8 skills)
 │   ├── databases/          # PostgreSQL, MariaDB, MongoDB, SQLite, Data Mesh, Streaming (6 skills)
 │   ├── domains/            # Matemática, Física, Computação Teórica, Circuitos, Robótica/Controle, Telecom, Química/CFD, SEP, Biotecnologia, WebAssembly (34 skills)
 │   ├── engineering-practices/ # Clean Code, C4 Model, Docs Anti-IA, Latência, Git VCS (10 skills)
@@ -34,11 +34,11 @@ Este repositório serve como uma central modular e extensível para carregamento
 │   ├── patterns/           # Design Patterns GoF e Boundary-Control-Entity BCE (4 skills)
 │   ├── programs/           # Containers, GitHub Actions, Antigravity Guide, Markmap, Moodle, WinDbg, DAST, IAST, SAST (15 skills)
 │   ├── roles/              # Architect, Orchestrator, Career Hunter, Web/Code Researcher, DevOps, DBA, QA, PO, UX (21 skills)
-└── agents/                 # 54 Agentes Especializados Universais em 7 Categorias
+└── agents/                 # 56 Agentes Especializados Universais em 7 Categorias
     ├── core-orchestration/     # Orquestração, supervisão, general e autodelegação (4 agentes)
     ├── research-discovery/     # Pesquisa de código, web, literatura científica e mapeamento (5 agentes)
-    ├── software-engineering/   # Engenharia de software, arquitetura, QA/mutação, Java, UI/UX, Frontend e otimização (11 agentes)
-    ├── data-cloud-devops/      # Multi-Cloud, DevOps/CI-CD, DBA, Data Mesh e IA/Big Data (5 agentes)
+    ├── software-engineering/   # Engenharia de software, arquitetura, QA/mutação, Java, UI/UX, Frontend, VCS, GitHub e otimização (12 agentes)
+    ├── data-cloud-devops/      # Multi-Cloud, Cloudflare, DevOps/CI-CD, DBA, Data Mesh e IA/Big Data (6 agentes)
     ├── cybersecurity/          # Pentest, AppSec, IAM, IA Red Teaming, Malware e Hardware (7 agentes)
     ├── academic-sciences/      # Ciências exatas, engenharias de base e computação avançada (16 agentes)
     └── specialized-domains/    # Carreira/ATS, Moodle LMS, Sistemas Corporativos, Linguística e Criador de Skills (6 agentes)

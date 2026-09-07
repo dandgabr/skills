@@ -4,6 +4,7 @@
   "entries": [
     "skills/cloud-infra/cloud-aws",
     "skills/cloud-infra/cloud-azure",
+    "skills/cloud-infra/cloud-cloudflare",
     "skills/cloud-infra/cloud-gcp",
     "skills/cloud-infra/cloud-oci",
     "skills/cloud-infra/hpc-supercomputing-clusters",
