@@ -1,490 +1,219 @@
 ---
 name: "documentation-designer"
-description: "Auxilia na elaboração de documentação técnica rica e no desenho de diagramas visuais e fluxogramas utilizando a sintaxe do Mermaid.js."
+description: "Especialista em Engenharia de Documentação Técnica, Prosa Humana Anti-IA (Anti-AI Writing Manifesto), Arquitetura Diátaxis e Modelagem Visual de Diagramas com Mermaid.js."
 ---
 
-# Habilidade Auxiliar: Designer de Documentação e Diagramas (Mermaid)
+# 📚 Habilidade: Engenheiro de Documentação Técnica & Modelador Visual (Mermaid)
 
-Esta skill guia a inteligência artificial a elaborar documentações de software visualmente ricas, estruturadas e a desenhar diagramas e fluxogramas usando a sintaxe correta do **Mermaid.js**, abrangendo desde estruturas tradicionais até diagramas de dados, estratégicos e de infraestrutura.
+Esta skill capacita a inteligência artificial a atuar como **Engenheiro de Documentação Técnica Sênior e Arquiteto de Comunicação Visual**. Seu papel é produzir documentações de software de nível de classe mundial (padrão Google e Stripe), combinando **prosa técnica humana, direta e sem clichês automatizados (*Anti-AI Writing Manifesto*)**, a arquitetura de informação sistemática do **Framework Diátaxis** e a elaboração precisa de diagramas visuais e fluxogramas ricos utilizando a sintaxe do **Mermaid.js**.
 
 ---
 
-## 🚫 Prevenção de Erros de Sintaxe (Crítico)
+## ✍️ 1. O Anti-AI Writing Manifesto: Prosa Técnica Humana (Craft Writing)
 
-Para evitar que o renderizador de Markdown ou a IDE quebrem ao processar o Mermaid, siga rigidamente estas regras:
+Textos técnicos gerados por inteligência artificial sofrem do chamado **"AI Idiolect"** — um conjunto de vícios estatísticos caracterizados por prolixidade, adjetivação hiperbólica vazia, subserviência bajuladora e uma cadência uniforme que cansa o leitor. Ao redigir qualquer documentação, **siga rigidamente as diretrizes anti-IA** (detalhadas em [references/anti-ai-technical-writing-guide.md](references/anti-ai-technical-writing-guide.md)).
+
+### 1.1. Lista de Veto de Vocabulário (Banned AI Words)
+| Categoria | Termos em Inglês a Banir | Termos em Português a Banir | Alternativa Humana Direta |
+| :--- | :--- | :--- | :--- |
+| **Verbos Inflados** | *Delve, leverage, streamline, foster, unleash, empower, orchestrate, harness, utilize* | *Mergulhar, alavancar, otimizar (vago), fomentar, capacitar, desatar, orquestrar (vago), utilizar* | Verbos concretos: *usar, criar, aplicar, executar, medir, construir, reduzir*. |
+| **Substantivos Abstratos** | *Tapestry, landscape, realm, paradigm, synergy, testament, beacon, cornerstone, linchpin* | *Cenário atual, ecossistema (vago), tapeçaria, reino, paradigma, sinergia, testemunho, farol* | Fatos específicos: *arquitetura, módulo, problema, código, contrato, biblioteca*. |
+| **Adjetivos Hiperbólicos** | *Crucial, vital, pivotal, unwavering, meticulous, transformative, groundbreaking, holistic* | *Crucial, vital, fundamental (repetitivo), meticuloso, transformador, revolucionário, holístico* | Eliminar o adjetivo. Apresentar evidências, números ou impactos reais. |
+| **Conectivos de Enchimento** | *In conclusion, it's worth noting that, at its core, furthermore, additionally, moreover* | *Em suma, vale ressaltar que, é importante destacar que, além disso (em excesso), no cerne* | Ir direto ao ponto. Cortar preâmbulos e transições redundantes. |
+
+### 1.2. Fórmulas Sintáticas Proibidas
+1. ❌ **Veto ao "Contrastive Reframe"**: Nunca use *"Não é apenas uma biblioteca; é uma revolução no modo de..."* ou *"It's not just X; it's Y"*. Diga diretamente o que a ferramenta faz.
+2. ❌ **Veto a Aberturas Bajuladoras (Chatbot Sycophancy)**: Elimine aberturas como *"Certamente! Com prazer..."*, *"No mundo dinâmico e em constante transformação de hoje..."* ou *"Neste documento, exploraremos a fundo..."*. Vá direto ao título e à primeira instrução prática.
+3. ❌ **Veto à Conclusão Resumo Óbvia**: Não crie parágrafos finais do tipo *"Em suma, podemos concluir que este guia abordou os passos essenciais..."*. Documentação técnica termina quando a instrução técnica termina.
+4. ❌ **Voz Passiva Fraca**: Substitua *"O arquivo deve ser criado pelo desenvolvedor"* por *"Crie o arquivo `config.json`"* (voz ativa/imperativa).
+
+### 1.3. A Lei do Ritmo e Cadência de Gary Provost
+A IA tende a produzir frases com o mesmo número monótono de palavras (12 a 18 palavras por frase). A escrita técnica humana possui **musicalidade e variação intencional**:
+- **Frases curtas**: Para regras, avisos de erro e comandos diretos. Impacto imediato.
+- **Frases médias**: Para explicações de causa e efeito e contextualização técnica.
+- **Frases longas estruturadas**: Para correlacionar conceitos complexos com pontuação precisa.
+
+---
+
+## 🧭 2. Arquitetura de Documentação: O Framework Diátaxis
+
+Toda documentação técnica deve pertencer explicitamente a um dos **quatro quadrantes puros do Diátaxis**, sem misturar propostas conflitantes no mesmo arquivo:
+
+```text
+               APRENDER (Aquisição)          TRABALHAR (Aplicação)
+             ┌─────────────────────────────┬─────────────────────────────┐
+PRÁTICA      │ 1. TUTORIAIS (Tutorials)    │ 2. GUIAS PRÁTICOS (How-To)  │
+(Ação)       │ Orientado ao aprendizado    │ Orientado à tarefa concreta │
+             ├─────────────────────────────┼─────────────────────────────┤
+TEÓRICA      │ 4. EXPLICAÇÃO (Explanation) │ 3. REFERÊNCIA (Reference)   │
+(Cognição)   │ Orientado à compreensão     │ Orientado à informação pura │
+             └─────────────────────────────┴─────────────────────────────┘
+```
+
+1. **Tutoriais (Tutorials)**: Lições passo a passo para iniciantes. Objetivo: conduzir o usuário do zero a uma primeira vitória rápida e segura sem sobrecarga teórica.
+2. **Guias Práticos (How-To Guides)**: Receitas resolutivas para problemas específicos enfrentados no dia a dia (ex.: *"Como configurar autenticação mTLS no NGINX"*). Pressupõem competência básica e vão direto ao procedimento.
+3. **Referência Técnica (Reference)**: Descrições exatas, frias, neutras e completas de APIs, parâmetros de linha de comando, schemas de banco de dados e variáveis de configuração.
+4. **Explicação e Arquitetura (Explanation)**: Discussão aprofundada sobre decisões arquiteturais, trade-offs técnicos, contexto histórico e motivos pelos quais o sistema foi projetado de determinada forma.
+
+---
+
+## 🚫 3. Prevenção de Erros de Sintaxe no Mermaid (Crítico)
+
+Para garantir que o renderizador de Markdown, GitHub, GitLab ou IDEs não quebrem ao processar diagramas Mermaid, siga rigidamente estas regras:
 
 1. **Palavras Reservadas**:
    - A palavra **`end`** (toda minúscula) é um delimitador de bloco em subgrafos. Se precisar escrever "end" em um nó ou texto, capitalize-a (`End`, `END`) ou cerque-a de aspas duplas: `id["Finalizar e fechar (end)"]`.
 2. **Caracteres Especiais**:
    - Evite usar parênteses `()`, colchetes `[]`, chaves `{}`, barras `/` ou aspas soltas diretamente no rótulo do nó.
-   - **Solução**: Sempre cerque rótulos contendo caracteres especiais ou espaços com aspas duplas, utilizando o formato: `id["Meu Rótulo (Contendo Parênteses)"]`.
+   - **Solução Obrigatória**: Sempre cerque rótulos contendo caracteres especiais ou espaços com aspas duplas: `id["Meu Rótulo (Contendo Parênteses)"]`.
 3. **Conexões Ambíguas**:
    - Não inicie rótulos de nós conectados com as letras `o` ou `x` coladas nos hifens (ex: `A---oB` ou `A---xB` são interpretados como setas circulares ou cruzadas). Use espaços: `A --- oB`.
 4. **Diagramas Experimentais/Beta**:
-   - Diagramas marcados com sufixo `-beta` devem iniciar exatamente com a palavra-chave correspondente (ex: `sankey-beta`, `treeView-beta`).
+   - Diagramas com sufixo `-beta` devem iniciar exatamente com a palavra-chave correspondente (ex: `sankey-beta`, `treeView-beta`, `architecture-beta`).
 
 ---
 
-## 📐 1. Diagramas Clássicos e Estruturais
+## 📐 4. Catálogo Canônico de Diagramas Mermaid
 
-### 🔹 Fluxogramas (`flowchart`)
-Utilize a declaração `flowchart` (em vez de `graph`) para obter renderizações modernas.
-- **Orientação**: `TB` ou `TD` (cima-baixo), `LR` (esquerda-direita), `BT` (baixo-cima), `RL` (direita-esquerda).
+### 4.1. Fluxogramas Modernos (`flowchart`)
+Utilize sempre a declaração `flowchart` (em vez de `graph`) para obter renderizações com renderizador moderno.
+- **Orientação**: `TB` / `TD` (cima-baixo), `LR` (esquerda-direita), `BT` (baixo-cima), `RL` (direita-esquerda).
 - **Formas de Nós**:
-    - Retângulo Padrão: `id1[Texto]`
-    - Arredondado (Início/Fim): `id2(Texto)`
-    - Estádio (Stadium): `id3([Texto])`
-    - Sub-rotina: `id4[[Texto]]`
-    - Banco de Dados (Cilindro): `id5[(Texto)]`
-    - Círculo: `id6((Texto))`
-    - Losango (Decisão): `id7{Texto}`
-    - Hexágono (Preparação): `id8{{Texto}}`
-    - Paralelogramo: `id9[/Texto/]` ou `id10[\Texto\]`
-    - Duplo Círculo: `id11(((Texto)))`
-- **Conexões**:
-    - Seta Simples: `A --> B`
-    - Linha sem Seta: `A --- B`
-    - Linha com Texto: `A -->|Texto| B` ou `A -- Texto --> B`
-    - Linha Pontilhada: `A -.-> B`
-    - Linha Grossa (Thick): `A ==> B`
-    - Comprimento Customizado: `--->` ou `====>` ou `-.-.->` (adicione caracteres para esticar)
-    - Setas Circulares/Cruzadas: `A --o B` ou `A --x B`
-- **Subgrafos**:
+  - Retângulo Padrão: `id1[Texto]`
+  - Arredondado (Início/Fim): `id2(Texto)`
+  - Estádio (Stadium): `id3([Texto])`
+  - Sub-rotina: `id4[[Texto]]`
+  - Banco de Dados (Cilindro): `id5[(Texto)]`
+  - Decisão (Losango): `id6{Texto}`
+  - Círculo / Duplo Círculo: `id7((Texto))` / `id8(((Texto)))`
+- **Exemplo Estruturado com Subgrafos**:
 ```mermaid
 flowchart TB
     subgraph Lane_Cliente["Cliente"]
         direction LR
-        A[Solicitar orçamento] --> B[Enviar documentos]
+        A["Solicitar orçamento"] --> B["Enviar documentos"]
     end
     subgraph Lane_Sistema["Sistema"]
         direction LR
-        C{Dados completos?}
-        D[Gerar proposta]
-        E[Solicitar complementação]
+        C{"Dados completos?"}
+        D["Gerar proposta"]
+        E["Solicitar complementação"]
     end
     subgraph Lane_Operacao["Operação"]
         direction LR
-        F[Aprovar proposta]
-        G[Iniciar execução]
+        F["Aprovar proposta"]
+        G["Iniciar execução"]
     end
     B --> C
     C -->|Sim| D --> F --> G
     C -->|Não| E --> B
 ```
 
-### 🔹 Raias de Processos (Swimlanes Diagram)
-Como o Mermaid não possui um tipo dedicado para Swimlanes, utilize `flowchart` combinando `subgraph` estruturados para representar raias funcionais.
-```mermaid
-flowchart TB
-    subgraph Lane_Cliente ["Cliente"]
-        direction LR
-        A[Solicitar Serviço] --> B[Aguardar Confirmação]
-    end
-    subgraph Lane_Atendimento ["Atendimento"]
-        direction LR
-        C[Receber Solicitação] --> D{Aprovado?}
-        D -->|Sim| E[Enviar para Execução]
-        D -->|Não| F[Negar Solicitação]
-    end
-    A --> C
-    E --> B
-```
-
-### 🔹 Diagramas de Sequência (`sequenceDiagram`)
-Útil para detalhar fluxos transacionais e chamadas de APIs.
-- **Destaques**: Suporta numeração automática (`autonumber`), ativação de participantes (`activate`/`deactivate` ou atalhos `+`/`-`), agrupamentos e condições (`alt`/`else`, `loop`, `opt`).
+### 4.2. Diagramas de Sequência (`sequenceDiagram`)
+Para detalhar fluxos transacionais, autenticação e chamadas de rede entre microsserviços.
 ```mermaid
 sequenceDiagram
     autonumber
     actor Cliente
-    participant API as API Gateway
+    participant Gateway as API Gateway
+    participant Auth as AuthService
     participant DB as Banco de Dados
-    Cliente->>+API: GET /pedidos/1
-    API->>+DB: SELECT * FROM pedidos WHERE id=1
-    DB-->>-API: Dados do pedido
-    API-->>-Cliente: 200 OK (JSON)
+    Cliente->>+Gateway: POST /v1/pagamentos (Bearer Token)
+    Gateway->>+Auth: Validar JWT Token
+    Auth-->>-Gateway: 200 OK (Token Válido)
+    Gateway->>+DB: INSERT INTO pagamentos
+    DB-->>-Gateway: Registro Gravado (ID 4982)
+    Gateway-->>-Cliente: 201 Created (JSON)
 ```
 
-### 🔹 Diagramas de Classe (`classDiagram`)
-Útil para detalhar a modelagem tática do DDD ou a estrutura interna de Design Patterns.
-- **Relações**: Herança (`<|--`), Composição (`*--`), Agregação (`o--`), Associação (`-->`), Dependência (`..>`).
-```mermaid
-classDiagram
-    class Veiculo {
-        +String placa
-        +ligar() void
-    }
-    class Carro {
-        -int portas
-        +abrirPorta-malas() void
-    }
-    Veiculo <|-- Carro
-```
-
-### 🔹 Diagramas de Estado (`stateDiagram-v2`)
-Mapeia o ciclo de vida de entidades e objetos de negócio complexos.
-- **Recursos**: Estados compostos, transições, bifurcações (`fork`/`join`) e notas explicativas.
-```mermaid
-stateDiagram-v2
-    [*] --> Inativo
-    Inativo --> Ativo : Ativar
-    state Ativo {
-        [*] --> Processando
-        Processando --> Aguardando
-        Aguardando --> Processando
-    }
-    Ativo --> Inativo : Desativar
-```
-
-### 🔹 Diagramas de Entidade e Relacionamento (`erDiagram`)
-Modelagem lógica e física de banco de dados relacionais.
-- **Relações de Cardinalidade**:
-    - `||--||` (Um para um)
-    - `||--o{` (Zero ou muitos)
-    - `||--|{` (Um ou muitos)
-```mermaid
-erDiagram
-    USUARIO ||--o{ POST : escreve
-    POST ||--|{ COMENTARIO : possui
-```
-
-### 🔹 Diagramas de Requisitos (`requirementDiagram`)
-Usado em engenharia de sistemas (padrão SysML) para mapear requisitos funcionais/não-funcionais e os elementos de design que os atendem.
-```mermaid
-requirementDiagram
-
-requirement ReqSeguranca {
-    id: 1
-    text: O sistema deve criptografar senhas com bcrypt.
-    risk: high
-    verifymethod: test
-}
-
-element BackendApp {
-    type: software_component
-}
-
-BackendApp - satisfies -> ReqSeguranca
-```
-
-### 🔹 Diagrama C4 (C4Context, C4Container, C4Component) 🦺⚠️
-Para mapear a arquitetura em diferentes níveis de abstração conceitual.
+### 4.3. Diagramas C4 de Arquitetura (Context, Container, Component)
+Para mapear sistemas em múltiplos níveis de granularidade arquitetural.
 ```mermaid
 C4Context
-    title Diagrama de Contexto - Sistema de Vendas
-    Person(cliente, "Cliente", "Comprador de produtos online.")
-    System(vendas, "Sistema de Vendas", "Permite visualizar produtos e realizar compras.")
-    System_Ext(gateway, "Gateway de Pagamento", "Processa transações de cartão de crédito.")
+    title Diagrama de Contexto - Plataforma de Pagamentos
+    Person(cliente, "Cliente", "Usuário final do aplicativo bancário.")
+    System(gateway, "Gateway de Pagamentos", "Valida, autoriza e liquida transações financeiras.")
+    System_Ext(bacen, "Banco Central / SPI", "Câmara regulatória e liquidação Pix.")
+    System_Ext(antifraude, "Motor Antifraude", "Scoring em tempo real de risco transacional.")
     
-    Rel(cliente, vendas, "Usa", "HTTPS")
-    Rel(vendas, gateway, "Processa pagamento", "API REST / JSON")
+    Rel(cliente, gateway, "Submete pagamento", "HTTPS / TLS 1.3")
+    Rel(gateway, antifraude, "Consulta risco", "gRPC / mTLS")
+    Rel(gateway, bacen, "Liquida ordem de transferência", "ISO 20022 / XML")
 ```
 
----
-
-## 📊 2. Diagramas de Dados, Planejamento e Métricas
-
-### 🔹 Gráficos de Gantt (`gantt`)
-Perfeito para cronogramas, calendários e marcos de entrega.
+### 4.4. Diagramas de Classes e Modelagem Tática (`classDiagram`)
 ```mermaid
-gantt
-    title Cronograma de Implantação
-    dateFormat  YYYY-MM-DD
-    section Análise
-    Análise de requisitos :a1, 2026-07-01, 10d
-    section Desenvolvimento
-    Modelagem do banco   :a2, after a1, 5d
-    Codificação API      :a3, after a2, 15d
+classDiagram
+    class Pedido {
+        +UUID id
+        +Status status
+        +List itens
+        +calcularTotal() Dinheiro
+        +confirmar() void
+    }
+    class ItemPedido {
+        +UUID produtoId
+        +int quantidade
+        +Dinheiro precoUnitario
+    }
+    Pedido *-- ItemPedido : composicao
 ```
 
-### 🔹 Gráfico de Pizza (`pie`)
-Visualiza fatias e proporções de dados simples.
+### 4.5. Diagramas de Entidade-Relacionamento (`erDiagram`)
 ```mermaid
-pie title Distribuição de Tecnologia no Backend
-    "Node.js" : 45
-    "Go" : 35
-    "Python" : 20
+erDiagram
+    USUARIO ||--o{ PEDIDO : realiza
+    PEDIDO ||--|{ ITEM_PEDIDO : contem
+    PRODUTO ||--o{ ITEM_PEDIDO : refere
 ```
 
-### 🔹 Gráfico de Quadrante (`quadrantChart`)
-Para matrizes de decisão, classificação de prioridades e análises SWOT.
-```mermaid
-quadrantChart
-    title Análise de Priorização de Funcionalidades
-    x-axis Baixo Impacto --> Alto Impacto
-    y-axis Alto Custo --> Baixo Custo
-    quadrant-1 Descartar
-    quadrant-2 Planejar
-    quadrant-3 Fazer Imediatamente
-    quadrant-4 Avaliar Viabilidade
-    "Funcionalidade A": [0.8, 0.9]
-    "Funcionalidade B": [0.2, 0.4]
-```
-
-### 🔹 Gráfico XY (`xychart-beta`) 🔥
-Renderização nativa de gráficos de barra e de linha cartesianos para dados numéricos temporais ou categóricos.
-```mermaid
-xychart-beta
-    title "Vendas Mensais (2026)"
-    x-axis [Jan, Fev, Mar, Abr, Mai, Jun]
-    y-axis "Receita (R$ mil)" 0 --> 120
-    bar [30, 45, 60, 80, 95, 110]
-    line [35, 40, 65, 75, 90, 115]
-```
-
-### 🔹 Treemap (`treemap`) 🔥
-Representação de estruturas de dados hierárquicas e seus pesos usando retângulos proporcionais aninhados.
-```mermaid
-treemap-beta
-"Nuvem"
-    "Computacao": 50
-    "Armazenamento": 30
-    "Rede": 20
-```
-
-### 🔹 Gráfico de Radar (`radar-beta`) 🔥
-Usado para comparar múltiplos perfis ou alternativas sob múltiplos eixos de análise quantitativa.
-```mermaid
-radar-beta
-title "Avaliação de Senioridade do Desenvolvedor"
-axis qualidade["Qualidade do Código"], comunicacao["Comunicação"], prazo["Entrega de Prazo"], lideranca["Liderança Técnica"], problemas["Resolução de Problemas"]
-curve junior["Dev Júnior"]{qualidade: 40, comunicacao: 60, prazo: 50, lideranca: 20, problemas: 40}
-curve senior["Dev Sênior"]{qualidade: 90, comunicacao: 85, prazo: 90, lideranca: 80, problemas: 95}
-max 100
-```
-
-### 🔹 Diagrama de Sankey (`sankey-beta`) 🔥
-Mapeia fluxos e transferência de volumes de energia, dinheiro ou recursos entre categorias.
-```mermaid
-sankey-beta
-    Origem, Canal_A, 100
-    Origem, Canal_B, 50
-    Canal_A, Destino_Final, 90
-    Canal_A, Perda, 10
-    Canal_B, Destino_Final, 50
-```
-
-### 🔹 Diagrama de Venn (`venn-beta`) 🔥
-Visualiza a intersecção de conjuntos lógicos de dados.
-```mermaid
-venn-beta
-set A["Linguagem Python"]:10
-set B["Data Science"]:10
-union A,B["Bibliotecas Científicas"]:4
-```
-
----
-
-## 🗺️ 3. Diagramas Estratégicos, Conceituais e Mapas Mentais
-
-### 🔹 Jornada do Usuário (`journey`)
-Esboço descritivo e sequencial das interações do usuário com o sistema, mapeando níveis de frustração e atores.
-```mermaid
-journey
-    title Compra de passagem aérea
-    section Pesquisa
-        Pesquisar voos: 5: Passageiro
-        Selecionar data: 3: Passageiro
-    section Pagamento
-    Inserir dados do cartão: 1: Passageiro, Banco
-        Confirmar compra: 4: Passageiro
-```
-
-### 🔹 Mapas Mentais (`mindmap`)
-Excelente para brainstorming estruturado de ideias, mapeamento mental de requisitos e conceitos.
-```mermaid
-mindmap
-    root((Arquitetura))
-        Padroes
-            Microservicos
-            Monolito Modular
-        Comunicacao
-            REST
-            gRPC
-            Event-Driven
-```
-
-### 🔹 Linha do Tempo (`timeline`)
-Apresenta cronologias de marcos, históricos de sistemas ou fases de lançamento.
-```mermaid
-timeline
-    title Linha do Tempo da Empresa
-    2020 : Fundação : Primeiro Cliente
-    2022 : Expansão Internacional
-    2025 : Abertura de Capital
-```
-
-### 🔹 Gráfico de Git (`gitGraph`)
-Representa de forma precisa fluxos de versionamento, commits, merge e branches do Git.
-```mermaid
-gitGraph
-    commit id: "Initial Commit"
-    branch develop
-    checkout develop
-    commit id: "Feature A"
-    checkout main
-    merge develop
-```
-
-### 🔹 Modelagem de Eventos (`eventmodeling`) 🔥
-Esboço dinâmico para arquiteturas Event-Driven (CQRS/Event Sourcing), sequenciando UIs, comandos e eventos.
-```mermaid
-flowchart LR
-    TelaRegistro[UI: Tela de Registro] --> RegistrarUsuario[Command: Registrar Usuario]
-    RegistrarUsuario --> UsuarioRegistrado[Event: Usuario Registrado]
-```
-
-### 🔹 Wardley Maps (`wardley-beta`) 🔥
-Mapeia estrategicamente o valor dos componentes do negócio em relação à sua evolução e maturidade.
-- **Eixos**: O eixo Y representa a visibilidade ao cliente, o eixo X a maturidade/evolução técnica (Gênese a Commodity).
-```mermaid
-wardley-beta
-    title Mapa de Evolução de IA
-    anchor Cliente [0.9, 0.4]
-    component Chatbot [0.7, 0.5]
-    component Modelo_LLM [0.4, 0.7]
-    component Servidores [0.1, 0.9]
-    
-    Cliente -> Chatbot
-    Chatbot -> Modelo_LLM
-    Modelo_LLM -> Servidores
-```
-
-### 🔹 Framework Cynefin (`cynefin`) 🔥
-Framework conceitual para categorizar a complexidade de problemas, identificando os cinco domínios de tomada de decisão.
-```mermaid
-mindmap
-    root((Cynefin))
-        clear
-            "Sense -> Categorise -> Respond"
-        complicated
-            "Sense -> Analyse -> Respond"
-        complex
-            "Probe -> Sense -> Respond"
-        chaotic
-            "Act -> Sense -> Respond"
-        confusion
-            "Move toward a domain"
-```
-
----
-
-## 💻 4. Diagramas Técnicos e de Arquitetura de Redes/Sistemas
-
-### 🔹 ZenUML (`zenuml`)
-Alternativa poderosa e estruturada em formato de código para a criação de diagramas de sequência complexos.
-```mermaid
-sequenceDiagram
-    title Processamento de Pedido
-    actor Cliente
-    participant Loja
-    participant Estoque
-    participant Pagamento
-    Cliente->>Loja: Fazer pedido
-    Loja->>Estoque: Reservar itens
-    Loja->>Pagamento: Cobrar pagamento
-```
-
-### 🔹 Diagrama de Blocos (`block-beta`) 🔥
-Ideal para diagramas físicos e de layout, simulando grades, tabelas de arquitetura ou quadros estruturais.
-```mermaid
-block-beta
-    columns 3
-    block:WebTier:2
-        columns 2
-        Browser["Navegador"]
-        App["App Mobile"]
-    end
-    DB["Banco de Dados"]
-    WebTier --> DB
-```
-
-### 🔹 Diagrama de Pacote de Rede (`packet-beta`) 🔥
-Representação visual e de baixo nível da distribuição de bits/bytes em cabeçalhos de protocolos de rede ou mensagens binárias.
-```mermaid
-packet-beta
-    0-7: "Versão IP"
-    8-15: "Tamanho do Cabeçalho"
-    16-31: "Tamanho Total"
-    32-63: "Identificação"
-```
-
-### 🔹 Diagrama de Arquitetura de Nuvem/Infra (`architecture-beta`) 🔥
-Criado para esboçar arquiteturas de nuvem de forma nativa e clara (p. ex., AWS, GCP), separando serviços e agrupando-os por redes.
+### 4.6. Diagramas de Arquitetura de Nuvem (`architecture-beta`)
 ```mermaid
 architecture-beta
 group vpc(cloud)[VPC Privada]
-service web(server)[Servidor Web] in vpc
-service cache(redis)[Redis Cache] in vpc
-service rds(database)[PostgreSQL] in vpc
+service web(server)[Servidor Web API] in vpc
+service cache(redis)[Cluster Redis] in vpc
+service rds(database)[PostgreSQL Multi-AZ] in vpc
 
 web:R -- L:cache
 web:B -- T:rds
 ```
 
-### 🔹 Visualizador de Árvores de Diretórios (`treeView-beta`) 🔥
-Gera visualizações organizadas de estruturas de arquivos e hierarquias de pastas usando indentação.
-```mermaid
-treeView-beta
-        "meu-projeto"
-                "src"
-                        "components"
-                                "Button.tsx"
-                        "App.tsx"
-                "package.json"
-                "tsconfig.json"
-```
-
-### 🔹 Quadro Kanban (`kanban`) 🔥
-Quadro ágil nativo para organização, controle e distribuição de tarefas de desenvolvimento.
-```mermaid
-kanban
-    title Sprint 24
-    section Backlog
-        Task_A["Criar Model de Usuário"]
-        Task_B["Configurar CI/CD"]
-    section Fazendo
-        Task_C["Desenvolver Login"]
-    section Concluído
-        Task_D["Setup Inicial"]
-```
-
 ---
 
-## 🔒 6. Diagramação de Segurança e Zonas de Confiança (Trust Boundaries)
+## 🔒 5. Diagramação de Zonas de Confiança e Segurança (Trust Boundaries)
 
-Ao documentar a arquitetura de segurança, utilize o Mermaid para ilustrar Zonas de Confiança (Trust Boundaries), autenticação mTLS/TLS, WAF, firewalls e gateways de API:
+Ao documentar fluxos de dados sensíveis ou requisitos de segurança (alinhado a [threat-modeler](../../security/ops-architecture/threat-modeler/SKILL.md)), represente explicitamente os limites de confiança:
 
 ```mermaid
 flowchart LR
     subgraph Internet ["Zona Pública (Untrusted)"]
-        User["Navegador / Mobile"]
+        User["Cliente / Navegador"]
     end
 
-    subgraph DMZ ["Zona DMZ (Edge Security)"]
-        WAF["AWS WAF / Cloudflare"]
-        Proxy["NGINX Reverse Proxy (mTLS)"]
+    subgraph DMZ ["Zona DMZ (Perímetro)"]
+        WAF["Cloudflare / AWS WAF"]
+        Proxy["NGINX Ingress (mTLS)"]
     end
 
-    subgraph Internal ["Zona Interna de Aplicação (Trusted)"]
-        API["API Gateway (JWT / OAuth2)"]
-        Microservice["Microsserviço de Negócio"]
+    subgraph Trusted ["Zona Privada de Aplicação (Trusted)"]
+        API["Microsserviço de Negócio"]
     end
 
-    subgraph SecureDB ["Zona Protegida de Dados (High Security)"]
-        DB[(PostgreSQL Cifrado AES-256)]
+    subgraph Vault ["Zona Criptográfica Crítica"]
+        KMS["HSM / HashiCorp Vault"]
     end
 
-    User -->|HTTPS TLS 1.3| WAF --> Proxy
-    Proxy -->|TLS Mutável| API --> Microservice
-    Microservice -->|Conexão Autenticada| DB
+    User -->|HTTPS| WAF --> Proxy
+    Proxy -->|mTLS| API
+    API -->|gRPC Seguro| KMS
 ```
 
 ---
 
-## 🤝 Integração com Outras Skills
+## 🔗 6. Integração com Outras Skills
 
-- **Sob a Skill [software-architect](../../roles/software-architect/SKILL.md)**: Use diagramas do Mermaid para mapear a separação lógica de camadas (Layers), fluxo de integração de APIs e topologias de rede.
-- **Sob a Skill [program-markmap](../../programs/markmap/SKILL.md)**: Use o Markmap para renderizar documentações de árvores hierárquicas, resumos de projetos e tópicos extensos em mapas mentais interativos navegáveis.
-- **Sob a Skill [threat-modeler](../../security/ops-architecture/threat-modeler/SKILL.md)**: Use diagramas de fluxo de dados (DFD) e zonas de confiança para modelar vetores de ataque e vetores STRIDE.
-- **Sob as Skills de Design Patterns [dp-*](../../patterns/creational/dp-creational-patterns/SKILL.md)**: Use diagramas de classe (`classDiagram`) do Mermaid para esboçar a relação conceitual de herança, composição e interfaces dos padrões estruturados ou compartilhamentais envolvidos.
+- **Sob [software-architect](../../roles/software-architect/SKILL.md)**: Aplica o Diátaxis nos ADRs (Architecture Decision Records) e utiliza o C4 Model para estruturar visões de sistema.
+- **Sob [clean-code-reusability](../clean-code-reusability/SKILL.md)**: Garante a clareza e precisão na documentação inline (docstrings, JSDoc, GoDoc) evitando prolixidade óbvia.
+- **Sob [ui-ux-designer](../../roles/ui-ux-designer/SKILL.md)**: Documenta tokens de design, design systems e fluxos de telas de forma compreensível tanto para designers quanto para engenheiros.
+- **Sob [frontend-developer](../../roles/frontend-developer/SKILL.md)**: Documenta contratos de componentes e especificações de acessibilidade (WCAG 2.2).

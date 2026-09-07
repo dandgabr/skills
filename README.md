@@ -26,7 +26,7 @@ Este repositório serve como uma central modular e extensível para carregamento
 │   ├── cloud-infra/        # AWS, Azure, GCP, OCI, Linux Kernel, HPC, Zero Trust (7 skills)
 │   ├── databases/          # PostgreSQL, MariaDB, MongoDB, SQLite, Data Mesh, Streaming (6 skills)
 │   ├── domains/            # Matemática, Física, Computação Teórica, Circuitos, Robótica/Controle, Telecom, Química/CFD, SEP, Biotecnologia, WebAssembly (34 skills)
-│   ├── engineering-practices/ # Clean Code, C4 Model, System Design, Conventional Commits (6 skills)
+│   ├── engineering-practices/ # Clean Code, C4 Model, Docs Anti-IA, Latência, Git VCS (10 skills)
 │   ├── framework/          # Spring Boot, Quarkus, MicroProfile, React, Vue, APIs REST, GraphQL, gRPC, SOAP, Testes de Mutação (15 skills)
 │   ├── languages/          # Java Moderno, Python, TypeScript, Go, Rust, C, C++, Assembly, Typst, LaTeX, Bash, etc. (15 skills)
 │   ├── mapping/            # Código AST, Call Graphs, Rede, eBPF, CMDB, Engenharia Reversa (13 skills)
