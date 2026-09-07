@@ -81,11 +81,20 @@ Como os repositórios de agentes e skills são vivos e dinâmicos:
 - **Consulta mandatória a Skills**: Antes de executar procedimentos técnicos, arquiteturais ou de codificação, o agente responsável deve obrigatoriamente carregar a skill correspondente (`SKILL.md`) do catálogo e seguir suas prescrições.
 - **Reaproveitamento de instâncias ativas**: Em ferramentas com suporte a instâncias concorrentes/subagentes persistentes, reutilize instâncias em estado ocioso (`idle`) antes de instanciar novas entidades.
 
-### 3. Decomposição e Paralelização Concorrente
+### 3. Orquestração Obrigatória de Múltiplos Agentes: Invocação do multi-agent-orchestrator
+- **Gating de Multiagentes**: Sempre que uma tarefa demandar a invocação, delegação ou coordenação de **dois ou mais agentes** (seja simultaneamente em paralelo, seja encadeados em pipeline sequencial), o agente [`multi-agent-orchestrator`](agents/core-orchestration/multi-agent-orchestrator/AGENT.md) DEVE ser obrigatoriamente invocado como supervisor e orquestrador principal da sessão.
+- **Responsabilidades do Orquestrador**:
+  1. **Ancoragem de Escopo**: Registrar e ancorar as metas e critérios de aceitação iniciais do usuário para evitar deriva de escopo (*Agent Drift* ou *Role Drift*).
+  2. **Supervisão Contínua**: Acompanhar o progresso de cada subagente especializado, mediando a troca de informações estritamente através do protocolo TOON.
+  3. **Mitigação e Resolução de Conflitos**: Detectar divergências arquiteturais ou inconsistências de dados entre agentes e coordenar o alinhamento.
+  4. **Contenção e Kill-Switch**: Intervir proativamente ou aplicar o encerramento seguro (*kill*) de qualquer subagente que persistir em desvios, loops ou ações desconformes com o objetivo inicial.
+- **Vedação de Execução Múltipla Desgovernada**: É terminantemente proibido disparar múltiplos subagentes autônomos sem a mediação e governança central do `multi-agent-orchestrator`.
+
+### 4. Decomposição e Paralelização Concorrente
 - **Paralelismo ativo**: Sempre que uma tarefa puder ser decomposta em subtarefas independentes (ex.: desenvolvimento simultâneo de módulos desacoplados, implementação de código vs. escrita de suíte de testes, análise estática vs. revisão de infraestrutura), divida a execução e acione os agentes em paralelo para acelerar o ciclo de entrega.
 - **Isolamento de contexto**: Subtarefas paralelas devem ter limites bem definidos de escopo e arquivos para evitar sobreposições e condições de corrida.
 
-### 4. Protocolo Hiper-Eficiente de Troca de Informação: TOON
+### 5. Protocolo Hiper-Eficiente de Troca de Informação: TOON
 Para economizar tokens, diminuir a latência e eliminar o excesso sintático de formatos verbosos de JSON conversacional, a comunicação, handoff e conciliação entre agentes deve adotar o protocolo **TOON (Token-Oriented Object Notation / Compact Pipe-Separated Attributes)**:
 
 #### Formato Canônico do Payload TOON:

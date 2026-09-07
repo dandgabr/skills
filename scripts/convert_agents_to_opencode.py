@@ -110,11 +110,16 @@ def convert_agents(target: pathlib.Path, dry_run: bool) -> None:
     generated = 0
     unchanged = 0
     to_generate = 0
+    valid_agent_names = set()
     for yaml_path in yaml_files:
         agent = parse_agent_yaml(yaml_path.read_text(encoding="utf-8"))
+        valid_agent_names.add(f"{agent['name']}.md")
         out_path = target / f"{agent['name']}.md"
         rel_path = yaml_path.relative_to(BASE_DIR).as_posix()
         content = build_agent_markdown(agent, rel_path)
+
+        if out_path.is_symlink():
+            out_path.unlink()
 
         if out_path.exists() and out_path.read_text(encoding="utf-8") == content:
             unchanged += 1
@@ -125,9 +130,18 @@ def convert_agents(target: pathlib.Path, dry_run: bool) -> None:
         if dry_run:
             print(f"[gerar] {out_path.name}")
         else:
+            if out_path.exists():
+                out_path.unlink()
             out_path.write_text(content, encoding="utf-8")
             generated += 1
             print(f"[ok] {out_path.name} (gerado)")
+
+    # Remover agentes descontinuados (ex.: researcher.md)
+    if not dry_run and target.is_dir():
+        for existing in target.glob("*.md"):
+            if existing.name not in valid_agent_names:
+                existing.unlink()
+                print(f"[remover] {existing.name} (obsoleto removido)")
 
     if dry_run:
         print(f"\nResumo: {to_generate} a gerar, {unchanged} inalterados, "
