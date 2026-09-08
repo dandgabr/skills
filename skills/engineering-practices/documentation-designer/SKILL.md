@@ -217,3 +217,4 @@ flowchart LR
 - **Sob [clean-code-reusability](../clean-code-reusability/SKILL.md)**: Garante a clareza e precisão na documentação inline (docstrings, JSDoc, GoDoc) evitando prolixidade óbvia.
 - **Sob [ui-ux-designer](../../roles/ui-ux-designer/SKILL.md)**: Documenta tokens de design, design systems e fluxos de telas de forma compreensível tanto para designers quanto para engenheiros.
 - **Sob [frontend-developer](../../roles/frontend-developer/SKILL.md)**: Documenta contratos de componentes e especificações de acessibilidade (WCAG 2.2).
+- **Sob [autodoc-code-explorer](../../mapping/autodoc-code-explorer/SKILL.md)**: Utiliza o AutoDoc MCP Server para inspecionar automaticamente a topologia do repositório, extrair métricas de arquivos e gerar diagramas C4 em sintaxe Mermaid C4 (C4Context, C4Container) para enriquecer a documentação técnica sob o framework Diátaxis.
