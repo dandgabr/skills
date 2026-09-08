@@ -47,10 +47,11 @@ flowchart TD
 
 ## 🛠️ 2. Domínios de Mapeamento e Matriz de Especialização
 
-O especialista orquestra 12 áreas fundamentais de mapeamento:
+O especialista orquestra 13 áreas fundamentais de mapeamento:
 
 | Domínio | Sub-Skill Especializada | Ferramentas Chave |
 | :--- | :--- | :--- |
+| **Mapeamento de Código & C4 Model** | [`autodoc-code-explorer`](../../mapping/autodoc-code-explorer/SKILL.md) | AutoDoc MCP, Tree-Sitter AST, Rayon, Mermaid C4, Structurizr DSL, Taint Analysis |
 | **Descoberta de Apps & Tracing** | [`app-dependency-discovery`](../../mapping/app-dependency-discovery/SKILL.md) | OpenTelemetry eBPF (OBI), Caretta, Jaeger, Zipkin, SkyWalking, SigNoz, Grafana Tempo |
 | **Análise de Fluxo de Rede** | [`network-flow-discovery`](../../mapping/network-flow-discovery/SKILL.md) | Zeek, ntopng, Arkime, Wireshark, tcpdump, pmacct, ElastiFlow, NetworkMiner, p0f, RITA, Nmap |
 | **Kubernetes & Containers eBPF** | [`k8s-container-mapping`](../../mapping/k8s-container-mapping/SKILL.md) | Cilium, Hubble, Kiali, Kubeshark, Pixie, Inspektor Gadget, Parca, Tetragon, Falco, Tracee |
