@@ -1,0 +1,6 @@
+{
+  "name": "backend-developer",
+  "description": "Agente de Desenvolvimento Backend sênior especialista em projetar APIs robustas (REST, gRPC, GraphQL), integrar bancos de dados eficientes (SQL/NoSQL), aplicar concorrência segura, processamento assíncrono resiliente e criar testes de integração, garantindo código limpo, seguro e performático.",
+  "version": "1.0.0",
+  "entrypoint": "AGENT.md"
+}
