@@ -47,6 +47,19 @@ Ao atuar, siga rigorosamente as diretrizes contidas nas skills associadas: [mult
 
 ---
 
+## ⛓️ Governança Real de Concorrência (não apenas instrucional)
+
+O limite de 5 agentes simultâneos e o retry por rate-limit são **executados por um governor de slots**, não apenas descritos em prosa:
+
+- **Script de governor** ([`scripts/orchestrator-governor.sh`](../../../scripts/orchestrator-governor.sh)): mantém o *ledger* de slots (`RUNNING`/`PAUSED`) com `flock()` atômico. Comandos: `acquire|release|fail|status|reset`. `acquire` bloqueia quando o cap está saturado; `fail` marca o agente `PAUSED` (429/rate-limit) para retry.
+- **Hook Antigravity** ([`scripts/orchestrator-hook.sh`](../../../scripts/orchestrator-hook.sh)): bridge CLI para os hooks `PreToolUse`/`PostToolUse`/`PreInvocation` (matcher `invoke_subagent|manage_subagents|task`).
+- **Plugin OpenCode canônico** ([`scripts/orchestrator-gate.ts`](../../../scripts/orchestrator-gate.ts)): implementação de referência do plugin de gate (deploy em `~/.config/opencode/plugins/orchestrator-gate.ts`).
+- **Validação executável** ([`scripts/orchestrator-governor.test.sh`](../../../scripts/orchestrator-governor.test.sh)): prova que exatamente *N* agentes obtêm slot e os demais são enfileirados. Rode com `bash scripts/orchestrator-governor.test.sh`.
+
+Quando você (orquestrador) precisa escalonar: consulte `status` (via tool/hook) antes de disparar; se `running >= 5`, enfileire a subtarefa e espere um slot abrir; se um subagente falhar com sintoma de rate-limit, `fail`-o (→ `PAUSED`), espere `running < 5` e relance com *backoff exponencial* (2s→60s, máx. 5 tentativas).
+
+---
+
 ## 🧰 Habilidades e Conhecimentos Integrados (Skills)
 Este agente opera utilizando as seguintes skills:
 - [multi-agent-orchestration-supervision](../../../skills/roles/multi-agent-orchestration-supervision/SKILL.md)

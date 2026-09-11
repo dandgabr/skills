@@ -114,6 +114,15 @@ Ao detectar um desses sintomas num subagente ativo:
 - **Somente** falhas com sintoma de rate-limit entram no fluxo de `PAUSED`/retry.
 - Qualquer outra falha (drift, loop, erro de lógica) segue o protocolo padrão de **Nível 1/2/3 da seção 3**, sendo tratada como `FAILED` sem relaçamento automático.
 
+### 5.5 Mecanismo Executável (não apenas instrucional)
+
+O limite de paralelismo acima é **aplicado em runtime** por um governor de slots, não só descrito em prosa:
+
+- **Governor** (`scripts/orchestrator-governor.sh`): ledger com `flock()` atômico. `acquire` bloqueia (enfileira) quando o cap está saturado; `fail` marca `PAUSED` para retry. O cap = `ORCH_MAX_CONCURRENT` (default 5, contando com o orquestrador).
+- **Hooks Antigravity** (`scripts/orchestrator-hook.sh` + `~/.gemini/config/hooks.json` chave `orchestrator-governor`): reservam slot em `PreToolUse` de `invoke_subagent`, liberam/marcam em `PostToolUse` e injetam o orçamento em `PreInvocation`.
+- **Plugin OpenCode** (`scripts/orchestrator-gate.ts`, deploy em `~/.config/opencode/plugins/orchestrator-gate.ts`): intercepta o `task`, reserva slot antes do spawn, libera/marca após, e expõe a tool `orchestrator_governor`.
+- **Validação** (`scripts/orchestrator-governor.test.sh` e `orchestrator-governor.check.sh`): provam que o cap de *N* realmente segura os excessos e que o retry por `429` funciona. Rode `bash scripts/orchestrator-governor.check.sh`.
+
 ---
 
 ## 📐 6. Exemplo de Decisão de Escalonamento
