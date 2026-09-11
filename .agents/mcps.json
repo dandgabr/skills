@@ -1,0 +1,31 @@
+{
+  "entries": [
+    {
+      "path": "mcps"
+    },
+    {
+      "path": "mcps/dev-tools"
+    },
+    {
+      "path": "mcps/databases"
+    },
+    {
+      "path": "mcps/cloud-infra"
+    },
+    {
+      "path": "mcps/security"
+    },
+    {
+      "path": "mcps/observability"
+    },
+    {
+      "path": "mcps/ai"
+    },
+    {
+      "path": "mcps/data"
+    },
+    {
+      "path": "../mcps"
+    }
+  ]
+}

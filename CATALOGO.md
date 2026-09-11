@@ -22,6 +22,16 @@ Este documento consolida o inventário canônico de todas as **197 Habilidades E
 
 ---
 
+## 🔌 Servidores MCP (Model Context Protocol)
+
+> O inventário detalhado e o template universal vivem em [**MCPS.md**](MCPS.md).
+
+| # | Categoria | Servidor | Markdown (Universal) | JSON (APIs/OpenCode) | `mcp_config.json` | Descrição e Especialidade |
+| :-: | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | `_template` | **mcp-template** | [`MCP.md`](mcps/_template/MCP.md) | [`mcp.json`](mcps/_template/mcp.json) | [`mcp_config.json`](mcps/_template/mcp_config.json) | Template universal de um servidor MCP para registro neste repositório. |
+
+---
+
 ## 🤖 Agentes Especializados Universais (58)
 
 | # | Categoria | Agente | Markdown (Universal) | YAML (ADK 2.0) | JSON (APIs) | Descrição e Especialidade |

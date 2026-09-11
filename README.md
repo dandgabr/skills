@@ -1,6 +1,6 @@
 # Repositório de Habilidades e Agentes
 
-Este repositório serve como uma central modular e extensível para carregamento de **Habilidades (Skills)**, **Agentes Especializados Universais (Multi-Harness Architecture)** e regras de engenharia de software para assistentes de programação de inteligência artificial em CLI e IDEs (Claude Code, OpenCode, OpenAI Codex, Google Antigravity, Cursor, Windsurf, Z.ai e frameworks multi-agente).
+Este repositório serve como uma central modular e extensível para carregamento de **Habilidades (Skills)**, **Agentes Especializados Universais (Multi-Harness Architecture)**, **Servidores MCP (Model Context Protocol)** e regras de engenharia de software para assistentes de programação de inteligência artificial em CLI e IDEs (Claude Code, OpenCode, OpenAI Codex, Google Antigravity, Cursor, Windsurf, Z.ai e frameworks multi-agente).
 
 ---
 
@@ -10,6 +10,7 @@ Este repositório serve como uma central modular e extensível para carregamento
 > Consulte a lista detalhada das **197 Skills** e **58 Agentes Especializados**, com métricas por categoria, subcategorias e descrições técnicas completas.
 
 - 🤖 **[Guia de Agentes Especializados Universais (agents/README.md)](agents/README.md)**: Personas, manifestos (`AGENT.md`, `agent.yaml`, `agent.json`) e instruções de execução para qualquer harness.
+- 🔌 **[Catálogo de Servidores MCP (MCPS.md)](MCPS.md)**: Inventário de servidores MCP e manifestos multiplataforma (`MCP.md`, `mcp.json`, `mcp_config.json`).
 - 📜 **[Regras Globais do Projeto (AGENTS.md)](AGENTS.md)**: Diretrizes de comportamento, Clean Code, padrões de skills e criação de agentes.
 - ⚙️ **[Manifesto de Skills (skills.json)](skills.json)**: Configuração e importação modular de habilidades.
 
@@ -19,6 +20,7 @@ Este repositório serve como uma central modular e extensível para carregamento
 
 ```text
 ├── CATALOGO.md             # Catálogo mestre com inventário de todas as 197 skills e 58 agentes
+├── MCPS.md                 # Catálogo de servidores MCP (Model Context Protocol)
 ├── README.md               # Visão geral e documentação do repositório
 ├── AGENTS.md               # Regras gerais de comportamento, clean code e workflows
 ├── skills.json             # Manifesto de carregamento e herança de skills
@@ -34,6 +36,15 @@ Este repositório serve como uma central modular e extensível para carregamento
 │   ├── patterns/           # Design Patterns GoF e Boundary-Control-Entity BCE (4 skills)
 │   ├── programs/           # Containers, GitHub Actions, Antigravity Guide, Markmap, Moodle, WinDbg, DAST, IAST, SAST (15 skills)
 │   ├── roles/              # Architect, Orchestrator, Career Hunter, Web/Code Researcher, DevOps, DBA, QA, PO, UX (21 skills)
+├── mcps/                   # Servidores MCP em 7 categorias + template universal
+│   ├── _template/          # Template universal de MCP (MCP.md, mcp.json, mcp_config.json)
+│   ├── dev-tools/          # Ferramentas de desenvolvimento, codebase, testes e automação
+│   ├── databases/          # Bancos de dados SQL/NoSQL
+│   ├── cloud-infra/        # AWS, Azure, GCP, OCI e cloud-edge
+│   ├── security/           # Segurança ofensiva/defensiva e threat intel
+│   ├── observability/      # Métricas, logs, traces e telemetria
+│   ├── ai/                 # LLMs, embeddings, RAG, MLOps e agentes de IA
+│   ├── data/               # Engenharia de dados, pipelines e streaming
 └── agents/                 # 58 Agentes Especializados Universais em 7 Categorias
     ├── core-orchestration/     # Orquestração, supervisão, general e autodelegação (4 agentes)
     ├── research-discovery/     # Pesquisa de código, web, literatura científica e mapeamento (5 agentes)

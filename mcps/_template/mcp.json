@@ -1,0 +1,19 @@
+{
+  "name": "mcp-template",
+  "description": "Template universal de um servidor MCP (Model Context Protocol) para registro neste repositório.",
+  "type": "mcp",
+  "$schema": "https://opencode.ai/config.json",
+  "transport": {
+    "type": "local",
+    "command": ["npx", "-y", "exemplo-do-servidor", "--arg"],
+    "remote_url": "",
+    "enabled": true,
+    "environment": {}
+  },
+  "auth": {},
+  "capabilities": {
+    "tools": true,
+    "resources": false,
+    "prompts": false
+  }
+}

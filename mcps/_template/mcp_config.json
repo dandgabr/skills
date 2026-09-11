@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "mcp-template": {
+      "type": "local",
+      "command": "npx",
+      "args": [
+        "-y",
+        "exemplo-do-servidor"
+      ],
+      "enabled": true,
+      "env": {}
+    }
+  }
+}
