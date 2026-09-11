@@ -11,6 +11,7 @@ Este repositório serve como uma central modular e extensível para carregamento
 
 - 🤖 **[Guia de Agentes Especializados Universais (agents/README.md)](agents/README.md)**: Personas, manifestos (`AGENT.md`, `agent.yaml`, `agent.json`) e instruções de execução para qualquer harness.
 - 🔌 **[Catálogo de Servidores MCP (MCPS.md)](MCPS.md)**: Inventário de servidores MCP e manifestos multiplataforma (`MCP.md`, `mcp.json`, `mcp_config.json`).
+- 🧰 **[Configurações de Harness (harness/README.md)](harness/README.md)**: Templates e exemplos de config por harness (`opencode.jsonc`, `.mcp.json`, `mcp_config.json`).
 - 📜 **[Regras Globais do Projeto (AGENTS.md)](AGENTS.md)**: Diretrizes de comportamento, Clean Code, padrões de skills e criação de agentes.
 - ⚙️ **[Manifesto de Skills (skills.json)](skills.json)**: Configuração e importação modular de habilidades.
 
@@ -45,6 +46,13 @@ Este repositório serve como uma central modular e extensível para carregamento
 │   ├── observability/      # Métricas, logs, traces e telemetria
 │   ├── ai/                 # LLMs, embeddings, RAG, MLOps e agentes de IA
 │   ├── data/               # Engenharia de dados, pipelines e streaming
+├── harness/                # Configurações de harness (OpenCode, Claude, Antigravity, Cursor)
+│   ├── _template/          # Template universal (HARNESS.md, schemas, templates)
+│   ├── opencode/           # opencode.jsonc.example + HARNESS.md
+│   ├── claude-code/        # .mcp.json.example + HARNESS.md
+│   ├── antigravity/        # mcp_config.json.example + HARNESS.md
+│   ├── cursor/             # .mcp.json.example + HARNESS.md
+│   └── shared/             # env.example, skills.json.example, plugins.json.example
 └── agents/                 # 58 Agentes Especializados Universais em 7 Categorias
     ├── core-orchestration/     # Orquestração, supervisão, general e autodelegação (4 agentes)
     ├── research-discovery/     # Pesquisa de código, web, literatura científica e mapeamento (5 agentes)

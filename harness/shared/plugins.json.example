@@ -1,0 +1,19 @@
+{
+  "entries": [
+    {
+      "path": "agents"
+    },
+    {
+      "path": "harness/opencode"
+    },
+    {
+      "path": "harness/claude-code"
+    },
+    {
+      "path": "harness/antigravity"
+    },
+    {
+      "path": "harness/cursor"
+    }
+  ]
+}

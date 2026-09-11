@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "meu-servidor": {
+      "type": "local",
+      "command": "npx",
+      "args": ["-y", "meu-servidor-mcp", "--arg"],
+      "enabled": true,
+      "env": {
+        "API_KEY": "{env:API_KEY}"
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+name: meu-agente
+model: inherit
+description: Descrição do agente.
+tools:
+  - path: ../../../skills/roles/exemplo/SKILL.md

@@ -299,11 +299,28 @@ converted_books/
 !SKILL.md
 !README.md
 !CATALOGO.md
+!MCPS.md
 !*.md
 !*.markdown
 !*.mdx
 !*.yaml
 !*.yml
-!*.json
 !*.toml
 !*.jsonc
+
+# JSON: allow only manifests/templates/examples; NEVER real harness/personal configs
+!*.json
+!*-example.json
+!*.template.json
+!*.schema.json
+
+# Real harness configs (may contain secrets) — never tracked
+harness/**/*.md
+!harness/**/README.md
+!harness/**/HARNESS.md
+harness/**/opencode.json
+harness/**/opencode.jsonc
+harness/**/.mcp.json
+harness/**/mcp_config.json
+harness/**/*.real.json
+mcps/**/*.real.json

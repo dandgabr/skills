@@ -32,6 +32,20 @@ Este documento consolida o inventário canônico de todas as **197 Habilidades E
 
 ---
 
+## 🧰 Configurações de Harness
+
+> O template universal e os exemplos vivem em [**`harness/`**](harness/README.md).
+
+| Harness | Arquivo de config | HARNESS.md | Descrição e Especialidade |
+| :--- | :--- | :--- | :--- |
+| **opencode** | [`opencode.jsonc.example`](harness/opencode/opencode.jsonc.example) | [`HARNESS.md`](harness/opencode/HARNESS.md) | Configuração de referência para o harness OpenCode (MCPs, permissões, agentes). |
+| **claude-code** | [`.mcp.json.example`](harness/claude-code/.mcp.json.example) | [`HARNESS.md`](harness/claude-code/HARNESS.md) | Configuração de referência para Claude Code / Desktop (`mcpServers`). |
+| **antigravity** | [`mcp_config.json.example`](harness/antigravity/mcp_config.json.example) | [`HARNESS.md`](harness/antigravity/HARNESS.md) | Configuração de referência para Google Antigravity (`mcpServers`). |
+| **cursor** | [`.mcp.json.example`](harness/cursor/.mcp.json.example) | [`HARNESS.md`](harness/cursor/HARNESS.md) | Configuração de referência para Cursor / Cline / Z.ai. |
+| **shared** | [`env.example`](harness/shared/env.example) | — | Variáveis de ambiente e snippets transversais reutilizáveis. |
+
+---
+
 ## 🤖 Agentes Especializados Universais (58)
 
 | # | Categoria | Agente | Markdown (Universal) | YAML (ADK 2.0) | JSON (APIs) | Descrição e Especialidade |

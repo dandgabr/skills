@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "meu-servidor": {
+      "serverUrl": "https://exemplo.internal/mcp",
+      "timeout": 5000,
+      "env": {
+        "API_KEY": "{env:API_KEY}"
+      }
+    }
+  }
+}

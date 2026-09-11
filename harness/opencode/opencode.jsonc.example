@@ -1,0 +1,20 @@
+{
+  "$comment": "Exemplo de config OpenCode. SEM segredos — use {env:VAR} / ${VAR}. Referencie este arquivo na seção OpenCode do CATALOGO.md.",
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "autodoc": {
+      "type": "local",
+      "command": ["node", "packages/autodoc-mcp/dist/index.js"],
+      "enabled": true,
+      "environment": {
+        "AUTODOC_LOCALE": "en-US",
+        "NODE_ENV": "production"
+      }
+    }
+  },
+  "permission": {
+    "read": "allow",
+    "edit": "ask",
+    "bash": "ask"
+  }
+}

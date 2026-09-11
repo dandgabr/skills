@@ -1,0 +1,22 @@
+{
+  "entries": [
+    {
+      "path": "harness"
+    },
+    {
+      "path": "harness/_template"
+    },
+    {
+      "path": "harness/opencode"
+    },
+    {
+      "path": "harness/claude-code"
+    },
+    {
+      "path": "harness/antigravity"
+    },
+    {
+      "path": "harness/cursor"
+    }
+  ]
+}

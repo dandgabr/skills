@@ -1,0 +1,24 @@
+{
+  "$comment": "Exemplo de bloco mcp/agent no schema OpenCode. SEM segredos — valores sensíveis via {env:VAR} ou ${VAR}.",
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "meu-servidor": {
+      "type": "local",
+      "command": ["npx", "-y", "meu-servidor-mcp", "--arg"],
+      "enabled": true,
+      "environment": {
+        "API_KEY": "{env:API_KEY}"
+      }
+    }
+  },
+  "agent": {
+    "meu-agente": {
+      "description": "Descrição do agente.",
+      "mode": "subagent",
+      "permission": {
+        "edit": "deny",
+        "bash": "ask"
+      }
+    }
+  }
+}
