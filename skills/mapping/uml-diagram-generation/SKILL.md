@@ -28,7 +28,7 @@ flowchart LR
 
     subgraph Formats["Formatos Declarativos"]
         PLANTUML["PlantUML (.puml)"]
-        MERMAID["Mermaid.js (.mmd)"]
+        MERMAID["Mermaid.js (.mermaid)"]
         GRAPHVIZ["Graphviz (.dot)"]
     end
 
@@ -169,4 +169,4 @@ npx markmap-cli architecture.md -o architecture-mindmap.html --open
 
 - [ ] **Abstração Apropriada**: Em diagramas de classes de alto nível, omita getters/setters e atributos utilitários privados para focar no domínio e nas interações essenciais.
 - [ ] **Uso de Cores e Estilos Consistentes**: Padronize interfaces com cores distintas de classes concretas e use estereótipos claros (`<<entity>>`, `<<value object>>`, `<<aggregate root>>`).
-- [ ] **Documentação Viva no Repositório**: Mantenha os fontes `.puml` e `.mmd` no mesmo repositório do código para permitir revisão em Pull Requests.
+- [ ] **Documentação Viva no Repositório**: Mantenha os fontes `.puml` e `.mermaid` no mesmo repositório do código para permitir revisão em Pull Requests.
