@@ -1,11 +1,19 @@
 ---
 name: framework-rest-api
-description: "Especialista em Arquitetura HTTP, Design de APIs RESTful e Padrões Avançados de Contratos (OpenAPI 3.1, RFC 9110/9112/9113/9114, RFC 10008 e RFC 7807). Cobre semântica completa de verbos (GET, POST, PUT, PATCH, DELETE, QUERY), códigos de status, negociação de conteúdo, cabeçalhos de segurança (CSP, HSTS), CORS, caching (ETag, Cache-Control), operações de longa duração (LRO), paginação determinística por cursor, mutações em lote, chaves de idempotência e governança evolutiva de APIs."
+description: "Especialista em Arquitetura HTTP, Design de APIs RESTful e Padrões Avançados de Contratos (OpenAPI 3.2, RFC 9110/9112/9113/9114, RFC 10008 e RFC 7807). Cobre semântica completa de verbos (GET, QUERY, POST, PUT, PATCH, DELETE, HEAD, OPTIONS), códigos de status, negociação de conteúdo, cabeçalhos de segurança (CSP, HSTS), CORS, caching (ETag, Cache-Control), operações de longa duração (LRO), paginação determinística por cursor, mutações em lote, chaves de idempotência e governança evolutiva de APIs."
 ---
 
 # Design de APIs RESTful, Protocolo HTTP e Padrões de Contrato
 
-Esta skill fornece as diretrizes canônicas para arquitetura do **Protocolo HTTP (HTTP/1.1, HTTP/2, HTTP/3 sobre QUIC)**, modelagem de **APIs RESTful** sob **OpenAPI 3.1** e aplicação dos **Padrões de Design de APIs** (baseado em JJ Geewax e *Continuous API Management*).
+Esta skill fornece as diretrizes canônicas para arquitetura do **Protocolo HTTP (HTTP/1.1, HTTP/2, HTTP/3 sobre QUIC)**, modelagem de **APIs RESTful** sob **OpenAPI 3.2** e aplicação dos **Padrões de Design de APIs** (baseado em JJ Geewax e *Continuous API Management*).
+
+> **OpenAPI 3.2**: Desde a versão **3.2.0** (e 3.2.1), o OpenAPI passou a suportar o
+> método **`QUERY`** nativamente por meio do campo fixo **`query`** (Operation Object)
+> do Path Item Object, definido conforme [RFC 10008](https://www.rfc-editor.org/rfc/rfc10008),
+> além do campo padrão **`additionalOperations`** para métodos arbitrários (ex.: `LINK`).
+> OAS 3.1 **não** possuía esse campo — ele foi adicionado em 3.2. Portanto, contratos
+> que descrevem o verbo `QUERY` devem declarar `openapi: 3.2.0` (ou superior). Ferramentas
+> de geração/validação precisam suportar 3.2 para fidelidade completa ao `QUERY`.
 
 ---
 
@@ -23,6 +31,27 @@ Esta skill fornece as diretrizes canônicas para arquitetura do **Protocolo HTTP
 | **OPTIONS** | Opcional | Sim | Sim | Sim | Não | RFC 9110 |
 
 > **Método `QUERY` (RFC 10008)**: Permite consultas e buscas seguras/idempotentes com payload JSON complexo sem violar a semântica do `GET` e sem efeitos colaterais de `POST`. A chave de cache deve incluir URI + hash do corpo da requisição.
+>
+> **`QUERY` em OpenAPI 3.2**: No OAS **3.2.0+** declare a operação no campo fixo
+> `query` do Path Item Object:
+> ```yaml
+> openapi: 3.2.0
+> paths:
+>   /v1/history:
+>     query:
+>       summary: Busca complexa de gastos
+>       requestBody:
+>         content:
+>           application/json:
+>             schema: { $ref: '#/components/schemas/HistoryQuery' }
+>       responses:
+>         '200':
+>           description: Resultados
+> ```
+> Para métodos arbitrários não cobertos pelos campos fixos, use `additionalOperations`
+> (chave = método HTTP em caixa-alta, ex.: `LINK`). Ferramentas/geradores antigos
+> (OAS 3.1) usam fallback para verbos padrão; documente o QUERY em prosa quando o
+> gerador não suportar 3.2.
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: "dba-database-administrator"
-description: "Fornece padrões de engenharia de software e administração de bancos de dados (DBA) para sistemas SQL e NoSQL. Cobre modelagem de dados, estratégias de indexação, otimização de consultas (EXPLAIN), controle de concorrência (ACID/BASE), replicação, alta disponibilidade, backups (PITR) e segurança em PostgreSQL, MariaDB, SQLite e MongoDB."
+description: "Fornece padrões de engenharia de software e administração de bancos de dados (DBA) para sistemas SQL e NoSQL. Cobre modelagem de dados, estratégias de indexação, otimização de consultas (EXPLAIN), controle de concorrência (ACID/BASE), replicação, alta disponibilidade, backups (PITR), conexões TLS seguras por padrão e segurança em PostgreSQL, MariaDB, SQLite e MongoDB."
 ---
 
 # Habilidade de IA: Administrador de Banco de Dados (DBA Specialist)
@@ -54,9 +54,27 @@ Para diretrizes de implementação técnica profunda, sintaxes e comandos de cad
 ## 🧰 Checklist de Práticas de Segurança e Hardening (DBA)
 
 1. **Princípio do Menor Privilégio (RBAC)**: Contas de aplicação devem possuir apenas os privilégios mínimos necessários (`SELECT`, `INSERT`, `UPDATE`, `DELETE`), proibindo o uso de superusuários (`postgres`, `root`).
-2. **Criptografia**:
-   - Em trânsito: Conexões obrigatoriamente cifradas via TLS/SSL.
-   - Em repouso (*Encryption at Rest*): Discos e volumes cifrados (AES-256) ou criptografia nativa de tabelas/coleções.
+2. **Criptografia em trânsito (Conexões seguras por padrão)**:
+   - **Postura padrão**: toda conexão remota DEVE ser cifrada via TLS/SSL, com verificação de certificado do servidor. Em produção, recuse `disable`, `allow`, `prefer` e `require` "nu" (sem verificar o servidor).
+   - **PostgreSQL (server)** — em `postgresql.conf`:
+     - `ssl = on`
+     - `ssl_min_protocol_version = 'TLSv1.2'` (mínimo; para política estrita usar somente `TLSv1.3` fixando min+max = `'TLSv1.3'`)
+     - `ssl_tls13_ciphers = 'TLS_AES_256_GCM_SHA384:TLS_AES_128_GCM_SHA256:TLS_CHACHA20_POLY1305_SHA256'` (AEAD-only em TLS 1.3)
+     - `ssl_key_file` com `chmod 0600`; `ssl_cert_file`; `ssl_ca_file` para verificação de client-cert
+   - **PostgreSQL (hba)** — em `pg_hba.conf`, forçar TLS e rejeitar não-TLS:
+     ```
+     hostssl  all  all  0.0.0.0/0  scram-sha-256  clientcert=verify-ca
+     hostnossl all  all  0.0.0.0/0  reject
+     ```
+   - **PostgreSQL (client / connection string)** — usar **`sslmode=verify-full`** + `sslrootcert=<CA>` (verifica cadeia + hostname). `require` apenas cifra, mas é vulnerável a MITM. Em aplicações Node.js (pg/Drizzle) e PgBouncer, force `verify-full`.
+   - **Verificação de que a conexão está cifrada (Postgres)**:
+     ```sql
+     SELECT ssl, version, cipher FROM pg_stat_ssl WHERE pid = pg_backend_pid();  -- ssl=t => cifrada
+     ```
+   - **MariaDB/MySQL**: `tls_version = TLSv1.2,TLSv1.3`, conta com `REQUIRE SSL` via `GRANT ... REQUIRE SSL`, client com `--ssl-verify-server-cert` on.
+   - **MongoDB**: servidor `--tlsMode requireSSL`; client `tls=true` + `tlsCAFile`; manter `tlsAllowInvalidCertificates=false` e `tlsAllowInvalidHostnames=false`.
+   - **SQLite**: embarcado, sem listener de rede e **sem TLS próprio** — proteja o transporte do arquivo (compartilhamento criptografado) ou use **SQLCipher** (AES-256) para criptografia em repouso.
+   - **Em repouso (*Encryption at Rest*)**: discos e volumes cifrados (AES-256) ou criptografia nativa de tabelas/coleções; senhas/hash sempre com algoritmos fortes (ex: `scram-sha-256`).
 3. **Auditoria e Monitoramento**:
    - Habilitação de logs de consultas lentas (*Slow Query Log*) e auditoria de ações administrativas.
    - Monitoramento ativo de IOPS, taxa de cache hit, uso de CPU, saturação de conexões e lag de replicação.
