@@ -42,6 +42,7 @@ Este documento consolida o inventário canônico de todas as **197 Habilidades E
 | **claude-code** | [`.mcp.json.example`](harness/claude-code/.mcp.json.example) | [`HARNESS.md`](harness/claude-code/HARNESS.md) | Configuração de referência para Claude Code / Desktop (`mcpServers`). |
 | **antigravity** | [`mcp_config.json.example`](harness/antigravity/mcp_config.json.example) | [`HARNESS.md`](harness/antigravity/HARNESS.md) | Configuração de referência para Google Antigravity (`mcpServers`). |
 | **cursor** | [`.mcp.json.example`](harness/cursor/.mcp.json.example) | [`HARNESS.md`](harness/cursor/HARNESS.md) | Configuração de referência para Cursor / Cline / Z.ai. |
+| **orchestrator-governor** | [`governor.sh`](harness/orchestrator/governor.sh) · [`hook.sh`](harness/orchestrator/hook.sh) · [`gate.ts`](harness/orchestrator/gate.ts) | [`HARNESS.md`](harness/orchestrator/HARNESS.md) | Governança multi-agente (concorrência + rate-limit) replicável em OpenCode, Antigravity e outros harnesses. |
 | **shared** | [`env.example`](harness/shared/env.example) | — | Variáveis de ambiente e snippets transversais reutilizáveis. |
 
 ---

@@ -17,6 +17,9 @@
     },
     {
       "path": "harness/cursor"
+    },
+    {
+      "path": "harness/orchestrator"
     }
   ]
 }

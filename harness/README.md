@@ -12,6 +12,7 @@ um `HARNESS.md` canônico + arquivos `.example` (SEM segredos) no formato nativo
 | [**Claude Code / Desktop**](claude-code/HARNESS.md) | `.mcp.json.example` | ✅ Estrutura pronta |
 | [**Google Antigravity**](antigravity/HARNESS.md) | `mcp_config.json.example` | ✅ Estrutura pronta |
 | [**Cursor / Cline / Z.ai**](cursor/HARNESS.md) | `.mcp.json.example` | ✅ Estrutura pronta |
+| [**Orquestrador Multi-Agente**](orchestrator/HARNESS.md) | `governor.sh` + `hook.sh` + `gate.ts` | ✅ Governança + rate-limit |
 
 ## 📁 Estrutura
 
@@ -23,6 +24,7 @@ harness/
 ├── claude-code/               # .mcp.json.example + HARNESS.md
 ├── antigravity/               # mcp_config.json.example + HARNESS.md
 ├── cursor/                    # .mcp.json.example + HARNESS.md
+├── orchestrator/              # Governança multi-agente (governor.sh, hook.sh, gate.ts)
 └── shared/                    # env.example, skills.json.example, plugins.json.example
 ```
 

@@ -52,6 +52,7 @@ Este repositório serve como uma central modular e extensível para carregamento
 │   ├── claude-code/        # .mcp.json.example + HARNESS.md
 │   ├── antigravity/        # mcp_config.json.example + HARNESS.md
 │   ├── cursor/             # .mcp.json.example + HARNESS.md
+│   ├── orchestrator/        # Governança multi-agente (governor.sh, hook.sh, gate.ts)
 │   └── shared/             # env.example, skills.json.example, plugins.json.example
 └── agents/                 # 58 Agentes Especializados Universais em 7 Categorias
     ├── core-orchestration/     # Orquestração, supervisão, general e autodelegação (4 agentes)
