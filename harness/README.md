@@ -13,6 +13,7 @@ um `HARNESS.md` canônico + arquivos `.example` (SEM segredos) no formato nativo
 | [**Google Antigravity**](antigravity/HARNESS.md) | `mcp_config.json.example` | ✅ Estrutura pronta |
 | [**Cursor / Cline / Z.ai**](cursor/HARNESS.md) | `.mcp.json.example` | ✅ Estrutura pronta |
 | [**Orquestrador Multi-Agente**](orchestrator/HARNESS.md) | `governor.sh` + `hook.sh` + `gate.ts` | ✅ Governança + rate-limit |
+| [**Time de Desenvolvimento**](time-desenvolvimento/HARNESS.md) | `time-desenvolvimento.prompt.md` + `opencode.jsonc.example` + `antigravity.hooks.example.json` | ✅ Workflow por fases |
 
 ## 📁 Estrutura
 
@@ -25,6 +26,7 @@ harness/
 ├── antigravity/               # mcp_config.json.example + HARNESS.md
 ├── cursor/                    # .mcp.json.example + HARNESS.md
 ├── orchestrator/              # Governança multi-agente (governor.sh, hook.sh, gate.ts)
+├── time-desenvolvimento/       # Workflow de desenvolvimento por fases (OpenCode + Antigravity)
 └── shared/                    # env.example, skills.json.example, plugins.json.example
 ```
 

@@ -1,0 +1,32 @@
+{
+  "time-desenvolvimento": {
+    "PreToolUse": [
+      {
+        "matcher": "invoke_subagent|manage_subagents|task",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "ORCH_GOVERNOR={env:ORCH_GOVERNOR} ORCH_MAX_CONCURRENT={env:ORCH_MAX_CONCURRENT} \"/path/to/time-desenvolvimento/hook.sh\" pretool"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "invoke_subagent|manage_subagents|task",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "ORCH_GOVERNOR={env:ORCH_GOVERNOR} ORCH_MAX_CONCURRENT={env:ORCH_MAX_CONCURRENT} \"/path/to/time-desenvolvimento/hook.sh\" posttool"
+          }
+        ]
+      }
+    ],
+    "PreInvocation": [
+      {
+        "type": "command",
+        "command": "ORCH_GOVERNOR={env:ORCH_GOVERNOR} ORCH_MAX_CONCURRENT={env:ORCH_MAX_CONCURRENT} \"/path/to/time-desenvolvimento/hook.sh\" preinv"
+      }
+    ]
+  }
+}

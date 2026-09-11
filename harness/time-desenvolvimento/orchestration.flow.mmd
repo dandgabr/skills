@@ -1,0 +1,24 @@
+flowchart TD
+    A[Demanda de desenvolvimento] --> B[project-reviewer cria plano de fases]
+    B --> C{Revisão do plano}
+    C --> C1[software-architect]
+    C --> C2[security-specialist]
+    C --> C3[qa-testing-specialist]
+    C1 --> D{Envolve?}
+    D -->|backend| D1[backend-developer]
+    D -->|frontend| D2[frontend-developer]
+    D -->|interface| D3[ui-ux-designer]
+    D -->|repositório| D4[vcs-repository-specialist]
+    D -->|GitHub| D5[github-specialist]
+    D -->|banco de dados| D6[dba-specialist]
+    D1 & D2 & D3 & D4 & D5 & D6 & D --> E[Plano aprovado]
+    E --> F{Fase corrente}
+    F --> G[Dev executa a fase backend/frontend]
+    F --> H[QA gera e valida testes em paralelo]
+    G --> I[Revisão security + code-optimizer]
+    I --> J[Dev corrige automaticamente]
+    J & H --> K[project-reviewer gera relatório da fase]
+    K --> L[ai-memory-specialist documenta no ai-memory]
+    L --> M{Última fase?}
+    M -->|não| F
+    M -->|sim| N[documenter atualiza toda a documentação]

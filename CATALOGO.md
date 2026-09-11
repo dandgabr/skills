@@ -43,6 +43,7 @@ Este documento consolida o inventário canônico de todas as **197 Habilidades E
 | **antigravity** | [`mcp_config.json.example`](harness/antigravity/mcp_config.json.example) | [`HARNESS.md`](harness/antigravity/HARNESS.md) | Configuração de referência para Google Antigravity (`mcpServers`). |
 | **cursor** | [`.mcp.json.example`](harness/cursor/.mcp.json.example) | [`HARNESS.md`](harness/cursor/HARNESS.md) | Configuração de referência para Cursor / Cline / Z.ai. |
 | **orchestrator-governor** | [`governor.sh`](harness/orchestrator/governor.sh) · [`hook.sh`](harness/orchestrator/hook.sh) · [`gate.ts`](harness/orchestrator/gate.ts) | [`HARNESS.md`](harness/orchestrator/HARNESS.md) | Governança multi-agente (concorrência + rate-limit) replicável em OpenCode, Antigravity e outros harnesses. |
+| **time-desenvolvimento** | [`time-desenvolvimento.prompt.md`](harness/time-desenvolvimento/time-desenvolvimento.prompt.md) · [`opencode.jsonc.example`](harness/time-desenvolvimento/opencode.jsonc.example) · [`antigravity.hooks.example.json`](harness/time-desenvolvimento/antigravity.hooks.example.json) | [`HARNESS.md`](harness/time-desenvolvimento/HARNESS.md) | Workflow de desenvolvimento por fases (análise, revisão, implementação, QA, segurança e documentação). Replicável em OpenCode e Antigravity. |
 | **shared** | [`env.example`](harness/shared/env.example) | — | Variáveis de ambiente e snippets transversais reutilizáveis. |
 
 ---

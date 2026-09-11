@@ -1,0 +1,38 @@
+{
+  "$comment": "Exemplo de config OpenCode para o time de desenvolvimento (workflow por fases). SEM segredos — use {env:VAR} / ${VAR}. Referencie este arquivo na seção OpenCode do CATALOGO.md.",
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": [
+    "harness/time-desenvolvimento/time-desenvolvimento.prompt.md"
+  ],
+  "agent": {
+    "time-desenvolvimento-supervisor": {
+      "description": "Supervisor do time de desenvolvimento — conduz o fluxo por fases (análise, revisão, implementação, QA, segurança, documentação).",
+      "mode": "all",
+      "tools": {
+        "task": true,
+        "orchestrator_governor": true,
+        "orchestrator_governor_*": true,
+        "ai-memory_*": true,
+        "memory_*": true
+      }
+    }
+  },
+  "mcp": {
+    "ai-memory": {
+      "type": "local",
+      "command": ["ai-memory", "mcp"],
+      "enabled": true,
+      "environment": {
+        "AI_MEMORY_URL": "{env:AI_MEMORY_URL}"
+      }
+    }
+  },
+  "permission": {
+    "read": "allow",
+    "edit": "ask",
+    "bash": "ask",
+    "task": "allow",
+    "orchestrator_governor": "allow",
+    "orchestrator_governor_*": "allow"
+  }
+}
